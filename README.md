@@ -6,7 +6,7 @@ Version: 1.0.0<br>
 
 ### Description
 
-This repository is a collection of quizzes and homework of the Clean programming languages, there is also a utility I created for windows and mac/linux for those who don't like/have Clean IDE
+This repository is a collection of quizzes and homework of Clean programming languages, there is also a utility I created for windows and mac/linux for those who don't like/have Clean IDE
 
 
 ### Usage
