@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clean Language Report</title>
+</head>
+<body style="font-family:Helvetica">
+<div><div style="position: absolute;"><svg width="355.555555555556" height="177.777777777778">
+<path d="M49.7777777777778 7.32929319639176 h280.888888888889 v141.785858051661 h-280.888888888889 Z M64 33.9959598630584 h252.444444444444 v88.4525247183276 h-252.444444444444 Z" stroke="none" fill="#3F87AF" fill-rule="evenodd"/>
+<path d="M64 111.781817914719 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 33.9959598630584 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 44.6626265297251 h252.444444444444 v67.1191913849942 h-252.444444444444 Z" stroke="none" fill="#FFFFFF"/>
+<path d="M99.1179703874409 137.550135143052 C93.2711853763986 133.302197180425,88.084448516421 128.213312506961,83.725936053644 122.448484581386 L110.089961763567 122.448484581386 Z" stroke="none" fill="#8C96A0"/>
+<path d="M99.1179703874409 18.8943093013927 C93.2711853763986 23.1422472640192,88.084448516421 28.2311319374834,83.725936053644 33.9959598630584 L110.089961763567 33.9959598630584 Z" stroke="none" fill="#8C96A0"/>
+<path d="M126.968649704419 100.555210486665 C109.380820468897 87.7769045717629,109.380820468897 61.5564287615705,126.968649704419 48.7781228466684 L116.780371998016 34.7551616108359 C89.6658019265873 54.45504989631,89.6658019265873 94.8782834370233,116.780371998016 114.578171722497 Z" stroke="none" fill="#8C96A0"/>
+<path d="M113.645517319123 118.89292902583 C83.5996423751073 97.0633230878727,83.5996423751073 52.2700102454607,113.645517319123 30.4404043075029 L102.673525942996 15.3387537458372 C62.3680839449271 44.6223714674879,62.3680839449271 104.710961865845,102.673525942996 133.994579587496 Z" stroke="none" fill="#8C96A0"/>
+<path d="M123.413094148863 104.110766042221 C105.825264913342 91.3324601273184,105.825264913342 65.111984317126,123.413094148863 52.3336784022239 L113.22481644246 38.3107171663915 C86.1102463710318 58.0106054518656,86.1102463710318 98.4338389925788,113.22481644246 118.133727278053  Z" stroke="none" fill="#3F87AF"/>
+<path d="M110.089961763567 122.448484581386 C80.0440868195518 100.618878643428,80.0440868195518 55.8255658010162,110.089961763567 33.9959598630584L83.725936053644 33.9959598630584 C63.9432065006372 60.1617750913602,63.9432065006372 96.2826693530842,83.725936053644 122.448484581386" stroke="none" fill="#3F87AF"/>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="145.777777777778" y="103.111111111111" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144.888888888889" y="102.222222222222" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144" y="101.333333333333" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="143.111111111111" y="100.444444444444" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="142.222222222222" y="99.5555555555556" fill="#3F87AF">Clean</text>
+</svg>
+</div><h1 style="text-align:right;background-color:#9999FF;"><a id="_7"><br>Chapter 7<br><br>Generic Programming</a></h1></div>
+<h2 style="background-color:#9999FF;"><a id="_7.1">7.1 Basic Ideas Behind Generic Programming</a></h2>
+<p style="text-align:justify;">In the previous Chapter on overloading it is explained how type classes can be used to define <i>different</i> functions or operators that have the <i>same</i> name and perform <i>similar tasks</i> albeit on objects of <i>different types</i>. These tasks are supposed to be similar, but they are in general not exactly the same. The corresponding function bodies are often slightly different because the data structures on which the functions work differ. As a consequence, one has to explicitly specify an implementation for every concrete instance of an overloaded function.</p>
+<p></p><div style="background-color:#FFFF45;">Equality class. The equality function on lists and trees. The programmer has to specify explicitly the function bodies for each concrete instantiation of equality.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;List&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Nil&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Cons&nbsp;a&nbsp;(List&nbsp;a)<br>
+::&nbsp;Tree&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Leaf&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Node&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;Bool<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;(List&nbsp;a)&nbsp;|&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;(List&nbsp;a)&nbsp;(List&nbsp;a)&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;Eq&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;Nil&nbsp;Nil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;(Cons&nbsp;x&nbsp;xs)&nbsp;(Cons&nbsp;x&nbsp;xs)=&nbsp;x&nbsp;==&nbsp;y&nbsp;&amp;&amp;&nbsp;xs&nbsp;==&nbsp;ys<br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;False<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Tree&nbsp;a&nbsp;|&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;Eq&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;(Leaf&nbsp;x)&nbsp;(Leaf&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;(Node&nbsp;lx&nbsp;rx)&nbsp;&nbsp;(Node&nbsp;ly&nbsp;ry)&nbsp;=&nbsp;lx&nbsp;==&nbsp;ly&nbsp;&amp;&amp;&nbsp;rx&nbsp;==&nbsp;ry<br>
+&nbsp;&nbsp;&nbsp;(==)&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;False<br></div>
+<p></p><p style="text-align:justify;">In the example above the programmer explicitly defines equality on lists and trees. For each new data type that we want to compare for equality, we have to define a similar instance. Moreover, if such a data type changes, the corresponding instance should be changed accordingly as well. Though the instances are <i>similar</i>, they are not the same since they operate on different data types.</p>
+<p style="text-align:justify;">What is similar in these instances? Both instances perform pattern match on the arguments. If the constructors are the same, they compare constructor arguments pairwise. For constructors with no arguments <span style="font-family:courier;">True</span> is returned. For constructors with several arguments, the results on the arguments are combined with &amp;&amp;. If constructors are not the same, <span style="font-family:courier;">False</span> is returned. In other words, equality on a data type is defined by looking at the structure of the data type. More precisely, it is defined by induction on the structure of types. There are many more functions than just equality that expose the same kind of similarity in their instances. Below is the mapping function that can be defined for type constructors of kind *-&gt;*.</p>
+<p></p><div style="background-color:#FFFF45;">The Functor provides the mapping function for a type constructor of kind *-&gt;* (<span style="color:blue;"><a href="CleanLanguageReport6.html#_6.4">see also 6.4</a></span>).</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Functor&nbsp;f<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(f&nbsp;a)&nbsp;-&gt;&nbsp;(f&nbsp;b)<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Functor&nbsp;List<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(List&nbsp;a)&nbsp;-&gt;&nbsp;(List&nbsp;b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;f&nbsp;Nil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;f&nbsp;(Cons&nbsp;x&nbsp;xs)&nbsp;=&nbsp;Cons&nbsp;(f&nbsp;x)&nbsp;:&nbsp;Cons&nbsp;(fmap&nbsp;f&nbsp;xs)<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Functor&nbsp;Tree<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(Tree&nbsp;a)&nbsp;-&gt;&nbsp;(Tree&nbsp;b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;f&nbsp;(Leaf&nbsp;a)&nbsp;&nbsp;&nbsp;=&nbsp;Leaf&nbsp;(f&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fmap&nbsp;f&nbsp;(Node&nbsp;l&nbsp;r)&nbsp;=&nbsp;Node&nbsp;(fmap&nbsp;f&nbsp;l)&nbsp;(fmap&nbsp;f&nbsp;r)<br></div>
+<p></p><p style="text-align:justify;">Again, both instances are similar: they perform pattern match on constructors and pairwise mapping of their arguments. The results are packed back in the same constructor.</p>
+<p style="text-align:justify;">Generic programming enables the programmer to capture this kind of similarities and define a single implementation for <i>all</i> instances of such a class of functions. To do so we need a universal structural representation of <i>all</i> data types. A generic function can then be defined <i>ones and forall</i> on that universal representation. A specific type is handled using its structural representation. In the rest of this section we will explain roughly how it all works. First we focus on the universal structural representation of types; then we show how a generic function can be defined on it; and at last we show how the generic definition is specialized to a concrete type. See also (Alimarine &amp; Plasmeijer, 2001, <span style="color:#0000FF;">A Generic Programming Extension for Clean</span>).</p>
+<p style="text-align:justify;">In CLEAN data types are algebraic: they are built in of sums of products of type terms. For example, the <span style="font-family:courier;">List</span> type is a sum of two things: nullary product for <span style="font-family:courier;">Nil</span> and a binary product of the head and the tail for <span style="font-family:courier;">Cons</span>. The Tree type is a sum of unary product of elements for Leaf and binary product of trees for <span style="font-family:courier;">Node</span>. Having this in mind we can uniformly represent CLEAN data types using binary sums and products.</p>
+<p></p><div style="background-color:#FFFF45;">Binary sum and product types defined in StdGeneric.dcl. These types are needed to represent CLEAN types as sums of products of types for the purpose of generic programming.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;UNIT&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;UNIT&nbsp;a<br>
+::&nbsp;PAIR&nbsp;a&nbsp;b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;PAIR&nbsp;a&nbsp;b<br>
+::&nbsp;EITHER&nbsp;l&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;LEFT&nbsp;l&nbsp;|&nbsp;RIGHT&nbsp;r<br></div>
+<p></p><p style="text-align:justify;">The <span style="font-family:courier;">UNIT</span> type represents a nullary product. The <span style="font-family:courier;">PAIR</span> type is a binary product. The <span style="font-family:courier;">EITHER</span> type is a binary sum. We do not need a type for nullary sums, as in CLEAN data types have at least one alternative. As one can imagine, we want sum-product representation of types to be equivalent (i.e. isomorphic) to the original data types. In the following example we give representations for <span style="font-family:courier;">List</span> and <span style="font-family:courier;">Tree</span> with conversion functions that implement the required isomorphisms.</p>
+<p></p><div style="background-color:#FFFF45;">Sum-product representation of the structure of <span style="font-family:courier;">List</span> and <span style="font-family:courier;">Tree</span> with conversion functions that implement isomorphisms between the types and their sum-product representations.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;ListS&nbsp;a&nbsp;:==&nbsp;EITHER&nbsp;UNIT&nbsp;(PAIR&nbsp;a&nbsp;(List&nbsp;a))<br>
+<br>
+listToStruct&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;(List&nbsp;a)&nbsp;&nbsp;-&gt;&nbsp;_ListS&nbsp;a<br>
+listToStruct&nbsp;Nil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;LEFT&nbsp;UNIT<br>
+listToStruct&nbsp;(Cons&nbsp;x&nbsp;xs)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;RIGHT&nbsp;(PAIR&nbsp;x&nbsp;xs)<br>
+<br>
+listFromStruct&nbsp;&nbsp;&nbsp;::&nbsp;(ListS&nbsp;a)&nbsp;-&gt;&nbsp;_List&nbsp;a<br>
+listFromStruct&nbsp;(LEFT&nbsp;UNIT)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Nil<br>
+listFromStruct&nbsp;(RIGHT&nbsp;(PAIR&nbsp;x&nbsp;xs)&nbsp;&nbsp;=&nbsp;Cons&nbsp;x&nbsp;xs<br>
+<br>
+::&nbsp;TreeS&nbsp;a&nbsp;:==&nbsp;EITHER&nbsp;a&nbsp;(PAIR&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a))<br>
+<br>
+treeToStruct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;(Tree&nbsp;a)&nbsp;&nbsp;&nbsp;-&gt;&nbsp;_TreeS&nbsp;a<br>
+treeFromStruct&nbsp;&nbsp;&nbsp;::&nbsp;(TreeS&nbsp;a)&nbsp;&nbsp;-&gt;&nbsp;_Tree&nbsp;a<br></div>
+<p></p><p style="text-align:justify;">As we said, all algebraic types can be represented in this way. Basic types are not algebraic, but there are only few of them: they are represented by themselves. Arrow types are represented by the arrow type constructor (-&gt;). To define a function generically on the structure of a type it is enough to define instances on the components the structure can be built from. These are binary sums, binary products, basic types, and the arrow type.</p>
+<p></p><div style="background-color:#FFFF45;">Equality on sums, products and primitive types. Equality cannot be feasibly defined for the arrow type, so the instance is omitted.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;UNIT<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;UNIT&nbsp;UNIT&nbsp;-&gt;&nbsp;Bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;UNIT&nbsp;UNIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;True<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;PAIR&nbsp;a&nbsp;b&nbsp;|&nbsp;Eq&nbsp;a&nbsp;&amp;&nbsp;Eq&nbsp;b<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;(PAIR&nbsp;a&nbsp;b)&nbsp;(PAIR&nbsp;a&nbsp;b)&nbsp;-&gt;&nbsp;Bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;(PAIR&nbsp;a1&nbsp;b1)&nbsp;(PAIR&nbsp;a2&nbsp;b2)&nbsp;=&nbsp;a1&nbsp;==&nbsp;a2&nbsp;&amp;&amp;&nbsp;b1&nbsp;==&nbsp;b2<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;EITHER&nbsp;a&nbsp;b&nbsp;|&nbsp;Eq&nbsp;a&nbsp;&amp;&nbsp;Eq&nbsp;b<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;(EITHER&nbsp;a&nbsp;b)&nbsp;(EITHER&nbsp;a&nbsp;b)&nbsp;-&gt;&nbsp;Bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;(LEFT&nbsp;x)&nbsp;&nbsp;(Leaf&nbsp;y)&nbsp;&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;(RIGHT&nbsp;x)&nbsp;(RIGHT&nbsp;y)&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;x_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;False<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Int<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;Int&nbsp;Int&nbsp;-&gt;&nbsp;Bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;x&nbsp;y&nbsp;=&nbsp;eqInt&nbsp;x&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;primitive&nbsp;equality&nbsp;on&nbsp;integers</span><br></div>
+<p></p><p style="text-align:justify;">Having defined instances on the structure components we can generate instances for all other types automatically.</p>
+<p></p><div style="background-color:#FFFF45;">Equality for lists and trees that can be automatically generated. Arguments are first converted to the structural representations which are then compared.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;(List&nbsp;a)&nbsp;|&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;(List&nbsp;a)&nbsp;(List&nbsp;a)&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;Eq&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;xs&nbsp;ys&nbsp;=&nbsp;listToStruct&nbsp;xs&nbsp;==&nbsp;listToStruct&nbsp;ys<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Tree&nbsp;a&nbsp;|&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;Eq&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;xs&nbsp;ys&nbsp;=&nbsp;treeToStruct&nbsp;xs&nbsp;==&nbsp;treeToStruct&nbsp;ys<br></div>
+<p></p><p style="text-align:justify;">Not only instances of one class expose similarity in the definition of instances.</p>
+<p></p><div style="background-color:#FFFF45;">The Bifunctor provides the mapping function for a type constructor of kind *-&gt;*-&gt;*. Instances are defined in a similar way to instances of Functor.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;Tree2&nbsp;a&nbsp;b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Tip&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Bin&nbsp;b&nbsp;(Tree&nbsp;a&nbsp;b)&nbsp;(Tree&nbsp;a&nbsp;b)<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Bifunctor&nbsp;f<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;bmap&nbsp;::&nbsp;(a1&nbsp;-&gt;&nbsp;b1)&nbsp;(a2&nbsp;-&gt;&nbsp;b2)&nbsp;(f&nbsp;a1&nbsp;a2)&nbsp;-&gt;&nbsp;(f&nbsp;b1&nbsp;b2)<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Bifunctor&nbsp;Tree<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;bmap&nbsp;::&nbsp;(a1&nbsp;-&gt;&nbsp;b1)&nbsp;(a2&nbsp;-&gt;&nbsp;b2)&nbsp;(Tree2&nbsp;a1&nbsp;a2)&nbsp;-&gt;&nbsp;(Tree&nbsp;b1&nbsp;b2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bmap&nbsp;f1&nbsp;f2&nbsp;(Tip&nbsp;x)&nbsp;=&nbsp;Tip&nbsp;(f1&nbsp;x)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bmap&nbsp;f1&nbsp;f2&nbsp;(Bin&nbsp;x&nbsp;l&nbsp;r)&nbsp;=&nbsp;Bin&nbsp;(f2&nbsp;x)&nbsp;(bmap&nbsp;f1&nbsp;f2&nbsp;l)&nbsp;(bmap&nbsp;f1&nbsp;f2&nbsp;r)<br></div>
+<p></p><p style="text-align:justify;">The instance in the example above also works in a similar way as the instance of Functor: it also maps substructures component-wise. Both Functor and Bifunctor provide <i>mapping</i> function. The difference is that one provides mapping for type constructors of kind *-&gt;* and the other for type constructors of kind *-&gt;*-&gt;*. In fact instances of mapping functions for all kinds are similar.</p>
+<h2 style="background-color:#9999FF;"><a id="_7.2">7.2 Defining Generic Functions</a></h2>
+<p style="text-align:justify;">The generic feature of CLEAN is able to derive instances for types of different kinds from a single generic definition. Such generic functions are known as kind-indexed generic functions (Alimarine &amp; Plasmeijer, <span style="color:#0000FF;">A Generic Programming Extension for Clean</span>). Actually, a generic function in CLEAN stands for a <i>set</i> of classes and instances of the <i>same</i> function for <i>different</i> kinds. Since CLEAN allows function to be used in a Curried manner (<span style="color:blue;"><a href="CleanLanguageReport3.html#_3.7.1">see 3.7.1</a></span>), the compiler is in general not able to deduce which kind of map is meant. Therefore the <i>kind</i> of a generic function application has to be specified explicitly.</p>
+<p style="text-align:justify;">To define a generic function the programmer has to provide to things: the base type of the generic function and the base cases (instances) of the generic function.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericsDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericDef ;</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericCase;</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">DeriveDef ;</td></tr>
+</table><p></p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>generic</b></span> <span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">TypeVariable</span>+ [GenericDependencies] <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericDependencies</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>|</b></span> {<span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">TypeVariable</span>+ }-list</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericCase</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;color:#993300;"><b>{|</b></span>GenericTypeArg<span style="font-family:courier;color:#993300;"><b>|}</b></span> {Pattern}+ <span style="font-family:courier;color:#993300;"><b>=</b></span> FunctionBody</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericTypeArg</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericMarkerType [<span style="font-family:courier;color:#FF0000;"><b>of</b></span> Pattern]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeVariable</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericMarkerType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>CONS</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>OBJECT</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>RECORD</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>FIELD</b></span></td></tr>
+</table><p></p>
+<p style="text-align:justify;">In the generic definition, recognised by the keyword <span style="font-family:courier;color:#FF0000;"><b>generic</b></span>, first the type of the generic function has to be specified. The type variables mentioned after the generic function name are called <i>generic type variables</i>. Similar to type classes, they are substituted by the actual instance type. A generic definition actually defines a <i>set</i> of type constructor classes. There is one class for each possible kind in the set. Such a generic function is sometimes called a kind-indexed class. The classes are generated using the type of the generic function. The classes always have one class variable, even if the generic function has several generic variables. The reason for this restriction is that the generic function can be defined by induction on one argument only.</p>
+<p></p><div style="background-color:#FFFF45;">Example. The generic definition of equality.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;gEq&nbsp;a&nbsp;::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;Bool<br>
+gEq&nbsp;{|Int|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+gEq&nbsp;{|Char|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+gEq&nbsp;{|Bool|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+gEq&nbsp;{|Real|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x&nbsp;==&nbsp;y<br>
+gEq&nbsp;{|UNIT|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;True<br>
+gEq&nbsp;{|PAIR|}&nbsp;&nbsp;&nbsp;eqx&nbsp;eqy&nbsp;&nbsp;&nbsp;(PAIR&nbsp;x1&nbsp;y1)&nbsp;(PAIR&nbsp;x2&nbsp;y2)&nbsp;&nbsp;=&nbsp;eqx&nbsp;x1&nbsp;x2&nbsp;&amp;&amp;&nbsp;eqy&nbsp;y1&nbsp;y2<br>
+gEq&nbsp;{|EITHER|}&nbsp;eql&nbsp;eqr&nbsp;&nbsp;&nbsp;(LEFT&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(LEFT&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;eql&nbsp;x&nbsp;y<br>
+gEq&nbsp;{|EITHER|}&nbsp;eql&nbsp;eqr&nbsp;&nbsp;&nbsp;(RIGHT&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;(RIGHT&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;eqr&nbsp;x&nbsp;y<br>
+gEq&nbsp;{|EITHER|}&nbsp;eql&nbsp;eqr&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;False<br>
+gEq&nbsp;{|CONS|}&nbsp;&nbsp;&nbsp;eq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CONS&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CONS&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;eq&nbsp;x&nbsp;y<br>
+gEq&nbsp;{|OBJECT|}&nbsp;eq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(OBJECT&nbsp;x)&nbsp;&nbsp;&nbsp;(OBJECT&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;eq&nbsp;x&nbsp;y<br>
+gEq&nbsp;{|RECORD|}&nbsp;eq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(RECORD&nbsp;x)&nbsp;&nbsp;&nbsp;(RECORD&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;eq&nbsp;x&nbsp;y<br>
+gEq&nbsp;{|FIELD|}&nbsp;&nbsp;eq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(FIELD&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;(FIELD&nbsp;y)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;eq&nbsp;x&nbsp;y<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example. The generic definition of map.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;gMap&nbsp;a&nbsp;b&nbsp;::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;b<br>
+gMap&nbsp;{|c|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x<br>
+gMap&nbsp;{|PAIR|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fx&nbsp;fy&nbsp;&nbsp;&nbsp;&nbsp;(PAIR&nbsp;x&nbsp;y)&nbsp;&nbsp;&nbsp;=&nbsp;PAIR&nbsp;(fx&nbsp;x)&nbsp;(fy&nbsp;y)<br>
+gMap&nbsp;{|EITHER|}&nbsp;&nbsp;&nbsp;fl&nbsp;fr&nbsp;&nbsp;&nbsp;&nbsp;(LEFT&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;LEFT&nbsp;(fl&nbsp;x)<br>
+gMap&nbsp;{|EITHER|}&nbsp;&nbsp;&nbsp;fl&nbsp;fr&nbsp;&nbsp;&nbsp;&nbsp;(RIGHT&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;RIGHT&nbsp;(fr&nbsp;x)<br>
+gMap&nbsp;{|CONS|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CONS&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;CONS&nbsp;(fx&nbsp;x)<br>
+gMap&nbsp;{|OBJECT|}&nbsp;&nbsp;&nbsp;fx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(OBJECT&nbsp;x)&nbsp;&nbsp;&nbsp;=&nbsp;OBJECT&nbsp;(fx&nbsp;x)<br>
+gMap&nbsp;{|RECORD|}&nbsp;&nbsp;&nbsp;fx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(RECORD&nbsp;x)&nbsp;&nbsp;&nbsp;=&nbsp;RECORD&nbsp;(fx&nbsp;x)<br>
+gMap&nbsp;{|FIELD|}&nbsp;&nbsp;&nbsp;&nbsp;fx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(FIELD&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;FIELD&nbsp;(fx&nbsp;x)<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Classes that are automatically generated for the generic map function given above.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;gMap{|*|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;t&nbsp;-&gt;&nbsp;t<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;gMap{|*-&gt;*|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(t&nbsp;a)&nbsp;-&gt;&nbsp;t&nbsp;b<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;gMap{|*-&gt;*-&gt;*|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;(a1&nbsp;-&gt;&nbsp;b1)&nbsp;(a2&nbsp;-&gt;&nbsp;b2)&nbsp;(t&nbsp;a1&nbsp;a2)&nbsp;-&gt;&nbsp;t&nbsp;b1&nbsp;b2<br>
+...<br></div>
+<p></p><p style="text-align:justify;">Roughly the algorithm for deriving classes is the following.</p>
+<p></p><div style="background-color:#FFFF45;">Algorithm for generating classes. Suppose we have a generic function <span style="font-family:courier;">genFun</span> with type <span style="font-family:courier;">GenFun</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;GenFun&nbsp;a1&nbsp;..&nbsp;an&nbsp;:==&nbsp;..<br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;genFun&nbsp;a1&nbsp;..&nbsp;an&nbsp;::&nbsp;GenFun&nbsp;a1&nbsp;..&nbsp;an<br>
+<br></div>
+<div style="background-color:#FFFF45;">A class for kind <i>k</i>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;genFun{|k|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;GenFun{|k|}&nbsp;t&nbsp;..&nbsp;t<br>
+<br></div>
+<div style="background-color:#FFFF45;">Is derived by induction on the structure of kind</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;GenFun{|*|}&nbsp;a1&nbsp;...&nbsp;an&nbsp;&nbsp;&nbsp;:==&nbsp;GenFun&nbsp;a1..&nbsp;an<br>
+::&nbsp;GenFun{|k-&gt;l|}&nbsp;a1&nbsp;..an&nbsp;&nbsp;:==<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A.b1&nbsp;..&nbsp;bn:&nbsp;(GenFun{|k|}&nbsp;b1&nbsp;..&nbsp;bn)&nbsp;-&gt;&nbsp;GenFun{|l|}&nbsp;(a1&nbsp;b1)&nbsp;..&nbsp;(an&nbsp;bn)<br></div>
+<p></p><p style="text-align:justify;">The programmer provides a set of basic cases for a generic function. Based on its basic cases a generic function can be derived for other types. See the next section for detailed discussion on types for which a generic function can and cannot be derived. Here we discuss what can be specified as the type argument in the definition of a generic base case</p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>A Generic structural representation type</i>: <span style="font-family:courier;">UNIT</span>, <span style="font-family:courier;">PAIR</span>, <span style="font-family:courier;">EITHER</span>, <span style="font-family:courier;">CONS</span>, <span style="font-family:courier;">OBJECT</span>, <span style="font-family:courier;">RECORD</span> and <span style="font-family:courier;">FIELD</span>. The programmer <i>must always provide</i> these cases as they cannot be derived by the compiler. Without these cases a generic function cannot be derived for basically any type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Basic type</i>. If a generic function is supposed to work on types that involve basic types, instances for basic types must be provided.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Type variable</i>. Type variable stands for all types of kind *. If a generic function has a case for a type variable it means that by default all types of kind star will be handled by that instance. The programmer can override the default behavior by defining an instance on a specific type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Arrow type </i><span style="font-family:courier;">(-&gt;)</span>. If a generic function is supposed to work with types that involve the arrow type, an instance on the arrow type has to be provided.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Type constructor</i>. A programmer may provide instances on other types. This may be needed for two reasons:</td></tr>
+</table>
+<table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"></td><td style="vertical-align:top;width:30px;">1.</td><td style="text-align:justify;">The instance cannot be derived for the reasons explained in the next section.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"></td><td style="vertical-align:top;width:30px;">2.</td><td style="text-align:justify;">The instance can be generated, but the programmer is not satisfied with generic behavior for this type and wants to provide a specific behavior.</td></tr>
+</table><h2 style="background-color:#9999FF;"><a id="_7.3">7.3 Deriving Generic Functions</a></h2>
+<p style="text-align:justify;">The user has to tell the compiler which instances of generic functions on which types are to be generated. This is done with the <i>derive</i> clause.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">DeriveDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>derive</b></span> <span style="font-family:courier;">FunctionName</span> {DerivableType}-list</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>derive</b></span> <span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;">ClassName</span> {DerivableType}-list</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">DerivableType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">PredefinedTypeConstructor</td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Deriving instances of generic mapping and generic equality for List , Tree and standard list</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>derive</b></span>&nbsp;gEq&nbsp;&nbsp;List,&nbsp;Tree,&nbsp;[]<br>
+<span style="font-family:courier;color:#FF0000;"><b>derive</b></span>&nbsp;gMap&nbsp;List,&nbsp;Tree,&nbsp;[]<br></div>
+<p></p><p style="text-align:justify;">A generic function can be automatically specialized only to algebraic types that are not abstract in the module where the <i>derive</i> directive is given. A generic function cannot be automatically derived for the following types:</p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Generic structure representation types: </i><span style="font-family:courier;">UNIT</span>, <span style="font-family:courier;">PAIR</span>, <span style="font-family:courier;">EITHER</span>, <span style="font-family:courier;">CONS</span>, <span style="font-family:courier;">OBJECT</span>, <span style="font-family:courier;">RECORD</span>, <span style="font-family:courier;">FIELD</span>. See also the previous section. It is impossible to derive instances for these types automatically because they are themselves used to build structural representation of types that is needed to derive an instance. Deriving instances for then would yield non-terminating cyclic functions. Instances on these types must be provided for the user. Derived instances of algebraic types call these instances.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Arrow type </i><span style="font-family:courier;">(-&gt;)</span>. An instance on the arrow type has to be provided by the programmer, if he or she wants the generic function to work with types containing arrows.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Basic types</i> like <span style="font-family:courier;">Int</span>, <span style="font-family:courier;">Char</span>, <span style="font-family:courier;">Real</span>, <span style="font-family:courier;">Bool</span>. In principle it is possible to represent all these basic types as algebraic types but that would be very inefficient. The user can provide a user defined instance on a basic type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Array types</i> as they are not algebraic. The user can provide a user defined instance on an array type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Synonym types</i>. The user may instead derive a generic function for the types involved on the right-hand-side of a type synonym type definition.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Abstract types</i>. The compiler does not know the structure of an abstract data type needed to derive the instance.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;"><i>Quantified types</i>. The programmer has to manually provide instances for type definitions with universal and existential quantification.</td></tr>
+</table>
+<p style="text-align:justify;">The compiler issues an error if there is no required instance for a type available. Required instances are determined by the overloading mechanism.</p>
+<p style="text-align:justify;"><span style="font-family:courier;color:#FF0000;"><b>derive</b></span> <span style="font-family:courier;color:#FF0000;"><b>class</b></span> of a class and type derives for the type all generic functions that occur directly in the context of the class definition (<span style="color:blue;"><a href="CleanLanguageReport6.html#_6.1">see 6.1</a></span>).</p>
+<p></p><div style="background-color:#FFFF45;">For example:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>import</b></span>&nbsp;GenEq,GenLexOrd<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;C&nbsp;a&nbsp;|&nbsp;gEq{|*|}&nbsp;a&nbsp;&amp;&nbsp;gLexOrd{|*|}&nbsp;a&nbsp;&amp;&nbsp;PlusMin&nbsp;a<br>
+<br>
+::&nbsp;T&nbsp;=&nbsp;V&nbsp;Char<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>derive</b></span>&nbsp;<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;C&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;derives&nbsp;gEq&nbsp;and&nbsp;gLexOrd&nbsp;for&nbsp;type&nbsp;T</span><br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_7.4">7.4 Applying Generic Functions</a></h2>
+<p style="text-align:justify;">The generic function in Clean stands for a set of overloaded functions. There is one function in the set for each kind. When a generic function is applied, the compiler must select one overloaded function in the set. The compiler cannot derive the required kind automatically. For this reason a kind has to be provided explicitly at each generic function application. Between the brackets <span style="font-family:courier;">{|</span> and <span style="font-family:courier;">|}</span> one can specify the intended kind. The compiler then resolves overloading of the selected overloaded function as usually.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericAppExpression</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;color:#993300;"><b>{|</b></span>TypeKind<span style="font-family:courier;color:#993300;"><b>|}</b></span> GraphExpr</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeKind</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>*</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">TypeKind <span style="font-family:courier;color:#993300;"><b>-&gt;</b></span> TypeKind</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">IntDenotation</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>(</b></span>TypeKind<span style="font-family:courier;color:#993300;"><b>)</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>{|</b></span>TypeKind<span style="font-family:courier;color:#993300;"><b>|}</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example: a generic equality operator can be defined as equality on types of kind *.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+(===)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2&nbsp;::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;gEq{|*|}&nbsp;a<br>
+(===)&nbsp;x&nbsp;y&nbsp;=&nbsp;gEq{|*|}&nbsp;x&nbsp;y<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example: a mapping function <span style="font-family:courier;">fmap</span> for functors and <span style="font-family:courier;">bmap</span> for bifunctors can be defined in terms of the generic mapping function defined above just by specializing it for the appropriate kind.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+fmap&nbsp;::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(f&nbsp;a)&nbsp;-&gt;&nbsp;(f&nbsp;b)&nbsp;|&nbsp;gMap{|*-&gt;*|}&nbsp;f<br>
+fmap&nbsp;f&nbsp;x&nbsp;y&nbsp;=&nbsp;gMap{|*-&gt;*|}&nbsp;f&nbsp;x&nbsp;y<br>
+<br>
+bmap&nbsp;::&nbsp;(a1&nbsp;-&gt;&nbsp;b1)&nbsp;(a2&nbsp;-&gt;&nbsp;b2)&nbsp;(f&nbsp;a1&nbsp;a2)&nbsp;-&gt;&nbsp;(f&nbsp;b1&nbsp;b2)&nbsp;|&nbsp;gMap{|*-&gt;*-&gt;*|}&nbsp;f<br>
+bmap&nbsp;f1&nbsp;f2&nbsp;x&nbsp;y&nbsp;=&nbsp;gMap{|*-&gt;*-&gt;*|}&nbsp;f1&nbsp;f2&nbsp;x&nbsp;y<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Equality makes sense not only on for kind *. In the example we alter the standard way of comparing elements. Equality for kind * and *-&gt;* are explicitly used.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+eqListFsts&nbsp;::&nbsp;[(a,&nbsp;b)]&nbsp;[(a,&nbsp;c)]&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;gEq{|*|}&nbsp;a<br>
+eqListFsts&nbsp;xs&nbsp;ys&nbsp;=&nbsp;gEq{|*-&gt;*|}&nbsp;(\x&nbsp;y&nbsp;-&gt;&nbsp;fst&nbsp;x&nbsp;===&nbsp;fst&nbsp;y)&nbsp;ys<br>
+<br>
+eqFsts&nbsp;::&nbsp;(f&nbsp;(a,&nbsp;b))&nbsp;(f&nbsp;(a,&nbsp;c))&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;gEq{|*-&gt;*|}&nbsp;f&nbsp;&amp;&nbsp;gEq{|*|}&nbsp;a<br>
+eqFsts&nbsp;xs&nbsp;ys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;gEq{|*-&gt;*|}&nbsp;(\x&nbsp;y&nbsp;-&gt;&nbsp;fst&nbsp;x&nbsp;===&nbsp;fst&nbsp;y)&nbsp;ys<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Examples of generic applications</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+Start&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;gEq{|*|}&nbsp;[1,2,3]&nbsp;[2,3,3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;True</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;[1,2,3]&nbsp;===&nbsp;[1,2,3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;True</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gEq{|*-&gt;*|}&nbsp;(\x&nbsp;y&nbsp;-&gt;&nbsp;True)&nbsp;[1,2,3]&nbsp;[4,5,6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;True</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;)<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_7.5">7.5 Using Constructor Information</a></h2>
+<p style="text-align:justify;">As it was outlined above, the structural representation of types lacks information about specific constructors and record fields, such as name, arity etc. This is because this information is not really part of the structure of types: different types can have the same structure. However, some generic functions need this information. Consider, for example a generic toString function that converts a value of any type to a string. It needs to print constructor names. For that reason the structural representation of types is extended with special constructor and field markers that enable us to pass information about fields and constructors to a generic function.</p>
+<p></p><div style="background-color:#FFFF45;">Definition of the constructor and field marker types (in StdGeneric.dcl).</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;CONS&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;CONS&nbsp;a<br>
+::&nbsp;OBJECT&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;OBJECT&nbsp;a<br>
+::&nbsp;RECORD&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;RECORD&nbsp;a<br>
+::&nbsp;FIELD&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;FIELD&nbsp;a<br></div>
+<p></p><p style="text-align:justify;">The markers themselves do not contain any information about constructors and fields. Instead, the information is passed to instances of a generic function on these markers.</p>
+<p></p><div style="background-color:#FFFF45;">Examples of structural representation with constructor and field information</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;ListS&nbsp;a&nbsp;&nbsp;&nbsp;:==&nbsp;OBJECT&nbsp;(EITHER&nbsp;(CONS&nbsp;UNIT)&nbsp;(CONS&nbsp;(PAIR&nbsp;a&nbsp;(List&nbsp;a))))<br>
+::&nbsp;TreeS&nbsp;a&nbsp;&nbsp;&nbsp;:==&nbsp;OBJECT&nbsp;(EITHER&nbsp;(CONS&nbsp;a)&nbsp;(CONS&nbsp;(PAIR&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a))))<br>
+<br>
+::&nbsp;Complex&nbsp;&nbsp;&nbsp;=&nbsp;{&nbsp;re&nbsp;&nbsp;&nbsp;::&nbsp;Real,&nbsp;im&nbsp;&nbsp;&nbsp;::&nbsp;Real&nbsp;}<br>
+::&nbsp;ComplexS&nbsp;&nbsp;:==&nbsp;RECORD&nbsp;(PAIR&nbsp;(FIELD&nbsp;Real)&nbsp;(FIELD&nbsp;Real))<br></div>
+<p></p><table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericTypeArg</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericMarkerType [<span style="font-family:courier;color:#FF0000;"><b>of</b></span> Pattern]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeVariable</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericMarkerType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>CONS</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>OBJECT</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>RECORD</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>FIELD</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Definition of the algebraic type, constructor, record type and field descriptors (StdGeneric.dcl)<br>The algebraic type descriptor is passed after <span style="font-family:courier;color:#FF0000;"><b>of</b></span> in the OBJECT case of a generic function.<br></div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">::&nbsp;GenericTypeDefDescriptor&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;gtd_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;String<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gtd_arity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gtd_num_conses&nbsp;::&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gtd_conses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;[GenericConsDescriptor]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></div>
+<div style="background-color:#FFFF45;">The constructor descriptor is passed after <span style="font-family:courier;color:#FF0000;"><b>of</b></span> in the CONS case of a generic function.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">::&nbsp;GenericConsDescriptor&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;gcd_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;String<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gcd_arity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gcd_prio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;GenConsPrio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;priority&nbsp;and&nbsp;associativity</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gcd_type_def&nbsp;&nbsp;&nbsp;::&nbsp;GenericTypeDefDescriptor&nbsp;<span style="color:#0000FF;">//&nbsp;type&nbsp;def&nbsp;of&nbsp;the&nbsp;constructor</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gcd_type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;GenType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;type&nbsp;of&nbsp;the&nbsp;constructor</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gcd_index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;Int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;index&nbsp;of&nbsp;the&nbsp;contructor&nbsp;in&nbsp;the&nbsp;type&nbsp;def</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">The record descriptor is passed after <span style="font-family:courier;color:#FF0000;"><b>of</b></span> in the RECORD case of a generic function.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">::&nbsp;GenericRecordDescriptor&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;grd_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;String<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;grd_arity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;grd_type_arity&nbsp;::&nbsp;Int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;arity&nbsp;of&nbsp;the&nbsp;type</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;grd_type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;GenType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;type&nbsp;of&nbsp;the&nbsp;constructor</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;grd_fields&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;[String]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></div>
+<div style="background-color:#FFFF45;">The field descriptor is passed after <span style="font-family:courier;color:#FF0000;"><b>of</b></span> in the FIELD case of a generic function.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">::&nbsp;GenericFieldDescriptor&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;gfd_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;String<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gfd_index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;Int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;index&nbsp;of&nbsp;the&nbsp;field&nbsp;in&nbsp;the&nbsp;record</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;gfd_cons&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;GenericRecordDescriptor&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;the&nbsp;record&nbsp;constructor</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Generic pretty printer.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;gToString&nbsp;a&nbsp;::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;String<br>
+gToString&nbsp;{|Int|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;toString&nbsp;x<br>
+gToString&nbsp;{|UNIT|}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;x<br>
+gToString&nbsp;{|PAIR|}&nbsp;fx&nbsp;fy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PAIR&nbsp;x&nbsp;y)&nbsp;&nbsp;&nbsp;=&nbsp;fx&nbsp;sep&nbsp;x&nbsp;+++&nbsp;sep&nbsp;+++&nbsp;fy&nbsp;sep&nbsp;y<br>
+gToString&nbsp;{|EITHER|}&nbsp;fl&nbsp;fr&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(LEFT&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;fl&nbsp;sep&nbsp;x<br>
+gToString&nbsp;{|EITHER|}&nbsp;fl&nbsp;fr&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(RIGHT&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;fr&nbsp;sep&nbsp;x<br>
+gToString&nbsp;{|CONS&nbsp;<span style="font-family:courier;color:#FF0000;"><b>of</b></span>&nbsp;c|}&nbsp;fx&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CONS&nbsp;x)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;c.gcd_arity&nbsp;==&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;c.gcd_name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;"("&nbsp;+++&nbsp;c.gcd_name&nbsp;+++&nbsp;"&nbsp;"&nbsp;+++&nbsp;fx&nbsp;"&nbsp;"&nbsp;&nbsp;x&nbsp;+++&nbsp;")"<br>
+gToString&nbsp;{|RECORD&nbsp;<span style="font-family:courier;color:#FF0000;"><b>of</b></span>&nbsp;c|}&nbsp;fx&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(RECORD&nbsp;x)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;"{"&nbsp;+++&nbsp;c.grd_name&nbsp;+++&nbsp;"&nbsp;|&nbsp;"&nbsp;+++&nbsp;fx&nbsp;",&nbsp;"&nbsp;x&nbsp;+++&nbsp;"}"<br>
+gToString&nbsp;{|FIELD&nbsp;<span style="font-family:courier;color:#FF0000;"><b>of</b></span>&nbsp;f|}&nbsp;fx&nbsp;&nbsp;&nbsp;sep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(FIELD&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;f.gfd_name&nbsp;+++&nbsp;"="&nbsp;+++&nbsp;fx&nbsp;x<br>
+<br>
+toStr&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;String&nbsp;|&nbsp;gToString{|*|}&nbsp;a<br>
+toStr&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;gToString{|*|}&nbsp;""&nbsp;x<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_7.6">7.6 Generic Functions and Uniqueness Typing</a></h2>
+<p style="text-align:justify;">Uniqueness is very important in Clean. The generic extension can deal with uniqueness. The mechanism that derives generic types for different kinds is extended to deal with uniqueness information. Roughly speaking it deals with uniqueness attribute variables in the same way as it does with normal generic variables.</p>
+<p></p><div style="background-color:#FFFF45;">The type of standard mapping for lists with uniqueness</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+map&nbsp;::&nbsp;(.a&nbsp;-&gt;&nbsp;.b)&nbsp;![.a]&nbsp;-&gt;&nbsp;[.b]<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Generic mapping with uniqueness.  The instance on lists has the same uniqueness typing as the standard map</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;gMap&nbsp;a&nbsp;b&nbsp;::&nbsp;.a&nbsp;-&gt;&nbsp;.b<br></div>
+<p></p><p style="text-align:justify;">Uniqueness information specified in the generic function is used in typing of generated code.</p>
+<p></p><div style="background-color:#FFFF45;">Generated classes</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+class&nbsp;gMap{|*|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;.t&nbsp;-&gt;&nbsp;.t<br>
+class&nbsp;gMap{|*-&gt;*|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;(.a&nbsp;-&gt;&nbsp;.b)&nbsp;(.t&nbsp;.a)&nbsp;-&gt;&nbsp;.t&nbsp;.b<br>
+class&nbsp;gMap{|*-&gt;*-&gt;*|}&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;(.a1&nbsp;-&gt;&nbsp;.b1)&nbsp;(.a2&nbsp;-&gt;&nbsp;.b2)&nbsp;(.t&nbsp;.a1&nbsp;.a2)&nbsp;-&gt;&nbsp;.t&nbsp;.b1&nbsp;.b2<br></div>
+<p></p><p style="text-align:justify;">Current limitations with uniqueness: generated types for higher order types require local uniqueness inequalities which are currently not supported.</p>
+<p></p><div style="background-color:#FFFF45;">Counter Example due to limitation in the current version of Clean.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+class&nbsp;gMap{|(*-&gt;*)-&gt;*|}&nbsp;t&nbsp;&nbsp;::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(A.&nbsp;(a:a)&nbsp;(b:b):&nbsp;(.a&nbsp;-&gt;&nbsp;.b)&nbsp;-&gt;&nbsp;(f:f&nbsp;a:a)&nbsp;-&gt;&nbsp;g:g&nbsp;a:a,&nbsp;[f&nbsp;&lt;=&nbsp;a,&nbsp;g&nbsp;&lt;=&nbsp;b])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(.t&nbsp;.f)&nbsp;-&gt;&nbsp;.t&nbsp;.g<br>
+&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;[f&nbsp;&lt;=&nbsp;t,&nbsp;g&nbsp;&lt;=&nbsp;t]<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_7.7">7.7 Generic Functions Using Other Generic Functions</a></h2>
+<p style="text-align:justify;">Generic type variables may not be used in the context of a generic function, for example: </p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;f1&nbsp;a&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;Int&nbsp;|&nbsp;Eq&nbsp;a<span style="font-family:courier;color:#0000FF;"><b>;</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;incorrect</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;f2&nbsp;a&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;Int&nbsp;|&nbsp;gEq{|*|}&nbsp;a<span style="font-family:courier;color:#0000FF;"><b>;</b></span>&nbsp;<span style="color:#0000FF;">//&nbsp;incorrect</span><br><p></p>
+<p style="text-align:justify;">However generic function definitions that depend on other generic functions can be defined by adding a <span style="font-family:courier;">|</span> followed by the required generic functions, separated by commas.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>generic</b></span> <span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">TypeVariable</span>+ [GenericDependencies] <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericDependencies</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>|</b></span> {<span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">TypeVariable</span>+ }-list</td></tr>
+</table><p></p>
+<p style="text-align:justify;">For example, to define <span style="font-family:courier;">h</span> using <span style="font-family:courier;">g1</span> and <span style="font-family:courier;">g2</span>:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;g1&nbsp;a&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;Int<span style="font-family:courier;color:#0000FF;"><b>;</b></span><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;g2&nbsp;a&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;Int<span style="font-family:courier;color:#0000FF;"><b>;</b></span><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;h&nbsp;a&nbsp;|&nbsp;g1&nbsp;a,&nbsp;g2&nbsp;a&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;Int<span style="font-family:courier;color:#0000FF;"><b>;</b></span><br>
+<br>
+h{|PAIR|}&nbsp;ha&nbsp;g1a&nbsp;g2a&nbsp;hb&nbsp;g1b&nbsp;g2b&nbsp;(PAIR&nbsp;a&nbsp;b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;g1a&nbsp;a+g2b&nbsp;b<span style="font-family:courier;color:#0000FF;"><b>;</b></span><br><p></p>
+<p style="text-align:justify;">The algorithm for generating classes described in <span style="color:blue;"><a href="#_7.2">7.2</a></span> is extended to add the dependent generic function arguments after each argument added by <span style="font-family:courier;">(GenFun{|k|} b1 .. bn)</span>.</p>
+<h2 style="background-color:#9999FF;"><a id="_7.8">7.8 Exporting Generic Functions</a></h2>
+<p style="text-align:justify;">Generic declarations and generic cases - both provided and derived - can be exported from a module. Exporting a generic function is done by giving the <i>generic</i> declaration in the DCL module. Exporting provided and derived generic cases is done by means of <i>derive</i>.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericExportDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericDef <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>derive</b></span> <span style="font-family:courier;">FunctionName</span> {DeriveExportType [UsedGenericDependencies]}-list <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>derive</b></span> <span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;">ClassName</span> {DerivableType}-list <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;color:#993300;"><b>{|</b></span>GenericExportTypeArg<span style="font-family:courier;color:#993300;"><b>|}</b></span> {Pattern}+ <span style="font-family:courier;color:#993300;"><b>=</b></span> FunctionBody</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>generic</b></span> <span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">TypeVariable</span>+ <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType</td></tr>
+</table><p></p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">DeriveExportType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericMarkerType [<span style="font-family:courier;color:#FF0000;"><b>of</b></span> UsedGenericInfoFields]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">PredefinedTypeConstructor</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeVariable</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">UsedGenericInfoFields</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>{</b></span>[{<span style="font-family:courier;">FieldName</span>}-list]<span style="font-family:courier;color:#993300;"><b>}</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">Variable</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">UsedGenericDependencies</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>with</b></span> {UsedGenericDependency}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">UsedGenericDependency</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">Variable</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>_</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GenericExportTypeArg</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GenericMarkerType [<span style="font-family:courier;color:#FF0000;"><b>of</b></span> Pattern]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>UNIT</b></span> | <span style="font-family:courier;color:#FF0000;"><b>PAIR</b></span> | <span style="font-family:courier;color:#FF0000;"><b>EITHER</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example. Exporting of generic mapping. Definition as given in module GenMap.dcl</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;gMap&nbsp;a&nbsp;b&nbsp;::&nbsp;.a&nbsp;-&gt;&nbsp;.b<br>
+<span style="font-family:courier;color:#FF0000;"><b>derive</b></span>&nbsp;gMap&nbsp;c,&nbsp;PAIR,&nbsp;EITHER,&nbsp;CONS,&nbsp;FIELD,&nbsp;[]<br></div>
+<p></p><p style="text-align:justify;">A generic function cannot be derived for an abstract data type, but it can be derived in the module where the abstract type defined. Thus, when one may export derived instance along with the abstract data type.</p>
+<p style="text-align:justify;">Additional information can be specified to make it possible for the compiler to optimize the generated code.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The used generic info fields for generic instances of <span style="font-family:courier;">OBJECT</span>, <span style="font-family:courier;">CONS</span>, <span style="font-family:courier;">RECORD</span> and <span style="font-family:courier;">FIELD</span> can be specified by adding: <span style="font-family:courier;">of</span> {<span style="font-family:courier;">FieldName</span>}-list, at the end of the derive statement.</td></tr>
+</table>
+<p style="text-align:justify;">For example for:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">gToString&nbsp;{|FIELD&nbsp;of&nbsp;{gfd_name}|}&nbsp;fx&nbsp;sep&nbsp;(FIELD&nbsp;x)&nbsp;=&nbsp;gfd_name&nbsp;+++&nbsp;"="&nbsp;+++&nbsp;fx&nbsp;x<br><p></p>
+<p style="text-align:justify;">add: <span style="font-family:courier;">of {gcd_name}</span> in the definition module:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">derive&nbsp;gToString&nbsp;FIELD&nbsp;of&nbsp;{gfd_name}<br><p></p>
+<p style="text-align:justify;">and the function will be called with just a <span style="font-family:courier;">gfd_name</span>, instead of a <span style="font-family:courier;">GenericFieldDescriptor</span> record.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">Whether generic function dependencies for generic instances are used can be specified by adding: <span style="font-family:courier;">with</span> followed by the list of dependencies. An <span style="font-family:courier;">_</span> indicates an unused dependency, a lower case identifier a (possibly) used dependency.</td></tr>
+</table>
+<p style="text-align:justify;">For example for:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>generic</b></span>&nbsp;h&nbsp;a&nbsp;|&nbsp;g1&nbsp;a,&nbsp;g2&nbsp;a&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;Int;<br>
+h&nbsp;{|OBJECT&nbsp;<span style="font-family:courier;color:#FF0000;"><b>of</b></span>&nbsp;{gtd_name}|}&nbsp;_&nbsp;g1_a&nbsp;_&nbsp;(OBJECT&nbsp;a)&nbsp;=&nbsp;g1_a&nbsp;gtd_name&nbsp;a;<br><p></p>
+<p style="text-align:justify;">Add: <span style="font-family:courier;">with _ g1 _</span> in the definition module:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>derive</b></span>&nbsp;h&nbsp;OBJECT&nbsp;<span style="font-family:courier;color:#FF0000;"><b>of</b></span>&nbsp;{gtd_name}&nbsp;<span style="font-family:courier;color:#FF0000;"><b>with</b></span>&nbsp;_&nbsp;g1&nbsp;_;<br><p></p>
+<p style="text-align:justify;"><span style="font-family:courier;">h</span> for <span style="font-family:courier;">OBJECT</span> will be called without a function argument for <span style="font-family:courier;">h</span> (for a of <span style="font-family:courier;">OBJECT</span>), with <span style="font-family:courier;">g1</span> and without <span style="font-family:courier;">g2</span>, because <span style="font-family:courier;">h</span> and <span style="font-family:courier;">g2</span> are not used by the implementation.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">Generic cases for the generic representation types (<span style="font-family:courier;">UNIT</span>, <span style="font-family:courier;">PAIR</span>, <span style="font-family:courier;">EITHER</span>, <span style="font-family:courier;">OBJECT</span>, <span style="font-family:courier;">CONS</span>, <span style="font-family:courier;">RECORD</span>, <span style="font-family:courier;">FIELD</span>) may be defined in definition modules (instead of a derive) using the same syntax as used in implementation modules.</td></tr>
+</table>
+</body>
+</html>

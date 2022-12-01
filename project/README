@@ -1,0 +1,52 @@
+Installing Clean
+================
+
+By default the Clean system is installed in the current directory.
+You can override these defaults by changing INSTALL_BIN_DIR, INSTALL_LIB_DIR, INSTALL_MAN_DIR in the Makefile.
+
+To install the Clean system type:
+
+	make
+
+Using Clean
+===========
+
+Compiling Clean programs on linux can be done using one of the following tools:
+
+- clm: A build tool for simple projects. All compilation options and paths to libraries are specified as command line arguments
+
+- cpm: A build tool that allows you to specify build configurations of programs in Clean project files (.prj).
+       You can use cpm to create or edit project files and build those projects.
+
+  cpm relies on the environment variable `CLEAN_HOME` to point to where you installed Clean to find libraries and executables.
+  So for example if you have installed clean in '/Users/myusername/clean' you should add the following exports to your .bashrc/.profile/etc
+
+  export CLEAN_HOME=/Users/myusername/clean
+  export PATH=$PATH:$CLEAN_HOME/bin
+
+Dependencies
+============
+
+Clean uses the linker and assembler from Apple. These are not
+installed by default. Therefore first Apple's XCode must be installed.
+For more information on XCode see:
+https://developer.apple.com/xcode/
+
+Compiling the example programs
+==============================
+
+The directory 'examples/SmallExamples' contains small Clean programs.
+The directory contains a Makefile to compile the examples.
+
+General Info
+============
+
+Additional information about Clean can be found on the website:
+
+  http://clean.cs.ru.nl
+
+Bug reports, questions and suggestions are welcome. Please send them to:
+
+	mailto:clean@cs.ru.nl
+
+Versions of Clean are available for several platforms.

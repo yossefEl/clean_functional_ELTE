@@ -1,0 +1,138 @@
+body {
+	background-color: #fff;
+
+	margin: 0px;
+	font-family: Verdana, Arial, sans-serif;
+}
+a {
+	color: #ff9933;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+img {
+	border: none;
+}
+#main-menu {
+	position: absolute;
+	top: 110px;
+	left: 20px;
+	height: 30px;
+	width: 100px;
+	text-align: right;
+}
+#main-menu a {
+	display: block;
+	color: #999;
+	text-decoration: none;
+}
+#main-title {
+	position: absolute;
+	top: 60px;
+	left: 145px;
+	height: 50px;
+}
+#main-title h1 {
+	margin: 0px;
+	font-family: "Trebuchet MS",Verdana, sans-serif;
+	color: #000;
+}
+#main-content {
+	position: absolute;
+	top: 110px;
+	left: 135px;
+	width: 600px;
+	font-size: 12px;
+
+	border: dashed #ccc;
+	border-width: 0px 1px 0px 1px;
+	padding: 0px 10px 100px 10px;
+}
+#main-message {
+	background-color: #D6F5E0;
+	border: 1px dashed #5CD685;
+	padding: 5px;
+	margin-bottom: 5px;
+	font-style: italic;
+}
+#main-message img {
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+
+table.pm-formlayout {
+	width: 100%;
+	margin-bottom: 10px;
+}
+table.pm-formlayout th {
+	background-color: #ff9933;
+	color: #fff;
+
+	width: 150px;
+	text-align: left;
+	padding: 2px;
+
+	vertical-align: top;
+}
+table.pm-formlayout td {
+	background-color: #eee;
+	padding: 2px;
+}
+
+table.pm-table {
+	width: 100%;
+	border-spacing: 0px;
+	background-color: #fff;
+}
+table.pm-table tr {
+}
+table.pm-table th {
+	background-color: #ccc;
+	color: #fff;
+	text-align: left;
+	border: 2px solid;
+	border-color: #ddd #bbb #bbb #ddd;
+}
+table.pm-table td {
+	border: solid #999;
+	border-width: 0px 0px 1px 0px;
+}
+
+div.pm-addrow {
+	padding: 2px;
+}
+div.pm-addrow img {
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}
+
+div.pm-toolbar {
+	text-align: right;
+	padding: 2px 0px 2px 0px;
+	margin: 0px 0px 5px 0px;
+}
+
+fieldset.pm-fieldset legend {
+	font-weight: bold;
+}
+
+table.pm-subset {
+	width: 300px;
+	text-align: center;
+}
+table.pm-subset th {
+	color: #000;	
+	background-color: transparent;
+}
+table.pm-subset select {
+	width: 100%;
+}
+
+button img {
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}

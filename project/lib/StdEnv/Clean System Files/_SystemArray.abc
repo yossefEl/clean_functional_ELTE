@@ -1,0 +1,5862 @@
+.comp 920 000111010010000
+.start _nostart_
+.depend "_SystemArray" "20211222160339"
+.module m__SystemArray "_SystemArray" "20211222160339"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.export e__SystemArray_rArray;
+.record e__SystemArray_rArray; aaaaaaaa 8 0 "Array;"
+.descexp e__SystemArray_tArray; e__SystemArray_cArray; _hnf 8 1 "Array;"
+.n 8 e__SystemArray_tArray;
+.o 1 0
+e__SystemArray_cArray;
+	push_node _cycle_in_spine 8
+	jsr_eval 7
+	jsr_eval 6
+	jsr_eval 5
+	jsr_eval 4
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+.impmod _SystemArray
+.impdesc e__SystemArray_rArray;
+	fill_r e__SystemArray_rArray; 8 0 8 0 0
+	pop_a 8
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;._createArray
+.export e__SystemArray_nArray;._createArray
+.export e__SystemArray_eaArray;._createArray
+.descs e__SystemArray_dArray;._createArray e__SystemArray_nArray;._createArray _ 1 0 "Array;._createArray"
+.n -4 e__SystemArray_dArray;._createArray e__SystemArray_eaArray;._createArray
+.o 1 0
+e__SystemArray_nArray;._createArray
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;._createArray
+	jsr_eval 0
+	repl_r_args_a 8 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.createArray
+.export e__SystemArray_nArray;.createArray
+.export e__SystemArray_eaArray;.createArray
+.descs e__SystemArray_dArray;.createArray e__SystemArray_nArray;.createArray _ 3 0 "Array;.createArray"
+.n -4 e__SystemArray_dArray;.createArray e__SystemArray_eaArray;.createArray
+.o 1 0
+e__SystemArray_nArray;.createArray
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.createArray
+	jsr_eval 0
+	repl_r_args_a 8 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.replace
+.export e__SystemArray_nArray;.replace
+.export e__SystemArray_eaArray;.replace
+.descs e__SystemArray_dArray;.replace e__SystemArray_nArray;.replace _ 4 0 "Array;.replace"
+.n -4 e__SystemArray_dArray;.replace e__SystemArray_eaArray;.replace
+.o 1 0
+e__SystemArray_nArray;.replace
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.replace
+	jsr_eval 0
+	repl_r_args_a 8 0 3 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.select
+.export e__SystemArray_nArray;.select
+.export e__SystemArray_eaArray;.select
+.descs e__SystemArray_dArray;.select e__SystemArray_nArray;.select _ 5 0 "Array;.select"
+.n -4 e__SystemArray_dArray;.select e__SystemArray_eaArray;.select
+.o 1 0
+e__SystemArray_nArray;.select
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.select
+	jsr_eval 0
+	repl_r_args_a 8 0 4 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.size
+.export e__SystemArray_nArray;.size
+.export e__SystemArray_eaArray;.size
+.descs e__SystemArray_dArray;.size e__SystemArray_nArray;.size _ 6 0 "Array;.size"
+.n -4 e__SystemArray_dArray;.size e__SystemArray_eaArray;.size
+.o 1 0
+e__SystemArray_nArray;.size
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.size
+	jsr_eval 0
+	repl_r_args_a 8 0 5 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.update
+.export e__SystemArray_nArray;.update
+.export e__SystemArray_eaArray;.update
+.descs e__SystemArray_dArray;.update e__SystemArray_nArray;.update _ 7 0 "Array;.update"
+.n -4 e__SystemArray_dArray;.update e__SystemArray_eaArray;.update
+.o 1 0
+e__SystemArray_nArray;.update
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.update
+	jsr_eval 0
+	repl_r_args_a 8 0 6 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.uselect
+.export e__SystemArray_nArray;.uselect
+.export e__SystemArray_eaArray;.uselect
+.descs e__SystemArray_dArray;.uselect e__SystemArray_nArray;.uselect _ 8 0 "Array;.uselect"
+.n -4 e__SystemArray_dArray;.uselect e__SystemArray_eaArray;.uselect
+.o 1 0
+e__SystemArray_nArray;.uselect
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.uselect
+	jsr_eval 0
+	repl_r_args_a 8 0 7 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_dArray;.usize
+.export e__SystemArray_nArray;.usize
+.export e__SystemArray_eaArray;.usize
+.descs e__SystemArray_dArray;.usize e__SystemArray_nArray;.usize _ 9 0 "Array;.usize"
+.n -4 e__SystemArray_dArray;.usize e__SystemArray_eaArray;.usize
+.o 1 0
+e__SystemArray_nArray;.usize
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemArray_eaArray;.usize
+	jsr_eval 0
+	repl_r_args_a 8 0 8 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;111
+.descexp e__SystemArray_dusize;111 e__SystemArray_nusize;111 e__SystemArray_lusize;111 1 0 "usize;111"
+.o 2 0
+e__SystemArray_iusize;111
+	pop_a 1
+.d 1 0
+	jmp s112
+.ai 1 _ e__SystemArray_iusize;111
+.o 2 0
+e__SystemArray_lusize;111
+	pop_a 1
+.d 1 0
+	jsr ea112
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;111
+.o 1 0
+e__SystemArray_nusize;111
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea112
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea112
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;111
+.o 1 0
+s112
+	push_a 0
+	push_arraysize _ 1 0
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;110
+.descexp e__SystemArray_duselect;110 e__SystemArray_nuselect;110 e__SystemArray_luselect;110 2 0 "uselect;110"
+.o 2 1 i
+e__SystemArray_iuselect;110
+	pop_a 1
+.d 1 1 i
+	jmp s111
+.ai 0 a111 e__SystemArray_iuselect;110
+.o 2 0
+e__SystemArray_luselect;110
+	repl_args 1 1
+.o 2 0
+a111
+.d 2 0
+	jsr ea111
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;110
+.o 1 0
+e__SystemArray_nuselect;110
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea111
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea111
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;110
+.o 1 1 i
+s111
+	push_a 0
+	select _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;109
+.descexp e__SystemArray_dupdate;109 e__SystemArray_nupdate;109 e__SystemArray_lupdate;109 3 0 "update;109"
+.o 3 1 i
+e__SystemArray_iupdate;109
+	pop_a 1
+.d 2 1 i
+	jmp s110
+.ai 0 a110 e__SystemArray_iupdate;109
+.o 2 0
+e__SystemArray_lupdate;109
+	repl_args 2 2
+.o 3 0
+a110
+.d 3 0
+	jsr ea110
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;109
+.o 1 0
+e__SystemArray_nupdate;109
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea110
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea110
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_supdate;109
+.o 2 1 i
+s110
+	update _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;108
+.descexp e__SystemArray_dsize;108 e__SystemArray_nsize;108 e__SystemArray_lsize;108 1 0 "size;108"
+.o 2 0
+e__SystemArray_isize;108
+	pop_a 1
+.d 1 0
+	jmp s109
+.ai 1 _ e__SystemArray_isize;108
+.o 2 0
+e__SystemArray_lsize;108
+	pop_a 1
+.d 1 0
+	jsr ea109
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;108
+.o 1 0
+e__SystemArray_nsize;108
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea109
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea109
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;108
+.o 1 0
+s109
+	push_arraysize _ 1 0
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;107
+.descexp e__SystemArray_dselect;107 e__SystemArray_nselect;107 e__SystemArray_lselect;107 2 0 "select;107"
+.o 2 1 i
+e__SystemArray_iselect;107
+	pop_a 1
+.d 1 1 i
+	jmp s108
+.ai 0 ea108 e__SystemArray_iselect;107
+.o 2 0
+e__SystemArray_lselect;107
+	repl_args 1 1
+.d 2 0
+	jmp ea108
+.n 2 e__SystemArray_dselect;107 _
+.o 1 0
+e__SystemArray_nselect;107
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea108
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 2 0
+ea108
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;107
+.o 1 1 i
+s108
+	select _ 1 0
+	jsr_eval 0
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;106
+.descexp e__SystemArray_dreplace;106 e__SystemArray_nreplace;106 e__SystemArray_lreplace;106 3 0 "replace;106"
+.o 3 1 i
+e__SystemArray_ireplace;106
+	pop_a 1
+.d 2 1 i
+	jmp s107
+.ai 0 a107 e__SystemArray_ireplace;106
+.o 2 0
+e__SystemArray_lreplace;106
+	repl_args 2 2
+.o 3 0
+a107
+.d 3 0
+	jsr ea107
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;106
+.o 1 0
+e__SystemArray_nreplace;106
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea107
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea107
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_sreplace;106
+.o 2 1 i
+s107
+	replace _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;105
+.descexp e__SystemArray_dcreateArray;105 e__SystemArray_ncreateArray;105 e__SystemArray_lcreateArray;105 2 0 "createArray;105"
+.o 2 1 i
+e__SystemArray_icreateArray;105
+	pop_a 1
+.d 1 1 i
+	jmp s106
+.ai 0 a106 e__SystemArray_icreateArray;105
+.o 2 0
+e__SystemArray_lcreateArray;105
+	repl_args 1 1
+.o 2 0
+a106
+.d 2 0
+	jsr ea106
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;105
+.o 1 0
+e__SystemArray_ncreateArray;105
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea106
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea106
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemArray_screateArray;105
+.o 1 1 i
+s106
+	create_array _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;104
+.descexp e__SystemArray_d_createArray;104 e__SystemArray_n_createArray;104 e__SystemArray_l_createArray;104 1 0 "_createArray;104"
+.o 1 1 i
+e__SystemArray_i_createArray;104
+	pop_a 1
+.d 0 1 i
+	jmp s105
+.ai 1 _ e__SystemArray_i_createArray;104
+.o 2 0
+e__SystemArray_l_createArray;104
+	pop_a 1
+.d 1 0
+	jsr ea105
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;104
+.o 1 0
+e__SystemArray_n_createArray;104
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea105
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea105
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;104
+.o 0 1 i
+s105
+	create_array_ _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_susize;103
+.descexp e__SystemArray_dusize;103 e__SystemArray_nusize;103 e__SystemArray_lusize;103 1 0 "usize;103"
+.o 2 0
+e__SystemArray_iusize;103
+	pop_a 1
+.d 1 0
+	jmp s104
+.ai 1 _ e__SystemArray_iusize;103
+.o 2 0
+e__SystemArray_lusize;103
+	pop_a 1
+.d 1 0
+	jsr ea104
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;103
+.o 1 0
+e__SystemArray_nusize;103
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea104
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea104
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;103
+.o 1 0
+s104
+	buildAC "StdArray:usize ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;102
+.descexp e__SystemArray_duselect;102 e__SystemArray_nuselect;102 e__SystemArray_luselect;102 2 0 "uselect;102"
+.o 2 1 i
+e__SystemArray_iuselect;102
+	pop_a 1
+.d 1 1 i
+	jsr s103
+.o 2 0
+.d 2 0
+	rtn
+.ai 0 a103 e__SystemArray_iuselect;102
+.o 2 0
+e__SystemArray_luselect;102
+	repl_args 1 1
+.o 2 0
+a103
+.d 2 0
+	jsr ea103
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;102
+.o 1 0
+e__SystemArray_nuselect;102
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea103
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea103
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;102
+.o 1 1 i
+s103
+	buildAC "StdArray:uselect ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;101
+.descexp e__SystemArray_dupdate;101 e__SystemArray_nupdate;101 e__SystemArray_lupdate;101 3 0 "update;101"
+.o 3 1 i
+e__SystemArray_iupdate;101
+	pop_a 1
+	jsr_eval 1
+.d 2 1 i
+	jmp s102
+.ai 0 a102 e__SystemArray_iupdate;101
+.o 2 0
+e__SystemArray_lupdate;101
+	repl_args 2 2
+.o 3 0
+a102
+.d 3 0
+	jsr ea102
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;101
+.o 1 0
+e__SystemArray_nupdate;101
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea102
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea102
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_supdate;101
+.o 2 1 i
+s102
+	buildAC "StdArray:update ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;100
+.descexp e__SystemArray_dsize;100 e__SystemArray_nsize;100 e__SystemArray_lsize;100 1 0 "size;100"
+.o 2 0
+e__SystemArray_isize;100
+	pop_a 1
+.d 1 0
+	jmp s101
+.ai 1 _ e__SystemArray_isize;100
+.o 2 0
+e__SystemArray_lsize;100
+	pop_a 1
+.d 1 0
+	jsr ea101
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;100
+.o 1 0
+e__SystemArray_nsize;100
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea101
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea101
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;100
+.o 1 0
+s101
+	buildAC "StdArray:size ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;99
+.descexp e__SystemArray_dselect;99 e__SystemArray_nselect;99 e__SystemArray_lselect;99 2 0 "select;99"
+.o 2 1 i
+e__SystemArray_iselect;99
+	pop_a 1
+.d 1 1 i
+	jmp s100
+.ai 0 ea100 e__SystemArray_iselect;99
+.o 2 0
+e__SystemArray_lselect;99
+	repl_args 1 1
+.d 2 0
+	jmp ea100
+.n 2 e__SystemArray_dselect;99 _
+.o 1 0
+e__SystemArray_nselect;99
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea100
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 2 0
+ea100
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;99
+.o 1 1 i
+s100
+	buildAC "StdArray:select ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;98
+.descexp e__SystemArray_dreplace;98 e__SystemArray_nreplace;98 e__SystemArray_lreplace;98 3 0 "replace;98"
+.o 3 1 i
+e__SystemArray_ireplace;98
+	pop_a 1
+	jsr_eval 1
+.d 2 1 i
+	jsr s99
+.o 2 0
+.d 2 0
+	rtn
+.ai 0 a99 e__SystemArray_ireplace;98
+.o 2 0
+e__SystemArray_lreplace;98
+	repl_args 2 2
+.o 3 0
+a99
+.d 3 0
+	jsr ea99
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;98
+.o 1 0
+e__SystemArray_nreplace;98
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea99
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea99
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_sreplace;98
+.o 2 1 i
+s99
+	buildAC "StdArray:replace ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;97
+.descexp e__SystemArray_dcreateArray;97 e__SystemArray_ncreateArray;97 e__SystemArray_lcreateArray;97 2 0 "createArray;97"
+.o 2 1 i
+e__SystemArray_icreateArray;97
+	pop_a 1
+	jsr_eval 0
+.d 1 1 i
+	jmp s98
+.ai 0 a98 e__SystemArray_icreateArray;97
+.o 2 0
+e__SystemArray_lcreateArray;97
+	repl_args 1 1
+.o 2 0
+a98
+.d 2 0
+	jsr ea98
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;97
+.o 1 0
+e__SystemArray_ncreateArray;97
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea98
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea98
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemArray_screateArray;97
+.o 1 1 i
+s98
+	buildAC "StdArray:createArray ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;96
+.descexp e__SystemArray_d_createArray;96 e__SystemArray_n_createArray;96 e__SystemArray_l_createArray;96 1 0 "_createArray;96"
+.o 1 1 i
+e__SystemArray_i_createArray;96
+	pop_a 1
+.d 0 1 i
+	jmp s97
+.ai 1 _ e__SystemArray_i_createArray;96
+.o 2 0
+e__SystemArray_l_createArray;96
+	pop_a 1
+.d 1 0
+	jsr ea97
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;96
+.o 1 0
+e__SystemArray_n_createArray;96
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea97
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea97
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;96
+.o 0 1 i
+s97
+	buildAC "StdArray:_createArray ({32#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_susize;95
+.descexp e__SystemArray_dusize;95 e__SystemArray_nusize;95 e__SystemArray_lusize;95 1 0 "usize;95"
+.o 2 0
+e__SystemArray_iusize;95
+	pop_a 1
+.d 1 0
+	jmp s96
+.ai 1 _ e__SystemArray_iusize;95
+.o 2 0
+e__SystemArray_lusize;95
+	pop_a 1
+.d 1 0
+	jsr ea96
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;95
+.o 1 0
+e__SystemArray_nusize;95
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea96
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea96
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;95
+.o 1 0
+s96
+	push_a 0
+	push_arraysize REAL32 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;94
+.descexp e__SystemArray_duselect;94 e__SystemArray_nuselect;94 e__SystemArray_luselect;94 2 0 "uselect;94"
+.o 2 1 i
+e__SystemArray_iuselect;94
+	pop_a 1
+.d 1 1 i
+	jsr s95
+.o 1 1 r
+	buildR_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a95 e__SystemArray_iuselect;94
+.o 2 0
+e__SystemArray_luselect;94
+	repl_args 1 1
+.o 2 0
+a95
+.d 2 0
+	jsr ea95
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;94
+.o 1 0
+e__SystemArray_nuselect;94
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea95
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea95
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;94
+.o 1 1 i
+s95
+	push_a 0
+	select REAL32 0 1
+.d 1 1 r
+	rtn
+.export e__SystemArray_supdate;93
+.descexp e__SystemArray_dupdate;93 e__SystemArray_nupdate;93 e__SystemArray_lupdate;93 3 0 "update;93"
+.o 3 1 i
+e__SystemArray_iupdate;93
+	pop_a 1
+	jsr_eval 1
+	pushR_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ir
+	jmp s94
+.ai 0 a94 e__SystemArray_iupdate;93
+.o 2 0
+e__SystemArray_lupdate;93
+	repl_args 2 2
+.o 3 0
+a94
+.d 3 0
+	jsr ea94
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;93
+.o 1 0
+e__SystemArray_nupdate;93
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea94
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea94
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ir
+e__SystemArray_supdate;93
+.o 1 2 ir
+s94
+	update REAL32 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;92
+.descexp e__SystemArray_dsize;92 e__SystemArray_nsize;92 e__SystemArray_lsize;92 1 0 "size;92"
+.o 2 0
+e__SystemArray_isize;92
+	pop_a 1
+.d 1 0
+	jmp s93
+.ai 1 _ e__SystemArray_isize;92
+.o 2 0
+e__SystemArray_lsize;92
+	pop_a 1
+.d 1 0
+	jsr ea93
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;92
+.o 1 0
+e__SystemArray_nsize;92
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea93
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea93
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;92
+.o 1 0
+s93
+	push_arraysize REAL32 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;91
+.descexp e__SystemArray_dselect;91 e__SystemArray_nselect;91 e__SystemArray_lselect;91 2 0 "select;91"
+.o 2 1 i
+e__SystemArray_iselect;91
+	pop_a 1
+.d 1 1 i
+	jsr s92
+.o 0 1 r
+	buildR_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.ai 0 a92 e__SystemArray_iselect;91
+.o 2 0
+e__SystemArray_lselect;91
+	repl_args 1 1
+.o 2 0
+a92
+.d 2 0
+	jsr ea92
+.o 0 1 r
+	buildR_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;91
+.o 1 0
+e__SystemArray_nselect;91
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea92
+.o 0 1 r
+	fillR_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea92
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;91
+.o 1 1 i
+s92
+	select REAL32 0 1
+.d 0 1 r
+	rtn
+.export e__SystemArray_sreplace;90
+.descexp e__SystemArray_dreplace;90 e__SystemArray_nreplace;90 e__SystemArray_lreplace;90 3 0 "replace;90"
+.o 3 1 i
+e__SystemArray_ireplace;90
+	pop_a 1
+	jsr_eval 1
+	pushR_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ir
+	jsr s91
+.o 1 1 r
+	buildR_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a91 e__SystemArray_ireplace;90
+.o 2 0
+e__SystemArray_lreplace;90
+	repl_args 2 2
+.o 3 0
+a91
+.d 3 0
+	jsr ea91
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;90
+.o 1 0
+e__SystemArray_nreplace;90
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea91
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 3 0
+ea91
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ir
+e__SystemArray_sreplace;90
+.o 1 2 ir
+s91
+	replace REAL32 0 1
+.d 1 1 r
+	rtn
+.export e__SystemArray_screateArray;89
+.descexp e__SystemArray_dcreateArray;89 e__SystemArray_ncreateArray;89 e__SystemArray_lcreateArray;89 2 0 "createArray;89"
+.o 2 1 i
+e__SystemArray_icreateArray;89
+	pop_a 1
+	jsr_eval 0
+	pushR_a 0
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 0 2 ir
+	jmp s90
+.ai 0 a90 e__SystemArray_icreateArray;89
+.o 2 0
+e__SystemArray_lcreateArray;89
+	repl_args 1 1
+.o 2 0
+a90
+.d 2 0
+	jsr ea90
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;89
+.o 1 0
+e__SystemArray_ncreateArray;89
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea90
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea90
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 1
+	pushI_a 0
+	pop_a 2
+.o 0 2 ir
+e__SystemArray_screateArray;89
+.o 0 2 ir
+s90
+	create_array REAL32 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;88
+.descexp e__SystemArray_d_createArray;88 e__SystemArray_n_createArray;88 e__SystemArray_l_createArray;88 1 0 "_createArray;88"
+.o 1 1 i
+e__SystemArray_i_createArray;88
+	pop_a 1
+.d 0 1 i
+	jmp s89
+.ai 1 _ e__SystemArray_i_createArray;88
+.o 2 0
+e__SystemArray_l_createArray;88
+	pop_a 1
+.d 1 0
+	jsr ea89
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;88
+.o 1 0
+e__SystemArray_n_createArray;88
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea89
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea89
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;88
+.o 0 1 i
+s89
+	create_array_ REAL32 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;87
+.descexp e__SystemArray_dusize;87 e__SystemArray_nusize;87 e__SystemArray_lusize;87 1 0 "usize;87"
+.o 2 0
+e__SystemArray_iusize;87
+	pop_a 1
+.d 1 0
+	jmp s88
+.ai 1 _ e__SystemArray_iusize;87
+.o 2 0
+e__SystemArray_lusize;87
+	pop_a 1
+.d 1 0
+	jsr ea88
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;87
+.o 1 0
+e__SystemArray_nusize;87
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea88
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea88
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;87
+.o 1 0
+s88
+	push_a 0
+	push_arraysize INT32 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;86
+.descexp e__SystemArray_duselect;86 e__SystemArray_nuselect;86 e__SystemArray_luselect;86 2 0 "uselect;86"
+.o 2 1 i
+e__SystemArray_iuselect;86
+	pop_a 1
+.d 1 1 i
+	jsr s87
+.o 1 1 i
+	buildI_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a87 e__SystemArray_iuselect;86
+.o 2 0
+e__SystemArray_luselect;86
+	repl_args 1 1
+.o 2 0
+a87
+.d 2 0
+	jsr ea87
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;86
+.o 1 0
+e__SystemArray_nuselect;86
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea87
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea87
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;86
+.o 1 1 i
+s87
+	push_a 0
+	select INT32 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_supdate;85
+.descexp e__SystemArray_dupdate;85 e__SystemArray_nupdate;85 e__SystemArray_lupdate;85 3 0 "update;85"
+.o 3 1 i
+e__SystemArray_iupdate;85
+	pop_a 1
+	jsr_eval 1
+	pushI_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ii
+	jmp s86
+.ai 0 a86 e__SystemArray_iupdate;85
+.o 2 0
+e__SystemArray_lupdate;85
+	repl_args 2 2
+.o 3 0
+a86
+.d 3 0
+	jsr ea86
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;85
+.o 1 0
+e__SystemArray_nupdate;85
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea86
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea86
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ii
+e__SystemArray_supdate;85
+.o 1 2 ii
+s86
+	update INT32 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;84
+.descexp e__SystemArray_dsize;84 e__SystemArray_nsize;84 e__SystemArray_lsize;84 1 0 "size;84"
+.o 2 0
+e__SystemArray_isize;84
+	pop_a 1
+.d 1 0
+	jmp s85
+.ai 1 _ e__SystemArray_isize;84
+.o 2 0
+e__SystemArray_lsize;84
+	pop_a 1
+.d 1 0
+	jsr ea85
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;84
+.o 1 0
+e__SystemArray_nsize;84
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea85
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea85
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;84
+.o 1 0
+s85
+	push_arraysize INT32 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;83
+.descexp e__SystemArray_dselect;83 e__SystemArray_nselect;83 e__SystemArray_lselect;83 2 0 "select;83"
+.o 2 1 i
+e__SystemArray_iselect;83
+	pop_a 1
+.d 1 1 i
+	jsr s84
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.ai 0 a84 e__SystemArray_iselect;83
+.o 2 0
+e__SystemArray_lselect;83
+	repl_args 1 1
+.o 2 0
+a84
+.d 2 0
+	jsr ea84
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;83
+.o 1 0
+e__SystemArray_nselect;83
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea84
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea84
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;83
+.o 1 1 i
+s84
+	select INT32 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sreplace;82
+.descexp e__SystemArray_dreplace;82 e__SystemArray_nreplace;82 e__SystemArray_lreplace;82 3 0 "replace;82"
+.o 3 1 i
+e__SystemArray_ireplace;82
+	pop_a 1
+	jsr_eval 1
+	pushI_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ii
+	jsr s83
+.o 1 1 i
+	buildI_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a83 e__SystemArray_ireplace;82
+.o 2 0
+e__SystemArray_lreplace;82
+	repl_args 2 2
+.o 3 0
+a83
+.d 3 0
+	jsr ea83
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;82
+.o 1 0
+e__SystemArray_nreplace;82
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea83
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 3 0
+ea83
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ii
+e__SystemArray_sreplace;82
+.o 1 2 ii
+s83
+	replace INT32 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_screateArray;81
+.descexp e__SystemArray_dcreateArray;81 e__SystemArray_ncreateArray;81 e__SystemArray_lcreateArray;81 2 0 "createArray;81"
+.o 2 1 i
+e__SystemArray_icreateArray;81
+	pop_a 1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 0 2 ii
+	jmp s82
+.ai 0 a82 e__SystemArray_icreateArray;81
+.o 2 0
+e__SystemArray_lcreateArray;81
+	repl_args 1 1
+.o 2 0
+a82
+.d 2 0
+	jsr ea82
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;81
+.o 1 0
+e__SystemArray_ncreateArray;81
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea82
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea82
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 0 2 ii
+e__SystemArray_screateArray;81
+.o 0 2 ii
+s82
+	create_array INT32 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;80
+.descexp e__SystemArray_d_createArray;80 e__SystemArray_n_createArray;80 e__SystemArray_l_createArray;80 1 0 "_createArray;80"
+.o 1 1 i
+e__SystemArray_i_createArray;80
+	pop_a 1
+.d 0 1 i
+	jmp s81
+.ai 1 _ e__SystemArray_i_createArray;80
+.o 2 0
+e__SystemArray_l_createArray;80
+	pop_a 1
+.d 1 0
+	jsr ea81
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;80
+.o 1 0
+e__SystemArray_n_createArray;80
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea81
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea81
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;80
+.o 0 1 i
+s81
+	create_array_ INT32 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;79
+.descexp e__SystemArray_dusize;79 e__SystemArray_nusize;79 e__SystemArray_lusize;79 1 0 "usize;79"
+.o 2 0
+e__SystemArray_iusize;79
+	pop_a 1
+.d 1 0
+	jmp s80
+.ai 1 _ e__SystemArray_iusize;79
+.o 2 0
+e__SystemArray_lusize;79
+	pop_a 1
+.d 1 0
+	jsr ea80
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;79
+.o 1 0
+e__SystemArray_nusize;79
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea80
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea80
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;79
+.o 1 0
+s80
+	buildAC "StdArray:usize ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;78
+.descexp e__SystemArray_duselect;78 e__SystemArray_nuselect;78 e__SystemArray_luselect;78 2 0 "uselect;78"
+.o 2 1 i
+e__SystemArray_iuselect;78
+	pop_a 1
+.d 1 1 i
+	jsr s79
+.o 2 0
+.d 2 0
+	rtn
+.ai 0 a79 e__SystemArray_iuselect;78
+.o 2 0
+e__SystemArray_luselect;78
+	repl_args 1 1
+.o 2 0
+a79
+.d 2 0
+	jsr ea79
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;78
+.o 1 0
+e__SystemArray_nuselect;78
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea79
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea79
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;78
+.o 1 1 i
+s79
+	buildAC "StdArray:uselect ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;77
+.descexp e__SystemArray_dupdate;77 e__SystemArray_nupdate;77 e__SystemArray_lupdate;77 3 0 "update;77"
+.o 3 1 i
+e__SystemArray_iupdate;77
+	pop_a 1
+	jsr_eval 1
+.d 2 1 i
+	jmp s78
+.ai 0 a78 e__SystemArray_iupdate;77
+.o 2 0
+e__SystemArray_lupdate;77
+	repl_args 2 2
+.o 3 0
+a78
+.d 3 0
+	jsr ea78
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;77
+.o 1 0
+e__SystemArray_nupdate;77
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea78
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea78
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_supdate;77
+.o 2 1 i
+s78
+	buildAC "StdArray:update ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;76
+.descexp e__SystemArray_dsize;76 e__SystemArray_nsize;76 e__SystemArray_lsize;76 1 0 "size;76"
+.o 2 0
+e__SystemArray_isize;76
+	pop_a 1
+.d 1 0
+	jmp s77
+.ai 1 _ e__SystemArray_isize;76
+.o 2 0
+e__SystemArray_lsize;76
+	pop_a 1
+.d 1 0
+	jsr ea77
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;76
+.o 1 0
+e__SystemArray_nsize;76
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea77
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea77
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;76
+.o 1 0
+s77
+	buildAC "StdArray:size ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;75
+.descexp e__SystemArray_dselect;75 e__SystemArray_nselect;75 e__SystemArray_lselect;75 2 0 "select;75"
+.o 2 1 i
+e__SystemArray_iselect;75
+	pop_a 1
+.d 1 1 i
+	jmp s76
+.ai 0 ea76 e__SystemArray_iselect;75
+.o 2 0
+e__SystemArray_lselect;75
+	repl_args 1 1
+.d 2 0
+	jmp ea76
+.n 2 e__SystemArray_dselect;75 _
+.o 1 0
+e__SystemArray_nselect;75
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea76
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 2 0
+ea76
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;75
+.o 1 1 i
+s76
+	buildAC "StdArray:select ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;74
+.descexp e__SystemArray_dreplace;74 e__SystemArray_nreplace;74 e__SystemArray_lreplace;74 3 0 "replace;74"
+.o 3 1 i
+e__SystemArray_ireplace;74
+	pop_a 1
+	jsr_eval 1
+.d 2 1 i
+	jsr s75
+.o 2 0
+.d 2 0
+	rtn
+.ai 0 a75 e__SystemArray_ireplace;74
+.o 2 0
+e__SystemArray_lreplace;74
+	repl_args 2 2
+.o 3 0
+a75
+.d 3 0
+	jsr ea75
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;74
+.o 1 0
+e__SystemArray_nreplace;74
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea75
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea75
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_sreplace;74
+.o 2 1 i
+s75
+	buildAC "StdArray:replace ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;73
+.descexp e__SystemArray_dcreateArray;73 e__SystemArray_ncreateArray;73 e__SystemArray_lcreateArray;73 2 0 "createArray;73"
+.o 2 1 i
+e__SystemArray_icreateArray;73
+	pop_a 1
+	jsr_eval 0
+.d 1 1 i
+	jmp s74
+.ai 0 a74 e__SystemArray_icreateArray;73
+.o 2 0
+e__SystemArray_lcreateArray;73
+	repl_args 1 1
+.o 2 0
+a74
+.d 2 0
+	jsr ea74
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;73
+.o 1 0
+e__SystemArray_ncreateArray;73
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea74
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea74
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemArray_screateArray;73
+.o 1 1 i
+s74
+	buildAC "StdArray:createArray ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;72
+.descexp e__SystemArray_d_createArray;72 e__SystemArray_n_createArray;72 e__SystemArray_l_createArray;72 1 0 "_createArray;72"
+.o 1 1 i
+e__SystemArray_i_createArray;72
+	pop_a 1
+.d 0 1 i
+	jmp s73
+.ai 1 _ e__SystemArray_i_createArray;72
+.o 2 0
+e__SystemArray_l_createArray;72
+	pop_a 1
+.d 1 0
+	jsr ea73
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;72
+.o 1 0
+e__SystemArray_n_createArray;72
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea73
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea73
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;72
+.o 0 1 i
+s73
+	buildAC "StdArray:_createArray ({#} a) should not be called"
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+.d 1 0
+	rtn
+.export e__SystemArray_susize;71
+.descexp e__SystemArray_dusize;71 e__SystemArray_nusize;71 e__SystemArray_lusize;71 1 0 "usize;71"
+.o 2 0
+e__SystemArray_iusize;71
+	pop_a 1
+.d 1 0
+	jmp s72
+.ai 1 _ e__SystemArray_iusize;71
+.o 2 0
+e__SystemArray_lusize;71
+	pop_a 1
+.d 1 0
+	jsr ea72
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;71
+.o 1 0
+e__SystemArray_nusize;71
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea72
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea72
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;71
+.o 1 0
+s72
+	push_a 0
+	push_arraysize _ 1 0
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;70
+.descexp e__SystemArray_duselect;70 e__SystemArray_nuselect;70 e__SystemArray_luselect;70 2 0 "uselect;70"
+.o 2 1 i
+e__SystemArray_iuselect;70
+	pop_a 1
+.d 1 1 i
+	jsr s71
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a71 e__SystemArray_iuselect;70
+.o 2 0
+e__SystemArray_luselect;70
+	repl_args 1 1
+.o 2 0
+a71
+.d 2 0
+	jsr ea71
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;70
+.o 1 0
+e__SystemArray_nuselect;70
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea71
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea71
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;70
+.o 1 1 i
+s71
+	push_a 0
+	select _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;69
+.descexp e__SystemArray_dupdate;69 e__SystemArray_nupdate;69 e__SystemArray_lupdate;69 3 0 "update;69"
+.o 3 1 i
+e__SystemArray_iupdate;69
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jmp s70
+.ai 0 a70 e__SystemArray_iupdate;69
+.o 2 0
+e__SystemArray_lupdate;69
+	repl_args 2 2
+.o 3 0
+a70
+.d 3 0
+	jsr ea70
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;69
+.o 1 0
+e__SystemArray_nupdate;69
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea70
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea70
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_supdate;69
+.o 2 1 i
+s70
+	update _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;68
+.descexp e__SystemArray_dsize;68 e__SystemArray_nsize;68 e__SystemArray_lsize;68 1 0 "size;68"
+.o 2 0
+e__SystemArray_isize;68
+	pop_a 1
+.d 1 0
+	jmp s69
+.ai 1 _ e__SystemArray_isize;68
+.o 2 0
+e__SystemArray_lsize;68
+	pop_a 1
+.d 1 0
+	jsr ea69
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;68
+.o 1 0
+e__SystemArray_nsize;68
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea69
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea69
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;68
+.o 1 0
+s69
+	push_arraysize _ 1 0
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;67
+.descexp e__SystemArray_dselect;67 e__SystemArray_nselect;67 e__SystemArray_lselect;67 2 0 "select;67"
+.o 2 1 i
+e__SystemArray_iselect;67
+	pop_a 1
+.d 1 1 i
+	jsr s68
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.ai 0 a68 e__SystemArray_iselect;67
+.o 2 0
+e__SystemArray_lselect;67
+	repl_args 1 1
+.o 2 0
+a68
+.d 2 0
+	jsr ea68
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;67
+.o 1 0
+e__SystemArray_nselect;67
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea68
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea68
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;67
+.o 1 1 i
+s68
+	select _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;66
+.descexp e__SystemArray_dreplace;66 e__SystemArray_nreplace;66 e__SystemArray_lreplace;66 3 0 "replace;66"
+.o 3 1 i
+e__SystemArray_ireplace;66
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jsr s67
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a67 e__SystemArray_ireplace;66
+.o 2 0
+e__SystemArray_lreplace;66
+	repl_args 2 2
+.o 3 0
+a67
+.d 3 0
+	jsr ea67
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;66
+.o 1 0
+e__SystemArray_nreplace;66
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea67
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea67
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_sreplace;66
+.o 2 1 i
+s67
+	replace _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;65
+.descexp e__SystemArray_dcreateArray;65 e__SystemArray_ncreateArray;65 e__SystemArray_lcreateArray;65 2 0 "createArray;65"
+.o 2 1 i
+e__SystemArray_icreateArray;65
+	pop_a 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 1 1 i
+	jmp s66
+.ai 0 a66 e__SystemArray_icreateArray;65
+.o 2 0
+e__SystemArray_lcreateArray;65
+	repl_args 1 1
+.o 2 0
+a66
+.d 2 0
+	jsr ea66
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;65
+.o 1 0
+e__SystemArray_ncreateArray;65
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea66
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea66
+	jsr_eval 1
+	jsr_eval 0
+	push_array 1
+	pushI_a 1
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_screateArray;65
+.o 1 1 i
+s66
+	create_array _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;64
+.descexp e__SystemArray_d_createArray;64 e__SystemArray_n_createArray;64 e__SystemArray_l_createArray;64 1 0 "_createArray;64"
+.o 1 1 i
+e__SystemArray_i_createArray;64
+	pop_a 1
+.d 0 1 i
+	jmp s65
+.ai 1 _ e__SystemArray_i_createArray;64
+.o 2 0
+e__SystemArray_l_createArray;64
+	pop_a 1
+.d 1 0
+	jsr ea65
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;64
+.o 1 0
+e__SystemArray_n_createArray;64
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea65
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea65
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;64
+.o 0 1 i
+s65
+	create_array_ _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_susize;63
+.descexp e__SystemArray_dusize;63 e__SystemArray_nusize;63 e__SystemArray_lusize;63 1 0 "usize;63"
+.o 2 0
+e__SystemArray_iusize;63
+	pop_a 1
+.d 1 0
+	jmp s64
+.ai 1 _ e__SystemArray_iusize;63
+.o 2 0
+e__SystemArray_lusize;63
+	pop_a 1
+.d 1 0
+	jsr ea64
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;63
+.o 1 0
+e__SystemArray_nusize;63
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea64
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea64
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;63
+.o 1 0
+s64
+	push_a 0
+	push_arraysize _ 1 0
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;62
+.descexp e__SystemArray_duselect;62 e__SystemArray_nuselect;62 e__SystemArray_luselect;62 2 0 "uselect;62"
+.o 2 1 i
+e__SystemArray_iuselect;62
+	pop_a 1
+.d 1 1 i
+	jsr s63
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a63 e__SystemArray_iuselect;62
+.o 2 0
+e__SystemArray_luselect;62
+	repl_args 1 1
+.o 2 0
+a63
+.d 2 0
+	jsr ea63
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;62
+.o 1 0
+e__SystemArray_nuselect;62
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea63
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea63
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;62
+.o 1 1 i
+s63
+	push_a 0
+	select _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;61
+.descexp e__SystemArray_dupdate;61 e__SystemArray_nupdate;61 e__SystemArray_lupdate;61 3 0 "update;61"
+.o 3 1 i
+e__SystemArray_iupdate;61
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jmp s62
+.ai 0 a62 e__SystemArray_iupdate;61
+.o 2 0
+e__SystemArray_lupdate;61
+	repl_args 2 2
+.o 3 0
+a62
+.d 3 0
+	jsr ea62
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;61
+.o 1 0
+e__SystemArray_nupdate;61
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea62
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea62
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_supdate;61
+.o 2 1 i
+s62
+	update _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;60
+.descexp e__SystemArray_dsize;60 e__SystemArray_nsize;60 e__SystemArray_lsize;60 1 0 "size;60"
+.o 2 0
+e__SystemArray_isize;60
+	pop_a 1
+.d 1 0
+	jmp s61
+.ai 1 _ e__SystemArray_isize;60
+.o 2 0
+e__SystemArray_lsize;60
+	pop_a 1
+.d 1 0
+	jsr ea61
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;60
+.o 1 0
+e__SystemArray_nsize;60
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea61
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea61
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;60
+.o 1 0
+s61
+	push_arraysize _ 1 0
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;59
+.descexp e__SystemArray_dselect;59 e__SystemArray_nselect;59 e__SystemArray_lselect;59 2 0 "select;59"
+.o 2 1 i
+e__SystemArray_iselect;59
+	pop_a 1
+.d 1 1 i
+	jsr s60
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.ai 0 a60 e__SystemArray_iselect;59
+.o 2 0
+e__SystemArray_lselect;59
+	repl_args 1 1
+.o 2 0
+a60
+.d 2 0
+	jsr ea60
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;59
+.o 1 0
+e__SystemArray_nselect;59
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea60
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea60
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;59
+.o 1 1 i
+s60
+	select _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;58
+.descexp e__SystemArray_dreplace;58 e__SystemArray_nreplace;58 e__SystemArray_lreplace;58 3 0 "replace;58"
+.o 3 1 i
+e__SystemArray_ireplace;58
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jsr s59
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a59 e__SystemArray_ireplace;58
+.o 2 0
+e__SystemArray_lreplace;58
+	repl_args 2 2
+.o 3 0
+a59
+.d 3 0
+	jsr ea59
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;58
+.o 1 0
+e__SystemArray_nreplace;58
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea59
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea59
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_sreplace;58
+.o 2 1 i
+s59
+	replace _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;57
+.descexp e__SystemArray_dcreateArray;57 e__SystemArray_ncreateArray;57 e__SystemArray_lcreateArray;57 2 0 "createArray;57"
+.o 2 1 i
+e__SystemArray_icreateArray;57
+	pop_a 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 1 1 i
+	jmp s58
+.ai 0 a58 e__SystemArray_icreateArray;57
+.o 2 0
+e__SystemArray_lcreateArray;57
+	repl_args 1 1
+.o 2 0
+a58
+.d 2 0
+	jsr ea58
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;57
+.o 1 0
+e__SystemArray_ncreateArray;57
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea58
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea58
+	jsr_eval 1
+	jsr_eval 0
+	push_array 1
+	pushI_a 1
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_screateArray;57
+.o 1 1 i
+s58
+	create_array _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;56
+.descexp e__SystemArray_d_createArray;56 e__SystemArray_n_createArray;56 e__SystemArray_l_createArray;56 1 0 "_createArray;56"
+.o 1 1 i
+e__SystemArray_i_createArray;56
+	pop_a 1
+.d 0 1 i
+	jmp s57
+.ai 1 _ e__SystemArray_i_createArray;56
+.o 2 0
+e__SystemArray_l_createArray;56
+	pop_a 1
+.d 1 0
+	jsr ea57
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;56
+.o 1 0
+e__SystemArray_n_createArray;56
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea57
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea57
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;56
+.o 0 1 i
+s57
+	create_array_ _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_susize;55
+.descexp e__SystemArray_dusize;55 e__SystemArray_nusize;55 e__SystemArray_lusize;55 1 0 "usize;55"
+.o 2 0
+e__SystemArray_iusize;55
+	pop_a 1
+.d 1 0
+	jmp s56
+.ai 1 _ e__SystemArray_iusize;55
+.o 2 0
+e__SystemArray_lusize;55
+	pop_a 1
+.d 1 0
+	jsr ea56
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;55
+.o 1 0
+e__SystemArray_nusize;55
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea56
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea56
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;55
+.o 1 0
+s56
+	push_a 0
+	push_arraysize _ 1 0
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;54
+.descexp e__SystemArray_duselect;54 e__SystemArray_nuselect;54 e__SystemArray_luselect;54 2 0 "uselect;54"
+.o 2 1 i
+e__SystemArray_iuselect;54
+	pop_a 1
+.d 1 1 i
+	jsr s55
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a55 e__SystemArray_iuselect;54
+.o 2 0
+e__SystemArray_luselect;54
+	repl_args 1 1
+.o 2 0
+a55
+.d 2 0
+	jsr ea55
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;54
+.o 1 0
+e__SystemArray_nuselect;54
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea55
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea55
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;54
+.o 1 1 i
+s55
+	push_a 0
+	select _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;53
+.descexp e__SystemArray_dupdate;53 e__SystemArray_nupdate;53 e__SystemArray_lupdate;53 3 0 "update;53"
+.o 3 1 i
+e__SystemArray_iupdate;53
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jmp s54
+.ai 0 a54 e__SystemArray_iupdate;53
+.o 2 0
+e__SystemArray_lupdate;53
+	repl_args 2 2
+.o 3 0
+a54
+.d 3 0
+	jsr ea54
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;53
+.o 1 0
+e__SystemArray_nupdate;53
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea54
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea54
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_supdate;53
+.o 2 1 i
+s54
+	update _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;52
+.descexp e__SystemArray_dsize;52 e__SystemArray_nsize;52 e__SystemArray_lsize;52 1 0 "size;52"
+.o 2 0
+e__SystemArray_isize;52
+	pop_a 1
+.d 1 0
+	jmp s53
+.ai 1 _ e__SystemArray_isize;52
+.o 2 0
+e__SystemArray_lsize;52
+	pop_a 1
+.d 1 0
+	jsr ea53
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;52
+.o 1 0
+e__SystemArray_nsize;52
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea53
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea53
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;52
+.o 1 0
+s53
+	push_arraysize _ 1 0
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;51
+.descexp e__SystemArray_dselect;51 e__SystemArray_nselect;51 e__SystemArray_lselect;51 2 0 "select;51"
+.o 2 1 i
+e__SystemArray_iselect;51
+	pop_a 1
+.d 1 1 i
+	jsr s52
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.ai 0 a52 e__SystemArray_iselect;51
+.o 2 0
+e__SystemArray_lselect;51
+	repl_args 1 1
+.o 2 0
+a52
+.d 2 0
+	jsr ea52
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;51
+.o 1 0
+e__SystemArray_nselect;51
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea52
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea52
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;51
+.o 1 1 i
+s52
+	select _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;50
+.descexp e__SystemArray_dreplace;50 e__SystemArray_nreplace;50 e__SystemArray_lreplace;50 3 0 "replace;50"
+.o 3 1 i
+e__SystemArray_ireplace;50
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jsr s51
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a51 e__SystemArray_ireplace;50
+.o 2 0
+e__SystemArray_lreplace;50
+	repl_args 2 2
+.o 3 0
+a51
+.d 3 0
+	jsr ea51
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;50
+.o 1 0
+e__SystemArray_nreplace;50
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea51
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea51
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_sreplace;50
+.o 2 1 i
+s51
+	replace _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;49
+.descexp e__SystemArray_dcreateArray;49 e__SystemArray_ncreateArray;49 e__SystemArray_lcreateArray;49 2 0 "createArray;49"
+.o 2 1 i
+e__SystemArray_icreateArray;49
+	pop_a 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 1 1 i
+	jmp s50
+.ai 0 a50 e__SystemArray_icreateArray;49
+.o 2 0
+e__SystemArray_lcreateArray;49
+	repl_args 1 1
+.o 2 0
+a50
+.d 2 0
+	jsr ea50
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;49
+.o 1 0
+e__SystemArray_ncreateArray;49
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea50
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea50
+	jsr_eval 1
+	jsr_eval 0
+	push_array 1
+	pushI_a 1
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_screateArray;49
+.o 1 1 i
+s50
+	create_array _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;48
+.descexp e__SystemArray_d_createArray;48 e__SystemArray_n_createArray;48 e__SystemArray_l_createArray;48 1 0 "_createArray;48"
+.o 1 1 i
+e__SystemArray_i_createArray;48
+	pop_a 1
+.d 0 1 i
+	jmp s49
+.ai 1 _ e__SystemArray_i_createArray;48
+.o 2 0
+e__SystemArray_l_createArray;48
+	pop_a 1
+.d 1 0
+	jsr ea49
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;48
+.o 1 0
+e__SystemArray_n_createArray;48
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea49
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea49
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;48
+.o 0 1 i
+s49
+	create_array_ _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_susize;47
+.descexp e__SystemArray_dusize;47 e__SystemArray_nusize;47 e__SystemArray_lusize;47 1 0 "usize;47"
+.o 2 0
+e__SystemArray_iusize;47
+	pop_a 1
+.d 1 0
+	jmp s48
+.ai 1 _ e__SystemArray_iusize;47
+.o 2 0
+e__SystemArray_lusize;47
+	pop_a 1
+.d 1 0
+	jsr ea48
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;47
+.o 1 0
+e__SystemArray_nusize;47
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea48
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea48
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;47
+.o 1 0
+s48
+	push_a 0
+	push_arraysize _ 1 0
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;46
+.descexp e__SystemArray_duselect;46 e__SystemArray_nuselect;46 e__SystemArray_luselect;46 2 0 "uselect;46"
+.o 2 1 i
+e__SystemArray_iuselect;46
+	pop_a 1
+.d 1 1 i
+	jsr s47
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a47 e__SystemArray_iuselect;46
+.o 2 0
+e__SystemArray_luselect;46
+	repl_args 1 1
+.o 2 0
+a47
+.d 2 0
+	jsr ea47
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;46
+.o 1 0
+e__SystemArray_nuselect;46
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea47
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea47
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;46
+.o 1 1 i
+s47
+	push_a 0
+	select _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;45
+.descexp e__SystemArray_dupdate;45 e__SystemArray_nupdate;45 e__SystemArray_lupdate;45 3 0 "update;45"
+.o 3 1 i
+e__SystemArray_iupdate;45
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jmp s46
+.ai 0 a46 e__SystemArray_iupdate;45
+.o 2 0
+e__SystemArray_lupdate;45
+	repl_args 2 2
+.o 3 0
+a46
+.d 3 0
+	jsr ea46
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;45
+.o 1 0
+e__SystemArray_nupdate;45
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea46
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea46
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_supdate;45
+.o 2 1 i
+s46
+	update _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;44
+.descexp e__SystemArray_dsize;44 e__SystemArray_nsize;44 e__SystemArray_lsize;44 1 0 "size;44"
+.o 2 0
+e__SystemArray_isize;44
+	pop_a 1
+.d 1 0
+	jmp s45
+.ai 1 _ e__SystemArray_isize;44
+.o 2 0
+e__SystemArray_lsize;44
+	pop_a 1
+.d 1 0
+	jsr ea45
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;44
+.o 1 0
+e__SystemArray_nsize;44
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea45
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea45
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;44
+.o 1 0
+s45
+	push_arraysize _ 1 0
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;43
+.descexp e__SystemArray_dselect;43 e__SystemArray_nselect;43 e__SystemArray_lselect;43 2 0 "select;43"
+.o 2 1 i
+e__SystemArray_iselect;43
+	pop_a 1
+.d 1 1 i
+	jsr s44
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.ai 0 a44 e__SystemArray_iselect;43
+.o 2 0
+e__SystemArray_lselect;43
+	repl_args 1 1
+.o 2 0
+a44
+.d 2 0
+	jsr ea44
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;43
+.o 1 0
+e__SystemArray_nselect;43
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea44
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea44
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;43
+.o 1 1 i
+s44
+	select _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;42
+.descexp e__SystemArray_dreplace;42 e__SystemArray_nreplace;42 e__SystemArray_lreplace;42 3 0 "replace;42"
+.o 3 1 i
+e__SystemArray_ireplace;42
+	pop_a 1
+	jsr_eval 1
+	push_array 1
+	update_a 0 2
+	pop_a 1
+.d 2 1 i
+	jsr s43
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 0 a43 e__SystemArray_ireplace;42
+.o 2 0
+e__SystemArray_lreplace;42
+	repl_args 2 2
+.o 3 0
+a43
+.d 3 0
+	jsr ea43
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;42
+.o 1 0
+e__SystemArray_nreplace;42
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea43
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea43
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_array 2
+	pushI_a 2
+	push_array 1
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.o 2 1 i
+e__SystemArray_sreplace;42
+.o 2 1 i
+s43
+	replace _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;41
+.descexp e__SystemArray_dcreateArray;41 e__SystemArray_ncreateArray;41 e__SystemArray_lcreateArray;41 2 0 "createArray;41"
+.o 2 1 i
+e__SystemArray_icreateArray;41
+	pop_a 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 1 1 i
+	jmp s42
+.ai 0 a42 e__SystemArray_icreateArray;41
+.o 2 0
+e__SystemArray_lcreateArray;41
+	repl_args 1 1
+.o 2 0
+a42
+.d 2 0
+	jsr ea42
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;41
+.o 1 0
+e__SystemArray_ncreateArray;41
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea42
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea42
+	jsr_eval 1
+	jsr_eval 0
+	push_array 1
+	pushI_a 1
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_screateArray;41
+.o 1 1 i
+s42
+	create_array _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;40
+.descexp e__SystemArray_d_createArray;40 e__SystemArray_n_createArray;40 e__SystemArray_l_createArray;40 1 0 "_createArray;40"
+.o 1 1 i
+e__SystemArray_i_createArray;40
+	pop_a 1
+.d 0 1 i
+	jmp s41
+.ai 1 _ e__SystemArray_i_createArray;40
+.o 2 0
+e__SystemArray_l_createArray;40
+	pop_a 1
+.d 1 0
+	jsr ea41
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;40
+.o 1 0
+e__SystemArray_n_createArray;40
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea41
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea41
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;40
+.o 0 1 i
+s41
+	create_array_ _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_susize;39
+.descexp e__SystemArray_dusize;39 e__SystemArray_nusize;39 e__SystemArray_lusize;39 1 0 "usize;39"
+.o 2 0
+e__SystemArray_iusize;39
+	pop_a 1
+.d 1 0
+	jmp s40
+.ai 1 _ e__SystemArray_iusize;39
+.o 2 0
+e__SystemArray_lusize;39
+	pop_a 1
+.d 1 0
+	jsr ea40
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;39
+.o 1 0
+e__SystemArray_nusize;39
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea40
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea40
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;39
+.o 1 0
+s40
+	push_a 0
+	push_arraysize BOOL 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;38
+.descexp e__SystemArray_duselect;38 e__SystemArray_nuselect;38 e__SystemArray_luselect;38 2 0 "uselect;38"
+.o 2 1 i
+e__SystemArray_iuselect;38
+	pop_a 1
+.d 1 1 i
+	jsr s39
+.o 1 1 b
+	buildB_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a39 e__SystemArray_iuselect;38
+.o 2 0
+e__SystemArray_luselect;38
+	repl_args 1 1
+.o 2 0
+a39
+.d 2 0
+	jsr ea39
+.o 1 1 b
+	push_a 0
+	buildh ARRAY 1
+	buildB_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;38
+.o 1 0
+e__SystemArray_nuselect;38
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea39
+.o 1 1 b
+	push_a 0
+	buildh ARRAY 1
+	buildB_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea39
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;38
+.o 1 1 i
+s39
+	push_a 0
+	select BOOL 0 1
+.d 1 1 b
+	rtn
+.export e__SystemArray_supdate;37
+.descexp e__SystemArray_dupdate;37 e__SystemArray_nupdate;37 e__SystemArray_lupdate;37 3 0 "update;37"
+.o 3 1 i
+e__SystemArray_iupdate;37
+	pop_a 1
+	jsr_eval 1
+	pushB_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ib
+	jmp s38
+.ai 0 a38 e__SystemArray_iupdate;37
+.o 2 0
+e__SystemArray_lupdate;37
+	repl_args 2 2
+.o 3 0
+a38
+.d 3 0
+	jsr ea38
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;37
+.o 1 0
+e__SystemArray_nupdate;37
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea38
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea38
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ib
+e__SystemArray_supdate;37
+.o 1 2 ib
+s38
+	update BOOL 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;36
+.descexp e__SystemArray_dsize;36 e__SystemArray_nsize;36 e__SystemArray_lsize;36 1 0 "size;36"
+.o 2 0
+e__SystemArray_isize;36
+	pop_a 1
+.d 1 0
+	jmp s37
+.ai 1 _ e__SystemArray_isize;36
+.o 2 0
+e__SystemArray_lsize;36
+	pop_a 1
+.d 1 0
+	jsr ea37
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;36
+.o 1 0
+e__SystemArray_nsize;36
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea37
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea37
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;36
+.o 1 0
+s37
+	push_arraysize BOOL 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;35
+.descexp e__SystemArray_dselect;35 e__SystemArray_nselect;35 e__SystemArray_lselect;35 2 0 "select;35"
+.o 2 1 i
+e__SystemArray_iselect;35
+	pop_a 1
+.d 1 1 i
+	jsr s36
+.o 0 1 b
+	buildB_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.ai 0 a36 e__SystemArray_iselect;35
+.o 2 0
+e__SystemArray_lselect;35
+	repl_args 1 1
+.o 2 0
+a36
+.d 2 0
+	jsr ea36
+.o 0 1 b
+	buildB_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;35
+.o 1 0
+e__SystemArray_nselect;35
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea36
+.o 0 1 b
+	fillB_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea36
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;35
+.o 1 1 i
+s36
+	select BOOL 0 1
+.d 0 1 b
+	rtn
+.export e__SystemArray_sreplace;34
+.descexp e__SystemArray_dreplace;34 e__SystemArray_nreplace;34 e__SystemArray_lreplace;34 3 0 "replace;34"
+.o 3 1 i
+e__SystemArray_ireplace;34
+	pop_a 1
+	jsr_eval 1
+	pushB_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ib
+	jsr s35
+.o 1 1 b
+	buildB_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a35 e__SystemArray_ireplace;34
+.o 2 0
+e__SystemArray_lreplace;34
+	repl_args 2 2
+.o 3 0
+a35
+.d 3 0
+	jsr ea35
+.o 1 1 b
+	push_a 0
+	buildh ARRAY 1
+	buildB_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;34
+.o 1 0
+e__SystemArray_nreplace;34
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea35
+.o 1 1 b
+	push_a 0
+	buildh ARRAY 1
+	buildB_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 3 0
+ea35
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ib
+e__SystemArray_sreplace;34
+.o 1 2 ib
+s35
+	replace BOOL 0 1
+.d 1 1 b
+	rtn
+.export e__SystemArray_screateArray;33
+.descexp e__SystemArray_dcreateArray;33 e__SystemArray_ncreateArray;33 e__SystemArray_lcreateArray;33 2 0 "createArray;33"
+.o 2 1 i
+e__SystemArray_icreateArray;33
+	pop_a 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 0 2 ib
+	jmp s34
+.ai 0 a34 e__SystemArray_icreateArray;33
+.o 2 0
+e__SystemArray_lcreateArray;33
+	repl_args 1 1
+.o 2 0
+a34
+.d 2 0
+	jsr ea34
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;33
+.o 1 0
+e__SystemArray_ncreateArray;33
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea34
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea34
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 1
+	pushI_a 0
+	pop_a 2
+.o 0 2 ib
+e__SystemArray_screateArray;33
+.o 0 2 ib
+s34
+	create_array BOOL 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;32
+.descexp e__SystemArray_d_createArray;32 e__SystemArray_n_createArray;32 e__SystemArray_l_createArray;32 1 0 "_createArray;32"
+.o 1 1 i
+e__SystemArray_i_createArray;32
+	pop_a 1
+.d 0 1 i
+	jmp s33
+.ai 1 _ e__SystemArray_i_createArray;32
+.o 2 0
+e__SystemArray_l_createArray;32
+	pop_a 1
+.d 1 0
+	jsr ea33
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;32
+.o 1 0
+e__SystemArray_n_createArray;32
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea33
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea33
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;32
+.o 0 1 i
+s33
+	create_array_ BOOL 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;31
+.descexp e__SystemArray_dusize;31 e__SystemArray_nusize;31 e__SystemArray_lusize;31 1 0 "usize;31"
+.o 2 0
+e__SystemArray_iusize;31
+	pop_a 1
+.d 1 0
+	jmp s32
+.ai 1 _ e__SystemArray_iusize;31
+.o 2 0
+e__SystemArray_lusize;31
+	pop_a 1
+.d 1 0
+	jsr ea32
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;31
+.o 1 0
+e__SystemArray_nusize;31
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea32
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea32
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;31
+.o 1 0
+s32
+	push_a 0
+	push_arraysize REAL 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;30
+.descexp e__SystemArray_duselect;30 e__SystemArray_nuselect;30 e__SystemArray_luselect;30 2 0 "uselect;30"
+.o 2 1 i
+e__SystemArray_iuselect;30
+	pop_a 1
+.d 1 1 i
+	jsr s31
+.o 1 1 r
+	buildR_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a31 e__SystemArray_iuselect;30
+.o 2 0
+e__SystemArray_luselect;30
+	repl_args 1 1
+.o 2 0
+a31
+.d 2 0
+	jsr ea31
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;30
+.o 1 0
+e__SystemArray_nuselect;30
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea31
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea31
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;30
+.o 1 1 i
+s31
+	push_a 0
+	select REAL 0 1
+.d 1 1 r
+	rtn
+.export e__SystemArray_supdate;29
+.descexp e__SystemArray_dupdate;29 e__SystemArray_nupdate;29 e__SystemArray_lupdate;29 3 0 "update;29"
+.o 3 1 i
+e__SystemArray_iupdate;29
+	pop_a 1
+	jsr_eval 1
+	pushR_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ir
+	jmp s30
+.ai 0 a30 e__SystemArray_iupdate;29
+.o 2 0
+e__SystemArray_lupdate;29
+	repl_args 2 2
+.o 3 0
+a30
+.d 3 0
+	jsr ea30
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;29
+.o 1 0
+e__SystemArray_nupdate;29
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea30
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea30
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ir
+e__SystemArray_supdate;29
+.o 1 2 ir
+s30
+	update REAL 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;28
+.descexp e__SystemArray_dsize;28 e__SystemArray_nsize;28 e__SystemArray_lsize;28 1 0 "size;28"
+.o 2 0
+e__SystemArray_isize;28
+	pop_a 1
+.d 1 0
+	jmp s29
+.ai 1 _ e__SystemArray_isize;28
+.o 2 0
+e__SystemArray_lsize;28
+	pop_a 1
+.d 1 0
+	jsr ea29
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;28
+.o 1 0
+e__SystemArray_nsize;28
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea29
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea29
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;28
+.o 1 0
+s29
+	push_arraysize REAL 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;27
+.descexp e__SystemArray_dselect;27 e__SystemArray_nselect;27 e__SystemArray_lselect;27 2 0 "select;27"
+.o 2 1 i
+e__SystemArray_iselect;27
+	pop_a 1
+.d 1 1 i
+	jsr s28
+.o 0 1 r
+	buildR_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.ai 0 a28 e__SystemArray_iselect;27
+.o 2 0
+e__SystemArray_lselect;27
+	repl_args 1 1
+.o 2 0
+a28
+.d 2 0
+	jsr ea28
+.o 0 1 r
+	buildR_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;27
+.o 1 0
+e__SystemArray_nselect;27
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea28
+.o 0 1 r
+	fillR_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea28
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;27
+.o 1 1 i
+s28
+	select REAL 0 1
+.d 0 1 r
+	rtn
+.export e__SystemArray_sreplace;26
+.descexp e__SystemArray_dreplace;26 e__SystemArray_nreplace;26 e__SystemArray_lreplace;26 3 0 "replace;26"
+.o 3 1 i
+e__SystemArray_ireplace;26
+	pop_a 1
+	jsr_eval 1
+	pushR_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ir
+	jsr s27
+.o 1 1 r
+	buildR_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a27 e__SystemArray_ireplace;26
+.o 2 0
+e__SystemArray_lreplace;26
+	repl_args 2 2
+.o 3 0
+a27
+.d 3 0
+	jsr ea27
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;26
+.o 1 0
+e__SystemArray_nreplace;26
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea27
+.o 1 1 r
+	push_a 0
+	buildh ARRAY 1
+	buildR_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 3 0
+ea27
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ir
+e__SystemArray_sreplace;26
+.o 1 2 ir
+s27
+	replace REAL 0 1
+.d 1 1 r
+	rtn
+.export e__SystemArray_screateArray;25
+.descexp e__SystemArray_dcreateArray;25 e__SystemArray_ncreateArray;25 e__SystemArray_lcreateArray;25 2 0 "createArray;25"
+.o 2 1 i
+e__SystemArray_icreateArray;25
+	pop_a 1
+	jsr_eval 0
+	pushR_a 0
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 0 2 ir
+	jmp s26
+.ai 0 a26 e__SystemArray_icreateArray;25
+.o 2 0
+e__SystemArray_lcreateArray;25
+	repl_args 1 1
+.o 2 0
+a26
+.d 2 0
+	jsr ea26
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;25
+.o 1 0
+e__SystemArray_ncreateArray;25
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea26
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea26
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 1
+	pushI_a 0
+	pop_a 2
+.o 0 2 ir
+e__SystemArray_screateArray;25
+.o 0 2 ir
+s26
+	create_array REAL 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;24
+.descexp e__SystemArray_d_createArray;24 e__SystemArray_n_createArray;24 e__SystemArray_l_createArray;24 1 0 "_createArray;24"
+.o 1 1 i
+e__SystemArray_i_createArray;24
+	pop_a 1
+.d 0 1 i
+	jmp s25
+.ai 1 _ e__SystemArray_i_createArray;24
+.o 2 0
+e__SystemArray_l_createArray;24
+	pop_a 1
+.d 1 0
+	jsr ea25
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;24
+.o 1 0
+e__SystemArray_n_createArray;24
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea25
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea25
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;24
+.o 0 1 i
+s25
+	create_array_ REAL 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;23
+.descexp e__SystemArray_dusize;23 e__SystemArray_nusize;23 e__SystemArray_lusize;23 1 0 "usize;23"
+.o 2 0
+e__SystemArray_iusize;23
+	pop_a 1
+.d 1 0
+	jmp s24
+.ai 1 _ e__SystemArray_iusize;23
+.o 2 0
+e__SystemArray_lusize;23
+	pop_a 1
+.d 1 0
+	jsr ea24
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;23
+.o 1 0
+e__SystemArray_nusize;23
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea24
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea24
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;23
+.o 1 0
+s24
+	push_a 0
+	push_arraysize CHAR 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;22
+.descexp e__SystemArray_duselect;22 e__SystemArray_nuselect;22 e__SystemArray_luselect;22 2 0 "uselect;22"
+.o 2 1 i
+e__SystemArray_iuselect;22
+	pop_a 1
+.d 1 1 i
+	jsr s23
+.o 1 1 c
+	buildC_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a23 e__SystemArray_iuselect;22
+.o 2 0
+e__SystemArray_luselect;22
+	repl_args 1 1
+.o 2 0
+a23
+.d 2 0
+	jsr ea23
+.o 1 1 c
+	push_a 0
+	buildh ARRAY 1
+	buildC_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;22
+.o 1 0
+e__SystemArray_nuselect;22
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea23
+.o 1 1 c
+	push_a 0
+	buildh ARRAY 1
+	buildC_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea23
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;22
+.o 1 1 i
+s23
+	push_a 0
+	select CHAR 0 1
+.d 1 1 c
+	rtn
+.export e__SystemArray_supdate;21
+.descexp e__SystemArray_dupdate;21 e__SystemArray_nupdate;21 e__SystemArray_lupdate;21 3 0 "update;21"
+.o 3 1 i
+e__SystemArray_iupdate;21
+	pop_a 1
+	jsr_eval 1
+	pushC_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ic
+	jmp s22
+.ai 0 a22 e__SystemArray_iupdate;21
+.o 2 0
+e__SystemArray_lupdate;21
+	repl_args 2 2
+.o 3 0
+a22
+.d 3 0
+	jsr ea22
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;21
+.o 1 0
+e__SystemArray_nupdate;21
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea22
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea22
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushC_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ic
+e__SystemArray_supdate;21
+.o 1 2 ic
+s22
+	update CHAR 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;20
+.descexp e__SystemArray_dsize;20 e__SystemArray_nsize;20 e__SystemArray_lsize;20 1 0 "size;20"
+.o 2 0
+e__SystemArray_isize;20
+	pop_a 1
+.d 1 0
+	jmp s21
+.ai 1 _ e__SystemArray_isize;20
+.o 2 0
+e__SystemArray_lsize;20
+	pop_a 1
+.d 1 0
+	jsr ea21
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;20
+.o 1 0
+e__SystemArray_nsize;20
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea21
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea21
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;20
+.o 1 0
+s21
+	push_arraysize CHAR 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;19
+.descexp e__SystemArray_dselect;19 e__SystemArray_nselect;19 e__SystemArray_lselect;19 2 0 "select;19"
+.o 2 1 i
+e__SystemArray_iselect;19
+	pop_a 1
+.d 1 1 i
+	jsr s20
+.o 0 1 c
+	buildC_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.ai 0 a20 e__SystemArray_iselect;19
+.o 2 0
+e__SystemArray_lselect;19
+	repl_args 1 1
+.o 2 0
+a20
+.d 2 0
+	jsr ea20
+.o 0 1 c
+	buildC_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;19
+.o 1 0
+e__SystemArray_nselect;19
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea20
+.o 0 1 c
+	fillC_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea20
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;19
+.o 1 1 i
+s20
+	select CHAR 0 1
+.d 0 1 c
+	rtn
+.export e__SystemArray_sreplace;18
+.descexp e__SystemArray_dreplace;18 e__SystemArray_nreplace;18 e__SystemArray_lreplace;18 3 0 "replace;18"
+.o 3 1 i
+e__SystemArray_ireplace;18
+	pop_a 1
+	jsr_eval 1
+	pushC_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ic
+	jsr s19
+.o 1 1 c
+	buildC_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a19 e__SystemArray_ireplace;18
+.o 2 0
+e__SystemArray_lreplace;18
+	repl_args 2 2
+.o 3 0
+a19
+.d 3 0
+	jsr ea19
+.o 1 1 c
+	push_a 0
+	buildh ARRAY 1
+	buildC_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;18
+.o 1 0
+e__SystemArray_nreplace;18
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea19
+.o 1 1 c
+	push_a 0
+	buildh ARRAY 1
+	buildC_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 3 0
+ea19
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushC_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ic
+e__SystemArray_sreplace;18
+.o 1 2 ic
+s19
+	replace CHAR 0 1
+.d 1 1 c
+	rtn
+.export e__SystemArray_screateArray;17
+.descexp e__SystemArray_dcreateArray;17 e__SystemArray_ncreateArray;17 e__SystemArray_lcreateArray;17 2 0 "createArray;17"
+.o 2 1 i
+e__SystemArray_icreateArray;17
+	pop_a 1
+	jsr_eval 0
+	pushC_a 0
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 0 2 ic
+	jmp s18
+.ai 0 a18 e__SystemArray_icreateArray;17
+.o 2 0
+e__SystemArray_lcreateArray;17
+	repl_args 1 1
+.o 2 0
+a18
+.d 2 0
+	jsr ea18
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;17
+.o 1 0
+e__SystemArray_ncreateArray;17
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea18
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea18
+	jsr_eval 1
+	jsr_eval 0
+	pushC_a 1
+	pushI_a 0
+	pop_a 2
+.o 0 2 ic
+e__SystemArray_screateArray;17
+.o 0 2 ic
+s18
+	create_array CHAR 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;16
+.descexp e__SystemArray_d_createArray;16 e__SystemArray_n_createArray;16 e__SystemArray_l_createArray;16 1 0 "_createArray;16"
+.o 1 1 i
+e__SystemArray_i_createArray;16
+	pop_a 1
+.d 0 1 i
+	jmp s17
+.ai 1 _ e__SystemArray_i_createArray;16
+.o 2 0
+e__SystemArray_l_createArray;16
+	pop_a 1
+.d 1 0
+	jsr ea17
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;16
+.o 1 0
+e__SystemArray_n_createArray;16
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea17
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea17
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;16
+.o 0 1 i
+s17
+	create_array_ CHAR 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;15
+.descexp e__SystemArray_dusize;15 e__SystemArray_nusize;15 e__SystemArray_lusize;15 1 0 "usize;15"
+.o 2 0
+e__SystemArray_iusize;15
+	pop_a 1
+.d 1 0
+	jmp s16
+.ai 1 _ e__SystemArray_iusize;15
+.o 2 0
+e__SystemArray_lusize;15
+	pop_a 1
+.d 1 0
+	jsr ea16
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;15
+.o 1 0
+e__SystemArray_nusize;15
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea16
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea16
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;15
+.o 1 0
+s16
+	push_a 0
+	push_arraysize INT 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;14
+.descexp e__SystemArray_duselect;14 e__SystemArray_nuselect;14 e__SystemArray_luselect;14 2 0 "uselect;14"
+.o 2 1 i
+e__SystemArray_iuselect;14
+	pop_a 1
+.d 1 1 i
+	jsr s15
+.o 1 1 i
+	buildI_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a15 e__SystemArray_iuselect;14
+.o 2 0
+e__SystemArray_luselect;14
+	repl_args 1 1
+.o 2 0
+a15
+.d 2 0
+	jsr ea15
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;14
+.o 1 0
+e__SystemArray_nuselect;14
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea15
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea15
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;14
+.o 1 1 i
+s15
+	push_a 0
+	select INT 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_supdate;13
+.descexp e__SystemArray_dupdate;13 e__SystemArray_nupdate;13 e__SystemArray_lupdate;13 3 0 "update;13"
+.o 3 1 i
+e__SystemArray_iupdate;13
+	pop_a 1
+	jsr_eval 1
+	pushI_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ii
+	jmp s14
+.ai 0 a14 e__SystemArray_iupdate;13
+.o 2 0
+e__SystemArray_lupdate;13
+	repl_args 2 2
+.o 3 0
+a14
+.d 3 0
+	jsr ea14
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;13
+.o 1 0
+e__SystemArray_nupdate;13
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea14
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea14
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ii
+e__SystemArray_supdate;13
+.o 1 2 ii
+s14
+	update INT 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;12
+.descexp e__SystemArray_dsize;12 e__SystemArray_nsize;12 e__SystemArray_lsize;12 1 0 "size;12"
+.o 2 0
+e__SystemArray_isize;12
+	pop_a 1
+.d 1 0
+	jmp s13
+.ai 1 _ e__SystemArray_isize;12
+.o 2 0
+e__SystemArray_lsize;12
+	pop_a 1
+.d 1 0
+	jsr ea13
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;12
+.o 1 0
+e__SystemArray_nsize;12
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea13
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea13
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;12
+.o 1 0
+s13
+	push_arraysize INT 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;11
+.descexp e__SystemArray_dselect;11 e__SystemArray_nselect;11 e__SystemArray_lselect;11 2 0 "select;11"
+.o 2 1 i
+e__SystemArray_iselect;11
+	pop_a 1
+.d 1 1 i
+	jsr s12
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.ai 0 a12 e__SystemArray_iselect;11
+.o 2 0
+e__SystemArray_lselect;11
+	repl_args 1 1
+.o 2 0
+a12
+.d 2 0
+	jsr ea12
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dselect;11
+.o 1 0
+e__SystemArray_nselect;11
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea12
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea12
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;11
+.o 1 1 i
+s12
+	select INT 0 1
+.d 0 1 i
+	rtn
+.export e__SystemArray_sreplace;10
+.descexp e__SystemArray_dreplace;10 e__SystemArray_nreplace;10 e__SystemArray_lreplace;10 3 0 "replace;10"
+.o 3 1 i
+e__SystemArray_ireplace;10
+	pop_a 1
+	jsr_eval 1
+	pushI_a 1
+	update_a 0 1
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 1 2 ii
+	jsr s11
+.o 1 1 i
+	buildI_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 0 a11 e__SystemArray_ireplace;10
+.o 2 0
+e__SystemArray_lreplace;10
+	repl_args 2 2
+.o 3 0
+a11
+.d 3 0
+	jsr ea11
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;10
+.o 1 0
+e__SystemArray_nreplace;10
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea11
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 3 0
+ea11
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	push_array 0
+	update_a 0 3
+	pop_a 3
+.o 1 2 ii
+e__SystemArray_sreplace;10
+.o 1 2 ii
+s11
+	replace INT 0 1
+.d 1 1 i
+	rtn
+.export e__SystemArray_screateArray;9
+.descexp e__SystemArray_dcreateArray;9 e__SystemArray_ncreateArray;9 e__SystemArray_lcreateArray;9 2 0 "createArray;9"
+.o 2 1 i
+e__SystemArray_icreateArray;9
+	pop_a 1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+.d 0 2 ii
+	jmp s10
+.ai 0 a10 e__SystemArray_icreateArray;9
+.o 2 0
+e__SystemArray_lcreateArray;9
+	repl_args 1 1
+.o 2 0
+a10
+.d 2 0
+	jsr ea10
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;9
+.o 1 0
+e__SystemArray_ncreateArray;9
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea10
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea10
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 0 2 ii
+e__SystemArray_screateArray;9
+.o 0 2 ii
+s10
+	create_array INT 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;8
+.descexp e__SystemArray_d_createArray;8 e__SystemArray_n_createArray;8 e__SystemArray_l_createArray;8 1 0 "_createArray;8"
+.o 1 1 i
+e__SystemArray_i_createArray;8
+	pop_a 1
+.d 0 1 i
+	jmp s9
+.ai 1 _ e__SystemArray_i_createArray;8
+.o 2 0
+e__SystemArray_l_createArray;8
+	pop_a 1
+.d 1 0
+	jsr ea9
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;8
+.o 1 0
+e__SystemArray_n_createArray;8
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea9
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea9
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;8
+.o 0 1 i
+s9
+	create_array_ INT 0 1
+.d 1 0
+	rtn
+.export e__SystemArray_susize;7
+.descexp e__SystemArray_dusize;7 e__SystemArray_nusize;7 e__SystemArray_lusize;7 1 0 "usize;7"
+.o 2 0
+e__SystemArray_iusize;7
+	pop_a 1
+.d 1 0
+	jmp s8
+.ai 1 _ e__SystemArray_iusize;7
+.o 2 0
+e__SystemArray_lusize;7
+	pop_a 1
+.d 1 0
+	jsr ea8
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dusize;7
+.o 1 0
+e__SystemArray_nusize;7
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea8
+.o 1 1 i
+	push_a 0
+	buildh ARRAY 1
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea8
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_susize;7
+.o 1 0
+s8
+	push_a 0
+	push_arraysize _ 1 0
+.d 1 1 i
+	rtn
+.export e__SystemArray_suselect;6
+.descexp e__SystemArray_duselect;6 e__SystemArray_nuselect;6 e__SystemArray_luselect;6 2 0 "uselect;6"
+.o 2 1 i
+e__SystemArray_iuselect;6
+	pop_a 1
+.d 1 1 i
+	jsr s7
+.o 2 0
+.d 2 0
+	rtn
+.ai 0 a7 e__SystemArray_iuselect;6
+.o 2 0
+e__SystemArray_luselect;6
+	repl_args 1 1
+.o 2 0
+a7
+.d 2 0
+	jsr ea7
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemArray_duselect;6
+.o 1 0
+e__SystemArray_nuselect;6
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea7
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea7
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_suselect;6
+.o 1 1 i
+s7
+	push_a 0
+	select _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_supdate;5
+.descexp e__SystemArray_dupdate;5 e__SystemArray_nupdate;5 e__SystemArray_lupdate;5 3 0 "update;5"
+.o 3 1 i
+e__SystemArray_iupdate;5
+	pop_a 1
+	jsr_eval 1
+.d 2 1 i
+	jmp s6
+.ai 0 a6 e__SystemArray_iupdate;5
+.o 2 0
+e__SystemArray_lupdate;5
+	repl_args 2 2
+.o 3 0
+a6
+.d 3 0
+	jsr ea6
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dupdate;5
+.o 1 0
+e__SystemArray_nupdate;5
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea6
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 3 0
+ea6
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_supdate;5
+.o 2 1 i
+s6
+	update _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_ssize;4
+.descexp e__SystemArray_dsize;4 e__SystemArray_nsize;4 e__SystemArray_lsize;4 1 0 "size;4"
+.o 2 0
+e__SystemArray_isize;4
+	pop_a 1
+.d 1 0
+	jmp s5
+.ai 1 _ e__SystemArray_isize;4
+.o 2 0
+e__SystemArray_lsize;4
+	pop_a 1
+.d 1 0
+	jsr ea5
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_dsize;4
+.o 1 0
+e__SystemArray_nsize;4
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea5
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea5
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+e__SystemArray_ssize;4
+.o 1 0
+s5
+	push_arraysize _ 1 0
+.d 0 1 i
+	rtn
+.export e__SystemArray_sselect;3
+.descexp e__SystemArray_dselect;3 e__SystemArray_nselect;3 e__SystemArray_lselect;3 2 0 "select;3"
+.o 2 1 i
+e__SystemArray_iselect;3
+	pop_a 1
+.d 1 1 i
+	jmp s4
+.ai 0 ea4 e__SystemArray_iselect;3
+.o 2 0
+e__SystemArray_lselect;3
+	repl_args 1 1
+.d 2 0
+	jmp ea4
+.n 2 e__SystemArray_dselect;3 _
+.o 1 0
+e__SystemArray_nselect;3
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea4
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 2 0
+ea4
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 1 1 i
+e__SystemArray_sselect;3
+.o 1 1 i
+s4
+	select _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_sreplace;2
+.descexp e__SystemArray_dreplace;2 e__SystemArray_nreplace;2 e__SystemArray_lreplace;2 3 0 "replace;2"
+.o 3 1 i
+e__SystemArray_ireplace;2
+	pop_a 1
+	jsr_eval 1
+.d 2 1 i
+	jsr s3
+.o 2 0
+.d 2 0
+	rtn
+.ai 0 a3 e__SystemArray_ireplace;2
+.o 2 0
+e__SystemArray_lreplace;2
+	repl_args 2 2
+.o 3 0
+a3
+.d 3 0
+	jsr ea3
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 3 e__SystemArray_dreplace;2
+.o 1 0
+e__SystemArray_nreplace;2
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea3
+.o 2 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 3 0
+ea3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	push_array 0
+	update_a 0 2
+	pop_a 2
+.o 2 1 i
+e__SystemArray_sreplace;2
+.o 2 1 i
+s3
+	replace _ 1 0
+.d 2 0
+	rtn
+.export e__SystemArray_screateArray;1
+.descexp e__SystemArray_dcreateArray;1 e__SystemArray_ncreateArray;1 e__SystemArray_lcreateArray;1 2 0 "createArray;1"
+.o 2 1 i
+e__SystemArray_icreateArray;1
+	pop_a 1
+	jsr_eval 0
+.d 1 1 i
+	jmp s2
+.ai 0 a2 e__SystemArray_icreateArray;1
+.o 2 0
+e__SystemArray_lcreateArray;1
+	repl_args 1 1
+.o 2 0
+a2
+.d 2 0
+	jsr ea2
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 2 e__SystemArray_dcreateArray;1
+.o 1 0
+e__SystemArray_ncreateArray;1
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea2
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 2 0
+ea2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemArray_screateArray;1
+.o 1 1 i
+s2
+	create_array _ 1 0
+.d 1 0
+	rtn
+.export e__SystemArray_s_createArray;0
+.descexp e__SystemArray_d_createArray;0 e__SystemArray_n_createArray;0 e__SystemArray_l_createArray;0 1 0 "_createArray;0"
+.o 1 1 i
+e__SystemArray_i_createArray;0
+	pop_a 1
+.d 0 1 i
+	jmp s1
+.ai 1 _ e__SystemArray_i_createArray;0
+.o 2 0
+e__SystemArray_l_createArray;0
+	pop_a 1
+.d 1 0
+	jsr ea1
+.o 1 0
+	buildh ARRAY 1
+.d 1 0
+	rtn
+.n 1 e__SystemArray_d_createArray;0
+.o 1 0
+e__SystemArray_n_createArray;0
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea1
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 1 0
+ea1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+e__SystemArray_s_createArray;0
+.o 0 1 i
+s1
+	create_array_ _ 1 0
+.d 1 0
+	rtn

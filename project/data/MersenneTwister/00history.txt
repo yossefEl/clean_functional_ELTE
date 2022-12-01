@@ -1,0 +1,16 @@
+Mersenne Twister 1.0.2 - October 10, 2003
+=========================================
+
+replaced mod by rem
+
+
+Mersenne Twister 1.0.1 - July 30, 1999
+======================================
+
+some bugs fixed
+
+
+Mersenne Twister 1.0 - July 9, 1999
+===================================
+
+initial version

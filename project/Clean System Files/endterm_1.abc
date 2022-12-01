@@ -1,0 +1,179 @@
+.comp 920 000111010010000
+.start __endterm_1_Start
+.depend "_SystemEnumStrict" "20211222160339"
+.depend "_SystemStrictLists" "20211222160339"
+.depend "StdStrictLists" "20211222160339"
+.depend "_SystemEnum" "20211222160339"
+.depend "StdEnum" "20211222160339"
+.depend "StdMisc" "20211222160339"
+.depend "StdFunctions" "20211222160339"
+.depend "StdCharList" "20211222160339"
+.depend "StdTuple" "20211222160339"
+.depend "StdOrdList" "20211222160339"
+.depend "StdList" "20211222160339"
+.depend "StdClass" "20211222160339"
+.depend "StdFile" "20211222160339"
+.depend "StdString" "20211222160339"
+.depend "_SystemArray" "20211222160339"
+.depend "StdArray" "20211222160339"
+.depend "StdChar" "20211222160339"
+.depend "StdReal" "20211222160339"
+.depend "StdInt" "20211222160339"
+.depend "StdOverloaded" "20211222160339"
+.depend "StdBool" "20211222160339"
+.depend "StdEnv" "20211222160339"
+.module m_endterm_1 "endterm_1" "20221118115131"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.impmod StdList
+.impdesc e_StdList_d!!
+.implab e_StdList_n!! _
+.implab e_StdList_slength;47
+.impmod StdString
+.implab e_StdString_stoString;5
+.implab e_StdString_s+++;11
+.impmod StdInt
+.implab e_StdInt_s+;6
+.implab e_StdInt_s<;17
+.record r11 aa 2 0 "Country"
+.desc d21 _hnf _add_arg 1 0 "Just"
+.desc d22 _hnf _hnf 0 0 "Nothing"
+.desc0 d24 0 "Red"
+.desc0 d25 1 "Green"
+.desc0 d26 2 "Blue"
+.desc0 d28 0 "AND"
+.desc0 d29 1 "OR"
+.desc d31 _hnf _add_arg 3 0 "Node"
+.desc d32 _hnf _hnf 0 0 "Leaf"
+.export __endterm_1_Start
+.o 0 0
+__endterm_1_Start
+	build _ 0 n3
+.d 1 0
+	jmp _driver
+.n 0 _
+.o 1 0
+n3
+	push_node _cycle_in_spine 0
+.d 0 0
+	jsr ea3
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.o 0 0
+ea3
+.o 0 0
+s3
+	buildh _Nil 0
+	buildI 1
+	buildh _Cons 2
+	buildI 96
+	buildh _Cons 2
+	buildI 12
+	buildh _Cons 2
+	buildI 56
+	buildh _Cons 2
+	buildI 41
+	buildh _Cons 2
+	buildI 33
+	buildh _Cons 2
+.d 1 0
+	jmp s2
+.o 1 0
+s2
+	create
+	pushI 4
+	push_a 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 1 i
+	jsr s1
+.o 1 0
+.d 1 0
+	jmp s4
+.o 1 0
+s4
+	eq_desc d22 0 0
+	jmp_true case.1
+	jmp case.2
+case.1
+	pop_a 1
+	buildAC "There is no fifth element in this list"
+.d 1 0
+	rtn
+case.2
+	repl_args 1 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	pop_a 1
+.d 0 1 i
+	jsr ItoAC
+.o 1 0
+	buildAC "The fifth element of the list is: "
+.d 2 0
+	jsr catAC
+.o 1 0
+.d 1 0
+	rtn
+.o 2 1 i
+s1
+	pushI 1
+	push_b 1
+	addI
+	push_a 0
+.d 1 0
+	jsr e_StdList_slength;47
+.o 0 1 i
+	ltI
+	jmp_false else.3
+	fillh d22 0 1
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+else.3
+	buildI_b 0
+	push_a 1
+	build e_StdList_d!! 2 e_StdList_n!!
+	fillh d21 1 2
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn

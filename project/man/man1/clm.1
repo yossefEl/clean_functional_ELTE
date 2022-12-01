@@ -1,0 +1,212 @@
+.TH CLM 1 "August 2019" "Version 3.0"
+.SH NAME
+clm \- Clean compiler (make)
+.SH SYNOPSIS
+clm -V
+clm ---version
+clm [options] main_module_name [-o application_name]
+.SH DESCRIPTION
+Makes an application from clean (.icl and .dcl) file(s). The main_module_name
+should be specified without (.icl) extension.
+  
+If '-o application_name' is not used, the name of the application is 'a.out'.
+(and is stored in the working directory)
+.SH CONFIGURATION OPTIONS
+.IP -V
+print version information and variables.
+.IP --version
+print version information.
+.IP -I\ path
+append `path` to the search path.
+.IP -P\ pathlist
+search path is `pathlist`.
+.SH MAIN MODULE OPTIONS
+.IP -w\ -nw
+enable/disable warnings. (default: -w)
+.IP -d\ -nd
+enable/disable the generation of readable label names. (default: -nd)
+.IP -d\ -nd
+enable/disable strictness analysis. (default: -sa)
+.SH PROJECT OPTIONS
+.IP -mv
+verbose output of the make process.
+.IP -ms
+silent make process.
+.IP -O
+only generate object (.o) file of main module.
+.IP -S
+only generate assembly (.s) file of main module.
+.IP -ABC
+only generate abc (.abc) file of main module.
+.IP -PO
+only generate object (.o) files of modules in the project.
+.IP -PS
+only generate assembly (.s) files of modules in the project.
+.IP -PABC
+only generate abc (.abc) files of modules in the project.
+.IP -c
+only syntax check main module. (note: compilation only considers the main
+module)
+.IP -lt\ -nlt
+enable/disable listing only the inferred types. (default -nlt)
+.IP -lat\ -nlat
+enable/disable listing all the types. (default: -nlat)
+.IP -lset
+list the types of functions for which not all strictness information has been
+exported.
+.IP -ci\ -nci
+enable/disable array indices checking. (default: -nci)
+.IP -ou\ -nou
+enable/disable optimizing uniqueness typing. (default: -ou)
+.IP -fusion -nfusion
+enable/disable optimizing by fusion transformation. (default: -nfusion)
+.IP -pt\ -npt
+enable/disable the generation of code for time profiling. (default: -npt)
+.IP -pg\ -npg
+enable/disable the generation of code for callgraph profiling. (default: -npg)
+.IP -desc
+generate all descriptors.
+.IP -exl
+export local labels.
+.IP -dynamics
+enable support for dynamics.
+.IP -funcmayfail
+enable the function totality checker.
+.IP -warnfuncmayfail
+enable the function totality checker but only emit it as a warning.
+.SH  LINKER OPTIONS
+.IP -ns
+disable stripping the application.
+.IP -no-opt-link
+disable the optimizing linker.
+.IP -l\ object_file
+include the file <object_file>.
+.IP -sl\ file
+include the shared library or linked option file (SEE LINK OPTIONS FILES) <file>.
+.IP -e\ symbol
+export the label name <symbol> for shared libraries.
+.IP -E\ file
+same as -e, but the exported label names are specified in the file <file>,
+separated by newlines.
+.SH  COMPILER APPLICATION OPTIONS
+.IP -clc\ file
+Use <file> as the compiler executable.
+.IP -aC,option(s)
+pass comma separated <option(s)> to the compiler (e.g. to set the compiler's
+heap size: -aC,-h,100m).
+.IP -RE\ file
+redirect the compiler stderror to <file>
+.IP -RO\ file
+redirect the compiler stdout to <file>
+same as -e, but the exported label names are specified in the file <file>,
+.SH  APPLICATION OPTIONS
+.IP -h\ size
+set the heap size to size in bytes (note: append k, K, m, or M to denote
+kilobytes or megabytes). (default: 2m)
+.IP -s\ size
+set the stack size to size in bytes (note: append k, K, m, or M to denote
+kilobytes or megabytes). (default: 512k)
+.IP -b\ -sc
+display the basic values or the constructiors. (default: -sc)
+.IP -t\ -nt
+enable/disable displaying the execution times. (default: -t)
+.IP -gc -ngc
+enable/disable displaying the heap size after garbage collection. (default:
+-ngc)
+.IP -st\ -nst
+enable/disable displaying the stack size before garbage collection. (default:
+-nst)
+.IP -gcm
+use marking/compacting garbage collection.
+.IP -gcc
+use copy/compacting garbage collection.
+.IP -gcf\ n
+multiply the heap size with <n> after garbage collection. (default: 20)
+.IP -gci\ size
+set the initial heap size to <size> in bytes (note: append k, K, m, or M to denote
+kilobytes or megabytes). (default: 100k)
+.IP -nortsopts
+disable RTS command line arguments in the generated application
+.SH MAKING A PROJECT
+Clm makes a project in the following way:
+.IP 1.
+All .icl files in the project which are no longer up to date are 
+compiled. The .icl files in the project are the main module and all 
+modules imported (directly and indirectly) by this module, except 
+system modules. A .icl file is considered not up to date if:
+.RS
+.IP \-
+no corresponding .abc file exists for this module.
+.IP \-
+the .abc file contains parallel code, does not contain stack lay
+out information or is generated with an other compiler version.
+.IP \-
+the .abc file is older than a corresponding .icl or .dcl file.
+.IP \-
+the .icl file is the main module and the .abc file is compiled
+with different compiler options (except for (not)verbose).
+.IP \-
+the .abc file is older than any of the .dcl files which are imported
+by this module.
+.LP
+If a module has to be compiled the following compiler options are used:
+.IP \-
+for the main module: the options specified to clm.
+.IP \-
+for other modules: if a corresponding .abc file exists, the options
+which were use to generate this .abc file, otherwise the default
+options. So the compiler options are remembered (in the abc file)
+after the first successfull compilation. If you want to change
+the options for such modules, compile the module with -ABC, -S or -O
+and the required options. Then, if the compilation succeeds, the
+options are remembered.
+.RE
+.IP 2.
+Code is generated for all .abc files in the project which are no longer
+up to date. The .abc files in the project are all .abc files for which a
+corresponding clean module exists which is the main module, or is 
+imported (directly or indirectly) by the main module. A .abc file is
+considered not up to date if:
+.RS
+.IP \-
+no corresponding .o file exists.
+.IP \-
+the corresponding .o file is older than the .abc file.
+.LP
+After generating code for a module, the assembler is called.
+.RE
+.IP 3.
+An application is build using the linker.
+.SH FINDING FILES
+.LP
+Clm searches files in the directories specified by the CLEANPATH 
+environment variable. If the file is not found in any of these directories,
+it searches the clean library directory, then the working directory. 
+CLEANPATH should contains a list of directories seperated by ':'.
+.LP
+The .abc,.s and .o files are normally generated in the same directory as
+the directory which contains the .icl file.
+.LP
+But it is possible to generate these files in an other directory by defining
+the environment variable CLEANABCPATH. clm will then search this directory
+first for .abc, .s and .o files.
+.LP
+It is also possible to generate .o files in an other directory by
+defining the environment variable CLEANOPATH. clm will then search .o files
+first in this directory. If CLEANABCPATH is also defined, it will not 
+search the directory specified by CLEANABCPATH for .o files.
+
+.SH LINK OPTION FILES
+Link option files consist of two parts separated by an
+= sign.
+.LP
+The first section consists of options that are passed on
+to the linker by clm.
+.LP
+The second section lists all the modules that clm should *not*
+pass to the linker, because they are already combined in
+one of the libraries mentioned in the first section.
+clm does not check if these modules are up-to-date.
+.LP
+The names between parentheses are the modules on which the
+the first module depends.

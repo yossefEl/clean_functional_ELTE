@@ -1,0 +1,78 @@
+Version:	1.3
+Global
+	Built:	False
+	CodeGen
+		CheckStacks:	False
+		CheckIndexes:	False
+		KeepABC:	False
+		TargetProcessor:	CurrentProcessor
+	Application
+		HeapSize:	409600
+		StackSize:	102400
+		ExtraMemory:	81920
+		IntialHeapSize:	204800
+		HeapSizeMultiplier:	4096
+		ShowExecutionTime:	False
+		ShowGC:	False
+		ShowStackSize:	False
+		MarkingCollector:	False
+		Profile
+			Memory:	False
+			MemoryMinimumHeapSize:	0
+			Time601:	False
+			Time:	False
+		Output
+			Output:	ShowConstructors
+			Font:	MS Sans Serif
+			FontSize:	8
+			WriteStdErr:	False
+	Project
+		Verbose:	False
+	Link
+		DefaultSystemObjects:	True
+		DefaultLibraries:	True
+		ExtraObjects
+			Path:	{Project}\example_const1_c.obj
+	Paths
+		Path:	{Project}
+MainModule
+	Name:	example_const1_main
+	Dir:	{Project}
+	IclOpen:	True
+	Compiler
+		NeverMemoryProfile:	False
+		NeverTimeProfile:	False
+		StrictnessAnalysis:	True
+		ListTypes:	NoTypes
+		ListAttributes:	False
+		Warnings:	False
+		Verbose:	False
+		ReadableABC:	False
+		ReuseUniqueNodes:	False
+	Dcl
+		Editor
+			TabSize:	4
+			Font:	Courier
+			FontSize:	10
+			AutoIndent:	True
+		WindowPosition
+			X:	152
+			Y:	90
+			SizeX:	792
+			SizeY:	300
+	DclOpen:	False
+	Icl
+		Editor
+			TabSize:	4
+			Font:	Courier
+			FontSize:	10
+			AutoIndent:	True
+		WindowPosition
+			X:	152
+			Y:	90
+			SizeX:	792
+			SizeY:	300
+	IclOpen:	True
+	LastModified:	No 0 0 0 0 0 0
+	Dependencies
+		Module:	example_const1_main

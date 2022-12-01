@@ -1,0 +1,1384 @@
+.comp 920 000111010010000
+.start _nostart_
+.depend "StdOverloaded" "20211222160339"
+.module m_StdOverloaded "StdOverloaded" "20211222160339"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.export e_StdOverloaded_r+;
+.record e_StdOverloaded_r+; a 1 0 "+;"
+.descexp e_StdOverloaded_t+; e_StdOverloaded_c+; _hnf 1 1 "+;"
+.n 1 e_StdOverloaded_t+;
+.o 1 0
+e_StdOverloaded_c+;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_r+;
+	fill_r e_StdOverloaded_r+; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d+;.+
+.export e_StdOverloaded_n+;.+
+.export e_StdOverloaded_ea+;.+
+.descs e_StdOverloaded_d+;.+ e_StdOverloaded_n+;.+ _ 1 0 "+;.+"
+.n -4 e_StdOverloaded_d+;.+ e_StdOverloaded_ea+;.+
+.o 1 0
+e_StdOverloaded_n+;.+
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea+;.+
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r-;
+.record e_StdOverloaded_r-; a 1 0 "-;"
+.descexp e_StdOverloaded_t-; e_StdOverloaded_c-; _hnf 1 1 "-;"
+.n 1 e_StdOverloaded_t-;
+.o 1 0
+e_StdOverloaded_c-;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r-;
+	fill_r e_StdOverloaded_r-; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d-;.-
+.export e_StdOverloaded_n-;.-
+.export e_StdOverloaded_ea-;.-
+.descs e_StdOverloaded_d-;.- e_StdOverloaded_n-;.- _ 1 0 "-;.-"
+.n -4 e_StdOverloaded_d-;.- e_StdOverloaded_ea-;.-
+.o 1 0
+e_StdOverloaded_n-;.-
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea-;.-
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rzero;
+.record e_StdOverloaded_rzero; a 1 0 "zero;"
+.export e_StdOverloaded_dzero;.zero
+.export e_StdOverloaded_nzero;.zero
+.export e_StdOverloaded_eazero;.zero
+.descs e_StdOverloaded_dzero;.zero e_StdOverloaded_nzero;.zero _ 1 0 "zero;.zero"
+.n -4 e_StdOverloaded_dzero;.zero e_StdOverloaded_eazero;.zero
+.o 1 0
+e_StdOverloaded_nzero;.zero
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eazero;.zero
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	jsr_eval 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r*;
+.record e_StdOverloaded_r*; a 1 0 "*;"
+.descexp e_StdOverloaded_t*; e_StdOverloaded_c*; _hnf 1 1 "*;"
+.n 1 e_StdOverloaded_t*;
+.o 1 0
+e_StdOverloaded_c*;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r*;
+	fill_r e_StdOverloaded_r*; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d*;.*
+.export e_StdOverloaded_n*;.*
+.export e_StdOverloaded_ea*;.*
+.descs e_StdOverloaded_d*;.* e_StdOverloaded_n*;.* _ 1 0 "*;.*"
+.n -4 e_StdOverloaded_d*;.* e_StdOverloaded_ea*;.*
+.o 1 0
+e_StdOverloaded_n*;.*
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea*;.*
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r/;
+.record e_StdOverloaded_r/; a 1 0 "/;"
+.descexp e_StdOverloaded_t/; e_StdOverloaded_c/; _hnf 1 1 "/;"
+.n 1 e_StdOverloaded_t/;
+.o 1 0
+e_StdOverloaded_c/;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r/;
+	fill_r e_StdOverloaded_r/; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d/;./
+.export e_StdOverloaded_n/;./
+.export e_StdOverloaded_ea/;./
+.descs e_StdOverloaded_d/;./ e_StdOverloaded_n/;./ _ 1 0 "/;./"
+.n -4 e_StdOverloaded_d/;./ e_StdOverloaded_ea/;./
+.o 1 0
+e_StdOverloaded_n/;./
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea/;./
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rone;
+.record e_StdOverloaded_rone; a 1 0 "one;"
+.export e_StdOverloaded_done;.one
+.export e_StdOverloaded_none;.one
+.export e_StdOverloaded_eaone;.one
+.descs e_StdOverloaded_done;.one e_StdOverloaded_none;.one _ 1 0 "one;.one"
+.n -4 e_StdOverloaded_done;.one e_StdOverloaded_eaone;.one
+.o 1 0
+e_StdOverloaded_none;.one
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaone;.one
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	jsr_eval 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r==;
+.record e_StdOverloaded_r==; a 1 0 "==;"
+.descexp e_StdOverloaded_t==; e_StdOverloaded_c==; _hnf 1 1 "==;"
+.n 1 e_StdOverloaded_t==;
+.o 1 0
+e_StdOverloaded_c==;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r==;
+	fill_r e_StdOverloaded_r==; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d==;.==
+.export e_StdOverloaded_n==;.==
+.export e_StdOverloaded_ea==;.==
+.descs e_StdOverloaded_d==;.== e_StdOverloaded_n==;.== _ 1 0 "==;.=="
+.n -4 e_StdOverloaded_d==;.== e_StdOverloaded_ea==;.==
+.o 1 0
+e_StdOverloaded_n==;.==
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea==;.==
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r<;
+.record e_StdOverloaded_r<; a 1 0 "<;"
+.descexp e_StdOverloaded_t<; e_StdOverloaded_c<; _hnf 1 1 "<;"
+.n 1 e_StdOverloaded_t<;
+.o 1 0
+e_StdOverloaded_c<;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r<;
+	fill_r e_StdOverloaded_r<; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d<;.<
+.export e_StdOverloaded_n<;.<
+.export e_StdOverloaded_ea<;.<
+.descs e_StdOverloaded_d<;.< e_StdOverloaded_n<;.< _ 1 0 "<;.<"
+.n -4 e_StdOverloaded_d<;.< e_StdOverloaded_ea<;.<
+.o 1 0
+e_StdOverloaded_n<;.<
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea<;.<
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_risEven;
+.record e_StdOverloaded_risEven; a 1 0 "isEven;"
+.descexp e_StdOverloaded_tisEven; e_StdOverloaded_cisEven; _hnf 1 1 "isEven;"
+.n 1 e_StdOverloaded_tisEven;
+.o 1 0
+e_StdOverloaded_cisEven;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_risEven;
+	fill_r e_StdOverloaded_risEven; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_disEven;.isEven
+.export e_StdOverloaded_nisEven;.isEven
+.export e_StdOverloaded_eaisEven;.isEven
+.descs e_StdOverloaded_disEven;.isEven e_StdOverloaded_nisEven;.isEven _ 1 0 "isEven;.isEven"
+.n -4 e_StdOverloaded_disEven;.isEven e_StdOverloaded_eaisEven;.isEven
+.o 1 0
+e_StdOverloaded_nisEven;.isEven
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaisEven;.isEven
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_risOdd;
+.record e_StdOverloaded_risOdd; a 1 0 "isOdd;"
+.descexp e_StdOverloaded_tisOdd; e_StdOverloaded_cisOdd; _hnf 1 1 "isOdd;"
+.n 1 e_StdOverloaded_tisOdd;
+.o 1 0
+e_StdOverloaded_cisOdd;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_risOdd;
+	fill_r e_StdOverloaded_risOdd; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_disOdd;.isOdd
+.export e_StdOverloaded_nisOdd;.isOdd
+.export e_StdOverloaded_eaisOdd;.isOdd
+.descs e_StdOverloaded_disOdd;.isOdd e_StdOverloaded_nisOdd;.isOdd _ 1 0 "isOdd;.isOdd"
+.n -4 e_StdOverloaded_disOdd;.isOdd e_StdOverloaded_eaisOdd;.isOdd
+.o 1 0
+e_StdOverloaded_nisOdd;.isOdd
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaisOdd;.isOdd
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rlength;
+.record e_StdOverloaded_rlength; a 1 0 "length;"
+.descexp e_StdOverloaded_tlength; e_StdOverloaded_clength; _hnf 1 1 "length;"
+.n 1 e_StdOverloaded_tlength;
+.o 1 0
+e_StdOverloaded_clength;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rlength;
+	fill_r e_StdOverloaded_rlength; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dlength;.length
+.export e_StdOverloaded_nlength;.length
+.export e_StdOverloaded_ealength;.length
+.descs e_StdOverloaded_dlength;.length e_StdOverloaded_nlength;.length _ 1 0 "length;.length"
+.n -4 e_StdOverloaded_dlength;.length e_StdOverloaded_ealength;.length
+.o 1 0
+e_StdOverloaded_nlength;.length
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ealength;.length
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r%;
+.record e_StdOverloaded_r%; a 1 0 "%;"
+.descexp e_StdOverloaded_t%; e_StdOverloaded_c%; _hnf 1 1 "%;"
+.n 1 e_StdOverloaded_t%;
+.o 1 0
+e_StdOverloaded_c%;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r%;
+	fill_r e_StdOverloaded_r%; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d%;.%
+.export e_StdOverloaded_n%;.%
+.export e_StdOverloaded_ea%;.%
+.descs e_StdOverloaded_d%;.% e_StdOverloaded_n%;.% _ 1 0 "%;.%"
+.n -4 e_StdOverloaded_d%;.% e_StdOverloaded_ea%;.%
+.o 1 0
+e_StdOverloaded_n%;.%
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea%;.%
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r+++;
+.record e_StdOverloaded_r+++; a 1 0 "+++;"
+.descexp e_StdOverloaded_t+++; e_StdOverloaded_c+++; _hnf 1 1 "+++;"
+.n 1 e_StdOverloaded_t+++;
+.o 1 0
+e_StdOverloaded_c+++;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r+++;
+	fill_r e_StdOverloaded_r+++; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d+++;.+++
+.export e_StdOverloaded_n+++;.+++
+.export e_StdOverloaded_ea+++;.+++
+.descs e_StdOverloaded_d+++;.+++ e_StdOverloaded_n+++;.+++ _ 1 0 "+++;.+++"
+.n -4 e_StdOverloaded_d+++;.+++ e_StdOverloaded_ea+++;.+++
+.o 1 0
+e_StdOverloaded_n+++;.+++
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea+++;.+++
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r^;
+.record e_StdOverloaded_r^; a 1 0 "^;"
+.descexp e_StdOverloaded_t^; e_StdOverloaded_c^; _hnf 1 1 "^;"
+.n 1 e_StdOverloaded_t^;
+.o 1 0
+e_StdOverloaded_c^;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r^;
+	fill_r e_StdOverloaded_r^; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d^;.^
+.export e_StdOverloaded_n^;.^
+.export e_StdOverloaded_ea^;.^
+.descs e_StdOverloaded_d^;.^ e_StdOverloaded_n^;.^ _ 1 0 "^;.^"
+.n -4 e_StdOverloaded_d^;.^ e_StdOverloaded_ea^;.^
+.o 1 0
+e_StdOverloaded_n^;.^
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea^;.^
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rabs;
+.record e_StdOverloaded_rabs; a 1 0 "abs;"
+.descexp e_StdOverloaded_tabs; e_StdOverloaded_cabs; _hnf 1 1 "abs;"
+.n 1 e_StdOverloaded_tabs;
+.o 1 0
+e_StdOverloaded_cabs;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rabs;
+	fill_r e_StdOverloaded_rabs; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dabs;.abs
+.export e_StdOverloaded_nabs;.abs
+.export e_StdOverloaded_eaabs;.abs
+.descs e_StdOverloaded_dabs;.abs e_StdOverloaded_nabs;.abs _ 1 0 "abs;.abs"
+.n -4 e_StdOverloaded_dabs;.abs e_StdOverloaded_eaabs;.abs
+.o 1 0
+e_StdOverloaded_nabs;.abs
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaabs;.abs
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rsign;
+.record e_StdOverloaded_rsign; a 1 0 "sign;"
+.descexp e_StdOverloaded_tsign; e_StdOverloaded_csign; _hnf 1 1 "sign;"
+.n 1 e_StdOverloaded_tsign;
+.o 1 0
+e_StdOverloaded_csign;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rsign;
+	fill_r e_StdOverloaded_rsign; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dsign;.sign
+.export e_StdOverloaded_nsign;.sign
+.export e_StdOverloaded_easign;.sign
+.descs e_StdOverloaded_dsign;.sign e_StdOverloaded_nsign;.sign _ 1 0 "sign;.sign"
+.n -4 e_StdOverloaded_dsign;.sign e_StdOverloaded_easign;.sign
+.o 1 0
+e_StdOverloaded_nsign;.sign
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_easign;.sign
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_r~;
+.record e_StdOverloaded_r~; a 1 0 "~;"
+.descexp e_StdOverloaded_t~; e_StdOverloaded_c~; _hnf 1 1 "~;"
+.n 1 e_StdOverloaded_t~;
+.o 1 0
+e_StdOverloaded_c~;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_r~;
+	fill_r e_StdOverloaded_r~; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_d~;.~
+.export e_StdOverloaded_n~;.~
+.export e_StdOverloaded_ea~;.~
+.descs e_StdOverloaded_d~;.~ e_StdOverloaded_n~;.~ _ 1 0 "~;.~"
+.n -4 e_StdOverloaded_d~;.~ e_StdOverloaded_ea~;.~
+.o 1 0
+e_StdOverloaded_n~;.~
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ea~;.~
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rmod;
+.record e_StdOverloaded_rmod; a 1 0 "mod;"
+.descexp e_StdOverloaded_tmod; e_StdOverloaded_cmod; _hnf 1 1 "mod;"
+.n 1 e_StdOverloaded_tmod;
+.o 1 0
+e_StdOverloaded_cmod;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rmod;
+	fill_r e_StdOverloaded_rmod; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dmod;.mod
+.export e_StdOverloaded_nmod;.mod
+.export e_StdOverloaded_eamod;.mod
+.descs e_StdOverloaded_dmod;.mod e_StdOverloaded_nmod;.mod _ 1 0 "mod;.mod"
+.n -4 e_StdOverloaded_dmod;.mod e_StdOverloaded_eamod;.mod
+.o 1 0
+e_StdOverloaded_nmod;.mod
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eamod;.mod
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rrem;
+.record e_StdOverloaded_rrem; a 1 0 "rem;"
+.descexp e_StdOverloaded_trem; e_StdOverloaded_crem; _hnf 1 1 "rem;"
+.n 1 e_StdOverloaded_trem;
+.o 1 0
+e_StdOverloaded_crem;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rrem;
+	fill_r e_StdOverloaded_rrem; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_drem;.rem
+.export e_StdOverloaded_nrem;.rem
+.export e_StdOverloaded_earem;.rem
+.descs e_StdOverloaded_drem;.rem e_StdOverloaded_nrem;.rem _ 1 0 "rem;.rem"
+.n -4 e_StdOverloaded_drem;.rem e_StdOverloaded_earem;.rem
+.o 1 0
+e_StdOverloaded_nrem;.rem
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_earem;.rem
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rgcd;
+.record e_StdOverloaded_rgcd; a 1 0 "gcd;"
+.descexp e_StdOverloaded_tgcd; e_StdOverloaded_cgcd; _hnf 1 1 "gcd;"
+.n 1 e_StdOverloaded_tgcd;
+.o 1 0
+e_StdOverloaded_cgcd;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rgcd;
+	fill_r e_StdOverloaded_rgcd; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dgcd;.gcd
+.export e_StdOverloaded_ngcd;.gcd
+.export e_StdOverloaded_eagcd;.gcd
+.descs e_StdOverloaded_dgcd;.gcd e_StdOverloaded_ngcd;.gcd _ 1 0 "gcd;.gcd"
+.n -4 e_StdOverloaded_dgcd;.gcd e_StdOverloaded_eagcd;.gcd
+.o 1 0
+e_StdOverloaded_ngcd;.gcd
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eagcd;.gcd
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rlcm;
+.record e_StdOverloaded_rlcm; a 1 0 "lcm;"
+.descexp e_StdOverloaded_tlcm; e_StdOverloaded_clcm; _hnf 1 1 "lcm;"
+.n 1 e_StdOverloaded_tlcm;
+.o 1 0
+e_StdOverloaded_clcm;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rlcm;
+	fill_r e_StdOverloaded_rlcm; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dlcm;.lcm
+.export e_StdOverloaded_nlcm;.lcm
+.export e_StdOverloaded_ealcm;.lcm
+.descs e_StdOverloaded_dlcm;.lcm e_StdOverloaded_nlcm;.lcm _ 1 0 "lcm;.lcm"
+.n -4 e_StdOverloaded_dlcm;.lcm e_StdOverloaded_ealcm;.lcm
+.o 1 0
+e_StdOverloaded_nlcm;.lcm
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ealcm;.lcm
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtoInt;
+.record e_StdOverloaded_rtoInt; a 1 0 "toInt;"
+.descexp e_StdOverloaded_ttoInt; e_StdOverloaded_ctoInt; _hnf 1 1 "toInt;"
+.n 1 e_StdOverloaded_ttoInt;
+.o 1 0
+e_StdOverloaded_ctoInt;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtoInt;
+	fill_r e_StdOverloaded_rtoInt; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtoInt;.toInt
+.export e_StdOverloaded_ntoInt;.toInt
+.export e_StdOverloaded_eatoInt;.toInt
+.descs e_StdOverloaded_dtoInt;.toInt e_StdOverloaded_ntoInt;.toInt _ 1 0 "toInt;.toInt"
+.n -4 e_StdOverloaded_dtoInt;.toInt e_StdOverloaded_eatoInt;.toInt
+.o 1 0
+e_StdOverloaded_ntoInt;.toInt
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatoInt;.toInt
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtoChar;
+.record e_StdOverloaded_rtoChar; a 1 0 "toChar;"
+.descexp e_StdOverloaded_ttoChar; e_StdOverloaded_ctoChar; _hnf 1 1 "toChar;"
+.n 1 e_StdOverloaded_ttoChar;
+.o 1 0
+e_StdOverloaded_ctoChar;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtoChar;
+	fill_r e_StdOverloaded_rtoChar; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtoChar;.toChar
+.export e_StdOverloaded_ntoChar;.toChar
+.export e_StdOverloaded_eatoChar;.toChar
+.descs e_StdOverloaded_dtoChar;.toChar e_StdOverloaded_ntoChar;.toChar _ 1 0 "toChar;.toChar"
+.n -4 e_StdOverloaded_dtoChar;.toChar e_StdOverloaded_eatoChar;.toChar
+.o 1 0
+e_StdOverloaded_ntoChar;.toChar
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatoChar;.toChar
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtoBool;
+.record e_StdOverloaded_rtoBool; a 1 0 "toBool;"
+.descexp e_StdOverloaded_ttoBool; e_StdOverloaded_ctoBool; _hnf 1 1 "toBool;"
+.n 1 e_StdOverloaded_ttoBool;
+.o 1 0
+e_StdOverloaded_ctoBool;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtoBool;
+	fill_r e_StdOverloaded_rtoBool; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtoBool;.toBool
+.export e_StdOverloaded_ntoBool;.toBool
+.export e_StdOverloaded_eatoBool;.toBool
+.descs e_StdOverloaded_dtoBool;.toBool e_StdOverloaded_ntoBool;.toBool _ 1 0 "toBool;.toBool"
+.n -4 e_StdOverloaded_dtoBool;.toBool e_StdOverloaded_eatoBool;.toBool
+.o 1 0
+e_StdOverloaded_ntoBool;.toBool
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatoBool;.toBool
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtoReal;
+.record e_StdOverloaded_rtoReal; a 1 0 "toReal;"
+.descexp e_StdOverloaded_ttoReal; e_StdOverloaded_ctoReal; _hnf 1 1 "toReal;"
+.n 1 e_StdOverloaded_ttoReal;
+.o 1 0
+e_StdOverloaded_ctoReal;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtoReal;
+	fill_r e_StdOverloaded_rtoReal; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtoReal;.toReal
+.export e_StdOverloaded_ntoReal;.toReal
+.export e_StdOverloaded_eatoReal;.toReal
+.descs e_StdOverloaded_dtoReal;.toReal e_StdOverloaded_ntoReal;.toReal _ 1 0 "toReal;.toReal"
+.n -4 e_StdOverloaded_dtoReal;.toReal e_StdOverloaded_eatoReal;.toReal
+.o 1 0
+e_StdOverloaded_ntoReal;.toReal
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatoReal;.toReal
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtoString;
+.record e_StdOverloaded_rtoString; a 1 0 "toString;"
+.descexp e_StdOverloaded_ttoString; e_StdOverloaded_ctoString; _hnf 1 1 "toString;"
+.n 1 e_StdOverloaded_ttoString;
+.o 1 0
+e_StdOverloaded_ctoString;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtoString;
+	fill_r e_StdOverloaded_rtoString; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtoString;.toString
+.export e_StdOverloaded_ntoString;.toString
+.export e_StdOverloaded_eatoString;.toString
+.descs e_StdOverloaded_dtoString;.toString e_StdOverloaded_ntoString;.toString _ 1 0 "toString;.toString"
+.n -4 e_StdOverloaded_dtoString;.toString e_StdOverloaded_eatoString;.toString
+.o 1 0
+e_StdOverloaded_ntoString;.toString
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatoString;.toString
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rfromInt;
+.record e_StdOverloaded_rfromInt; a 1 0 "fromInt;"
+.descexp e_StdOverloaded_tfromInt; e_StdOverloaded_cfromInt; _hnf 1 1 "fromInt;"
+.n 1 e_StdOverloaded_tfromInt;
+.o 1 0
+e_StdOverloaded_cfromInt;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rfromInt;
+	fill_r e_StdOverloaded_rfromInt; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dfromInt;.fromInt
+.export e_StdOverloaded_nfromInt;.fromInt
+.export e_StdOverloaded_eafromInt;.fromInt
+.descs e_StdOverloaded_dfromInt;.fromInt e_StdOverloaded_nfromInt;.fromInt _ 1 0 "fromInt;.fromInt"
+.n -4 e_StdOverloaded_dfromInt;.fromInt e_StdOverloaded_eafromInt;.fromInt
+.o 1 0
+e_StdOverloaded_nfromInt;.fromInt
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eafromInt;.fromInt
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rfromChar;
+.record e_StdOverloaded_rfromChar; a 1 0 "fromChar;"
+.descexp e_StdOverloaded_tfromChar; e_StdOverloaded_cfromChar; _hnf 1 1 "fromChar;"
+.n 1 e_StdOverloaded_tfromChar;
+.o 1 0
+e_StdOverloaded_cfromChar;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rfromChar;
+	fill_r e_StdOverloaded_rfromChar; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dfromChar;.fromChar
+.export e_StdOverloaded_nfromChar;.fromChar
+.export e_StdOverloaded_eafromChar;.fromChar
+.descs e_StdOverloaded_dfromChar;.fromChar e_StdOverloaded_nfromChar;.fromChar _ 1 0 "fromChar;.fromChar"
+.n -4 e_StdOverloaded_dfromChar;.fromChar e_StdOverloaded_eafromChar;.fromChar
+.o 1 0
+e_StdOverloaded_nfromChar;.fromChar
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eafromChar;.fromChar
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rfromBool;
+.record e_StdOverloaded_rfromBool; a 1 0 "fromBool;"
+.descexp e_StdOverloaded_tfromBool; e_StdOverloaded_cfromBool; _hnf 1 1 "fromBool;"
+.n 1 e_StdOverloaded_tfromBool;
+.o 1 0
+e_StdOverloaded_cfromBool;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rfromBool;
+	fill_r e_StdOverloaded_rfromBool; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dfromBool;.fromBool
+.export e_StdOverloaded_nfromBool;.fromBool
+.export e_StdOverloaded_eafromBool;.fromBool
+.descs e_StdOverloaded_dfromBool;.fromBool e_StdOverloaded_nfromBool;.fromBool _ 1 0 "fromBool;.fromBool"
+.n -4 e_StdOverloaded_dfromBool;.fromBool e_StdOverloaded_eafromBool;.fromBool
+.o 1 0
+e_StdOverloaded_nfromBool;.fromBool
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eafromBool;.fromBool
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rfromReal;
+.record e_StdOverloaded_rfromReal; a 1 0 "fromReal;"
+.descexp e_StdOverloaded_tfromReal; e_StdOverloaded_cfromReal; _hnf 1 1 "fromReal;"
+.n 1 e_StdOverloaded_tfromReal;
+.o 1 0
+e_StdOverloaded_cfromReal;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rfromReal;
+	fill_r e_StdOverloaded_rfromReal; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dfromReal;.fromReal
+.export e_StdOverloaded_nfromReal;.fromReal
+.export e_StdOverloaded_eafromReal;.fromReal
+.descs e_StdOverloaded_dfromReal;.fromReal e_StdOverloaded_nfromReal;.fromReal _ 1 0 "fromReal;.fromReal"
+.n -4 e_StdOverloaded_dfromReal;.fromReal e_StdOverloaded_eafromReal;.fromReal
+.o 1 0
+e_StdOverloaded_nfromReal;.fromReal
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eafromReal;.fromReal
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rfromString;
+.record e_StdOverloaded_rfromString; a 1 0 "fromString;"
+.descexp e_StdOverloaded_tfromString; e_StdOverloaded_cfromString; _hnf 1 1 "fromString;"
+.n 1 e_StdOverloaded_tfromString;
+.o 1 0
+e_StdOverloaded_cfromString;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rfromString;
+	fill_r e_StdOverloaded_rfromString; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dfromString;.fromString
+.export e_StdOverloaded_nfromString;.fromString
+.export e_StdOverloaded_eafromString;.fromString
+.descs e_StdOverloaded_dfromString;.fromString e_StdOverloaded_nfromString;.fromString _ 1 0 "fromString;.fromString"
+.n -4 e_StdOverloaded_dfromString;.fromString e_StdOverloaded_eafromString;.fromString
+.o 1 0
+e_StdOverloaded_nfromString;.fromString
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eafromString;.fromString
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rln;
+.record e_StdOverloaded_rln; a 1 0 "ln;"
+.descexp e_StdOverloaded_tln; e_StdOverloaded_cln; _hnf 1 1 "ln;"
+.n 1 e_StdOverloaded_tln;
+.o 1 0
+e_StdOverloaded_cln;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rln;
+	fill_r e_StdOverloaded_rln; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dln;.ln
+.export e_StdOverloaded_nln;.ln
+.export e_StdOverloaded_ealn;.ln
+.descs e_StdOverloaded_dln;.ln e_StdOverloaded_nln;.ln _ 1 0 "ln;.ln"
+.n -4 e_StdOverloaded_dln;.ln e_StdOverloaded_ealn;.ln
+.o 1 0
+e_StdOverloaded_nln;.ln
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ealn;.ln
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rlog10;
+.record e_StdOverloaded_rlog10; a 1 0 "log10;"
+.descexp e_StdOverloaded_tlog10; e_StdOverloaded_clog10; _hnf 1 1 "log10;"
+.n 1 e_StdOverloaded_tlog10;
+.o 1 0
+e_StdOverloaded_clog10;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rlog10;
+	fill_r e_StdOverloaded_rlog10; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dlog10;.log10
+.export e_StdOverloaded_nlog10;.log10
+.export e_StdOverloaded_ealog10;.log10
+.descs e_StdOverloaded_dlog10;.log10 e_StdOverloaded_nlog10;.log10 _ 1 0 "log10;.log10"
+.n -4 e_StdOverloaded_dlog10;.log10 e_StdOverloaded_ealog10;.log10
+.o 1 0
+e_StdOverloaded_nlog10;.log10
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_ealog10;.log10
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rexp;
+.record e_StdOverloaded_rexp; a 1 0 "exp;"
+.descexp e_StdOverloaded_texp; e_StdOverloaded_cexp; _hnf 1 1 "exp;"
+.n 1 e_StdOverloaded_texp;
+.o 1 0
+e_StdOverloaded_cexp;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rexp;
+	fill_r e_StdOverloaded_rexp; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dexp;.exp
+.export e_StdOverloaded_nexp;.exp
+.export e_StdOverloaded_eaexp;.exp
+.descs e_StdOverloaded_dexp;.exp e_StdOverloaded_nexp;.exp _ 1 0 "exp;.exp"
+.n -4 e_StdOverloaded_dexp;.exp e_StdOverloaded_eaexp;.exp
+.o 1 0
+e_StdOverloaded_nexp;.exp
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaexp;.exp
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rsqrt;
+.record e_StdOverloaded_rsqrt; a 1 0 "sqrt;"
+.descexp e_StdOverloaded_tsqrt; e_StdOverloaded_csqrt; _hnf 1 1 "sqrt;"
+.n 1 e_StdOverloaded_tsqrt;
+.o 1 0
+e_StdOverloaded_csqrt;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rsqrt;
+	fill_r e_StdOverloaded_rsqrt; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dsqrt;.sqrt
+.export e_StdOverloaded_nsqrt;.sqrt
+.export e_StdOverloaded_easqrt;.sqrt
+.descs e_StdOverloaded_dsqrt;.sqrt e_StdOverloaded_nsqrt;.sqrt _ 1 0 "sqrt;.sqrt"
+.n -4 e_StdOverloaded_dsqrt;.sqrt e_StdOverloaded_easqrt;.sqrt
+.o 1 0
+e_StdOverloaded_nsqrt;.sqrt
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_easqrt;.sqrt
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rsin;
+.record e_StdOverloaded_rsin; a 1 0 "sin;"
+.descexp e_StdOverloaded_tsin; e_StdOverloaded_csin; _hnf 1 1 "sin;"
+.n 1 e_StdOverloaded_tsin;
+.o 1 0
+e_StdOverloaded_csin;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rsin;
+	fill_r e_StdOverloaded_rsin; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dsin;.sin
+.export e_StdOverloaded_nsin;.sin
+.export e_StdOverloaded_easin;.sin
+.descs e_StdOverloaded_dsin;.sin e_StdOverloaded_nsin;.sin _ 1 0 "sin;.sin"
+.n -4 e_StdOverloaded_dsin;.sin e_StdOverloaded_easin;.sin
+.o 1 0
+e_StdOverloaded_nsin;.sin
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_easin;.sin
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rcos;
+.record e_StdOverloaded_rcos; a 1 0 "cos;"
+.descexp e_StdOverloaded_tcos; e_StdOverloaded_ccos; _hnf 1 1 "cos;"
+.n 1 e_StdOverloaded_tcos;
+.o 1 0
+e_StdOverloaded_ccos;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rcos;
+	fill_r e_StdOverloaded_rcos; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dcos;.cos
+.export e_StdOverloaded_ncos;.cos
+.export e_StdOverloaded_eacos;.cos
+.descs e_StdOverloaded_dcos;.cos e_StdOverloaded_ncos;.cos _ 1 0 "cos;.cos"
+.n -4 e_StdOverloaded_dcos;.cos e_StdOverloaded_eacos;.cos
+.o 1 0
+e_StdOverloaded_ncos;.cos
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eacos;.cos
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtan;
+.record e_StdOverloaded_rtan; a 1 0 "tan;"
+.descexp e_StdOverloaded_ttan; e_StdOverloaded_ctan; _hnf 1 1 "tan;"
+.n 1 e_StdOverloaded_ttan;
+.o 1 0
+e_StdOverloaded_ctan;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtan;
+	fill_r e_StdOverloaded_rtan; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtan;.tan
+.export e_StdOverloaded_ntan;.tan
+.export e_StdOverloaded_eatan;.tan
+.descs e_StdOverloaded_dtan;.tan e_StdOverloaded_ntan;.tan _ 1 0 "tan;.tan"
+.n -4 e_StdOverloaded_dtan;.tan e_StdOverloaded_eatan;.tan
+.o 1 0
+e_StdOverloaded_ntan;.tan
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatan;.tan
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rasin;
+.record e_StdOverloaded_rasin; a 1 0 "asin;"
+.descexp e_StdOverloaded_tasin; e_StdOverloaded_casin; _hnf 1 1 "asin;"
+.n 1 e_StdOverloaded_tasin;
+.o 1 0
+e_StdOverloaded_casin;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rasin;
+	fill_r e_StdOverloaded_rasin; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dasin;.asin
+.export e_StdOverloaded_nasin;.asin
+.export e_StdOverloaded_eaasin;.asin
+.descs e_StdOverloaded_dasin;.asin e_StdOverloaded_nasin;.asin _ 1 0 "asin;.asin"
+.n -4 e_StdOverloaded_dasin;.asin e_StdOverloaded_eaasin;.asin
+.o 1 0
+e_StdOverloaded_nasin;.asin
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaasin;.asin
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_racos;
+.record e_StdOverloaded_racos; a 1 0 "acos;"
+.descexp e_StdOverloaded_tacos; e_StdOverloaded_cacos; _hnf 1 1 "acos;"
+.n 1 e_StdOverloaded_tacos;
+.o 1 0
+e_StdOverloaded_cacos;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_racos;
+	fill_r e_StdOverloaded_racos; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dacos;.acos
+.export e_StdOverloaded_nacos;.acos
+.export e_StdOverloaded_eaacos;.acos
+.descs e_StdOverloaded_dacos;.acos e_StdOverloaded_nacos;.acos _ 1 0 "acos;.acos"
+.n -4 e_StdOverloaded_dacos;.acos e_StdOverloaded_eaacos;.acos
+.o 1 0
+e_StdOverloaded_nacos;.acos
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaacos;.acos
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_ratan;
+.record e_StdOverloaded_ratan; a 1 0 "atan;"
+.descexp e_StdOverloaded_tatan; e_StdOverloaded_catan; _hnf 1 1 "atan;"
+.n 1 e_StdOverloaded_tatan;
+.o 1 0
+e_StdOverloaded_catan;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_ratan;
+	fill_r e_StdOverloaded_ratan; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_datan;.atan
+.export e_StdOverloaded_natan;.atan
+.export e_StdOverloaded_eaatan;.atan
+.descs e_StdOverloaded_datan;.atan e_StdOverloaded_natan;.atan _ 1 0 "atan;.atan"
+.n -4 e_StdOverloaded_datan;.atan e_StdOverloaded_eaatan;.atan
+.o 1 0
+e_StdOverloaded_natan;.atan
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaatan;.atan
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rsinh;
+.record e_StdOverloaded_rsinh; a 1 0 "sinh;"
+.descexp e_StdOverloaded_tsinh; e_StdOverloaded_csinh; _hnf 1 1 "sinh;"
+.n 1 e_StdOverloaded_tsinh;
+.o 1 0
+e_StdOverloaded_csinh;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rsinh;
+	fill_r e_StdOverloaded_rsinh; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dsinh;.sinh
+.export e_StdOverloaded_nsinh;.sinh
+.export e_StdOverloaded_easinh;.sinh
+.descs e_StdOverloaded_dsinh;.sinh e_StdOverloaded_nsinh;.sinh _ 1 0 "sinh;.sinh"
+.n -4 e_StdOverloaded_dsinh;.sinh e_StdOverloaded_easinh;.sinh
+.o 1 0
+e_StdOverloaded_nsinh;.sinh
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_easinh;.sinh
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rcosh;
+.record e_StdOverloaded_rcosh; a 1 0 "cosh;"
+.descexp e_StdOverloaded_tcosh; e_StdOverloaded_ccosh; _hnf 1 1 "cosh;"
+.n 1 e_StdOverloaded_tcosh;
+.o 1 0
+e_StdOverloaded_ccosh;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rcosh;
+	fill_r e_StdOverloaded_rcosh; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dcosh;.cosh
+.export e_StdOverloaded_ncosh;.cosh
+.export e_StdOverloaded_eacosh;.cosh
+.descs e_StdOverloaded_dcosh;.cosh e_StdOverloaded_ncosh;.cosh _ 1 0 "cosh;.cosh"
+.n -4 e_StdOverloaded_dcosh;.cosh e_StdOverloaded_eacosh;.cosh
+.o 1 0
+e_StdOverloaded_ncosh;.cosh
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eacosh;.cosh
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rtanh;
+.record e_StdOverloaded_rtanh; a 1 0 "tanh;"
+.descexp e_StdOverloaded_ttanh; e_StdOverloaded_ctanh; _hnf 1 1 "tanh;"
+.n 1 e_StdOverloaded_ttanh;
+.o 1 0
+e_StdOverloaded_ctanh;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rtanh;
+	fill_r e_StdOverloaded_rtanh; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dtanh;.tanh
+.export e_StdOverloaded_ntanh;.tanh
+.export e_StdOverloaded_eatanh;.tanh
+.descs e_StdOverloaded_dtanh;.tanh e_StdOverloaded_ntanh;.tanh _ 1 0 "tanh;.tanh"
+.n -4 e_StdOverloaded_dtanh;.tanh e_StdOverloaded_eatanh;.tanh
+.o 1 0
+e_StdOverloaded_ntanh;.tanh
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eatanh;.tanh
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_rasinh;
+.record e_StdOverloaded_rasinh; a 1 0 "asinh;"
+.descexp e_StdOverloaded_tasinh; e_StdOverloaded_casinh; _hnf 1 1 "asinh;"
+.n 1 e_StdOverloaded_tasinh;
+.o 1 0
+e_StdOverloaded_casinh;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_rasinh;
+	fill_r e_StdOverloaded_rasinh; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dasinh;.asinh
+.export e_StdOverloaded_nasinh;.asinh
+.export e_StdOverloaded_eaasinh;.asinh
+.descs e_StdOverloaded_dasinh;.asinh e_StdOverloaded_nasinh;.asinh _ 1 0 "asinh;.asinh"
+.n -4 e_StdOverloaded_dasinh;.asinh e_StdOverloaded_eaasinh;.asinh
+.o 1 0
+e_StdOverloaded_nasinh;.asinh
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaasinh;.asinh
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_racosh;
+.record e_StdOverloaded_racosh; a 1 0 "acosh;"
+.descexp e_StdOverloaded_tacosh; e_StdOverloaded_cacosh; _hnf 1 1 "acosh;"
+.n 1 e_StdOverloaded_tacosh;
+.o 1 0
+e_StdOverloaded_cacosh;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_racosh;
+	fill_r e_StdOverloaded_racosh; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_dacosh;.acosh
+.export e_StdOverloaded_nacosh;.acosh
+.export e_StdOverloaded_eaacosh;.acosh
+.descs e_StdOverloaded_dacosh;.acosh e_StdOverloaded_nacosh;.acosh _ 1 0 "acosh;.acosh"
+.n -4 e_StdOverloaded_dacosh;.acosh e_StdOverloaded_eaacosh;.acosh
+.o 1 0
+e_StdOverloaded_nacosh;.acosh
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaacosh;.acosh
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_ratanh;
+.record e_StdOverloaded_ratanh; a 1 0 "atanh;"
+.descexp e_StdOverloaded_tatanh; e_StdOverloaded_catanh; _hnf 1 1 "atanh;"
+.n 1 e_StdOverloaded_tatanh;
+.o 1 0
+e_StdOverloaded_catanh;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+.impdesc e_StdOverloaded_ratanh;
+	fill_r e_StdOverloaded_ratanh; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdOverloaded_datanh;.atanh
+.export e_StdOverloaded_natanh;.atanh
+.export e_StdOverloaded_eaatanh;.atanh
+.descs e_StdOverloaded_datanh;.atanh e_StdOverloaded_natanh;.atanh _ 1 0 "atanh;.atanh"
+.n -4 e_StdOverloaded_datanh;.atanh e_StdOverloaded_eaatanh;.atanh
+.o 1 0
+e_StdOverloaded_natanh;.atanh
+	push_node _cycle_in_spine 1
+.o 2 0
+e_StdOverloaded_eaatanh;.atanh
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clean Language Report</title>
+</head>
+<body style="font-family:Helvetica">
+<div><div style="position: absolute;"><svg width="355.555555555556" height="177.777777777778">
+<path d="M49.7777777777778 7.32929319639176 h280.888888888889 v141.785858051661 h-280.888888888889 Z M64 33.9959598630584 h252.444444444444 v88.4525247183276 h-252.444444444444 Z" stroke="none" fill="#3F87AF" fill-rule="evenodd"/>
+<path d="M64 111.781817914719 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 33.9959598630584 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 44.6626265297251 h252.444444444444 v67.1191913849942 h-252.444444444444 Z" stroke="none" fill="#FFFFFF"/>
+<path d="M99.1179703874409 137.550135143052 C93.2711853763986 133.302197180425,88.084448516421 128.213312506961,83.725936053644 122.448484581386 L110.089961763567 122.448484581386 Z" stroke="none" fill="#8C96A0"/>
+<path d="M99.1179703874409 18.8943093013927 C93.2711853763986 23.1422472640192,88.084448516421 28.2311319374834,83.725936053644 33.9959598630584 L110.089961763567 33.9959598630584 Z" stroke="none" fill="#8C96A0"/>
+<path d="M126.968649704419 100.555210486665 C109.380820468897 87.7769045717629,109.380820468897 61.5564287615705,126.968649704419 48.7781228466684 L116.780371998016 34.7551616108359 C89.6658019265873 54.45504989631,89.6658019265873 94.8782834370233,116.780371998016 114.578171722497 Z" stroke="none" fill="#8C96A0"/>
+<path d="M113.645517319123 118.89292902583 C83.5996423751073 97.0633230878727,83.5996423751073 52.2700102454607,113.645517319123 30.4404043075029 L102.673525942996 15.3387537458372 C62.3680839449271 44.6223714674879,62.3680839449271 104.710961865845,102.673525942996 133.994579587496 Z" stroke="none" fill="#8C96A0"/>
+<path d="M123.413094148863 104.110766042221 C105.825264913342 91.3324601273184,105.825264913342 65.111984317126,123.413094148863 52.3336784022239 L113.22481644246 38.3107171663915 C86.1102463710318 58.0106054518656,86.1102463710318 98.4338389925788,113.22481644246 118.133727278053  Z" stroke="none" fill="#3F87AF"/>
+<path d="M110.089961763567 122.448484581386 C80.0440868195518 100.618878643428,80.0440868195518 55.8255658010162,110.089961763567 33.9959598630584L83.725936053644 33.9959598630584 C63.9432065006372 60.1617750913602,63.9432065006372 96.2826693530842,83.725936053644 122.448484581386" stroke="none" fill="#3F87AF"/>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="145.777777777778" y="103.111111111111" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144.888888888889" y="102.222222222222" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144" y="101.333333333333" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="143.111111111111" y="100.444444444444" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="142.222222222222" y="99.5555555555556" fill="#3F87AF">Clean</text>
+</svg>
+</div><h1 style="text-align:right;background-color:#9999FF;"><a id="_1"><br>Chapter 1<br><br>Basic Semantics</a></h1></div>
+<p style="text-align:justify;">The semantics of CLEAN is based on <i>Term Graph Rewriting Systems</i> (Barendregt, 1987; Plasmeijer and Van Eekelen, 1993). This means that functions in a CLEAN program semantically work on <i>graphs</i> instead of the usual <i>terms</i>. This enabled us to incorporate CLEAN's typical features (definition of cyclic data structures, lazy copying, uniqueness typing) which would otherwise be very difficult to give a proper semantics for. However, in many cases the programmer does not need to be aware of the fact that he/she is manipulating graphs. Evaluation of a CLEAN program takes place in the same way as in other lazy functional languages. One of the "differences" between CLEAN and other functional languages is that when a variable occurs more than once in a function body, the semantics <i>prescribe</i> that the actual argument is shared (the semantics of most other languages do not prescribe this although it is common practice in any implementation of a functional language). Furthermore, one can label any expression to make the definition of cyclic structures possible. So, people familiar with other functional languages will have no problems writing CLEAN programs.</p>
+<p style="text-align:justify;">When larger applications are being written, or, when CLEAN is interfaced with the non-functional world, or, when efficiency counts, or, when one simply wants to have a good understanding of the language it is good to have some knowledge of the basic semantics of CLEAN which is based on term graph rewriting. In this chapter a short introduction into the basic semantics of CLEAN is given. An extensive treatment of the underlying semantics and the implementation techniques of CLEAN can be found in Plasmeijer and Van Eekelen (1993).</p>
+<h2 style="background-color:#9999FF;"><a id="_1.1">1.1 Graph Rewriting</a></h2>
+<p style="text-align:justify;">A CLEAN <i>program</i> basically consists of a number of <i>graph rewrite rules</i> (<i>function definitions</i>) which specify how a given <i>graph</i> (the <i>initial expression</i>) has to be <i>rewritten</i>.</p>
+<p style="text-align:justify;">A <i>graph</i> is a set of nodes. Each node has a defining <i>node-identifier</i> (the <i>node-id</i>). A <i>node</i> consists of a <i>symbol</i> and a (possibly empty) sequence of <i>applied node-id's</i> (the <i>arguments</i> of the symbol) <i>Applied node-id's</i> can be seen as <i>references</i> (<i>arcs</i>) to nodes in the graph, as such they have a <i>direction</i>: from the node in which the node-id is applied to the node of which the node-id is the defining identifier.</p>
+<p style="text-align:justify;">Each <i>graph rewrite rule</i> consists of a <i>left-hand side graph</i> (the <i>pattern</i>) and a <i>right-hand side</i> (rhs) consisting of a graph<i> </i>(the <i>contractum</i>) or just a <i>single</i> node-id (a <i>redirection</i>). In CLEAN rewrite rules are not comparing: the left-hand side (lhs) graph of a rule is a tree, i.e. each node identifier is applied only once, so there exists exactly one path from the root to a node of this graph.</p>
+<p style="text-align:justify;">A rewrite rule defines a (<i>partial</i>) <i>function</i>. The <i>function symbol</i> is the root symbol of the left-hand side graph of the rule alternatives. All other symbols that appear in rewrite rules, are <i>constructor symbols</i>.</p>
+<p style="text-align:justify;">The <i>program graph</i> is the graph that is rewritten according to the rules. Initially, this program graph is fixed: it consists of a single node containing the symbol Start, so there is no need to specify this graph in the program explicitly. The part of the graph that matches the pattern of a certain rewrite rule is called a <i>redex</i> (<i>reducible expression</i>). A <i>rewrite of a redex</i> to its <i>reduct</i> can take place according to the right-hand side of the corresponding rewrite rule. If the right-hand side is a contractum then the rewrite consists of building this contractum and doing a redirection of the root of the redex to root of the right-hand side. Otherwise, only a redirection of the root of the redex to the single node-id specified on the right-hand side is performed. A <i>redirection</i> of a node-id n1 to a node-id n2 means that all applied occurrences of n1 are replaced by occurrences of n2 (which is in reality commonly implemented by <i>overwriting</i> n1 with n2).</p>
+<p style="text-align:justify;">A <i>reduction strategy</i> is a function that makes choices out of the available redexes. A <i>reducer</i> is a process that reduces redexes that are indicated by the strategy. The result of a reducer  is reached as soon as the reduction strategy does not indicate redexes any more. A graph is in <i>normal form</i> if none of the patterns in the rules match any part of the graph. A graph is said to be in root normal form when the root of a graph is not the root of a redex and can never become the root of a redex. In general it is undecidable whether a graph is in root normal form.</p>
+<p style="text-align:justify;">A pattern <i>partially matches</i> a graph if firstly the symbol of the root of the pattern equals the symbol of the root of the graph and secondly in positions where symbols in the pattern are not syntactically equal to symbols in the graph, the corresponding sub-graph is a redex or the sub-graph itself is partially matching a rule. A graph is in <i>strong root normal form</i> if the graph does not partially match any rule. It is decidable whether or not a graph is in strong root normal form. A graph in strong root normal form does not partially match any rule, so it is also in root normal form.</p>
+<p style="text-align:justify;">The default reduction strategy used in CLEAN is the <i>functional reduction strategy</i>. Reducing graphs according to this strategy resembles very much the way execution proceeds in other lazy functional languages: in the standard lambda calculus semantics the functional strategy corresponds to normal order reduction. On graph rewrite rules the functional strategy proceeds as follows: if there are several rewrite rules for a particular function, the rules are tried in textual order; patterns are tested from left to right; evaluation to strong root normal form of arguments is forced when an actual argument is matched against a corresponding non-variable part of the pattern. A formal definition of this strategy can be found in (Toyama <i>et al.</i>, 1991).</p>
+<h3 style="background-color:#9999FF;"><a id="_1.1.1">1.1.1 A Small Example</a></h3>
+<p style="text-align:justify;">Consider the following CLEAN program:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">Add&nbsp;Zero&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)<br>
+Add&nbsp;(Succ&nbsp;a)&nbsp;z&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;Succ&nbsp;(Add&nbsp;a&nbsp;z)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)<br>
+<br>
+Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;(Succ&nbsp;o)&nbsp;o<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;=&nbsp;Zero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)<br><p></p>
+<p style="text-align:justify;">In CLEAN a distinction is between function definitions (graph rewriting rules) and graphs (constant definitions). A semantic equivalent definition of the program above is given below where this distinction is made explicit ("=&gt;" indicates a rewrite rule whereas "=:" is used for a constant (<i>sub-</i>) <i>graph</i> definition</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">Add&nbsp;Zero&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)<br>
+Add&nbsp;(Succ&nbsp;a)&nbsp;z&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;Succ&nbsp;(Add&nbsp;a&nbsp;z)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)<br>
+<br>
+Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;(Succ&nbsp;o)&nbsp;o<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;=:&nbsp;Zero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)<br><p></p>
+<p style="text-align:justify;">These rules are internally translated to a semantically equivalent set of rules in which the graph structure on both left-hand side as right-hand side of the rewrite rules has been made explicit by adding node-id's. Using the set of rules with explicit node-id's it will be easier to understand what the meaning is of the rules in the graph rewriting world.</p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">x&nbsp;=:&nbsp;Add&nbsp;y&nbsp;z<br>
+y&nbsp;=:&nbsp;Zero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&nbsp;&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)<br>
+x&nbsp;=:&nbsp;Add&nbsp;y&nbsp;z<br>
+y&nbsp;=:&nbsp;Succ&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&nbsp;&nbsp;m&nbsp;=:&nbsp;Succ&nbsp;n<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;=:&nbsp;Add&nbsp;a&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)<br>
+<br>
+x&nbsp;=:&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&nbsp;&nbsp;m&nbsp;=:&nbsp;Add&nbsp;n&nbsp;o<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;=:&nbsp;Succ&nbsp;o<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;=:&nbsp;Zero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)<br><p style="text-align:justify;">The fixed initial program graph that is in memory when a program starts is the following:</p>
+<table style="width:100%;"><tr><td style="vertical-align:top;width:50%;">The initial graph in linear notation:</td><td style="text-align:justify;width:50%;">The initial graph in pictorial notation:</td></tr></table>
+<table style="width:100%;"><tr><td style="width:50%;"><p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">@DataRoot&nbsp;&nbsp;&nbsp;&nbsp;=:&nbsp;Graph&nbsp;@StartNode<br>
+@StartNode&nbsp;&nbsp;&nbsp;=:&nbsp;Start<br></td><td style="width:50%;"><svg width="444.444444444444" height="54">
+<text font-family="courier" font-weight="bold" font-size="16px" x="76.8" y="18" fill="#000000">@DataRoot=:Graph</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="67.2" y="54" fill="#000000">@StartNode=:Start</text>
+<path d="M206.4 22.5L206.4 40.5" fill="none" stroke="#000000"/>
+<path d="M206.4 40.5L208.832143241427 34.8618442752845L206.4 37.5L203.967856758573 34.8618442752845 Z" fill="none" stroke="#000000"/>
+</svg>
+</td></tr></table><p style="text-align:justify;">To distinguish the node-id's appearing in the rewrite rules from the node-id's appearing in the graph the latter always begin with a "<span style="font-family:courier;">@</span>".</p>
+<p style="text-align:justify;">The initial graph is rewritten until it is in normal form. Therefore a CLEAN program must at least contain a "<i>start rule</i>" that matches this initial graph via a pattern. The right-hand side of the start rule specifies the actual computation. In this start rule in the left-hand side the symbol <span style="font-family:courier;">Start</span> is used. However, the symbols <span style="font-family:courier;">Graph</span> and <span style="font-family:courier;">Initial</span> (<span style="color:blue;"><a href="#_1.2">see 1.2</a></span>) are internal, so they cannot actually be addressed in any rule.</p>
+<p style="text-align:justify;">The patterns in rewrite rules contain <i>formal node-id's</i>. During the matching these formal nodeid's are mapped to the <i>actual node-id's</i>of the graph  After that the following semantic actions are performed:</p>
+<p style="text-align:justify;">The start node is the only redex matching rule (3). The contractum can now be constructed:</p>
+<table style="width:100%;"><tr><td style="vertical-align:top;width:50%;">The contractum in linear notation:</td><td style="text-align:justify;width:50%;">The contractum in pictorial notation:</td></tr></table>
+<table style="width:100%;"><tr><td style="width:50%;"><p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">@A&nbsp;=:&nbsp;Add&nbsp;&nbsp;@B&nbsp;@C<br>
+@B&nbsp;=:&nbsp;Succ&nbsp;@C<br>
+@C&nbsp;=:&nbsp;Zero<br></td><td style="width:50%;"><svg width="444.444444444444" height="90">
+<text font-family="courier" font-weight="bold" font-size="16px" x="153.6" y="18" fill="#000000">@A=:Add</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="105.6" y="54" fill="#000000">@B=:Succ @C=:Zero</text>
+<path d="M201.6 22.5L172.8 40.5" fill="none" stroke="#000000"/>
+<path d="M172.8 40.5L179.617255659676 38.79301085656L175.657092243004 38.7143173481228L176.721898330945 35.4950178993023 Z" fill="none" stroke="#000000"/>
+<path d="M211.2 22.5L240 40.5" fill="none" stroke="#000000"/>
+<path d="M240 40.5L236.078101669055 35.4950178993023L237.142907756996 38.7143173481228L233.182744340324 38.79301085656 Z" fill="none" stroke="#000000"/>
+<path d="M172.8 58.5L172.8 70.5C172.8 75.4705627482,178.6910373312 79.5,183.466666666667 79.5L229.333333333333 79.5C235.224370664533 79.5,240 74.5294372518,240 70.5L240 70.5" fill="none" stroke="#000000"/>
+<path d="M240 70.5L240 58.5" fill="none" stroke="#000000"/>
+<path d="M240 58.5L237.567856758573 64.1381557247154L240 61.5L242.432143241427 64.1381557247154 Z" fill="none" stroke="#000000"/>
+</svg>
+</td></tr></table><p style="text-align:justify;">All applied occurrences of <span style="font-family:courier;">@StartNode</span> will be replaced by occurrences of <span style="font-family:courier;">@A</span>. The graph after rewriting is then:</p>
+<table style="width:100%;"><tr><td style="vertical-align:top;width:50%;">The graph after rewriting:</td><td style="text-align:justify;width:50%;">Pictorial notation:</td></tr></table>
+<table style="width:100%;"><tr><td style="width:50%;"><p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">@DataRoot&nbsp;&nbsp;&nbsp;&nbsp;=:&nbsp;Graph&nbsp;@A<br>
+@StartNode&nbsp;&nbsp;&nbsp;=:&nbsp;Start<br>
+@A&nbsp;=:&nbsp;Add&nbsp;&nbsp;@B&nbsp;@C<br>
+@B&nbsp;=:&nbsp;Succ&nbsp;@C<br>
+@C&nbsp;=:&nbsp;Zero<br></td><td style="width:50%;"><svg width="444.444444444444" height="162">
+<text font-family="courier" font-weight="bold" font-size="16px" x="76.8" y="18" fill="#000000">@DataRoot=:Graph</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="67.2" y="54" fill="#000000">@StartNode=:Start</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="153.6" y="90" fill="#000000">@A=:Add</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="105.6" y="126" fill="#000000">@B=:Succ @C=:Zero</text>
+<path d="M206.4 22.5C206.4 27.4705627482,212.2910373312 31.5,217.066666666667 31.5L252.622222222222 31.5C258.513259553422 31.5,263.288888888889 36.4705627482,263.288888888889 40.5L263.288888888889 54C263.288888888889 58.9705627482,257.397851557689 63,252.622222222222 63L217.066666666667 63C211.175629335467 63,206.4 67.9705627482,206.4 72" fill="none" stroke="#000000"/>
+<path d="M206.4 72L206.4 79.5" fill="none" stroke="#000000"/>
+<path d="M206.4 79.5L208.832143241427 73.8618442752846L206.4 76.5L203.967856758573 73.8618442752846 Z" fill="none" stroke="#000000"/>
+<path d="M201.6 94.5L172.8 112.5" fill="none" stroke="#000000"/>
+<path d="M172.8 112.5L179.617255659676 110.79301085656L175.657092243004 110.714317348123L176.721898330945 107.495017899302 Z" fill="none" stroke="#000000"/>
+<path d="M211.2 94.5L240 112.5" fill="none" stroke="#000000"/>
+<path d="M240 112.5L236.078101669055 107.495017899302L237.142907756996 110.714317348123L233.182744340324 110.79301085656 Z" fill="none" stroke="#000000"/>
+<path d="M172.8 130.5L172.8 142.5C172.8 147.4705627482,178.6910373312 151.5,183.466666666667 151.5L229.333333333333 151.5C235.224370664533 151.5,240 146.5294372518,240 142.5L240 142.5" fill="none" stroke="#000000"/>
+<path d="M240 142.5L240 130.5" fill="none" stroke="#000000"/>
+<path d="M240 130.5L237.567856758573 136.138155724715L240 133.5L242.432143241427 136.138155724715 Z" fill="none" stroke="#000000"/>
+</svg>
+</td></tr></table><p style="text-align:justify;">This completes one rewrite. All nodes that are not accessible from <span style="font-family:courier;">@DataRoot</span> are garbage and not considered any more in the next rewrite steps. In an implementation once in a while garbage collection is performed in order to reclaim the memory space occupied by these garbage nodes. In this example the start node is not accessible from the data root node after the rewrite step and can be left out.</p>
+<table style="width:100%;"><tr><td style="vertical-align:top;width:50%;">The graph after garbage collection:</td><td style="text-align:justify;width:50%;">Pictorial notation:</td></tr></table>
+<table style="width:100%;"><tr><td style="width:50%;"><p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">@DataRoot&nbsp;&nbsp;&nbsp;=:&nbsp;Graph&nbsp;@A<br>
+@A&nbsp;=:&nbsp;Add&nbsp;&nbsp;@B&nbsp;@C<br>
+@B&nbsp;=:&nbsp;Succ&nbsp;@C<br>
+@C&nbsp;=:&nbsp;Zero<br></td><td style="width:50%;"><svg width="444.444444444444" height="126">
+<text font-family="courier" font-weight="bold" font-size="16px" x="76.8" y="18" fill="#000000">@DataRoot=:Graph</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="153.6" y="54" fill="#000000">@A=:Add</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="105.6" y="90" fill="#000000">@B=:Succ @C=:Zero</text>
+<path d="M206.4 22.5L206.4 40.5" fill="none" stroke="#000000"/>
+<path d="M206.4 40.5L208.832143241427 34.8618442752845L206.4 37.5L203.967856758573 34.8618442752845 Z" fill="none" stroke="#000000"/>
+<path d="M201.6 58.5L172.8 76.5" fill="none" stroke="#000000"/>
+<path d="M172.8 76.5L179.617255659676 74.79301085656L175.657092243004 74.7143173481228L176.721898330945 71.4950178993023 Z" fill="none" stroke="#000000"/>
+<path d="M211.2 58.5L240 76.5" fill="none" stroke="#000000"/>
+<path d="M240 76.5L236.078101669055 71.4950178993023L237.142907756996 74.7143173481228L233.182744340324 74.79301085656 Z" fill="none" stroke="#000000"/>
+<path d="M172.8 94.5L172.8 106.5C172.8 111.4705627482,178.6910373312 115.5,183.466666666667 115.5L229.333333333333 115.5C235.224370664533 115.5,240 110.5294372518,240 106.5L240 106.5" fill="none" stroke="#000000"/>
+<path d="M240 106.5L240 94.5" fill="none" stroke="#000000"/>
+<path d="M240 94.5L237.567856758573 100.138155724715L240 97.5L242.432143241427 100.138155724715 Z" fill="none" stroke="#000000"/>
+</svg>
+</td></tr></table><p style="text-align:justify;">The graph accessible from <span style="font-family:courier;">@DataRoot</span> still contains a redex. It matches rule 2 yielding the expected normal form:</p>
+<table style="width:100%;"><tr><td style="vertical-align:top;width:50%;">The final graph:</td><td style="text-align:justify;width:50%;">Pictorial notation:</td></tr></table>
+<table style="width:100%;"><tr><td style="width:50%;"><p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">@DataRoot&nbsp;=:&nbsp;Graph&nbsp;@D<br>
+@D&nbsp;=:&nbsp;Succ&nbsp;@C<br>
+@C&nbsp;=:&nbsp;Zero<br></td><td style="width:50%;"><svg width="444.444444444444" height="90">
+<text font-family="courier" font-weight="bold" font-size="16px" x="76.8" y="18" fill="#000000">@DataRoot=:Graph</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="144" y="54" fill="#000000">@D=:Succ</text>
+<text font-family="courier" font-weight="bold" font-size="16px" x="144" y="90" fill="#000000">@C=:Zero</text>
+<path d="M206.4 22.5L206.4 40.5" fill="none" stroke="#000000"/>
+<path d="M206.4 40.5L208.832143241427 34.8618442752845L206.4 37.5L203.967856758573 34.8618442752845 Z" fill="none" stroke="#000000"/>
+<path d="M206.4 58.5L206.4 76.5" fill="none" stroke="#000000"/>
+<path d="M206.4 76.5L208.832143241427 70.8618442752846L206.4 73.5L203.967856758573 70.8618442752846 Z" fill="none" stroke="#000000"/>
+</svg>
+</td></tr></table><p style="text-align:justify;">The fact that graphs are being used in CLEAN gives the programmer the ability to explicitly share terms or to create cyclic structures. In this way time and space efficiency can be obtained.</p>
+<h2 style="background-color:#9999FF;"><a id="_1.2">1.2 Global Graphs</a></h2>
+<p style="text-align:justify;">Due to the presence of global graphs in CLEAN the initial graph in a specific CLEAN program is slightly different from the basic semantics. In a specific CLEAN program the initial graph is defined as:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">@DataRoot&nbsp;&nbsp;&nbsp;&nbsp;=:&nbsp;Graph&nbsp;@StartNode&nbsp;@GlobId1&nbsp;@GlobId2&nbsp;...&nbsp;@GlobIdn<br>
+@StartNode&nbsp;&nbsp;&nbsp;=:&nbsp;Start<br>
+@GlobId1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=:&nbsp;Initial<br>
+@GlobId2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=:&nbsp;Initial<br>
+...<br>
+@GlobIdn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=:&nbsp;Initial<br><p></p>
+<p style="text-align:justify;">The root of the initial graph will not only contain the node-id of the start node, the root of the graph to be rewritten, but it will also contain for each <i>global graph</i> (<span style="color:blue;"><a href="CleanLanguageReport10.html#_10.2">see 10.2</a></span>) a reference to an initial node (initialized with the symbol <span style="font-family:courier;">Initial</span>). All references to a specific global graph will be references to its initial node or, when it is rewritten, they will be references to its reduct.</p>
+</body>
+</html>

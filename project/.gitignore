@@ -1,0 +1,3 @@
+# ignore practice and everything inside it
+./practice/*
+./py_imp/*

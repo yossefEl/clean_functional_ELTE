@@ -1,0 +1,8624 @@
+.comp 920 000111010010000
+.start _nostart_
+.depend "_SystemStrictLists" "20211222160339"
+.depend "StdClass" "20211222160339"
+.depend "StdInt" "20211222160339"
+.depend "StdOverloaded" "20211222160339"
+.depend "StdBool" "20211222160339"
+.depend "_SystemEnumStrict" "20211222160339"
+.module m__SystemEnumStrict "_SystemEnumStrict" "20211222160339"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Consi
+.impdesc _Consits
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.impmod _SystemStrictLists
+.impdesc e__SystemStrictLists_d_decons;4
+.impdesc e__SystemStrictLists_d_decons;6
+.impdesc e__SystemStrictLists_d_decons;8
+.impdesc e__SystemStrictLists_d_decons;10
+.impdesc e__SystemStrictLists_d_decons_u;18
+.impdesc e__SystemStrictLists_d_decons_uts;38
+.impmod StdInt
+.impdesc e_StdInt_d+;6
+.implab e_StdInt_s+;6
+.implab e_StdInt_n+;6
+.impdesc e_StdInt_d-;7
+.implab e_StdInt_s-;7
+.implab e_StdInt_n-;7
+.implab e_StdInt_sone;11
+.implab e_StdInt_s<;17
+.impmod StdBool
+.implab e_StdBool_snot
+.impmod _SystemStrictLists
+.impdesc e__SystemStrictLists_rList;
+.impmod StdClass
+.impdesc e_StdClass_dIncDec;.+
+.implab e_StdClass_nIncDec;.+
+.impdesc e_StdClass_dIncDec;.-
+.implab e_StdClass_nIncDec;.-
+.impdesc e_StdClass_dIncDec;.one
+.implab e_StdClass_nIncDec;.one
+.impdesc e_StdClass_dEnum;.IncDec
+.implab e_StdClass_nEnum;.IncDec
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_d+;.+
+.implab e_StdOverloaded_n+;.+ e_StdOverloaded_ea+;.+
+.impdesc e_StdOverloaded_d-;.-
+.implab e_StdOverloaded_n-;.- e_StdOverloaded_ea-;.-
+.impdesc e_StdOverloaded_done;.one
+.implab e_StdOverloaded_none;.one e_StdOverloaded_eaone;.one
+.export e__SystemEnumStrict_s_from_then_to_o;67
+.export e__SystemEnumStrict_ea_from_then_to_o;67
+.descexp e__SystemEnumStrict_d_from_then_to_o;67 e__SystemEnumStrict_n_from_then_to_o;67 e__SystemEnumStrict_l_from_then_to_o;67 3 0 "_from_then_to_o;67"
+.a 3 e__SystemEnumStrict_ea_from_then_to_o;67
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o;67
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_o;67
+.n 3 e__SystemEnumStrict_d_from_then_to_o;67 e__SystemEnumStrict_ea_from_then_to_o;67
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o;67
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_o;67
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_o;67
+.o 1 3 iii
+s68
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s161
+.o 1 3 iii
+s161
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.1
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s162
+else.1
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s163
+.o 1 3 iii
+s162
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 3 iii
+	jsr s162.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.2
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s162.2
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.3
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s162.2
+else.3
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s163
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.4
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 3 iii
+	jsr s163.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.4
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s163.2
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.5
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s163.2
+else.5
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_o;66
+.export e__SystemEnumStrict_ea_from_then_to_o;66
+.descexp e__SystemEnumStrict_d_from_then_to_o;66 e__SystemEnumStrict_n_from_then_to_o;66 e__SystemEnumStrict_l_from_then_to_o;66 3 0 "_from_then_to_o;66"
+.a 3 e__SystemEnumStrict_ea_from_then_to_o;66
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o;66
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_o;66
+.n 3 e__SystemEnumStrict_d_from_then_to_o;66 e__SystemEnumStrict_ea_from_then_to_o;66
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o;66
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_o;66
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_o;66
+.o 1 3 iii
+s67
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s158
+.o 1 3 iii
+s158
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.6
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s159
+else.6
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s160
+.o 1 3 iii
+s159
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.7
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n207
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 3
+.d 1 0
+	rtn
+else.7
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n207
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea207
+.o 1 3 iii
+s207
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s159
+.o 1 3 iii
+s160
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.8
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n206
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 3
+.d 1 0
+	rtn
+else.8
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n206
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea206
+.o 1 3 iii
+s206
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s160
+.export e__SystemEnumStrict_s_from_then_to_o;65
+.export e__SystemEnumStrict_ea_from_then_to_o;65
+.descexp e__SystemEnumStrict_d_from_then_to_o;65 e__SystemEnumStrict_n_from_then_to_o;65 e__SystemEnumStrict_l_from_then_to_o;65 3 0 "_from_then_to_o;65"
+.a 3 e__SystemEnumStrict_ea_from_then_to_o;65
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o;65
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_o;65
+.n 3 e__SystemEnumStrict_d_from_then_to_o;65 e__SystemEnumStrict_ea_from_then_to_o;65
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o;65
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_o;65
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_o;65
+.o 1 3 iii
+s66
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s155
+.o 1 3 iii
+s155
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.9
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s156
+else.9
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s157
+.o 1 3 iii
+s156
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.10
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s156.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.10
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s156.2
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.11
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s156.2
+else.11
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s157
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.12
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s157.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.12
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s157.2
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.13
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s157.2
+else.13
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_o;64
+.export e__SystemEnumStrict_ea_from_then_to_o;64
+.descexp e__SystemEnumStrict_d_from_then_to_o;64 e__SystemEnumStrict_n_from_then_to_o;64 e__SystemEnumStrict_l_from_then_to_o;64 3 0 "_from_then_to_o;64"
+.a 3 e__SystemEnumStrict_ea_from_then_to_o;64
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o;64
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_o;64
+.n 3 e__SystemEnumStrict_d_from_then_to_o;64 e__SystemEnumStrict_ea_from_then_to_o;64
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o;64
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_o;64
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_o;64
+.o 1 3 iii
+s65
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s152
+.o 1 3 iii
+s152
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.14
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s153
+else.14
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s154
+.o 1 3 iii
+s153
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.15
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s153.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.15
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s153.2
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.16
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s153.2
+else.16
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s154
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.17
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s154.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.17
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s154.2
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.18
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s154.2
+else.18
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_o;63
+.export e__SystemEnumStrict_ea_from_then_to_o;63
+.descexp e__SystemEnumStrict_d_from_then_to_o;63 e__SystemEnumStrict_n_from_then_to_o;63 e__SystemEnumStrict_l_from_then_to_o;63 3 0 "_from_then_to_o;63"
+.a 3 e__SystemEnumStrict_ea_from_then_to_o;63
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o;63
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_o;63
+.n 3 e__SystemEnumStrict_d_from_then_to_o;63 e__SystemEnumStrict_ea_from_then_to_o;63
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o;63
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_o;63
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_o;63
+.o 1 3 iii
+s64
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s149
+.o 1 3 iii
+s149
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.19
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s150
+else.19
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s151
+.o 1 3 iii
+s150
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.20
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n205
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 3
+.d 1 0
+	rtn
+else.20
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n205
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea205
+.o 1 3 iii
+s205
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s150
+.o 1 3 iii
+s151
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.21
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n204
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 3
+.d 1 0
+	rtn
+else.21
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n204
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea204
+.o 1 3 iii
+s204
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s151
+.export e__SystemEnumStrict_s_from_then_to_o;62
+.export e__SystemEnumStrict_ea_from_then_to_o;62
+.descexp e__SystemEnumStrict_d_from_then_to_o;62 e__SystemEnumStrict_n_from_then_to_o;62 e__SystemEnumStrict_l_from_then_to_o;62 3 0 "_from_then_to_o;62"
+.a 3 e__SystemEnumStrict_ea_from_then_to_o;62
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o;62
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_o;62
+.n 3 e__SystemEnumStrict_d_from_then_to_o;62 e__SystemEnumStrict_ea_from_then_to_o;62
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o;62
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_o;62
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_o;62
+.o 1 3 iii
+s63
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s146
+.o 1 3 iii
+s146
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.22
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s147
+else.22
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s148
+.o 1 3 iii
+s147
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.23
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n203
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 3
+.d 1 0
+	rtn
+else.23
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n203
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea203
+.o 1 3 iii
+s203
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s147
+.o 1 3 iii
+s148
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.24
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n202
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 3
+.d 1 0
+	rtn
+else.24
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n202
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea202
+.o 1 3 iii
+s202
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s148
+.export e__SystemEnumStrict_s_from_then_to_uts;61
+.export e__SystemEnumStrict_ea_from_then_to_uts;61
+.descexp e__SystemEnumStrict_d_from_then_to_uts;61 e__SystemEnumStrict_n_from_then_to_uts;61 e__SystemEnumStrict_l_from_then_to_uts;61 3 0 "_from_then_to_uts;61"
+.a 3 e__SystemEnumStrict_ea_from_then_to_uts;61
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_uts;61
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_uts;61
+.n 3 e__SystemEnumStrict_d_from_then_to_uts;61 e__SystemEnumStrict_ea_from_then_to_uts;61
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_uts;61
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_uts;61
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_uts;61
+.o 1 3 iii
+s62
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s143
+.o 1 3 iii
+s143
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.25
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s144
+else.25
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s145
+.o 1 3 iii
+s144
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.26
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 3 iii
+	jsr s144.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.26
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s144.2
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.27
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s144.2
+else.27
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s145
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.28
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 3 iii
+	jsr s145.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.28
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s145.2
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.29
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 3
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s145.2
+else.29
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_u;60
+.export e__SystemEnumStrict_ea_from_then_to_u;60
+.descexp e__SystemEnumStrict_d_from_then_to_u;60 e__SystemEnumStrict_n_from_then_to_u;60 e__SystemEnumStrict_l_from_then_to_u;60 3 0 "_from_then_to_u;60"
+.a 3 e__SystemEnumStrict_ea_from_then_to_u;60
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_u;60
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_u;60
+.n 3 e__SystemEnumStrict_d_from_then_to_u;60 e__SystemEnumStrict_ea_from_then_to_u;60
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_u;60
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_u;60
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_u;60
+.o 1 3 iii
+s61
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s140
+.o 1 3 iii
+s140
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.30
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s141
+else.30
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s142
+.o 1 3 iii
+s141
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.31
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n201
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 3
+.d 1 0
+	rtn
+else.31
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n201
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea201
+.o 1 3 iii
+s201
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s141
+.o 1 3 iii
+s142
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.32
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n200
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 3
+.d 1 0
+	rtn
+else.32
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n200
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea200
+.o 1 3 iii
+s200
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s142
+.export e__SystemEnumStrict_s_from_then_to_sts;59
+.export e__SystemEnumStrict_ea_from_then_to_sts;59
+.descexp e__SystemEnumStrict_d_from_then_to_sts;59 e__SystemEnumStrict_n_from_then_to_sts;59 e__SystemEnumStrict_l_from_then_to_sts;59 3 0 "_from_then_to_sts;59"
+.a 3 e__SystemEnumStrict_ea_from_then_to_sts;59
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_sts;59
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_sts;59
+.n 3 e__SystemEnumStrict_d_from_then_to_sts;59 e__SystemEnumStrict_ea_from_then_to_sts;59
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_sts;59
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_sts;59
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_sts;59
+.o 1 3 iii
+s60
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s137
+.o 1 3 iii
+s137
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.33
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s138
+else.33
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s139
+.o 1 3 iii
+s138
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.34
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s138.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.34
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s138.2
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.35
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s138.2
+else.35
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s139
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.36
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s139.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.36
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s139.2
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.37
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s139.2
+else.37
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_ts;58
+.export e__SystemEnumStrict_ea_from_then_to_ts;58
+.descexp e__SystemEnumStrict_d_from_then_to_ts;58 e__SystemEnumStrict_n_from_then_to_ts;58 e__SystemEnumStrict_l_from_then_to_ts;58 3 0 "_from_then_to_ts;58"
+.a 3 e__SystemEnumStrict_ea_from_then_to_ts;58
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_ts;58
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_ts;58
+.n 3 e__SystemEnumStrict_d_from_then_to_ts;58 e__SystemEnumStrict_ea_from_then_to_ts;58
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_ts;58
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_ts;58
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_ts;58
+.o 1 3 iii
+s59
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s134
+.o 1 3 iii
+s134
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.38
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s135
+else.38
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s136
+.o 1 3 iii
+s135
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.39
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s135.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.39
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s135.2
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.40
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s135.2
+else.40
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s136
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.41
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.d 1 3 iii
+	jsr s136.2
+.o 1 0
+	pop_a 1
+	pop_b 3
+.d 1 0
+	rtn
+else.41
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.o 1 3 iii
+s136.2
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.42
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 3
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s136.2
+else.42
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_s;57
+.export e__SystemEnumStrict_ea_from_then_to_s;57
+.descexp e__SystemEnumStrict_d_from_then_to_s;57 e__SystemEnumStrict_n_from_then_to_s;57 e__SystemEnumStrict_l_from_then_to_s;57 3 0 "_from_then_to_s;57"
+.a 3 e__SystemEnumStrict_ea_from_then_to_s;57
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_s;57
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_to_s;57
+.n 3 e__SystemEnumStrict_d_from_then_to_s;57 e__SystemEnumStrict_ea_from_then_to_s;57
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_s;57
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_to_s;57
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 2
+	pushI_a 1
+	pushI_a 0
+	pop_a 3
+.o 1 3 iii
+e__SystemEnumStrict_s_from_then_to_s;57
+.o 1 3 iii
+s58
+	push_b 2
+	push_b 2
+	push_b 2
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s131
+.o 1 3 iii
+s131
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.43
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s132
+else.43
+	push_b 0
+	push_b 2
+	subI
+	push_b 3
+	push_b 2
+	push_b 2
+	update_b 2 3
+	update_b 0 2
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s133
+.o 1 3 iii
+s132
+	push_b 0
+	push_b 3
+	ltI
+	notB
+	jmp_false else.44
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n199
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 3
+.d 1 0
+	rtn
+else.44
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n199
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea199
+.o 1 3 iii
+s199
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s132
+.o 1 3 iii
+s133
+	push_b 2
+	push_b 1
+	ltI
+	notB
+	jmp_false else.45
+	push_b 2
+	push_b 2
+	push_b 2
+	build_u _ 0 3 n198
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 3
+.d 1 0
+	rtn
+else.45
+	fillh _Nil 0 0
+	pop_b 3
+.d 1 0
+	rtn
+.nu 0 3 _ _
+.o 1 0
+n198
+	push_node_u _cycle_in_spine 0 3
+.o 1 3 iii
+ea198
+.o 1 3 iii
+s198
+	push_b 1
+	push_b 1
+	addI
+	push_b 3
+	push_b 3
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 1 3 iii
+	jmp s133
+.export e__SystemEnumStrict_s_from_then_o;56
+.export e__SystemEnumStrict_ea_from_then_o;56
+.descexp e__SystemEnumStrict_d_from_then_o;56 e__SystemEnumStrict_n_from_then_o;56 e__SystemEnumStrict_l_from_then_o;56 2 0 "_from_then_o;56"
+.a 2 e__SystemEnumStrict_ea_from_then_o;56
+.o 2 0
+e__SystemEnumStrict_l_from_then_o;56
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_o;56
+.n 2 e__SystemEnumStrict_d_from_then_o;56 e__SystemEnumStrict_ea_from_then_o;56
+.o 1 0
+e__SystemEnumStrict_n_from_then_o;56
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_s_from_then_o;56
+.o 3 0
+e__SystemEnumStrict_ea_from_then_o;56
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+s57
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s129
+.o 1 2 ii
+s129
+	push_b 0
+	push_b 2
+	subI
+	create
+	push_b 2
+.d 1 2 ii
+	jsr s130
+.o 1 0
+	push_b 0
+	fill_r _Consits 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s130
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 2 ii
+	jsr s130.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s130.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s130.2
+.export e__SystemEnumStrict_s_from_then_o;55
+.export e__SystemEnumStrict_ea_from_then_o;55
+.descexp e__SystemEnumStrict_d_from_then_o;55 e__SystemEnumStrict_n_from_then_o;55 e__SystemEnumStrict_l_from_then_o;55 2 0 "_from_then_o;55"
+.a 2 e__SystemEnumStrict_ea_from_then_o;55
+.o 2 0
+e__SystemEnumStrict_l_from_then_o;55
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_o;55
+.n 2 e__SystemEnumStrict_d_from_then_o;55 e__SystemEnumStrict_ea_from_then_o;55
+.o 1 0
+e__SystemEnumStrict_n_from_then_o;55
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_s_from_then_o;55
+.o 3 0
+e__SystemEnumStrict_ea_from_then_o;55
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+s56
+	push_a 0
+	push_b 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s127
+.o 2 1 i
+s127
+	buildI_b 0
+	push_a 1
+	build _ 2 e_StdInt_n-;7
+	push_a 1
+	build _ 2 n128
+	push_b 0
+	fill_r _Consi 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 _ ea128
+.o 1 0
+n128
+	push_node _cycle_in_spine 2
+.o 3 0
+ea128
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+s128
+	push_a 0
+	push_b 0
+	build_u _ 1 1 n197
+	push_b 0
+	fill_r _Consi 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.nu 1 1 _ _
+.o 1 0
+n197
+	push_node_u _cycle_in_spine 1 1
+.o 2 1 i
+ea197
+.o 2 1 i
+s197
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	push_b 1
+	addI
+	push_a 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s128
+.export e__SystemEnumStrict_s_from_then_o;54
+.export e__SystemEnumStrict_ea_from_then_o;54
+.descexp e__SystemEnumStrict_d_from_then_o;54 e__SystemEnumStrict_n_from_then_o;54 e__SystemEnumStrict_l_from_then_o;54 2 0 "_from_then_o;54"
+.a 2 e__SystemEnumStrict_ea_from_then_o;54
+.o 2 0
+e__SystemEnumStrict_l_from_then_o;54
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_o;54
+.n 2 e__SystemEnumStrict_d_from_then_o;54 e__SystemEnumStrict_ea_from_then_o;54
+.o 1 0
+e__SystemEnumStrict_n_from_then_o;54
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_s_from_then_o;54
+.o 3 0
+e__SystemEnumStrict_ea_from_then_o;54
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+s55
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s125
+.o 1 2 ii
+s125
+	push_b 0
+	push_b 2
+	subI
+	create
+	push_b 2
+.d 1 2 ii
+	jsr s126
+.o 1 0
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s126
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s126.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s126.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s126.2
+.export e__SystemEnumStrict_s_from_then_o;53
+.export e__SystemEnumStrict_ea_from_then_o;53
+.descexp e__SystemEnumStrict_d_from_then_o;53 e__SystemEnumStrict_n_from_then_o;53 e__SystemEnumStrict_l_from_then_o;53 2 0 "_from_then_o;53"
+.a 2 e__SystemEnumStrict_ea_from_then_o;53
+.o 2 0
+e__SystemEnumStrict_l_from_then_o;53
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_o;53
+.n 2 e__SystemEnumStrict_d_from_then_o;53 e__SystemEnumStrict_ea_from_then_o;53
+.o 1 0
+e__SystemEnumStrict_n_from_then_o;53
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_s_from_then_o;53
+.o 3 0
+e__SystemEnumStrict_ea_from_then_o;53
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+s54
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s123
+.o 1 2 ii
+s123
+	push_b 0
+	push_b 2
+	subI
+	create
+	push_b 2
+.d 1 2 ii
+	jsr s124
+.o 1 0
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s124
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s124.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s124.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s124.2
+.export e__SystemEnumStrict_s_from_then_o;52
+.export e__SystemEnumStrict_ea_from_then_o;52
+.descexp e__SystemEnumStrict_d_from_then_o;52 e__SystemEnumStrict_n_from_then_o;52 e__SystemEnumStrict_l_from_then_o;52 2 0 "_from_then_o;52"
+.a 2 e__SystemEnumStrict_ea_from_then_o;52
+.o 2 0
+e__SystemEnumStrict_l_from_then_o;52
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_o;52
+.n 2 e__SystemEnumStrict_d_from_then_o;52 e__SystemEnumStrict_ea_from_then_o;52
+.o 1 0
+e__SystemEnumStrict_n_from_then_o;52
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_s_from_then_o;52
+.o 3 0
+e__SystemEnumStrict_ea_from_then_o;52
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+s53
+	push_a 0
+	push_b 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s121
+.o 2 1 i
+s121
+	buildI_b 0
+	push_a 1
+	build _ 2 e_StdInt_n-;7
+	push_a 1
+	build _ 2 n122
+	buildI_b 0
+	fillh _Cons 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 _ ea122
+.o 1 0
+n122
+	push_node _cycle_in_spine 2
+.o 3 0
+ea122
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+s122
+	push_a 0
+	push_b 0
+	build_u _ 1 1 n196
+	buildI_b 0
+	fillh _Cons 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.nu 1 1 _ _
+.o 1 0
+n196
+	push_node_u _cycle_in_spine 1 1
+.o 2 1 i
+ea196
+.o 2 1 i
+s196
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	push_b 1
+	addI
+	push_a 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s122
+.export e__SystemEnumStrict_s_from_then_o;51
+.export e__SystemEnumStrict_ea_from_then_o;51
+.descexp e__SystemEnumStrict_d_from_then_o;51 e__SystemEnumStrict_n_from_then_o;51 e__SystemEnumStrict_l_from_then_o;51 2 0 "_from_then_o;51"
+.a 2 e__SystemEnumStrict_ea_from_then_o;51
+.o 2 0
+e__SystemEnumStrict_l_from_then_o;51
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_o;51
+.n 2 e__SystemEnumStrict_d_from_then_o;51 e__SystemEnumStrict_ea_from_then_o;51
+.o 1 0
+e__SystemEnumStrict_n_from_then_o;51
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_then_o;51
+.o 3 0
+e__SystemEnumStrict_s_from_then_o;51
+.o 3 0
+s52
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp s119
+.o 3 0
+s119
+	push_a 0
+	push_a 2
+	build _ 2 e_StdInt_n-;7
+	push_a 2
+	build _ 2 n120
+	push_a 1
+	fillh _Cons 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.n 2 _ ea120
+.o 1 0
+n120
+	push_node _cycle_in_spine 2
+.o 3 0
+ea120
+.o 3 0
+s120
+	push_a 1
+	push_a 1
+	build _ 2 e_StdInt_n+;6
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 2 n120
+	push_a 1
+	fillh _Cons 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_uts;50
+.export e__SystemEnumStrict_ea_from_then_uts;50
+.descexp e__SystemEnumStrict_d_from_then_uts;50 e__SystemEnumStrict_n_from_then_uts;50 e__SystemEnumStrict_l_from_then_uts;50 2 0 "_from_then_uts;50"
+.a 2 e__SystemEnumStrict_ea_from_then_uts;50
+.o 2 0
+e__SystemEnumStrict_l_from_then_uts;50
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_uts;50
+.n 2 e__SystemEnumStrict_d_from_then_uts;50 e__SystemEnumStrict_ea_from_then_uts;50
+.o 1 0
+e__SystemEnumStrict_n_from_then_uts;50
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_then_uts;50
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_then_uts;50
+.o 1 2 ii
+s51
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s117
+.o 1 2 ii
+s117
+	push_b 0
+	push_b 2
+	subI
+	create
+	push_b 2
+.d 1 2 ii
+	jsr s118
+.o 1 0
+	push_b 0
+	fill_r _Consits 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s118
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 2 ii
+	jsr s118.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s118.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s118.2
+.export e__SystemEnumStrict_s_from_then_u;49
+.export e__SystemEnumStrict_ea_from_then_u;49
+.descexp e__SystemEnumStrict_d_from_then_u;49 e__SystemEnumStrict_n_from_then_u;49 e__SystemEnumStrict_l_from_then_u;49 2 0 "_from_then_u;49"
+.a 2 e__SystemEnumStrict_ea_from_then_u;49
+.o 2 0
+e__SystemEnumStrict_l_from_then_u;49
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_u;49
+.n 2 e__SystemEnumStrict_d_from_then_u;49 e__SystemEnumStrict_ea_from_then_u;49
+.o 1 0
+e__SystemEnumStrict_n_from_then_u;49
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_then_u;49
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+e__SystemEnumStrict_s_from_then_u;49
+.o 2 1 i
+s50
+	push_a 0
+	push_b 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s115
+.o 2 1 i
+s115
+	buildI_b 0
+	push_a 1
+	build _ 2 e_StdInt_n-;7
+	push_a 1
+	build _ 2 n116
+	push_b 0
+	fill_r _Consi 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 _ ea116
+.o 1 0
+n116
+	push_node _cycle_in_spine 2
+.o 3 0
+ea116
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+s116
+	push_a 0
+	push_b 0
+	build_u _ 1 1 n195
+	push_b 0
+	fill_r _Consi 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.nu 1 1 _ _
+.o 1 0
+n195
+	push_node_u _cycle_in_spine 1 1
+.o 2 1 i
+ea195
+.o 2 1 i
+s195
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	push_b 1
+	addI
+	push_a 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s116
+.export e__SystemEnumStrict_s_from_then_sts;48
+.export e__SystemEnumStrict_ea_from_then_sts;48
+.descexp e__SystemEnumStrict_d_from_then_sts;48 e__SystemEnumStrict_n_from_then_sts;48 e__SystemEnumStrict_l_from_then_sts;48 2 0 "_from_then_sts;48"
+.a 2 e__SystemEnumStrict_ea_from_then_sts;48
+.o 2 0
+e__SystemEnumStrict_l_from_then_sts;48
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_sts;48
+.n 2 e__SystemEnumStrict_d_from_then_sts;48 e__SystemEnumStrict_ea_from_then_sts;48
+.o 1 0
+e__SystemEnumStrict_n_from_then_sts;48
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_then_sts;48
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_then_sts;48
+.o 1 2 ii
+s49
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s113
+.o 1 2 ii
+s113
+	push_b 0
+	push_b 2
+	subI
+	create
+	push_b 2
+.d 1 2 ii
+	jsr s114
+.o 1 0
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s114
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s114.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s114.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s114.2
+.export e__SystemEnumStrict_s_from_then_ts;47
+.export e__SystemEnumStrict_ea_from_then_ts;47
+.descexp e__SystemEnumStrict_d_from_then_ts;47 e__SystemEnumStrict_n_from_then_ts;47 e__SystemEnumStrict_l_from_then_ts;47 2 0 "_from_then_ts;47"
+.a 2 e__SystemEnumStrict_ea_from_then_ts;47
+.o 2 0
+e__SystemEnumStrict_l_from_then_ts;47
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_ts;47
+.n 2 e__SystemEnumStrict_d_from_then_ts;47 e__SystemEnumStrict_ea_from_then_ts;47
+.o 1 0
+e__SystemEnumStrict_n_from_then_ts;47
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_then_ts;47
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_then_ts;47
+.o 1 2 ii
+s48
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s111
+.o 1 2 ii
+s111
+	push_b 0
+	push_b 2
+	subI
+	create
+	push_b 2
+.d 1 2 ii
+	jsr s112
+.o 1 0
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s112
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s112.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s112.2
+	push_b 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s112.2
+.export e__SystemEnumStrict_s_from_then_s;46
+.export e__SystemEnumStrict_ea_from_then_s;46
+.descexp e__SystemEnumStrict_d_from_then_s;46 e__SystemEnumStrict_n_from_then_s;46 e__SystemEnumStrict_l_from_then_s;46 2 0 "_from_then_s;46"
+.a 2 e__SystemEnumStrict_ea_from_then_s;46
+.o 2 0
+e__SystemEnumStrict_l_from_then_s;46
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_then_s;46
+.n 2 e__SystemEnumStrict_d_from_then_s;46 e__SystemEnumStrict_ea_from_then_s;46
+.o 1 0
+e__SystemEnumStrict_n_from_then_s;46
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_then_s;46
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+e__SystemEnumStrict_s_from_then_s;46
+.o 2 1 i
+s47
+	push_a 0
+	push_b 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s109
+.o 2 1 i
+s109
+	buildI_b 0
+	push_a 1
+	build _ 2 e_StdInt_n-;7
+	push_a 1
+	build _ 2 n110
+	buildI_b 0
+	fillh _Cons 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 _ ea110
+.o 1 0
+n110
+	push_node _cycle_in_spine 2
+.o 3 0
+ea110
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+s110
+	push_a 0
+	push_b 0
+	build_u _ 1 1 n194
+	buildI_b 0
+	fillh _Cons 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.nu 1 1 _ _
+.o 1 0
+n194
+	push_node_u _cycle_in_spine 1 1
+.o 2 1 i
+ea194
+.o 2 1 i
+s194
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	push_b 1
+	addI
+	push_a 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 i
+	jmp s110
+.export e__SystemEnumStrict_s_from_to_o;45
+.export e__SystemEnumStrict_ea_from_to_o;45
+.descexp e__SystemEnumStrict_d_from_to_o;45 e__SystemEnumStrict_n_from_to_o;45 e__SystemEnumStrict_l_from_to_o;45 2 0 "_from_to_o;45"
+.a 2 e__SystemEnumStrict_ea_from_to_o;45
+.o 2 0
+e__SystemEnumStrict_l_from_to_o;45
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_o;45
+.n 2 e__SystemEnumStrict_d_from_to_o;45 e__SystemEnumStrict_ea_from_to_o;45
+.o 1 0
+e__SystemEnumStrict_n_from_to_o;45
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_o;45
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_o;45
+.o 1 2 ii
+s46
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s108
+.o 1 2 ii
+s108
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.46
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 2 ii
+	jsr s108.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+else.46
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s108.2
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.47
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s108.2
+else.47
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_o;44
+.export e__SystemEnumStrict_ea_from_to_o;44
+.descexp e__SystemEnumStrict_d_from_to_o;44 e__SystemEnumStrict_n_from_to_o;44 e__SystemEnumStrict_l_from_to_o;44 2 0 "_from_to_o;44"
+.a 2 e__SystemEnumStrict_ea_from_to_o;44
+.o 2 0
+e__SystemEnumStrict_l_from_to_o;44
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_o;44
+.n 2 e__SystemEnumStrict_d_from_to_o;44 e__SystemEnumStrict_ea_from_to_o;44
+.o 1 0
+e__SystemEnumStrict_n_from_to_o;44
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_o;44
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_o;44
+.o 1 2 ii
+s45
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s107
+.o 1 2 ii
+s107
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.48
+	push_b 1
+	push_b 1
+	build_u _ 0 2 n193
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 2
+.d 1 0
+	rtn
+else.48
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.nu 0 2 _ _
+.o 1 0
+n193
+	push_node_u _cycle_in_spine 0 2
+.o 1 2 ii
+ea193
+.o 1 2 ii
+s193
+	pushI 1
+	push_b 1
+	addI
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s107
+.export e__SystemEnumStrict_s_from_to_o;43
+.export e__SystemEnumStrict_ea_from_to_o;43
+.descexp e__SystemEnumStrict_d_from_to_o;43 e__SystemEnumStrict_n_from_to_o;43 e__SystemEnumStrict_l_from_to_o;43 2 0 "_from_to_o;43"
+.a 2 e__SystemEnumStrict_ea_from_to_o;43
+.o 2 0
+e__SystemEnumStrict_l_from_to_o;43
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_o;43
+.n 2 e__SystemEnumStrict_d_from_to_o;43 e__SystemEnumStrict_ea_from_to_o;43
+.o 1 0
+e__SystemEnumStrict_n_from_to_o;43
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_o;43
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_o;43
+.o 1 2 ii
+s44
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s106
+.o 1 2 ii
+s106
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.49
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s106.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+else.49
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s106.2
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.50
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s106.2
+else.50
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_o;42
+.export e__SystemEnumStrict_ea_from_to_o;42
+.descexp e__SystemEnumStrict_d_from_to_o;42 e__SystemEnumStrict_n_from_to_o;42 e__SystemEnumStrict_l_from_to_o;42 2 0 "_from_to_o;42"
+.a 2 e__SystemEnumStrict_ea_from_to_o;42
+.o 2 0
+e__SystemEnumStrict_l_from_to_o;42
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_o;42
+.n 2 e__SystemEnumStrict_d_from_to_o;42 e__SystemEnumStrict_ea_from_to_o;42
+.o 1 0
+e__SystemEnumStrict_n_from_to_o;42
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_o;42
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_o;42
+.o 1 2 ii
+s43
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s105
+.o 1 2 ii
+s105
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.51
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s105.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+else.51
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s105.2
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.52
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s105.2
+else.52
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_o;41
+.export e__SystemEnumStrict_ea_from_to_o;41
+.descexp e__SystemEnumStrict_d_from_to_o;41 e__SystemEnumStrict_n_from_to_o;41 e__SystemEnumStrict_l_from_to_o;41 2 0 "_from_to_o;41"
+.a 2 e__SystemEnumStrict_ea_from_to_o;41
+.o 2 0
+e__SystemEnumStrict_l_from_to_o;41
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_o;41
+.n 2 e__SystemEnumStrict_d_from_to_o;41 e__SystemEnumStrict_ea_from_to_o;41
+.o 1 0
+e__SystemEnumStrict_n_from_to_o;41
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_o;41
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_o;41
+.o 1 2 ii
+s42
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s104
+.o 1 2 ii
+s104
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.53
+	push_b 1
+	push_b 1
+	build_u _ 0 2 n192
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+else.53
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.nu 0 2 _ _
+.o 1 0
+n192
+	push_node_u _cycle_in_spine 0 2
+.o 1 2 ii
+ea192
+.o 1 2 ii
+s192
+	pushI 1
+	push_b 1
+	addI
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s104
+.export e__SystemEnumStrict_s_from_to_o;40
+.export e__SystemEnumStrict_ea_from_to_o;40
+.descexp e__SystemEnumStrict_d_from_to_o;40 e__SystemEnumStrict_n_from_to_o;40 e__SystemEnumStrict_l_from_to_o;40 2 0 "_from_to_o;40"
+.a 2 e__SystemEnumStrict_ea_from_to_o;40
+.o 2 0
+e__SystemEnumStrict_l_from_to_o;40
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_o;40
+.n 2 e__SystemEnumStrict_d_from_to_o;40 e__SystemEnumStrict_ea_from_to_o;40
+.o 1 0
+e__SystemEnumStrict_n_from_to_o;40
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_o;40
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_o;40
+.o 1 2 ii
+s41
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s103
+.o 1 2 ii
+s103
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.54
+	push_b 1
+	push_b 1
+	build_u _ 0 2 n191
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+else.54
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.nu 0 2 _ _
+.o 1 0
+n191
+	push_node_u _cycle_in_spine 0 2
+.o 1 2 ii
+ea191
+.o 1 2 ii
+s191
+	pushI 1
+	push_b 1
+	addI
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s103
+.export e__SystemEnumStrict_s_from_to_uts;39
+.export e__SystemEnumStrict_ea_from_to_uts;39
+.descexp e__SystemEnumStrict_d_from_to_uts;39 e__SystemEnumStrict_n_from_to_uts;39 e__SystemEnumStrict_l_from_to_uts;39 2 0 "_from_to_uts;39"
+.a 2 e__SystemEnumStrict_ea_from_to_uts;39
+.o 2 0
+e__SystemEnumStrict_l_from_to_uts;39
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_uts;39
+.n 2 e__SystemEnumStrict_d_from_to_uts;39 e__SystemEnumStrict_ea_from_to_uts;39
+.o 1 0
+e__SystemEnumStrict_n_from_to_uts;39
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_uts;39
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_uts;39
+.o 1 2 ii
+s40
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s102
+.o 1 2 ii
+s102
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.55
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 2 ii
+	jsr s102.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+else.55
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s102.2
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.56
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	push_b 2
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s102.2
+else.56
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_u;38
+.export e__SystemEnumStrict_ea_from_to_u;38
+.descexp e__SystemEnumStrict_d_from_to_u;38 e__SystemEnumStrict_n_from_to_u;38 e__SystemEnumStrict_l_from_to_u;38 2 0 "_from_to_u;38"
+.a 2 e__SystemEnumStrict_ea_from_to_u;38
+.o 2 0
+e__SystemEnumStrict_l_from_to_u;38
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_u;38
+.n 2 e__SystemEnumStrict_d_from_to_u;38 e__SystemEnumStrict_ea_from_to_u;38
+.o 1 0
+e__SystemEnumStrict_n_from_to_u;38
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_u;38
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_u;38
+.o 1 2 ii
+s39
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s101
+.o 1 2 ii
+s101
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.57
+	push_b 1
+	push_b 1
+	build_u _ 0 2 n190
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 2
+.d 1 0
+	rtn
+else.57
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.nu 0 2 _ _
+.o 1 0
+n190
+	push_node_u _cycle_in_spine 0 2
+.o 1 2 ii
+ea190
+.o 1 2 ii
+s190
+	pushI 1
+	push_b 1
+	addI
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s101
+.export e__SystemEnumStrict_s_from_to_sts;37
+.export e__SystemEnumStrict_ea_from_to_sts;37
+.descexp e__SystemEnumStrict_d_from_to_sts;37 e__SystemEnumStrict_n_from_to_sts;37 e__SystemEnumStrict_l_from_to_sts;37 2 0 "_from_to_sts;37"
+.a 2 e__SystemEnumStrict_ea_from_to_sts;37
+.o 2 0
+e__SystemEnumStrict_l_from_to_sts;37
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_sts;37
+.n 2 e__SystemEnumStrict_d_from_to_sts;37 e__SystemEnumStrict_ea_from_to_sts;37
+.o 1 0
+e__SystemEnumStrict_n_from_to_sts;37
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_sts;37
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_sts;37
+.o 1 2 ii
+s38
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s100
+.o 1 2 ii
+s100
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.58
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s100.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+else.58
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s100.2
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.59
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s100.2
+else.59
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_ts;36
+.export e__SystemEnumStrict_ea_from_to_ts;36
+.descexp e__SystemEnumStrict_d_from_to_ts;36 e__SystemEnumStrict_n_from_to_ts;36 e__SystemEnumStrict_l_from_to_ts;36 2 0 "_from_to_ts;36"
+.a 2 e__SystemEnumStrict_ea_from_to_ts;36
+.o 2 0
+e__SystemEnumStrict_l_from_to_ts;36
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_ts;36
+.n 2 e__SystemEnumStrict_d_from_to_ts;36 e__SystemEnumStrict_ea_from_to_ts;36
+.o 1 0
+e__SystemEnumStrict_n_from_to_ts;36
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_ts;36
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_ts;36
+.o 1 2 ii
+s37
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s99
+.o 1 2 ii
+s99
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.60
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.d 1 2 ii
+	jsr s99.2
+.o 1 0
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+else.60
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 2 ii
+s99.2
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.61
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	push_a 0
+	buildI_b 2
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s99.2
+else.61
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_s;35
+.export e__SystemEnumStrict_ea_from_to_s;35
+.descexp e__SystemEnumStrict_d_from_to_s;35 e__SystemEnumStrict_n_from_to_s;35 e__SystemEnumStrict_l_from_to_s;35 2 0 "_from_to_s;35"
+.a 2 e__SystemEnumStrict_ea_from_to_s;35
+.o 2 0
+e__SystemEnumStrict_l_from_to_s;35
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_to_s;35
+.n 2 e__SystemEnumStrict_d_from_to_s;35 e__SystemEnumStrict_ea_from_to_s;35
+.o 1 0
+e__SystemEnumStrict_n_from_to_s;35
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_to_s;35
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 1
+	pushI_a 0
+	pop_a 2
+.o 1 2 ii
+e__SystemEnumStrict_s_from_to_s;35
+.o 1 2 ii
+s36
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s98
+.o 1 2 ii
+s98
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.62
+	push_b 1
+	push_b 1
+	build_u _ 0 2 n189
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 2
+.d 1 0
+	rtn
+else.62
+	fillh _Nil 0 0
+	pop_b 2
+.d 1 0
+	rtn
+.nu 0 2 _ _
+.o 1 0
+n189
+	push_node_u _cycle_in_spine 0 2
+.o 1 2 ii
+ea189
+.o 1 2 ii
+s189
+	pushI 1
+	push_b 1
+	addI
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 1 2 ii
+	jmp s98
+.export e__SystemEnumStrict_s_from_o;34
+.export e__SystemEnumStrict_ea_from_o;34
+.descexp e__SystemEnumStrict_d_from_o;34 e__SystemEnumStrict_n_from_o;34 e__SystemEnumStrict_l_from_o;34 1 0 "_from_o;34"
+.o 2 0
+e__SystemEnumStrict_l_from_o;34
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_o;34
+.n 1 e__SystemEnumStrict_d_from_o;34 e__SystemEnumStrict_ea_from_o;34
+.o 1 0
+e__SystemEnumStrict_n_from_o;34
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_s_from_o;34
+.o 2 0
+e__SystemEnumStrict_ea_from_o;34
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+s35
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s97
+.o 1 1 i
+s97
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	push_b 1
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 1 i
+	jsr s97.2
+.o 1 0
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 1 i
+s97.2
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	push_b 1
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s97.2
+.export e__SystemEnumStrict_s_from_o;33
+.export e__SystemEnumStrict_ea_from_o;33
+.descexp e__SystemEnumStrict_d_from_o;33 e__SystemEnumStrict_n_from_o;33 e__SystemEnumStrict_l_from_o;33 1 0 "_from_o;33"
+.o 2 0
+e__SystemEnumStrict_l_from_o;33
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_o;33
+.n 1 e__SystemEnumStrict_d_from_o;33 e__SystemEnumStrict_ea_from_o;33
+.o 1 0
+e__SystemEnumStrict_n_from_o;33
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_s_from_o;33
+.o 2 0
+e__SystemEnumStrict_ea_from_o;33
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+s34
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s96
+.o 1 1 i
+s96
+	push_b 0
+	build_u _ 0 1 n188
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 1
+.d 1 0
+	rtn
+.nu 0 1 _ _
+.o 1 0
+n188
+	push_node_u _cycle_in_spine 0 1
+.o 1 1 i
+ea188
+.o 1 1 i
+s188
+	pushI 1
+	push_b 1
+	addI
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s96
+.export e__SystemEnumStrict_s_from_o;32
+.export e__SystemEnumStrict_ea_from_o;32
+.descexp e__SystemEnumStrict_d_from_o;32 e__SystemEnumStrict_n_from_o;32 e__SystemEnumStrict_l_from_o;32 1 0 "_from_o;32"
+.o 2 0
+e__SystemEnumStrict_l_from_o;32
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_o;32
+.n 1 e__SystemEnumStrict_d_from_o;32 e__SystemEnumStrict_ea_from_o;32
+.o 1 0
+e__SystemEnumStrict_n_from_o;32
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_s_from_o;32
+.o 2 0
+e__SystemEnumStrict_ea_from_o;32
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+s33
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s95
+.o 1 1 i
+s95
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.d 1 1 i
+	jsr s95.2
+.o 1 0
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 1 i
+s95.2
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s95.2
+.export e__SystemEnumStrict_s_from_o;31
+.export e__SystemEnumStrict_ea_from_o;31
+.descexp e__SystemEnumStrict_d_from_o;31 e__SystemEnumStrict_n_from_o;31 e__SystemEnumStrict_l_from_o;31 1 0 "_from_o;31"
+.o 2 0
+e__SystemEnumStrict_l_from_o;31
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_o;31
+.n 1 e__SystemEnumStrict_d_from_o;31 e__SystemEnumStrict_ea_from_o;31
+.o 1 0
+e__SystemEnumStrict_n_from_o;31
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_s_from_o;31
+.o 2 0
+e__SystemEnumStrict_ea_from_o;31
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+s32
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s94
+.o 1 1 i
+s94
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.d 1 1 i
+	jsr s94.2
+.o 1 0
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 1 i
+s94.2
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s94.2
+.export e__SystemEnumStrict_s_from_o;30
+.export e__SystemEnumStrict_ea_from_o;30
+.descexp e__SystemEnumStrict_d_from_o;30 e__SystemEnumStrict_n_from_o;30 e__SystemEnumStrict_l_from_o;30 1 0 "_from_o;30"
+.o 2 0
+e__SystemEnumStrict_l_from_o;30
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_o;30
+.n 1 e__SystemEnumStrict_d_from_o;30 e__SystemEnumStrict_ea_from_o;30
+.o 1 0
+e__SystemEnumStrict_n_from_o;30
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_s_from_o;30
+.o 2 0
+e__SystemEnumStrict_ea_from_o;30
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+s31
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s93
+.o 1 1 i
+s93
+	push_b 0
+	build_u _ 0 1 n187
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 1
+.d 1 0
+	rtn
+.nu 0 1 _ _
+.o 1 0
+n187
+	push_node_u _cycle_in_spine 0 1
+.o 1 1 i
+ea187
+.o 1 1 i
+s187
+	pushI 1
+	push_b 1
+	addI
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s93
+.export e__SystemEnumStrict_s_from_o;29
+.export e__SystemEnumStrict_ea_from_o;29
+.descexp e__SystemEnumStrict_d_from_o;29 e__SystemEnumStrict_n_from_o;29 e__SystemEnumStrict_l_from_o;29 1 0 "_from_o;29"
+.o 2 0
+e__SystemEnumStrict_l_from_o;29
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_o;29
+.n 1 e__SystemEnumStrict_d_from_o;29 e__SystemEnumStrict_ea_from_o;29
+.o 1 0
+e__SystemEnumStrict_n_from_o;29
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_ea_from_o;29
+.o 2 0
+e__SystemEnumStrict_s_from_o;29
+.o 2 0
+s30
+	push_a 0
+	updatepop_a 0 1
+.d 2 0
+	jmp s92
+.n 1 _ ea92
+.o 1 0
+n92
+	push_node _cycle_in_spine 1
+.o 2 0
+ea92
+.o 2 0
+s92
+	push_a 0
+	build _ 1 n186
+	build _ 1 n92
+	push_a 1
+	fillh _Cons 2 3
+	pop_a 1
+.d 1 0
+	rtn
+.n 1 _ ea186
+.o 1 0
+n186
+	push_node _cycle_in_spine 1
+.o 2 0
+ea186
+.o 2 0
+s186
+	pushI 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	pop_a 1
+	addI
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_uts;28
+.export e__SystemEnumStrict_ea_from_uts;28
+.descexp e__SystemEnumStrict_d_from_uts;28 e__SystemEnumStrict_n_from_uts;28 e__SystemEnumStrict_l_from_uts;28 1 0 "_from_uts;28"
+.o 2 0
+e__SystemEnumStrict_l_from_uts;28
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_uts;28
+.n 1 e__SystemEnumStrict_d_from_uts;28 e__SystemEnumStrict_ea_from_uts;28
+.o 1 0
+e__SystemEnumStrict_n_from_uts;28
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_ea_from_uts;28
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemEnumStrict_s_from_uts;28
+.o 1 1 i
+s29
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s91
+.o 1 1 i
+s91
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	push_b 1
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.d 1 1 i
+	jsr s91.2
+.o 1 0
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 1 i
+s91.2
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	push_b 1
+	fill_r _Consits 1 1 2 0 0
+	pop_a 1
+	pop_b 1
+.keep 1 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s91.2
+.export e__SystemEnumStrict_s_from_u;27
+.export e__SystemEnumStrict_ea_from_u;27
+.descexp e__SystemEnumStrict_d_from_u;27 e__SystemEnumStrict_n_from_u;27 e__SystemEnumStrict_l_from_u;27 1 0 "_from_u;27"
+.o 2 0
+e__SystemEnumStrict_l_from_u;27
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_u;27
+.n 1 e__SystemEnumStrict_d_from_u;27 e__SystemEnumStrict_ea_from_u;27
+.o 1 0
+e__SystemEnumStrict_n_from_u;27
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_ea_from_u;27
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemEnumStrict_s_from_u;27
+.o 1 1 i
+s28
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s90
+.o 1 1 i
+s90
+	push_b 0
+	build_u _ 0 1 n185
+	push_b 0
+	fill_r _Consi 1 1 1 0 0
+	pop_a 1
+	pop_b 1
+	pop_b 1
+.d 1 0
+	rtn
+.nu 0 1 _ _
+.o 1 0
+n185
+	push_node_u _cycle_in_spine 0 1
+.o 1 1 i
+ea185
+.o 1 1 i
+s185
+	pushI 1
+	push_b 1
+	addI
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s90
+.export e__SystemEnumStrict_s_from_sts;26
+.export e__SystemEnumStrict_ea_from_sts;26
+.descexp e__SystemEnumStrict_d_from_sts;26 e__SystemEnumStrict_n_from_sts;26 e__SystemEnumStrict_l_from_sts;26 1 0 "_from_sts;26"
+.o 2 0
+e__SystemEnumStrict_l_from_sts;26
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_sts;26
+.n 1 e__SystemEnumStrict_d_from_sts;26 e__SystemEnumStrict_ea_from_sts;26
+.o 1 0
+e__SystemEnumStrict_n_from_sts;26
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_ea_from_sts;26
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemEnumStrict_s_from_sts;26
+.o 1 1 i
+s27
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s89
+.o 1 1 i
+s89
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.d 1 1 i
+	jsr s89.2
+.o 1 0
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 1 i
+s89.2
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s89.2
+.export e__SystemEnumStrict_s_from_ts;25
+.export e__SystemEnumStrict_ea_from_ts;25
+.descexp e__SystemEnumStrict_d_from_ts;25 e__SystemEnumStrict_n_from_ts;25 e__SystemEnumStrict_l_from_ts;25 1 0 "_from_ts;25"
+.o 2 0
+e__SystemEnumStrict_l_from_ts;25
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_ts;25
+.n 1 e__SystemEnumStrict_d_from_ts;25 e__SystemEnumStrict_ea_from_ts;25
+.o 1 0
+e__SystemEnumStrict_n_from_ts;25
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_ea_from_ts;25
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemEnumStrict_s_from_ts;25
+.o 1 1 i
+s26
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s88
+.o 1 1 i
+s88
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.d 1 1 i
+	jsr s88.2
+.o 1 0
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 1 i
+s88.2
+	pushI 1
+	push_b 1
+	addI
+	create
+	push_a 0
+	buildI_b 1
+	fillh _Cons 2 3
+.keep 1 0
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s88.2
+.export e__SystemEnumStrict_s_from_s;24
+.export e__SystemEnumStrict_ea_from_s;24
+.descexp e__SystemEnumStrict_d_from_s;24 e__SystemEnumStrict_n_from_s;24 e__SystemEnumStrict_l_from_s;24 1 0 "_from_s;24"
+.o 2 0
+e__SystemEnumStrict_l_from_s;24
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemEnumStrict_ea_from_s;24
+.n 1 e__SystemEnumStrict_d_from_s;24 e__SystemEnumStrict_ea_from_s;24
+.o 1 0
+e__SystemEnumStrict_n_from_s;24
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemEnumStrict_ea_from_s;24
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 1 1 i
+e__SystemEnumStrict_s_from_s;24
+.o 1 1 i
+s25
+	push_b 0
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s87
+.o 1 1 i
+s87
+	push_b 0
+	build_u _ 0 1 n184
+	buildI_b 0
+	fillh _Cons 2 2
+	pop_b 1
+.d 1 0
+	rtn
+.nu 0 1 _ _
+.o 1 0
+n184
+	push_node_u _cycle_in_spine 0 1
+.o 1 1 i
+ea184
+.o 1 1 i
+s184
+	pushI 1
+	push_b 1
+	addI
+	updatepop_b 0 1
+.d 1 1 i
+	jmp s87
+.export e__SystemEnumStrict_s_from_then_to_o
+.descexp e__SystemEnumStrict_d_from_then_to_o e__SystemEnumStrict_n_from_then_to_o e__SystemEnumStrict_l_from_then_to_o 5 0 "_from_then_to_o"
+.a 0 ea24
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_o
+	repl_args 4 4
+.d 5 0
+	jmp ea24
+.n 5 e__SystemEnumStrict_d_from_then_to_o _
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_o
+	push_node _cycle_in_spine 5
+.d 5 0
+	jsr ea24
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 5 0
+ea24
+	jsr_eval 4
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 7 0
+e__SystemEnumStrict_s_from_then_to_o
+.o 7 0
+s24
+	push_a 4
+	push_a 1
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.63
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 0 6
+	pop_a 1
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 7 0
+	jmp s70
+else.63
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 0 6
+	pop_a 1
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 7 0
+	jmp s71
+.o 7 0
+s70
+	push_a 4
+	push_a 1
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.64
+	push_a 1
+	repl_r_args_a 4 0 1 1
+	build_r e__SystemStrictLists_rList; 2 0 3 0
+.impmod StdClass
+.impdesc e_StdClass_rEnum;
+	build_r e_StdClass_rEnum; 2 0 2 0
+	push_a 9
+	push_a 9
+	push_a 9
+	push_a 5
+	update_a 3 6
+	update_a 0 3
+	update_a 5 0
+	update_a 2 5
+	update_a 0 2
+	update_a 4 0
+	update_a 1 4
+	update_a 0 1
+	pop_a 1
+	build _ 6 n183
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+	jmp_ap 2
+else.64
+	build_r e__SystemStrictLists_rList; 2 0 2 0
+	pop_a 1
+	pop_a 7
+	buildh _Nil 0
+.d 1 0
+	rtn
+.n 6 _ ea183
+.o 1 0
+n183
+	push_node _cycle_in_spine 6
+.o 7 0
+ea183
+.o 7 0
+s183
+	push_a 4
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 2 0
+	push_a 8
+	push_a 8
+	push_a 6
+	update_a 2 7
+	update_a 4 2
+	update_a 6 4
+	update_a 1 6
+	update_a 3 1
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 7 0
+	jsr s70
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 7 0
+s71
+	push_a 6
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.65
+	push_a 1
+	repl_r_args_a 4 0 1 1
+	build_r e__SystemStrictLists_rList; 2 0 3 0
+	build_r e_StdClass_rEnum; 2 0 2 0
+	push_a 9
+	push_a 9
+	push_a 9
+	push_a 5
+	update_a 3 6
+	update_a 0 3
+	update_a 5 0
+	update_a 2 5
+	update_a 0 2
+	update_a 4 0
+	update_a 1 4
+	update_a 0 1
+	pop_a 1
+	build _ 6 n182
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+	jmp_ap 2
+else.65
+	build_r e__SystemStrictLists_rList; 2 0 2 0
+	pop_a 1
+	pop_a 7
+	buildh _Nil 0
+.d 1 0
+	rtn
+.n 6 _ ea182
+.o 1 0
+n182
+	push_node _cycle_in_spine 6
+.o 7 0
+ea182
+.o 7 0
+s182
+	push_a 4
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 2 0
+	push_a 8
+	push_a 8
+	push_a 6
+	update_a 2 7
+	update_a 4 2
+	update_a 6 4
+	update_a 1 6
+	update_a 3 1
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 7 0
+	jsr s71
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_uts
+.export e__SystemEnumStrict_ea_from_then_to_uts
+.descexp e__SystemEnumStrict_d_from_then_to_uts e__SystemEnumStrict_n_from_then_to_uts e__SystemEnumStrict_l_from_then_to_uts 5 0 "_from_then_to_uts"
+.a 5 e__SystemEnumStrict_ea_from_then_to_uts
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_uts
+	push_args 0 4 4
+	update_a 5 4
+	create
+	update_a 0 6
+	pop_a 1
+.d 6 0
+	jmp e__SystemEnumStrict_ea_from_then_to_uts
+.n 5 e__SystemEnumStrict_d_from_then_to_uts e__SystemEnumStrict_ea_from_then_to_uts
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_uts
+	push_node _cycle_in_spine 5
+.o 6 0
+e__SystemEnumStrict_ea_from_then_to_uts
+	jsr_eval 4
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 8 0
+e__SystemEnumStrict_s_from_then_to_uts
+.o 8 0
+s23
+	push_a 4
+	push_a 1
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.66
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 0 6
+	pop_a 1
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 8 0
+	jmp s85
+else.66
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 0 6
+	pop_a 1
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 8 0
+	jmp s86
+.o 8 0
+s85
+	push_a 4
+	push_a 1
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.67
+	push_a 5
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 8
+	push_a 8
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 7 9
+	update_a 6 8
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	buildh _Nil 0
+	update_a 0 12
+	update_a 0 13
+	pop_a 1
+.d 8 0
+	jsr s85
+.o 1 0
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 4 0
+	jmp_i 2
+else.67
+	push_a 3
+	push_a 3
+	buildhr e__SystemStrictLists_rList; 2 0
+	pop_a 1
+	fillh _Nil 0 7
+	pop_a 7
+.d 1 0
+	rtn
+.o 8 0
+s86
+	push_a 6
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.68
+	push_a 5
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 8
+	push_a 8
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 7 9
+	update_a 6 8
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	buildh _Nil 0
+	update_a 0 12
+	update_a 0 13
+	pop_a 1
+.d 8 0
+	jsr s86
+.o 1 0
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 4 0
+	jmp_i 2
+else.68
+	push_a 3
+	push_a 3
+	buildhr e__SystemStrictLists_rList; 2 0
+	pop_a 1
+	fillh _Nil 0 7
+	pop_a 7
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_u
+.export e__SystemEnumStrict_ea_from_then_to_u
+.descexp e__SystemEnumStrict_d_from_then_to_u e__SystemEnumStrict_n_from_then_to_u e__SystemEnumStrict_l_from_then_to_u 5 0 "_from_then_to_u"
+.a 5 e__SystemEnumStrict_ea_from_then_to_u
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_u
+	push_args 0 4 4
+	update_a 5 4
+	create
+	update_a 0 6
+	pop_a 1
+.d 6 0
+	jmp e__SystemEnumStrict_ea_from_then_to_u
+.n 5 e__SystemEnumStrict_d_from_then_to_u e__SystemEnumStrict_ea_from_then_to_u
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_u
+	push_node _cycle_in_spine 5
+.o 6 0
+e__SystemEnumStrict_ea_from_then_to_u
+	jsr_eval 4
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 8 0
+e__SystemEnumStrict_s_from_then_to_u
+.o 8 0
+s22
+	push_a 4
+	push_a 1
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.69
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 0 6
+	pop_a 1
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 8 0
+	jmp s83
+else.69
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 0 6
+	pop_a 1
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 8 0
+	jmp s84
+.o 8 0
+s83
+	push_a 4
+	push_a 1
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.70
+	push_a 1
+	repl_r_args_a 4 0 1 1
+.impmod _SystemStrictLists
+.impdesc e__SystemStrictLists_rUList;
+	build_r e__SystemStrictLists_rUList; 2 0 3 0
+	build_r e_StdClass_rEnum; 2 0 2 0
+	push_a 9
+	push_a 9
+	push_a 9
+	push_a 5
+	update_a 3 6
+	update_a 0 3
+	update_a 5 0
+	update_a 2 5
+	update_a 0 2
+	update_a 4 0
+	update_a 1 4
+	update_a 0 1
+	pop_a 1
+	build _ 6 n181
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 4 0
+	jmp_i 2
+else.70
+	push_a 3
+	push_a 3
+	buildhr e__SystemStrictLists_rList; 2 0
+	pop_a 1
+	fillh _Nil 0 7
+	pop_a 7
+.d 1 0
+	rtn
+.n 6 _ ea181
+.o 1 0
+n181
+	push_node _cycle_in_spine 6
+.o 7 0
+ea181
+.o 7 0
+s181
+	push_a 4
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 2 0
+	push_a 8
+	push_a 8
+	push_a 6
+	update_a 2 7
+	update_a 4 2
+	update_a 6 4
+	update_a 1 6
+	update_a 3 1
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 8 0
+	jmp s83
+.o 8 0
+s84
+	push_a 6
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.71
+	push_a 1
+	repl_r_args_a 4 0 1 1
+	build_r e__SystemStrictLists_rUList; 2 0 3 0
+	build_r e_StdClass_rEnum; 2 0 2 0
+	push_a 9
+	push_a 9
+	push_a 9
+	push_a 5
+	update_a 3 6
+	update_a 0 3
+	update_a 5 0
+	update_a 2 5
+	update_a 0 2
+	update_a 4 0
+	update_a 1 4
+	update_a 0 1
+	pop_a 1
+	build _ 6 n180
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 4 0
+	jmp_i 2
+else.71
+	push_a 3
+	push_a 3
+	buildhr e__SystemStrictLists_rList; 2 0
+	pop_a 1
+	fillh _Nil 0 7
+	pop_a 7
+.d 1 0
+	rtn
+.n 6 _ ea180
+.o 1 0
+n180
+	push_node _cycle_in_spine 6
+.o 7 0
+ea180
+.o 7 0
+s180
+	push_a 4
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 2 0
+	push_a 8
+	push_a 8
+	push_a 6
+	update_a 2 7
+	update_a 4 2
+	update_a 6 4
+	update_a 1 6
+	update_a 3 1
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 8 0
+	jmp s84
+.export e__SystemEnumStrict_s_from_then_to_sts
+.export e__SystemEnumStrict_ea_from_then_to_sts
+.descexp e__SystemEnumStrict_d_from_then_to_sts e__SystemEnumStrict_n_from_then_to_sts e__SystemEnumStrict_l_from_then_to_sts 4 0 "_from_then_to_sts"
+.a 4 e__SystemEnumStrict_ea_from_then_to_sts
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_sts
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_then_to_sts
+.n 4 e__SystemEnumStrict_d_from_then_to_sts e__SystemEnumStrict_ea_from_then_to_sts
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_sts
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_then_to_sts
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 6 0
+e__SystemEnumStrict_s_from_then_to_sts
+.o 6 0
+s21
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.72
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 7
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 0
+	jmp s81
+else.72
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 7
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 0
+	jmp s82
+.o 6 0
+s81
+	push_a 2
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.73
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.d 6 0
+	jsr s81.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+else.73
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.o 6 0
+s81.2
+	push_a 2
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.74
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.keep 7 5
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 6 0
+	jmp s81.2
+else.74
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.o 6 0
+s82
+	push_a 4
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.75
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.d 6 0
+	jsr s82.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+else.75
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.o 6 0
+s82.2
+	push_a 4
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.76
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.keep 7 5
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 6 0
+	jmp s82.2
+else.76
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_ts
+.export e__SystemEnumStrict_ea_from_then_to_ts
+.descexp e__SystemEnumStrict_d_from_then_to_ts e__SystemEnumStrict_n_from_then_to_ts e__SystemEnumStrict_l_from_then_to_ts 4 0 "_from_then_to_ts"
+.a 4 e__SystemEnumStrict_ea_from_then_to_ts
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_ts
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_then_to_ts
+.n 4 e__SystemEnumStrict_d_from_then_to_ts e__SystemEnumStrict_ea_from_then_to_ts
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_ts
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_then_to_ts
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 6 0
+e__SystemEnumStrict_s_from_then_to_ts
+.o 6 0
+s20
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.77
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 7
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 0
+	jmp s79
+else.77
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 7
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 0
+	jmp s80
+.o 6 0
+s79
+	push_a 2
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.78
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.d 6 0
+	jsr s79.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+else.78
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.o 6 0
+s79.2
+	push_a 2
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.79
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.keep 7 5
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 6 0
+	jmp s79.2
+else.79
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.o 6 0
+s80
+	push_a 4
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.80
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.d 6 0
+	jsr s80.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+else.80
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.o 6 0
+s80.2
+	push_a 4
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.81
+	push_a 3
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 8 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.keep 7 5
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 6 0
+	jmp s80.2
+else.81
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_to_s
+.export e__SystemEnumStrict_ea_from_then_to_s
+.descexp e__SystemEnumStrict_d_from_then_to_s e__SystemEnumStrict_n_from_then_to_s e__SystemEnumStrict_l_from_then_to_s 4 0 "_from_then_to_s"
+.a 4 e__SystemEnumStrict_ea_from_then_to_s
+.o 2 0
+e__SystemEnumStrict_l_from_then_to_s
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_then_to_s
+.n 4 e__SystemEnumStrict_d_from_then_to_s e__SystemEnumStrict_ea_from_then_to_s
+.o 1 0
+e__SystemEnumStrict_n_from_then_to_s
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_then_to_s
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 6 0
+e__SystemEnumStrict_s_from_then_to_s
+.o 6 0
+s19
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.82
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 7
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 0
+	jmp s77
+else.82
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 7
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 0
+	jmp s78
+.o 6 0
+s77
+	push_a 2
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.83
+	push_a 1
+	repl_r_args_a 4 0 1 1
+	build_r e_StdClass_rEnum; 2 0 1 0
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 4
+	update_a 3 5
+	update_a 1 3
+	update_a 4 1
+	update_a 2 4
+	update_a 0 2
+	pop_a 1
+	build _ 5 n179
+	push_a 3
+	fillh _Cons 2 7
+	pop_a 5
+.d 1 0
+	rtn
+else.83
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.n 5 _ ea179
+.o 1 0
+n179
+	push_node _cycle_in_spine 5
+.o 6 0
+ea179
+.o 6 0
+s179
+	push_a 3
+	push_a 2
+	jsr_eval 0
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 1 2 0
+	push_a 5
+	push_a 5
+	push_a 4
+	update_a 2 5
+	update_a 4 2
+	update_a 1 4
+	update_a 3 1
+	update_a 0 3
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 6 0
+	jmp s77
+.o 6 0
+s78
+	push_a 4
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.84
+	push_a 1
+	repl_r_args_a 4 0 1 1
+	build_r e_StdClass_rEnum; 2 0 1 0
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 4
+	update_a 3 5
+	update_a 1 3
+	update_a 4 1
+	update_a 2 4
+	update_a 0 2
+	pop_a 1
+	build _ 5 n178
+	push_a 3
+	fillh _Cons 2 7
+	pop_a 5
+.d 1 0
+	rtn
+else.84
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+.n 5 _ ea178
+.o 1 0
+n178
+	push_node _cycle_in_spine 5
+.o 6 0
+ea178
+.o 6 0
+s178
+	push_a 3
+	push_a 2
+	jsr_eval 0
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 1 2 0
+	push_a 5
+	push_a 5
+	push_a 4
+	update_a 2 5
+	update_a 4 2
+	update_a 1 4
+	update_a 3 1
+	update_a 0 3
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 6 0
+	jmp s78
+.export e__SystemEnumStrict_s_from_then_o
+.descexp e__SystemEnumStrict_d_from_then_o e__SystemEnumStrict_n_from_then_o e__SystemEnumStrict_l_from_then_o 4 0 "_from_then_o"
+.a 0 ea18
+.o 2 0
+e__SystemEnumStrict_l_from_then_o
+	repl_args 3 3
+.d 4 0
+	jmp ea18
+.n 4 e__SystemEnumStrict_d_from_then_o _
+.o 1 0
+e__SystemEnumStrict_n_from_then_o
+	push_node _cycle_in_spine 4
+.d 4 0
+	jsr ea18
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 4 0
+ea18
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 6 0
+e__SystemEnumStrict_s_from_then_o
+.o 6 0
+s18
+	push_a 1
+	repl_r_args_a 4 0 2 1
+	push_a 5
+	push_a 7
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 3 n166
+	push_a 2
+	repl_r_args_a 4 0 1 1
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_r+;
+	buildhr e_StdOverloaded_r+; 1 0
+	build_r e__SystemStrictLists_rList; 2 0 4 0
+	push_a 8
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	build _ 4 n69
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 8
+	update_a 1 7
+	updatepop_a 0 6
+	jmp_ap 2
+.n 3 _ ea166
+.o 1 0
+n166
+	push_node _cycle_in_spine 3
+.o 4 0
+ea166
+.o 4 0
+s166
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.n 4 _ _
+.o 1 0
+n69
+	push_node _cycle_in_spine 4
+.d 4 0
+	jsr ea69
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 4 0
+ea69
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 1 0
+	push_r_args 1 2 0
+	update_a 2 4
+	update_a 0 2
+	update_a 1 3
+	pop_a 2
+.o 5 0
+s69
+	push_a 2
+	push_a 5
+	push_a 5
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 3 n177
+	build_r e_StdOverloaded_r+; 1 0 3 0
+	build_r e__SystemStrictLists_rList; 2 0 2 0
+	push_a 7
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	build _ 4 n69
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+	jmp_ap 2
+.n 3 _ ea177
+.o 1 0
+n177
+	push_node _cycle_in_spine 3
+.o 4 0
+ea177
+.o 4 0
+s177
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_then_uts
+.export e__SystemEnumStrict_ea_from_then_uts
+.descexp e__SystemEnumStrict_d_from_then_uts e__SystemEnumStrict_n_from_then_uts e__SystemEnumStrict_l_from_then_uts 4 0 "_from_then_uts"
+.a 4 e__SystemEnumStrict_ea_from_then_uts
+.o 2 0
+e__SystemEnumStrict_l_from_then_uts
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_then_uts
+.n 4 e__SystemEnumStrict_d_from_then_uts e__SystemEnumStrict_ea_from_then_uts
+.o 1 0
+e__SystemEnumStrict_n_from_then_uts
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_then_uts
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 7 0
+e__SystemEnumStrict_s_from_then_uts
+.o 7 0
+s17
+	push_a 4
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	create
+	push_a 8
+	push_a 7
+	push_a 7
+	push_a 5
+	update_a 4 6
+	update_a 3 4
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	buildh _Nil 0
+	update_a 0 10
+	pop_a 1
+.d 6 0
+	jsr s76
+.o 1 0
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 4 0
+	jmp_i 2
+.o 6 0
+s76
+	push_a 4
+	push_a 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 6
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 4 5
+	update_a 0 4
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 9
+	update_a 0 11
+	pop_a 1
+.d 6 0
+	jsr s76
+.o 1 0
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 4 0
+	jmp_i 2
+.export e__SystemEnumStrict_s_from_then_u
+.export e__SystemEnumStrict_ea_from_then_u
+.descexp e__SystemEnumStrict_d_from_then_u e__SystemEnumStrict_n_from_then_u e__SystemEnumStrict_l_from_then_u 4 0 "_from_then_u"
+.a 4 e__SystemEnumStrict_ea_from_then_u
+.o 2 0
+e__SystemEnumStrict_l_from_then_u
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_then_u
+.n 4 e__SystemEnumStrict_d_from_then_u e__SystemEnumStrict_ea_from_then_u
+.o 1 0
+e__SystemEnumStrict_n_from_then_u
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_then_u
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 7 0
+e__SystemEnumStrict_s_from_then_u
+.o 7 0
+s16
+	push_a 1
+	repl_r_args_a 4 0 2 1
+	push_a 5
+	push_a 7
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 3 n167
+	push_a 2
+	repl_r_args_a 4 0 1 1
+	buildhr e_StdOverloaded_r+; 1 0
+	build_r e__SystemStrictLists_rUList; 2 0 4 0
+	push_a 8
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	build _ 4 n75
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 8
+	update_a 1 7
+	updatepop_a 0 6
+.d 4 0
+	jmp_i 2
+.n 3 _ ea167
+.o 1 0
+n167
+	push_node _cycle_in_spine 3
+.o 4 0
+ea167
+.o 4 0
+s167
+	push_a 2
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.n 4 _ ea75
+.o 1 0
+n75
+	push_node _cycle_in_spine 4
+.o 5 0
+ea75
+	jsr_eval 2
+	push_r_args 1 1 0
+	push_r_args 1 2 0
+	update_a 2 4
+	update_a 0 2
+	update_a 1 3
+	pop_a 2
+.o 6 0
+s75
+	push_a 2
+	build_r e_StdOverloaded_r+; 1 0 3 0
+	build_r e__SystemStrictLists_rUList; 2 0 2 0
+	push_a 7
+	push_a 7
+	push_a 4
+	update_a 2 5
+	update_a 4 2
+	update_a 1 4
+	update_a 3 1
+	update_a 0 3
+	pop_a 1
+	build _ 5 n176
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 4 0
+	jmp_i 2
+.n 5 _ ea176
+.o 1 0
+n176
+	push_node _cycle_in_spine 5
+.o 6 0
+ea176
+.o 6 0
+s176
+	push_a 4
+	jsr_eval 0
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 1 0
+	push_r_args 2 2 0
+	push_a 6
+	push_a 4
+	update_a 1 5
+	update_a 2 1
+	update_a 3 2
+	update_a 4 3
+	update_a 0 4
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 6 0
+	jmp s75
+.export e__SystemEnumStrict_s_from_then_sts
+.export e__SystemEnumStrict_ea_from_then_sts
+.descexp e__SystemEnumStrict_d_from_then_sts e__SystemEnumStrict_n_from_then_sts e__SystemEnumStrict_l_from_then_sts 3 0 "_from_then_sts"
+.a 3 e__SystemEnumStrict_ea_from_then_sts
+.o 2 0
+e__SystemEnumStrict_l_from_then_sts
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_sts
+.n 3 e__SystemEnumStrict_d_from_then_sts e__SystemEnumStrict_ea_from_then_sts
+.o 1 0
+e__SystemEnumStrict_n_from_then_sts
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_sts
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+e__SystemEnumStrict_s_from_then_sts
+.o 5 0
+s15
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	create
+	push_a 6
+	push_a 3
+	update_a 2 4
+	update_a 1 2
+	update_a 3 1
+	update_a 0 3
+	pop_a 1
+	update_a 6 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 4 0
+	jsr s74
+.o 1 0
+	push_a 1
+	fillh _Cons 2 3
+	pop_a 1
+.d 1 0
+	rtn
+.o 4 0
+s74
+	push_a 2
+	push_a 1
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 4
+	push_a 3
+	push_a 3
+	update_a 3 4
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	update_a 5 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	push_a 3
+	push_a 5
+	fillh _Cons 2 7
+.d 4 0
+	jsr s74.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+.o 4 0
+s74.2
+	push_a 2
+	push_a 1
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 4
+	push_a 3
+	push_a 3
+	update_a 3 4
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	update_a 5 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	push_a 3
+	push_a 5
+	fillh _Cons 2 7
+.keep 5 3
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp s74.2
+.export e__SystemEnumStrict_s_from_then_ts
+.export e__SystemEnumStrict_ea_from_then_ts
+.descexp e__SystemEnumStrict_d_from_then_ts e__SystemEnumStrict_n_from_then_ts e__SystemEnumStrict_l_from_then_ts 3 0 "_from_then_ts"
+.a 3 e__SystemEnumStrict_ea_from_then_ts
+.o 2 0
+e__SystemEnumStrict_l_from_then_ts
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_ts
+.n 3 e__SystemEnumStrict_d_from_then_ts e__SystemEnumStrict_ea_from_then_ts
+.o 1 0
+e__SystemEnumStrict_n_from_then_ts
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_ts
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+e__SystemEnumStrict_s_from_then_ts
+.o 5 0
+s14
+	push_a 2
+	push_r_args 2 4 0
+	updatepop_a 1 3
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	create
+	push_a 6
+	push_a 3
+	update_a 2 4
+	update_a 1 2
+	update_a 3 1
+	update_a 0 3
+	pop_a 1
+	update_a 6 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 4 0
+	jsr s73
+.o 1 0
+	push_a 1
+	fillh _Cons 2 3
+	pop_a 1
+.d 1 0
+	rtn
+.o 4 0
+s73
+	push_a 2
+	push_a 1
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 4
+	push_a 3
+	push_a 3
+	update_a 3 4
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	update_a 5 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	push_a 3
+	push_a 5
+	fillh _Cons 2 7
+.d 4 0
+	jsr s73.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+.o 4 0
+s73.2
+	push_a 2
+	push_a 1
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 4
+	push_a 3
+	push_a 3
+	update_a 3 4
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	update_a 5 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	push_a 3
+	push_a 5
+	fillh _Cons 2 7
+.keep 5 3
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp s73.2
+.export e__SystemEnumStrict_s_from_then_s
+.export e__SystemEnumStrict_ea_from_then_s
+.descexp e__SystemEnumStrict_d_from_then_s e__SystemEnumStrict_n_from_then_s e__SystemEnumStrict_l_from_then_s 3 0 "_from_then_s"
+.a 3 e__SystemEnumStrict_ea_from_then_s
+.o 2 0
+e__SystemEnumStrict_l_from_then_s
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_then_s
+.n 3 e__SystemEnumStrict_d_from_then_s e__SystemEnumStrict_ea_from_then_s
+.o 1 0
+e__SystemEnumStrict_n_from_then_s
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_then_s
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+e__SystemEnumStrict_s_from_then_s
+.o 5 0
+s13
+	push_a 1
+	repl_r_args_a 4 0 2 1
+	push_a 3
+	push_a 5
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 3 n168
+	push_a 2
+	repl_r_args_a 4 0 1 1
+	buildhr e_StdOverloaded_r+; 1 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 3 n72
+	push_a 3
+	fillh _Cons 2 6
+	pop_a 4
+.d 1 0
+	rtn
+.n 3 _ ea168
+.o 1 0
+n168
+	push_node _cycle_in_spine 3
+.o 4 0
+ea168
+.o 4 0
+s168
+	push_a 2
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.n 3 _ ea72
+.o 1 0
+n72
+	push_node _cycle_in_spine 3
+.o 4 0
+ea72
+	jsr_eval 1
+	repl_r_args 1 0
+.o 4 0
+s72
+	push_a 0
+	build_r e_StdOverloaded_r+; 1 0 1 0
+	push_a 4
+	push_a 4
+	push_a 3
+	update_a 2 4
+	update_a 0 2
+	update_a 3 0
+	update_a 1 3
+	update_a 0 1
+	pop_a 1
+	build _ 4 n175
+	push_a 2
+	fillh _Cons 2 5
+	pop_a 3
+.d 1 0
+	rtn
+.n 4 _ ea175
+.o 1 0
+n175
+	push_node _cycle_in_spine 4
+.o 5 0
+ea175
+.o 5 0
+s175
+	push_a 3
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 1 1 0
+	push_a 3
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp s72
+.export e__SystemEnumStrict_s_from_to_o
+.descexp e__SystemEnumStrict_d_from_to_o e__SystemEnumStrict_n_from_to_o e__SystemEnumStrict_l_from_to_o 4 0 "_from_to_o"
+.a 0 ea12
+.o 2 0
+e__SystemEnumStrict_l_from_to_o
+	repl_args 3 3
+.d 4 0
+	jmp ea12
+.n 4 e__SystemEnumStrict_d_from_to_o _
+.o 1 0
+e__SystemEnumStrict_n_from_to_o
+	push_node _cycle_in_spine 4
+.d 4 0
+	jsr ea12
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 4 0
+ea12
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 6 0
+e__SystemEnumStrict_s_from_to_o
+.o 6 0
+s12
+	push_a 4
+	push_a 1
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.85
+	push_a 1
+	repl_r_args_a 4 0 3 1
+	push_a 2
+	repl_r_args_a 4 0 1 1
+	build_r e__SystemStrictLists_rList; 2 0 4 0
+	build_r e_StdClass_rEnum; 2 0 3 0
+	push_a 9
+	push_a 9
+	push_a 5
+	update_a 2 6
+	update_a 4 2
+	update_a 1 4
+	update_a 3 1
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	build _ 6 n169
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 8
+	update_a 1 7
+	updatepop_a 0 6
+	jmp_ap 2
+else.85
+	build_r e__SystemStrictLists_rList; 2 0 2 0
+	pop_a 1
+	pop_a 6
+	buildh _Nil 0
+.d 1 0
+	rtn
+.n 6 _ ea169
+.o 1 0
+n169
+	push_node _cycle_in_spine 6
+.o 7 0
+ea169
+.o 7 0
+s169
+	push_a 4
+	jsr_eval 0
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 2 0
+	push_a 7
+	push_a 5
+	update_a 1 6
+	update_a 2 1
+	update_a 3 2
+	update_a 4 3
+	update_a 5 4
+	update_a 0 5
+	pop_a 1
+	update_a 5 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 6 0
+	jsr s12
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_uts
+.export e__SystemEnumStrict_ea_from_to_uts
+.descexp e__SystemEnumStrict_d_from_to_uts e__SystemEnumStrict_n_from_to_uts e__SystemEnumStrict_l_from_to_uts 4 0 "_from_to_uts"
+.a 4 e__SystemEnumStrict_ea_from_to_uts
+.o 2 0
+e__SystemEnumStrict_l_from_to_uts
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_to_uts
+.n 4 e__SystemEnumStrict_d_from_to_uts e__SystemEnumStrict_ea_from_to_uts
+.o 1 0
+e__SystemEnumStrict_n_from_to_uts
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_to_uts
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 7 0
+e__SystemEnumStrict_s_from_to_uts
+.o 7 0
+s11
+	push_a 4
+	push_a 1
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.86
+	push_r_args 1 4 0
+	updatepop_a 2 3
+	jsr_eval 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 7
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	push_a 6
+	update_a 6 7
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 6 8
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	buildh _Nil 0
+	update_a 0 11
+	pop_a 1
+.d 7 0
+	jsr s11
+.o 1 0
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 4 0
+	jmp_i 2
+else.86
+	push_a 3
+	push_a 3
+	buildhr e__SystemStrictLists_rList; 2 0
+	pop_a 1
+	fillh _Nil 0 6
+	pop_a 6
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_u
+.export e__SystemEnumStrict_ea_from_to_u
+.descexp e__SystemEnumStrict_d_from_to_u e__SystemEnumStrict_n_from_to_u e__SystemEnumStrict_l_from_to_u 4 0 "_from_to_u"
+.a 4 e__SystemEnumStrict_ea_from_to_u
+.o 2 0
+e__SystemEnumStrict_l_from_to_u
+	push_args 0 3 3
+	update_a 4 3
+	create
+	update_a 0 5
+	pop_a 1
+.d 5 0
+	jmp e__SystemEnumStrict_ea_from_to_u
+.n 4 e__SystemEnumStrict_d_from_to_u e__SystemEnumStrict_ea_from_to_u
+.o 1 0
+e__SystemEnumStrict_n_from_to_u
+	push_node _cycle_in_spine 4
+.o 5 0
+e__SystemEnumStrict_ea_from_to_u
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 2 0
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 7 0
+e__SystemEnumStrict_s_from_to_u
+.o 7 0
+s10
+	push_a 4
+	push_a 1
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.87
+	push_a 1
+	repl_r_args_a 4 0 3 1
+	push_a 2
+	repl_r_args_a 4 0 1 1
+	build_r e__SystemStrictLists_rUList; 2 0 4 0
+	build_r e_StdClass_rEnum; 2 0 3 0
+	push_a 9
+	push_a 9
+	push_a 5
+	update_a 2 6
+	update_a 4 2
+	update_a 1 4
+	update_a 3 1
+	update_a 5 3
+	update_a 0 5
+	pop_a 1
+	build _ 6 n170
+	push_a 3
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 8
+	update_a 1 7
+	updatepop_a 0 6
+.d 4 0
+	jmp_i 2
+else.87
+	push_a 3
+	push_a 3
+	buildhr e__SystemStrictLists_rList; 2 0
+	pop_a 1
+	fillh _Nil 0 6
+	pop_a 6
+.d 1 0
+	rtn
+.n 6 _ ea170
+.o 1 0
+n170
+	push_node _cycle_in_spine 6
+.o 7 0
+ea170
+.o 7 0
+s170
+	push_a 4
+	jsr_eval 0
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 2 0
+	push_a 7
+	push_a 5
+	update_a 1 6
+	update_a 2 1
+	update_a 3 2
+	update_a 4 3
+	update_a 5 4
+	update_a 0 5
+	pop_a 1
+	update_a 5 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 7 0
+	jmp s10
+.export e__SystemEnumStrict_s_from_to_sts
+.export e__SystemEnumStrict_ea_from_to_sts
+.descexp e__SystemEnumStrict_d_from_to_sts e__SystemEnumStrict_n_from_to_sts e__SystemEnumStrict_l_from_to_sts 3 0 "_from_to_sts"
+.a 3 e__SystemEnumStrict_ea_from_to_sts
+.o 2 0
+e__SystemEnumStrict_l_from_to_sts
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_to_sts
+.n 3 e__SystemEnumStrict_d_from_to_sts e__SystemEnumStrict_ea_from_to_sts
+.o 1 0
+e__SystemEnumStrict_n_from_to_sts
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_to_sts
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+e__SystemEnumStrict_s_from_to_sts
+.o 5 0
+s9
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.88
+	push_r_args 1 4 0
+	updatepop_a 2 3
+	jsr_eval 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 7 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+	push_a 4
+	push_a 6
+	fillh _Cons 2 8
+.d 5 0
+	jsr s9.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+else.88
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+.o 5 0
+s9.2
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.89
+	push_r_args 1 4 0
+	updatepop_a 2 3
+	jsr_eval 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 7 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+	push_a 4
+	push_a 6
+	fillh _Cons 2 8
+.keep 6 4
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 5 0
+	jmp s9.2
+else.89
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_ts
+.export e__SystemEnumStrict_ea_from_to_ts
+.descexp e__SystemEnumStrict_d_from_to_ts e__SystemEnumStrict_n_from_to_ts e__SystemEnumStrict_l_from_to_ts 3 0 "_from_to_ts"
+.a 3 e__SystemEnumStrict_ea_from_to_ts
+.o 2 0
+e__SystemEnumStrict_l_from_to_ts
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_to_ts
+.n 3 e__SystemEnumStrict_d_from_to_ts e__SystemEnumStrict_ea_from_to_ts
+.o 1 0
+e__SystemEnumStrict_n_from_to_ts
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_to_ts
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+e__SystemEnumStrict_s_from_to_ts
+.o 5 0
+s8
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.90
+	push_r_args 1 4 0
+	updatepop_a 2 3
+	jsr_eval 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 7 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+	push_a 4
+	push_a 6
+	fillh _Cons 2 8
+.d 5 0
+	jsr s8.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+else.90
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+.o 5 0
+s8.2
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.91
+	push_r_args 1 4 0
+	updatepop_a 2 3
+	jsr_eval 0
+	push_r_args 2 4 0
+	updatepop_a 0 3
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 4
+	push_a 4
+	push_a 4
+	update_a 4 5
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 7 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+	push_a 4
+	push_a 6
+	fillh _Cons 2 8
+.keep 6 4
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 5 0
+	jmp s8.2
+else.91
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_to_s
+.export e__SystemEnumStrict_ea_from_to_s
+.descexp e__SystemEnumStrict_d_from_to_s e__SystemEnumStrict_n_from_to_s e__SystemEnumStrict_l_from_to_s 3 0 "_from_to_s"
+.a 3 e__SystemEnumStrict_ea_from_to_s
+.o 2 0
+e__SystemEnumStrict_l_from_to_s
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_to_s
+.n 3 e__SystemEnumStrict_d_from_to_s e__SystemEnumStrict_ea_from_to_s
+.o 1 0
+e__SystemEnumStrict_n_from_to_s
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_to_s
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+e__SystemEnumStrict_s_from_to_s
+.o 5 0
+s7
+	push_a 2
+	push_a 1
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 0 1 b
+	notB
+	jmp_false else.92
+	push_a 1
+	repl_r_args_a 4 0 3 1
+	push_a 2
+	repl_r_args_a 4 0 1 1
+	build_r e_StdClass_rEnum; 2 0 2 0
+	push_a 6
+	push_a 6
+	push_a 4
+	update_a 2 5
+	update_a 4 2
+	update_a 0 4
+	update_a 3 0
+	update_a 1 3
+	update_a 0 1
+	pop_a 1
+	build _ 5 n171
+	push_a 3
+	fillh _Cons 2 6
+	pop_a 4
+.d 1 0
+	rtn
+else.92
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+.n 5 _ ea171
+.o 1 0
+n171
+	push_node _cycle_in_spine 5
+.o 6 0
+ea171
+.o 6 0
+s171
+	push_a 3
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 1 2 0
+	push_a 4
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 5 0
+	jmp s7
+.export e__SystemEnumStrict_s_from_o
+.descexp e__SystemEnumStrict_d_from_o e__SystemEnumStrict_n_from_o e__SystemEnumStrict_l_from_o 3 0 "_from_o"
+.a 0 ea6
+.o 2 0
+e__SystemEnumStrict_l_from_o
+	repl_args 2 2
+.d 3 0
+	jmp ea6
+.n 3 e__SystemEnumStrict_d_from_o _
+.o 1 0
+e__SystemEnumStrict_n_from_o
+	push_node _cycle_in_spine 3
+.d 3 0
+	jsr ea6
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 3 0
+ea6
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 4 0
+	update_a 5 7
+	update_a 3 5
+	update_a 1 3
+	update_a 4 6
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 7 0
+e__SystemEnumStrict_s_from_o
+.o 7 0
+s6
+	push_a 2
+	push_a 1
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 3 n172
+	build_r e__SystemStrictLists_rList; 2 0 5 0
+.impmod StdClass
+.impdesc e_StdClass_rIncDec;
+	build_r e_StdClass_rIncDec; 4 0 2 0
+	build e__SystemEnumStrict_d_from_o 3 e__SystemEnumStrict_n_from_o
+	push_a 5
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+	jmp_ap 2
+.n 3 _ ea172
+.o 1 0
+n172
+	push_node _cycle_in_spine 3
+.o 4 0
+ea172
+.o 4 0
+s172
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemEnumStrict_s_from_uts
+.export e__SystemEnumStrict_ea_from_uts
+.descexp e__SystemEnumStrict_d_from_uts e__SystemEnumStrict_n_from_uts e__SystemEnumStrict_l_from_uts 3 0 "_from_uts"
+.a 3 e__SystemEnumStrict_ea_from_uts
+.o 2 0
+e__SystemEnumStrict_l_from_uts
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_uts
+.n 3 e__SystemEnumStrict_d_from_uts e__SystemEnumStrict_ea_from_uts
+.o 1 0
+e__SystemEnumStrict_n_from_uts
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_uts
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 4 0
+	update_a 5 7
+	update_a 3 5
+	update_a 1 3
+	update_a 4 6
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 8 0
+e__SystemEnumStrict_s_from_uts
+.o 8 0
+s5
+	push_a 2
+	jsr_eval 0
+	push_a 1
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	push_a 7
+	update_a 7 8
+	update_a 0 7
+	pop_a 1
+	update_a 7 11
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 8 0
+	jsr s5
+.o 1 0
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 4 0
+	jmp_i 2
+.export e__SystemEnumStrict_s_from_u
+.export e__SystemEnumStrict_ea_from_u
+.descexp e__SystemEnumStrict_d_from_u e__SystemEnumStrict_n_from_u e__SystemEnumStrict_l_from_u 3 0 "_from_u"
+.a 3 e__SystemEnumStrict_ea_from_u
+.o 2 0
+e__SystemEnumStrict_l_from_u
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemEnumStrict_ea_from_u
+.n 3 e__SystemEnumStrict_d_from_u e__SystemEnumStrict_ea_from_u
+.o 1 0
+e__SystemEnumStrict_n_from_u
+	push_node _cycle_in_spine 3
+.o 4 0
+e__SystemEnumStrict_ea_from_u
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 2 0
+	push_r_args 2 4 0
+	update_a 5 7
+	update_a 3 5
+	update_a 1 3
+	update_a 4 6
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 8 0
+e__SystemEnumStrict_s_from_u
+.o 8 0
+s4
+	push_a 2
+	push_a 1
+	build_r e__SystemStrictLists_rUList; 2 0 6 0
+	build_r e_StdClass_rIncDec; 4 0 3 0
+	push_a 10
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	build _ 5 n173
+	push_a 5
+	push_a 8
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 4 0
+	jmp_i 2
+.n 5 _ ea173
+.o 1 0
+n173
+	push_node _cycle_in_spine 5
+.o 6 0
+ea173
+.o 6 0
+s173
+	push_a 4
+	jsr_eval 0
+	push_a 3
+	jsr_eval 0
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 2 2 0
+	push_r_args 3 4 0
+	update_a 6 8
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 8 0
+	jmp s4
+.export e__SystemEnumStrict_s_from_sts
+.export e__SystemEnumStrict_ea_from_sts
+.descexp e__SystemEnumStrict_d_from_sts e__SystemEnumStrict_n_from_sts e__SystemEnumStrict_l_from_sts 2 0 "_from_sts"
+.a 2 e__SystemEnumStrict_ea_from_sts
+.o 2 0
+e__SystemEnumStrict_l_from_sts
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_sts
+.n 2 e__SystemEnumStrict_d_from_sts e__SystemEnumStrict_ea_from_sts
+.o 1 0
+e__SystemEnumStrict_n_from_sts
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_sts
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 4 0
+.o 6 0
+e__SystemEnumStrict_s_from_sts
+.o 6 0
+s3
+	push_a 2
+	jsr_eval 0
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.d 6 0
+	jsr s3.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+.o 6 0
+s3.2
+	push_a 2
+	jsr_eval 0
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.keep 7 5
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 6 0
+	jmp s3.2
+.export e__SystemEnumStrict_s_from_ts
+.export e__SystemEnumStrict_ea_from_ts
+.descexp e__SystemEnumStrict_d_from_ts e__SystemEnumStrict_n_from_ts e__SystemEnumStrict_l_from_ts 2 0 "_from_ts"
+.a 2 e__SystemEnumStrict_ea_from_ts
+.o 2 0
+e__SystemEnumStrict_l_from_ts
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_ts
+.n 2 e__SystemEnumStrict_d_from_ts e__SystemEnumStrict_ea_from_ts
+.o 1 0
+e__SystemEnumStrict_n_from_ts
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_ts
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 4 0
+.o 6 0
+e__SystemEnumStrict_s_from_ts
+.o 6 0
+s2
+	push_a 2
+	jsr_eval 0
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.d 6 0
+	jsr s2.2
+.o 1 0
+	pop_a 2
+.d 1 0
+	rtn
+.o 6 0
+s2.2
+	push_a 2
+	jsr_eval 0
+	push_a 1
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jsr_i 2
+.o 1 0
+	create
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	push_a 5
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+	push_a 5
+	push_a 7
+	fillh _Cons 2 9
+.keep 7 5
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 6 0
+	jmp s2.2
+.export e__SystemEnumStrict_s_from_s
+.export e__SystemEnumStrict_ea_from_s
+.descexp e__SystemEnumStrict_d_from_s e__SystemEnumStrict_n_from_s e__SystemEnumStrict_l_from_s 2 0 "_from_s"
+.a 2 e__SystemEnumStrict_ea_from_s
+.o 2 0
+e__SystemEnumStrict_l_from_s
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemEnumStrict_ea_from_s
+.n 2 e__SystemEnumStrict_d_from_s e__SystemEnumStrict_ea_from_s
+.o 1 0
+e__SystemEnumStrict_n_from_s
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemEnumStrict_ea_from_s
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 4 0
+.o 6 0
+e__SystemEnumStrict_s_from_s
+.o 6 0
+s1
+	push_a 2
+	push_a 1
+	build_r e_StdClass_rIncDec; 4 0 2 0
+	push_a 7
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	build _ 4 n174
+	push_a 5
+	fillh _Cons 2 7
+	pop_a 5
+.d 1 0
+	rtn
+.n 4 _ ea174
+.o 1 0
+n174
+	push_node _cycle_in_spine 4
+.o 5 0
+ea174
+.o 5 0
+s174
+	push_a 3
+	jsr_eval 0
+	push_a 2
+	jsr_eval 0
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr_i 2
+.o 1 0
+	push_r_args 1 4 0
+	update_a 4 5
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 6 0
+	jmp s1

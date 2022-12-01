@@ -1,0 +1,68 @@
+Version: 1.5
+Global
+	ProjectRoot:	.
+	Target:	StdEnv
+	Exec:	{Project}/ex_instances
+	ByteCode:	{Project}/ex_instances.bc
+	CodeGen
+		CheckStacks:	False
+		CheckIndexes:	True
+		OptimiseABC:	False
+		GenerateByteCode:	False
+	Application
+		HeapSize:	2097152
+		StackSize:	512000
+		ExtraMemory:	8192
+		IntialHeapSize:	204800
+		HeapSizeMultiplier:	4096
+		ShowExecutionTime:	False
+		ShowGC:	False
+		ShowStackSize:	False
+		MarkingCollector:	False
+		DisableRTSFlags:	False
+		RunFromConsole:	False
+		StandardRuntimeEnv:	True
+		Profile
+			Memory:	False
+			MemoryMinimumHeapSize:	0
+			Time:	False
+			Callgraph:	False
+			Stack:	False
+			Dynamics:	False
+			GenericFusion:	False
+			DescExL:	False
+		Output
+			Output:	ShowConstructors
+			Font:	Monaco
+			FontSize:	9
+			WriteStdErr:	False
+	Link
+		LinkMethod:	Static
+		GenerateRelocations:	False
+		GenerateSymbolTable:	False
+		GenerateLinkMap:	False
+		LinkResources:	False
+		ResourceSource:	
+		GenerateDLL:	False
+		ExportedNames:	
+		StripByteCode:	True
+		KeepByteCodeSymbols:	True
+		PrelinkByteCode:	False
+	Paths
+		Path:	{Project}
+	Precompile:	
+	Postlink:	
+MainModule
+	Name:	ex_instances
+	Dir:	{Project}
+	Compiler
+		NeverMemoryProfile:	False
+		NeverTimeProfile:	False
+		StrictnessAnalysis:	True
+		ListTypes:	StrictExportTypes
+		ListAttributes:	True
+		Warnings:	True
+		Verbose:	True
+		ReadableABC:	False
+		ReuseUniqueNodes:	True
+		Fusion:	False

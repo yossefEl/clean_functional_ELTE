@@ -1,0 +1,44 @@
+Version: 1.4
+Global
+	Built:	True
+	Target:	Everything
+	Exec:	{Project}\testMersenneTwister.exe
+	CodeGen
+		CheckStacks:	False
+		CheckIndexes:	True
+	Application
+		HeapSize:	409600
+		StackSize:	102400
+		ExtraMemory:	81920
+		IntialHeapSize:	204800
+		HeapSizeMultiplier:	4096
+		ShowExecutionTime:	False
+		ShowGC:	False
+		ShowStackSize:	False
+		MarkingCollector:	False
+		StandardRuntimeEnv:	True
+		Profile
+			Memory:	False
+			MemoryMinimumHeapSize:	0
+			Time:	False
+			Stack:	False
+		Output
+			Output:	ShowConstructors
+			Font:	Courier
+			FontSize:	9
+			WriteStdErr:	False
+	Link
+		LinkMethod:	Static
+		GenerateRelocations:	False
+		GenerateLinkMap:	False
+		LinkResources:	False
+		ResourceSource:	
+		GenerateDLL:	False
+		ExportedNames:	
+	Paths
+		Path:	{Project}
+	Precompile:	
+	Postlink:	
+MainModule
+	Name:	testMersenneTwister
+	Dir:	{Project}

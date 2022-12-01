@@ -1,0 +1,2670 @@
+.comp 920 000111010010000
+.start _nostart_
+.depend "_SystemStrictLists" "20211222160339"
+.module m__SystemStrictLists "_SystemStrictLists" "20211222160339"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.export e__SystemStrictLists_rList;
+.record e__SystemStrictLists_rList; aa 2 0 "List;"
+.descexp e__SystemStrictLists_tList; e__SystemStrictLists_cList; _hnf 2 1 "List;"
+.n 2 e__SystemStrictLists_tList;
+.o 1 0
+e__SystemStrictLists_cList;
+	push_node _cycle_in_spine 2
+	jsr_eval 1
+	jsr_eval 0
+.impmod _SystemStrictLists
+.impdesc e__SystemStrictLists_rList;
+	fill_r e__SystemStrictLists_rList; 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_dList;._cons
+.export e__SystemStrictLists_nList;._cons
+.export e__SystemStrictLists_eaList;._cons
+.descs e__SystemStrictLists_dList;._cons e__SystemStrictLists_nList;._cons _ 1 0 "List;._cons"
+.n -4 e__SystemStrictLists_dList;._cons e__SystemStrictLists_eaList;._cons
+.o 1 0
+e__SystemStrictLists_nList;._cons
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_eaList;._cons
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_dList;._decons
+.export e__SystemStrictLists_nList;._decons
+.export e__SystemStrictLists_eaList;._decons
+.descs e__SystemStrictLists_dList;._decons e__SystemStrictLists_nList;._decons _ 2 0 "List;._decons"
+.n -4 e__SystemStrictLists_dList;._decons e__SystemStrictLists_eaList;._decons
+.o 1 0
+e__SystemStrictLists_nList;._decons
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_eaList;._decons
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_rUList;
+.record e__SystemStrictLists_rUList; aa 2 0 "UList;"
+.descexp e__SystemStrictLists_tUList; e__SystemStrictLists_cUList; _hnf 2 1 "UList;"
+.n 2 e__SystemStrictLists_tUList;
+.o 1 0
+e__SystemStrictLists_cUList;
+	push_node _cycle_in_spine 2
+	jsr_eval 1
+	jsr_eval 0
+.impdesc e__SystemStrictLists_rUList;
+	fill_r e__SystemStrictLists_rUList; 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_dUList;._cons_u
+.export e__SystemStrictLists_nUList;._cons_u
+.export e__SystemStrictLists_eaUList;._cons_u
+.descs e__SystemStrictLists_dUList;._cons_u e__SystemStrictLists_nUList;._cons_u _ 1 0 "UList;._cons_u"
+.n -4 e__SystemStrictLists_dUList;._cons_u e__SystemStrictLists_eaUList;._cons_u
+.o 1 0
+e__SystemStrictLists_nUList;._cons_u
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_eaUList;._cons_u
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_dUList;._decons_u
+.export e__SystemStrictLists_nUList;._decons_u
+.export e__SystemStrictLists_eaUList;._decons_u
+.descs e__SystemStrictLists_dUList;._decons_u e__SystemStrictLists_nUList;._decons_u _ 2 0 "UList;._decons_u"
+.n -4 e__SystemStrictLists_dUList;._decons_u e__SystemStrictLists_eaUList;._decons_u
+.o 1 0
+e__SystemStrictLists_nUList;._decons_u
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_eaUList;._decons_u
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_rUTSList;
+.record e__SystemStrictLists_rUTSList; aa 2 0 "UTSList;"
+.descexp e__SystemStrictLists_tUTSList; e__SystemStrictLists_cUTSList; _hnf 2 1 "UTSList;"
+.n 2 e__SystemStrictLists_tUTSList;
+.o 1 0
+e__SystemStrictLists_cUTSList;
+	push_node _cycle_in_spine 2
+	jsr_eval 1
+	jsr_eval 0
+.impdesc e__SystemStrictLists_rUTSList;
+	fill_r e__SystemStrictLists_rUTSList; 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_dUTSList;._cons_uts
+.export e__SystemStrictLists_nUTSList;._cons_uts
+.export e__SystemStrictLists_eaUTSList;._cons_uts
+.descs e__SystemStrictLists_dUTSList;._cons_uts e__SystemStrictLists_nUTSList;._cons_uts _ 1 0 "UTSList;._cons_uts"
+.n -4 e__SystemStrictLists_dUTSList;._cons_uts e__SystemStrictLists_eaUTSList;._cons_uts
+.o 1 0
+e__SystemStrictLists_nUTSList;._cons_uts
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_eaUTSList;._cons_uts
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_dUTSList;._decons_uts
+.export e__SystemStrictLists_nUTSList;._decons_uts
+.export e__SystemStrictLists_eaUTSList;._decons_uts
+.descs e__SystemStrictLists_dUTSList;._decons_uts e__SystemStrictLists_nUTSList;._decons_uts _ 2 0 "UTSList;._decons_uts"
+.n -4 e__SystemStrictLists_dUTSList;._decons_uts e__SystemStrictLists_eaUTSList;._decons_uts
+.o 1 0
+e__SystemStrictLists_nUTSList;._decons_uts
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_eaUTSList;._decons_uts
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;54
+.descexp e__SystemStrictLists_d_decons_uts;54 e__SystemStrictLists_n_decons_uts;54 e__SystemStrictLists_l_decons_uts;54 1 0 "_decons_uts;54"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;54
+	pop_a 1
+.d 1 0
+	jsr s55
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;54
+.o 2 0
+e__SystemStrictLists_l_decons_uts;54
+	pop_a 1
+.d 1 0
+	jsr ea55
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;54
+.o 1 0
+e__SystemStrictLists_n_decons_uts;54
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea55
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea55
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;54
+.o 1 0
+s55
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_uts;53
+.export e__SystemStrictLists_ea_cons_uts;53
+.descexp e__SystemStrictLists_d_cons_uts;53 e__SystemStrictLists_n_cons_uts;53 e__SystemStrictLists_l_cons_uts;53 2 0 "_cons_uts;53"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;53
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s54
+.ai 2 e__SystemStrictLists_ea_cons_uts;53 e__SystemStrictLists_i_cons_uts;53
+.o 2 0
+e__SystemStrictLists_l_cons_uts;53
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;53
+.n 2 e__SystemStrictLists_d_cons_uts;53 e__SystemStrictLists_ea_cons_uts;53
+.o 1 0
+e__SystemStrictLists_n_cons_uts;53
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;53
+	jsr_eval 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_uts;53
+.o 3 0
+s54
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;52
+.descexp e__SystemStrictLists_d_decons_uts;52 e__SystemStrictLists_n_decons_uts;52 e__SystemStrictLists_l_decons_uts;52 1 0 "_decons_uts;52"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;52
+	pop_a 1
+.d 1 0
+	jsr s53
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;52
+.o 2 0
+e__SystemStrictLists_l_decons_uts;52
+	pop_a 1
+.d 1 0
+	jsr ea53
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;52
+.o 1 0
+e__SystemStrictLists_n_decons_uts;52
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea53
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea53
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;52
+.o 1 0
+s53
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_uts;51
+.export e__SystemStrictLists_ea_cons_uts;51
+.descexp e__SystemStrictLists_d_cons_uts;51 e__SystemStrictLists_n_cons_uts;51 e__SystemStrictLists_l_cons_uts;51 2 0 "_cons_uts;51"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;51
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s52
+.ai 2 e__SystemStrictLists_ea_cons_uts;51 e__SystemStrictLists_i_cons_uts;51
+.o 2 0
+e__SystemStrictLists_l_cons_uts;51
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;51
+.n 2 e__SystemStrictLists_d_cons_uts;51 e__SystemStrictLists_ea_cons_uts;51
+.o 1 0
+e__SystemStrictLists_n_cons_uts;51
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;51
+	jsr_eval 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_uts;51
+.o 3 0
+s52
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;50
+.descexp e__SystemStrictLists_d_decons_uts;50 e__SystemStrictLists_n_decons_uts;50 e__SystemStrictLists_l_decons_uts;50 1 0 "_decons_uts;50"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;50
+	pop_a 1
+.d 1 0
+	jsr s51
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;50
+.o 2 0
+e__SystemStrictLists_l_decons_uts;50
+	pop_a 1
+.d 1 0
+	jsr ea51
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;50
+.o 1 0
+e__SystemStrictLists_n_decons_uts;50
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea51
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea51
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;50
+.o 1 0
+s51
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_uts;49
+.export e__SystemStrictLists_ea_cons_uts;49
+.descexp e__SystemStrictLists_d_cons_uts;49 e__SystemStrictLists_n_cons_uts;49 e__SystemStrictLists_l_cons_uts;49 2 0 "_cons_uts;49"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;49
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s50
+.ai 2 e__SystemStrictLists_ea_cons_uts;49 e__SystemStrictLists_i_cons_uts;49
+.o 2 0
+e__SystemStrictLists_l_cons_uts;49
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;49
+.n 2 e__SystemStrictLists_d_cons_uts;49 e__SystemStrictLists_ea_cons_uts;49
+.o 1 0
+e__SystemStrictLists_n_cons_uts;49
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;49
+	jsr_eval 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_uts;49
+.o 3 0
+s50
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;48
+.descexp e__SystemStrictLists_d_decons_uts;48 e__SystemStrictLists_n_decons_uts;48 e__SystemStrictLists_l_decons_uts;48 1 0 "_decons_uts;48"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;48
+	pop_a 1
+.d 1 0
+	jsr s49
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;48
+.o 2 0
+e__SystemStrictLists_l_decons_uts;48
+	pop_a 1
+.d 1 0
+	jsr ea49
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;48
+.o 1 0
+e__SystemStrictLists_n_decons_uts;48
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea49
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea49
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;48
+.o 1 0
+s49
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_uts;47
+.export e__SystemStrictLists_ea_cons_uts;47
+.descexp e__SystemStrictLists_d_cons_uts;47 e__SystemStrictLists_n_cons_uts;47 e__SystemStrictLists_l_cons_uts;47 2 0 "_cons_uts;47"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;47
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s48
+.ai 2 e__SystemStrictLists_ea_cons_uts;47 e__SystemStrictLists_i_cons_uts;47
+.o 2 0
+e__SystemStrictLists_l_cons_uts;47
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;47
+.n 2 e__SystemStrictLists_d_cons_uts;47 e__SystemStrictLists_ea_cons_uts;47
+.o 1 0
+e__SystemStrictLists_n_cons_uts;47
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;47
+	jsr_eval 1
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_uts;47
+.o 3 0
+s48
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;46
+.descexp e__SystemStrictLists_d_decons_uts;46 e__SystemStrictLists_n_decons_uts;46 e__SystemStrictLists_l_decons_uts;46 1 0 "_decons_uts;46"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;46
+	pop_a 1
+.d 1 0
+	jsr s47
+.o 1 2 f
+	buildF_b 0
+	pop_b 2
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;46
+.o 2 0
+e__SystemStrictLists_l_decons_uts;46
+	pop_a 1
+.d 1 0
+	jsr ea47
+.o 1 2 f
+	push_a 0
+	buildF_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;46
+.o 1 0
+e__SystemStrictLists_n_decons_uts;46
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea47
+.o 1 2 f
+	push_a 0
+	buildF_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 0
+ea47
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;46
+.o 1 0
+s47
+	repl_r_args 1 2
+.d 1 2 f
+	rtn
+.export e__SystemStrictLists_s_cons_uts;45
+.export e__SystemStrictLists_ea_cons_uts;45
+.descexp e__SystemStrictLists_d_cons_uts;45 e__SystemStrictLists_n_cons_uts;45 e__SystemStrictLists_l_cons_uts;45 2 0 "_cons_uts;45"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;45
+	pop_a 1
+	pushF_a 0
+	pop_a 1
+.d 2 2 f
+	jmp s46
+.ai 2 e__SystemStrictLists_ea_cons_uts;45 e__SystemStrictLists_i_cons_uts;45
+.o 2 0
+e__SystemStrictLists_l_cons_uts;45
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;45
+.n 2 e__SystemStrictLists_d_cons_uts;45 e__SystemStrictLists_ea_cons_uts;45
+.o 1 0
+e__SystemStrictLists_n_cons_uts;45
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;45
+	jsr_eval 1
+	jsr_eval 0
+	pushF_a 0
+	pop_a 1
+.o 2 2 f
+e__SystemStrictLists_s_cons_uts;45
+.o 2 2 f
+s46
+	fill_r _Consfts 1 2 1 0 0
+	pop_b 2
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;44
+.descexp e__SystemStrictLists_d_decons_uts;44 e__SystemStrictLists_n_decons_uts;44 e__SystemStrictLists_l_decons_uts;44 1 0 "_decons_uts;44"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;44
+	pop_a 1
+.d 1 0
+	jsr s45
+.o 1 1 b
+	buildB_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;44
+.o 2 0
+e__SystemStrictLists_l_decons_uts;44
+	pop_a 1
+.d 1 0
+	jsr ea45
+.o 1 1 b
+	push_a 0
+	buildB_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;44
+.o 1 0
+e__SystemStrictLists_n_decons_uts;44
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea45
+.o 1 1 b
+	push_a 0
+	buildB_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea45
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;44
+.o 1 0
+s45
+	repl_r_args 1 1
+.d 1 1 b
+	rtn
+.export e__SystemStrictLists_s_cons_uts;43
+.export e__SystemStrictLists_ea_cons_uts;43
+.descexp e__SystemStrictLists_d_cons_uts;43 e__SystemStrictLists_n_cons_uts;43 e__SystemStrictLists_l_cons_uts;43 2 0 "_cons_uts;43"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;43
+	pop_a 1
+	pushB_a 0
+	pop_a 1
+.d 2 1 b
+	jmp s44
+.ai 2 e__SystemStrictLists_ea_cons_uts;43 e__SystemStrictLists_i_cons_uts;43
+.o 2 0
+e__SystemStrictLists_l_cons_uts;43
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;43
+.n 2 e__SystemStrictLists_d_cons_uts;43 e__SystemStrictLists_ea_cons_uts;43
+.o 1 0
+e__SystemStrictLists_n_cons_uts;43
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;43
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 2 1 b
+e__SystemStrictLists_s_cons_uts;43
+.o 2 1 b
+s44
+	fill_r _Consbts 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;42
+.descexp e__SystemStrictLists_d_decons_uts;42 e__SystemStrictLists_n_decons_uts;42 e__SystemStrictLists_l_decons_uts;42 1 0 "_decons_uts;42"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;42
+	pop_a 1
+.d 1 0
+	jsr s43
+.o 1 1 c
+	buildC_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;42
+.o 2 0
+e__SystemStrictLists_l_decons_uts;42
+	pop_a 1
+.d 1 0
+	jsr ea43
+.o 1 1 c
+	push_a 0
+	buildC_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;42
+.o 1 0
+e__SystemStrictLists_n_decons_uts;42
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea43
+.o 1 1 c
+	push_a 0
+	buildC_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea43
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;42
+.o 1 0
+s43
+	repl_r_args 1 1
+.d 1 1 c
+	rtn
+.export e__SystemStrictLists_s_cons_uts;41
+.export e__SystemStrictLists_ea_cons_uts;41
+.descexp e__SystemStrictLists_d_cons_uts;41 e__SystemStrictLists_n_cons_uts;41 e__SystemStrictLists_l_cons_uts;41 2 0 "_cons_uts;41"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;41
+	pop_a 1
+	pushC_a 0
+	pop_a 1
+.d 2 1 c
+	jmp s42
+.ai 2 e__SystemStrictLists_ea_cons_uts;41 e__SystemStrictLists_i_cons_uts;41
+.o 2 0
+e__SystemStrictLists_l_cons_uts;41
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;41
+.n 2 e__SystemStrictLists_d_cons_uts;41 e__SystemStrictLists_ea_cons_uts;41
+.o 1 0
+e__SystemStrictLists_n_cons_uts;41
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;41
+	jsr_eval 1
+	jsr_eval 0
+	pushC_a 0
+	pop_a 1
+.o 2 1 c
+e__SystemStrictLists_s_cons_uts;41
+.o 2 1 c
+s42
+	fill_r _Conscts 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;40
+.descexp e__SystemStrictLists_d_decons_uts;40 e__SystemStrictLists_n_decons_uts;40 e__SystemStrictLists_l_decons_uts;40 1 0 "_decons_uts;40"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;40
+	pop_a 1
+.d 1 0
+	jsr s41
+.o 1 1 r
+	buildR_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;40
+.o 2 0
+e__SystemStrictLists_l_decons_uts;40
+	pop_a 1
+.d 1 0
+	jsr ea41
+.o 1 1 r
+	push_a 0
+	buildR_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;40
+.o 1 0
+e__SystemStrictLists_n_decons_uts;40
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea41
+.o 1 1 r
+	push_a 0
+	buildR_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea41
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;40
+.o 1 0
+s41
+	repl_r_args 1 2
+.d 1 1 r
+	rtn
+.export e__SystemStrictLists_s_cons_uts;39
+.export e__SystemStrictLists_ea_cons_uts;39
+.descexp e__SystemStrictLists_d_cons_uts;39 e__SystemStrictLists_n_cons_uts;39 e__SystemStrictLists_l_cons_uts;39 2 0 "_cons_uts;39"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;39
+	pop_a 1
+	pushR_a 0
+	pop_a 1
+.d 2 1 r
+	jmp s40
+.ai 2 e__SystemStrictLists_ea_cons_uts;39 e__SystemStrictLists_i_cons_uts;39
+.o 2 0
+e__SystemStrictLists_l_cons_uts;39
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;39
+.n 2 e__SystemStrictLists_d_cons_uts;39 e__SystemStrictLists_ea_cons_uts;39
+.o 1 0
+e__SystemStrictLists_n_cons_uts;39
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;39
+	jsr_eval 1
+	jsr_eval 0
+	pushR_a 0
+	pop_a 1
+.o 2 1 r
+e__SystemStrictLists_s_cons_uts;39
+.o 2 1 r
+s40
+	fill_r _Consrts 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;38
+.descexp e__SystemStrictLists_d_decons_uts;38 e__SystemStrictLists_n_decons_uts;38 e__SystemStrictLists_l_decons_uts;38 1 0 "_decons_uts;38"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;38
+	pop_a 1
+.d 1 0
+	jsr s39
+.o 1 1 i
+	buildI_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_uts;38
+.o 2 0
+e__SystemStrictLists_l_decons_uts;38
+	pop_a 1
+.d 1 0
+	jsr ea39
+.o 1 1 i
+	push_a 0
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;38
+.o 1 0
+e__SystemStrictLists_n_decons_uts;38
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea39
+.o 1 1 i
+	push_a 0
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea39
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;38
+.o 1 0
+s39
+	repl_r_args 1 1
+.d 1 1 i
+	rtn
+.export e__SystemStrictLists_s_cons_uts;37
+.export e__SystemStrictLists_ea_cons_uts;37
+.descexp e__SystemStrictLists_d_cons_uts;37 e__SystemStrictLists_n_cons_uts;37 e__SystemStrictLists_l_cons_uts;37 2 0 "_cons_uts;37"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;37
+	pop_a 1
+	pushI_a 0
+	pop_a 1
+.d 2 1 i
+	jmp s38
+.ai 2 e__SystemStrictLists_ea_cons_uts;37 e__SystemStrictLists_i_cons_uts;37
+.o 2 0
+e__SystemStrictLists_l_cons_uts;37
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;37
+.n 2 e__SystemStrictLists_d_cons_uts;37 e__SystemStrictLists_ea_cons_uts;37
+.o 1 0
+e__SystemStrictLists_n_cons_uts;37
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;37
+	jsr_eval 1
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+e__SystemStrictLists_s_cons_uts;37
+.o 2 1 i
+s38
+	fill_r _Consits 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_uts;36
+.descexp e__SystemStrictLists_d_decons_uts;36 e__SystemStrictLists_n_decons_uts;36 e__SystemStrictLists_l_decons_uts;36 1 0 "_decons_uts;36"
+.o 2 0
+e__SystemStrictLists_i_decons_uts;36
+	pop_a 1
+.d 1 0
+	jmp s37
+.ai 1 _ e__SystemStrictLists_i_decons_uts;36
+.o 2 0
+e__SystemStrictLists_l_decons_uts;36
+	pop_a 1
+.d 1 0
+	jsr ea37
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_uts;36
+.o 1 0
+e__SystemStrictLists_n_decons_uts;36
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea37
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea37
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_uts;36
+.o 1 0
+s37
+	print "_decons_uts of UTSList a"
+	halt
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_uts;35
+.export e__SystemStrictLists_ea_cons_uts;35
+.descexp e__SystemStrictLists_d_cons_uts;35 e__SystemStrictLists_n_cons_uts;35 e__SystemStrictLists_l_cons_uts;35 2 0 "_cons_uts;35"
+.o 4 0
+e__SystemStrictLists_i_cons_uts;35
+	pop_a 1
+.d 3 0
+	jmp s36
+.ai 2 e__SystemStrictLists_ea_cons_uts;35 e__SystemStrictLists_i_cons_uts;35
+.o 2 0
+e__SystemStrictLists_l_cons_uts;35
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_uts;35
+.n 2 e__SystemStrictLists_d_cons_uts;35 e__SystemStrictLists_ea_cons_uts;35
+.o 1 0
+e__SystemStrictLists_n_cons_uts;35
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_uts;35
+	jsr_eval 1
+	jsr_eval 0
+.o 3 0
+e__SystemStrictLists_s_cons_uts;35
+.o 3 0
+s36
+	print "_cons_uts of UTSList a"
+	halt
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;34
+.descexp e__SystemStrictLists_d_decons_u;34 e__SystemStrictLists_n_decons_u;34 e__SystemStrictLists_l_decons_u;34 1 0 "_decons_u;34"
+.o 2 0
+e__SystemStrictLists_i_decons_u;34
+	pop_a 1
+.d 1 0
+	jsr s35
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;34
+.o 2 0
+e__SystemStrictLists_l_decons_u;34
+	pop_a 1
+.d 1 0
+	jsr ea35
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;34
+.o 1 0
+e__SystemStrictLists_n_decons_u;34
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea35
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea35
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;34
+.o 1 0
+s35
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_u;33
+.export e__SystemStrictLists_ea_cons_u;33
+.descexp e__SystemStrictLists_d_cons_u;33 e__SystemStrictLists_n_cons_u;33 e__SystemStrictLists_l_cons_u;33 2 0 "_cons_u;33"
+.o 4 0
+e__SystemStrictLists_i_cons_u;33
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s34
+.ai 2 e__SystemStrictLists_ea_cons_u;33 e__SystemStrictLists_i_cons_u;33
+.o 2 0
+e__SystemStrictLists_l_cons_u;33
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;33
+.n 2 e__SystemStrictLists_d_cons_u;33 e__SystemStrictLists_ea_cons_u;33
+.o 1 0
+e__SystemStrictLists_n_cons_u;33
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;33
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_u;33
+.o 3 0
+s34
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;32
+.descexp e__SystemStrictLists_d_decons_u;32 e__SystemStrictLists_n_decons_u;32 e__SystemStrictLists_l_decons_u;32 1 0 "_decons_u;32"
+.o 2 0
+e__SystemStrictLists_i_decons_u;32
+	pop_a 1
+.d 1 0
+	jsr s33
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;32
+.o 2 0
+e__SystemStrictLists_l_decons_u;32
+	pop_a 1
+.d 1 0
+	jsr ea33
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;32
+.o 1 0
+e__SystemStrictLists_n_decons_u;32
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea33
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea33
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;32
+.o 1 0
+s33
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_u;31
+.export e__SystemStrictLists_ea_cons_u;31
+.descexp e__SystemStrictLists_d_cons_u;31 e__SystemStrictLists_n_cons_u;31 e__SystemStrictLists_l_cons_u;31 2 0 "_cons_u;31"
+.o 4 0
+e__SystemStrictLists_i_cons_u;31
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s32
+.ai 2 e__SystemStrictLists_ea_cons_u;31 e__SystemStrictLists_i_cons_u;31
+.o 2 0
+e__SystemStrictLists_l_cons_u;31
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;31
+.n 2 e__SystemStrictLists_d_cons_u;31 e__SystemStrictLists_ea_cons_u;31
+.o 1 0
+e__SystemStrictLists_n_cons_u;31
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;31
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_u;31
+.o 3 0
+s32
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;30
+.descexp e__SystemStrictLists_d_decons_u;30 e__SystemStrictLists_n_decons_u;30 e__SystemStrictLists_l_decons_u;30 1 0 "_decons_u;30"
+.o 2 0
+e__SystemStrictLists_i_decons_u;30
+	pop_a 1
+.d 1 0
+	jsr s31
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;30
+.o 2 0
+e__SystemStrictLists_l_decons_u;30
+	pop_a 1
+.d 1 0
+	jsr ea31
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;30
+.o 1 0
+e__SystemStrictLists_n_decons_u;30
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea31
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea31
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;30
+.o 1 0
+s31
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_u;29
+.export e__SystemStrictLists_ea_cons_u;29
+.descexp e__SystemStrictLists_d_cons_u;29 e__SystemStrictLists_n_cons_u;29 e__SystemStrictLists_l_cons_u;29 2 0 "_cons_u;29"
+.o 4 0
+e__SystemStrictLists_i_cons_u;29
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s30
+.ai 2 e__SystemStrictLists_ea_cons_u;29 e__SystemStrictLists_i_cons_u;29
+.o 2 0
+e__SystemStrictLists_l_cons_u;29
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;29
+.n 2 e__SystemStrictLists_d_cons_u;29 e__SystemStrictLists_ea_cons_u;29
+.o 1 0
+e__SystemStrictLists_n_cons_u;29
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;29
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_u;29
+.o 3 0
+s30
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;28
+.descexp e__SystemStrictLists_d_decons_u;28 e__SystemStrictLists_n_decons_u;28 e__SystemStrictLists_l_decons_u;28 1 0 "_decons_u;28"
+.o 2 0
+e__SystemStrictLists_i_decons_u;28
+	pop_a 1
+.d 1 0
+	jsr s29
+.o 2 0
+	push_a 0
+	buildh ARRAY 1
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;28
+.o 2 0
+e__SystemStrictLists_l_decons_u;28
+	pop_a 1
+.d 1 0
+	jsr ea29
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;28
+.o 1 0
+e__SystemStrictLists_n_decons_u;28
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea29
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh ARRAY 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea29
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;28
+.o 1 0
+s29
+	repl_r_args 2 0
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_u;27
+.export e__SystemStrictLists_ea_cons_u;27
+.descexp e__SystemStrictLists_d_cons_u;27 e__SystemStrictLists_n_cons_u;27 e__SystemStrictLists_l_cons_u;27 2 0 "_cons_u;27"
+.o 4 0
+e__SystemStrictLists_i_cons_u;27
+	pop_a 1
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s28
+.ai 2 e__SystemStrictLists_ea_cons_u;27 e__SystemStrictLists_i_cons_u;27
+.o 2 0
+e__SystemStrictLists_l_cons_u;27
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;27
+.n 2 e__SystemStrictLists_d_cons_u;27 e__SystemStrictLists_ea_cons_u;27
+.o 1 0
+e__SystemStrictLists_n_cons_u;27
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;27
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 3 0
+e__SystemStrictLists_s_cons_u;27
+.o 3 0
+s28
+	fill_r _Consa 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;26
+.descexp e__SystemStrictLists_d_decons_u;26 e__SystemStrictLists_n_decons_u;26 e__SystemStrictLists_l_decons_u;26 1 0 "_decons_u;26"
+.o 2 0
+e__SystemStrictLists_i_decons_u;26
+	pop_a 1
+.d 1 0
+	jsr s27
+.o 1 2 f
+	buildF_b 0
+	pop_b 2
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;26
+.o 2 0
+e__SystemStrictLists_l_decons_u;26
+	pop_a 1
+.d 1 0
+	jsr ea27
+.o 1 2 f
+	push_a 0
+	buildF_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;26
+.o 1 0
+e__SystemStrictLists_n_decons_u;26
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea27
+.o 1 2 f
+	push_a 0
+	buildF_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.o 1 0
+ea27
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;26
+.o 1 0
+s27
+	repl_r_args 1 2
+.d 1 2 f
+	rtn
+.export e__SystemStrictLists_s_cons_u;25
+.export e__SystemStrictLists_ea_cons_u;25
+.descexp e__SystemStrictLists_d_cons_u;25 e__SystemStrictLists_n_cons_u;25 e__SystemStrictLists_l_cons_u;25 2 0 "_cons_u;25"
+.o 4 0
+e__SystemStrictLists_i_cons_u;25
+	pop_a 1
+	pushF_a 0
+	pop_a 1
+.d 2 2 f
+	jmp s26
+.ai 2 e__SystemStrictLists_ea_cons_u;25 e__SystemStrictLists_i_cons_u;25
+.o 2 0
+e__SystemStrictLists_l_cons_u;25
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;25
+.n 2 e__SystemStrictLists_d_cons_u;25 e__SystemStrictLists_ea_cons_u;25
+.o 1 0
+e__SystemStrictLists_n_cons_u;25
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;25
+	jsr_eval 0
+	pushF_a 0
+	pop_a 1
+.o 2 2 f
+e__SystemStrictLists_s_cons_u;25
+.o 2 2 f
+s26
+	fill_r _Consf 1 2 1 0 0
+	pop_b 2
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;24
+.descexp e__SystemStrictLists_d_decons_u;24 e__SystemStrictLists_n_decons_u;24 e__SystemStrictLists_l_decons_u;24 1 0 "_decons_u;24"
+.o 2 0
+e__SystemStrictLists_i_decons_u;24
+	pop_a 1
+.d 1 0
+	jsr s25
+.o 1 1 b
+	buildB_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;24
+.o 2 0
+e__SystemStrictLists_l_decons_u;24
+	pop_a 1
+.d 1 0
+	jsr ea25
+.o 1 1 b
+	push_a 0
+	buildB_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;24
+.o 1 0
+e__SystemStrictLists_n_decons_u;24
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea25
+.o 1 1 b
+	push_a 0
+	buildB_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea25
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;24
+.o 1 0
+s25
+	repl_r_args 1 1
+.d 1 1 b
+	rtn
+.export e__SystemStrictLists_s_cons_u;23
+.export e__SystemStrictLists_ea_cons_u;23
+.descexp e__SystemStrictLists_d_cons_u;23 e__SystemStrictLists_n_cons_u;23 e__SystemStrictLists_l_cons_u;23 2 0 "_cons_u;23"
+.o 4 0
+e__SystemStrictLists_i_cons_u;23
+	pop_a 1
+	pushB_a 0
+	pop_a 1
+.d 2 1 b
+	jmp s24
+.ai 2 e__SystemStrictLists_ea_cons_u;23 e__SystemStrictLists_i_cons_u;23
+.o 2 0
+e__SystemStrictLists_l_cons_u;23
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;23
+.n 2 e__SystemStrictLists_d_cons_u;23 e__SystemStrictLists_ea_cons_u;23
+.o 1 0
+e__SystemStrictLists_n_cons_u;23
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;23
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 2 1 b
+e__SystemStrictLists_s_cons_u;23
+.o 2 1 b
+s24
+	fill_r _Consb 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;22
+.descexp e__SystemStrictLists_d_decons_u;22 e__SystemStrictLists_n_decons_u;22 e__SystemStrictLists_l_decons_u;22 1 0 "_decons_u;22"
+.o 2 0
+e__SystemStrictLists_i_decons_u;22
+	pop_a 1
+.d 1 0
+	jsr s23
+.o 1 1 c
+	buildC_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;22
+.o 2 0
+e__SystemStrictLists_l_decons_u;22
+	pop_a 1
+.d 1 0
+	jsr ea23
+.o 1 1 c
+	push_a 0
+	buildC_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;22
+.o 1 0
+e__SystemStrictLists_n_decons_u;22
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea23
+.o 1 1 c
+	push_a 0
+	buildC_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea23
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;22
+.o 1 0
+s23
+	repl_r_args 1 1
+.d 1 1 c
+	rtn
+.export e__SystemStrictLists_s_cons_u;21
+.export e__SystemStrictLists_ea_cons_u;21
+.descexp e__SystemStrictLists_d_cons_u;21 e__SystemStrictLists_n_cons_u;21 e__SystemStrictLists_l_cons_u;21 2 0 "_cons_u;21"
+.o 4 0
+e__SystemStrictLists_i_cons_u;21
+	pop_a 1
+	pushC_a 0
+	pop_a 1
+.d 2 1 c
+	jmp s22
+.ai 2 e__SystemStrictLists_ea_cons_u;21 e__SystemStrictLists_i_cons_u;21
+.o 2 0
+e__SystemStrictLists_l_cons_u;21
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;21
+.n 2 e__SystemStrictLists_d_cons_u;21 e__SystemStrictLists_ea_cons_u;21
+.o 1 0
+e__SystemStrictLists_n_cons_u;21
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;21
+	jsr_eval 0
+	pushC_a 0
+	pop_a 1
+.o 2 1 c
+e__SystemStrictLists_s_cons_u;21
+.o 2 1 c
+s22
+	fill_r _Consc 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;20
+.descexp e__SystemStrictLists_d_decons_u;20 e__SystemStrictLists_n_decons_u;20 e__SystemStrictLists_l_decons_u;20 1 0 "_decons_u;20"
+.o 2 0
+e__SystemStrictLists_i_decons_u;20
+	pop_a 1
+.d 1 0
+	jsr s21
+.o 1 1 r
+	buildR_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;20
+.o 2 0
+e__SystemStrictLists_l_decons_u;20
+	pop_a 1
+.d 1 0
+	jsr ea21
+.o 1 1 r
+	push_a 0
+	buildR_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;20
+.o 1 0
+e__SystemStrictLists_n_decons_u;20
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea21
+.o 1 1 r
+	push_a 0
+	buildR_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea21
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;20
+.o 1 0
+s21
+	repl_r_args 1 2
+.d 1 1 r
+	rtn
+.export e__SystemStrictLists_s_cons_u;19
+.export e__SystemStrictLists_ea_cons_u;19
+.descexp e__SystemStrictLists_d_cons_u;19 e__SystemStrictLists_n_cons_u;19 e__SystemStrictLists_l_cons_u;19 2 0 "_cons_u;19"
+.o 4 0
+e__SystemStrictLists_i_cons_u;19
+	pop_a 1
+	pushR_a 0
+	pop_a 1
+.d 2 1 r
+	jmp s20
+.ai 2 e__SystemStrictLists_ea_cons_u;19 e__SystemStrictLists_i_cons_u;19
+.o 2 0
+e__SystemStrictLists_l_cons_u;19
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;19
+.n 2 e__SystemStrictLists_d_cons_u;19 e__SystemStrictLists_ea_cons_u;19
+.o 1 0
+e__SystemStrictLists_n_cons_u;19
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;19
+	jsr_eval 0
+	pushR_a 0
+	pop_a 1
+.o 2 1 r
+e__SystemStrictLists_s_cons_u;19
+.o 2 1 r
+s20
+	fill_r _Consr 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;18
+.descexp e__SystemStrictLists_d_decons_u;18 e__SystemStrictLists_n_decons_u;18 e__SystemStrictLists_l_decons_u;18 1 0 "_decons_u;18"
+.o 2 0
+e__SystemStrictLists_i_decons_u;18
+	pop_a 1
+.d 1 0
+	jsr s19
+.o 1 1 i
+	buildI_b 0
+	pop_b 1
+.d 2 0
+	rtn
+.ai 1 _ e__SystemStrictLists_i_decons_u;18
+.o 2 0
+e__SystemStrictLists_l_decons_u;18
+	pop_a 1
+.d 1 0
+	jsr ea19
+.o 1 1 i
+	push_a 0
+	buildI_b 0
+	buildh _Tuple 2
+	updatepop_a 0 1
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;18
+.o 1 0
+e__SystemStrictLists_n_decons_u;18
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea19
+.o 1 1 i
+	push_a 0
+	buildI_b 0
+	fillh _Tuple 2 3
+	pop_a 1
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea19
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;18
+.o 1 0
+s19
+	repl_r_args 1 1
+.d 1 1 i
+	rtn
+.export e__SystemStrictLists_s_cons_u;17
+.export e__SystemStrictLists_ea_cons_u;17
+.descexp e__SystemStrictLists_d_cons_u;17 e__SystemStrictLists_n_cons_u;17 e__SystemStrictLists_l_cons_u;17 2 0 "_cons_u;17"
+.o 4 0
+e__SystemStrictLists_i_cons_u;17
+	pop_a 1
+	pushI_a 0
+	pop_a 1
+.d 2 1 i
+	jmp s18
+.ai 2 e__SystemStrictLists_ea_cons_u;17 e__SystemStrictLists_i_cons_u;17
+.o 2 0
+e__SystemStrictLists_l_cons_u;17
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;17
+.n 2 e__SystemStrictLists_d_cons_u;17 e__SystemStrictLists_ea_cons_u;17
+.o 1 0
+e__SystemStrictLists_n_cons_u;17
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;17
+	jsr_eval 0
+	pushI_a 0
+	pop_a 1
+.o 2 1 i
+e__SystemStrictLists_s_cons_u;17
+.o 2 1 i
+s18
+	fill_r _Consi 1 1 1 0 0
+	pop_b 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons_u;16
+.descexp e__SystemStrictLists_d_decons_u;16 e__SystemStrictLists_n_decons_u;16 e__SystemStrictLists_l_decons_u;16 1 0 "_decons_u;16"
+.o 2 0
+e__SystemStrictLists_i_decons_u;16
+	pop_a 1
+.d 1 0
+	jmp s17
+.ai 1 _ e__SystemStrictLists_i_decons_u;16
+.o 2 0
+e__SystemStrictLists_l_decons_u;16
+	pop_a 1
+.d 1 0
+	jsr ea17
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons_u;16
+.o 1 0
+e__SystemStrictLists_n_decons_u;16
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea17
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea17
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons_u;16
+.o 1 0
+s17
+	print "_decons_u of UList a"
+	halt
+.d 2 0
+	rtn
+.export e__SystemStrictLists_s_cons_u;15
+.export e__SystemStrictLists_ea_cons_u;15
+.descexp e__SystemStrictLists_d_cons_u;15 e__SystemStrictLists_n_cons_u;15 e__SystemStrictLists_l_cons_u;15 2 0 "_cons_u;15"
+.o 4 0
+e__SystemStrictLists_i_cons_u;15
+	pop_a 1
+.d 3 0
+	jmp s16
+.ai 2 e__SystemStrictLists_ea_cons_u;15 e__SystemStrictLists_i_cons_u;15
+.o 2 0
+e__SystemStrictLists_l_cons_u;15
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons_u;15
+.n 2 e__SystemStrictLists_d_cons_u;15 e__SystemStrictLists_ea_cons_u;15
+.o 1 0
+e__SystemStrictLists_n_cons_u;15
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons_u;15
+	jsr_eval 0
+.o 3 0
+e__SystemStrictLists_s_cons_u;15
+.o 3 0
+s16
+	print "_cons_u of UList a"
+	halt
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons;14
+.descexp e__SystemStrictLists_d_decons;14 e__SystemStrictLists_n_decons;14 e__SystemStrictLists_l_decons;14 2 0 "_decons;14"
+.o 2 0
+e__SystemStrictLists_i_decons;14
+	repl_args 1 1
+	jsr_eval 0
+	push_r_args 0 2 0
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s15
+.ai 0 a15 e__SystemStrictLists_i_decons;14
+.o 2 0
+e__SystemStrictLists_l_decons;14
+	repl_args 1 1
+.o 2 0
+a15
+.d 2 0
+	jsr ea15
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemStrictLists_d_decons;14
+.o 1 0
+e__SystemStrictLists_n_decons;14
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea15
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea15
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 3 0
+e__SystemStrictLists_s_decons;14
+.o 3 0
+s15
+	push_a 1
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	jmp_i 1
+.export e__SystemStrictLists_s_cons;13
+.export e__SystemStrictLists_ea_cons;13
+.descexp e__SystemStrictLists_d_cons;13 e__SystemStrictLists_n_cons;13 e__SystemStrictLists_l_cons;13 3 0 "_cons;13"
+.o 3 0
+e__SystemStrictLists_i_cons;13
+	repl_args 1 1
+	create
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	push_r_args 1 2 0
+	update_a 4 3
+	update_a 5 4
+	update_a 2 5
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 5 0
+	jmp s14
+.ai 3 e__SystemStrictLists_ea_cons;13 e__SystemStrictLists_i_cons;13
+.o 2 0
+e__SystemStrictLists_l_cons;13
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemStrictLists_ea_cons;13
+.n 3 e__SystemStrictLists_d_cons;13 e__SystemStrictLists_ea_cons;13
+.o 1 0
+e__SystemStrictLists_n_cons;13
+	push_node _cycle_in_spine 3
+.d 4 0
+	jmp e__SystemStrictLists_ea_cons;13
+.o 5 0
+e__SystemStrictLists_s_cons;13
+	jsr_eval 3
+	jsr_eval 2
+.d 5 0
+	jmp s14
+.o 4 0
+e__SystemStrictLists_ea_cons;13
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+s14
+	push_a 3
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 4 0
+	jmp_i 2
+.export e__SystemStrictLists_s_decons;12
+.descexp e__SystemStrictLists_d_decons;12 e__SystemStrictLists_n_decons;12 e__SystemStrictLists_l_decons;12 2 0 "_decons;12"
+.o 2 0
+e__SystemStrictLists_i_decons;12
+	repl_args 1 1
+	jsr_eval 0
+	push_r_args 0 2 0
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 3 0
+	jmp s13
+.ai 0 a13 e__SystemStrictLists_i_decons;12
+.o 2 0
+e__SystemStrictLists_l_decons;12
+	repl_args 1 1
+.o 2 0
+a13
+.d 2 0
+	jsr ea13
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 2 e__SystemStrictLists_d_decons;12
+.o 1 0
+e__SystemStrictLists_n_decons;12
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea13
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+ea13
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 3 0
+e__SystemStrictLists_s_decons;12
+.o 3 0
+s13
+	push_a 1
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	jmp_i 1
+.export e__SystemStrictLists_s_cons;11
+.export e__SystemStrictLists_ea_cons;11
+.descexp e__SystemStrictLists_d_cons;11 e__SystemStrictLists_n_cons;11 e__SystemStrictLists_l_cons;11 3 0 "_cons;11"
+.o 3 0
+e__SystemStrictLists_i_cons;11
+	repl_args 1 1
+	create
+	jsr_eval 2
+	jsr_eval 1
+	push_r_args 1 2 0
+	update_a 4 3
+	update_a 5 4
+	update_a 2 5
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 5 0
+	jmp s12
+.ai 3 e__SystemStrictLists_ea_cons;11 e__SystemStrictLists_i_cons;11
+.o 2 0
+e__SystemStrictLists_l_cons;11
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.d 4 0
+	jmp e__SystemStrictLists_ea_cons;11
+.n 3 e__SystemStrictLists_d_cons;11 e__SystemStrictLists_ea_cons;11
+.o 1 0
+e__SystemStrictLists_n_cons;11
+	push_node _cycle_in_spine 3
+.d 4 0
+	jmp e__SystemStrictLists_ea_cons;11
+.o 5 0
+e__SystemStrictLists_s_cons;11
+	jsr_eval 2
+.d 5 0
+	jmp s12
+.o 4 0
+e__SystemStrictLists_ea_cons;11
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 5 0
+s12
+	push_a 3
+	push_a 1
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 4 0
+	jmp_i 2
+.export e__SystemStrictLists_s_decons;10
+.descexp e__SystemStrictLists_d_decons;10 e__SystemStrictLists_n_decons;10 e__SystemStrictLists_l_decons;10 1 0 "_decons;10"
+.o 2 0
+e__SystemStrictLists_i_decons;10
+	pop_a 1
+.d 1 0
+	jmp s11
+.ai 1 _ e__SystemStrictLists_i_decons;10
+.o 2 0
+e__SystemStrictLists_l_decons;10
+	pop_a 1
+.d 1 0
+	jsr ea11
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons;10
+.o 1 0
+e__SystemStrictLists_n_decons;10
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea11
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea11
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons;10
+.o 1 0
+s11
+	eq_desc _Cons 2 0
+	jmp_true case.1
+	jmp s11.1
+case.1
+	repl_args 2 2
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+s11.1
+	pop_a 1
+	pushD m__SystemStrictLists
+	pushD e__SystemStrictLists_d_decons;10
+.d 0 2 ii
+	jmp _match_error
+.export e__SystemStrictLists_s_cons;9
+.export e__SystemStrictLists_ea_cons;9
+.descexp e__SystemStrictLists_d_cons;9 e__SystemStrictLists_n_cons;9 e__SystemStrictLists_l_cons;9 2 0 "_cons;9"
+.o 3 0
+e__SystemStrictLists_i_cons;9
+	pop_a 1
+	create
+	jsr_eval 2
+	jsr_eval 1
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jmp s10
+.ai 2 e__SystemStrictLists_ea_cons;9 e__SystemStrictLists_i_cons;9
+.o 2 0
+e__SystemStrictLists_l_cons;9
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons;9
+.n 2 e__SystemStrictLists_d_cons;9 e__SystemStrictLists_ea_cons;9
+.o 1 0
+e__SystemStrictLists_n_cons;9
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_s_cons;9
+.o 3 0
+e__SystemStrictLists_ea_cons;9
+	jsr_eval 1
+	jsr_eval 0
+.o 3 0
+s10
+	push_a 1
+	push_a 1
+	fillh _Cons 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons;8
+.descexp e__SystemStrictLists_d_decons;8 e__SystemStrictLists_n_decons;8 e__SystemStrictLists_l_decons;8 1 0 "_decons;8"
+.o 2 0
+e__SystemStrictLists_i_decons;8
+	pop_a 1
+.d 1 0
+	jmp s9
+.ai 1 _ e__SystemStrictLists_i_decons;8
+.o 2 0
+e__SystemStrictLists_l_decons;8
+	pop_a 1
+.d 1 0
+	jsr ea9
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons;8
+.o 1 0
+e__SystemStrictLists_n_decons;8
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea9
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea9
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons;8
+.o 1 0
+s9
+	eq_desc _Cons 2 0
+	jmp_true case.2
+	jmp s9.1
+case.2
+	repl_args 2 2
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+s9.1
+	pop_a 1
+	pushD m__SystemStrictLists
+	pushD e__SystemStrictLists_d_decons;8
+.d 0 2 ii
+	jmp _match_error
+.export e__SystemStrictLists_s_cons;7
+.export e__SystemStrictLists_ea_cons;7
+.descexp e__SystemStrictLists_d_cons;7 e__SystemStrictLists_n_cons;7 e__SystemStrictLists_l_cons;7 2 0 "_cons;7"
+.o 3 0
+e__SystemStrictLists_i_cons;7
+	pop_a 1
+	create
+	jsr_eval 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jmp s8
+.ai 2 e__SystemStrictLists_ea_cons;7 e__SystemStrictLists_i_cons;7
+.o 2 0
+e__SystemStrictLists_l_cons;7
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons;7
+.n 2 e__SystemStrictLists_d_cons;7 e__SystemStrictLists_ea_cons;7
+.o 1 0
+e__SystemStrictLists_n_cons;7
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_s_cons;7
+.o 3 0
+e__SystemStrictLists_ea_cons;7
+	jsr_eval 1
+.o 3 0
+s8
+	push_a 1
+	push_a 1
+	fillh _Cons 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons;6
+.descexp e__SystemStrictLists_d_decons;6 e__SystemStrictLists_n_decons;6 e__SystemStrictLists_l_decons;6 1 0 "_decons;6"
+.o 2 0
+e__SystemStrictLists_i_decons;6
+	pop_a 1
+.d 1 0
+	jmp s7
+.ai 1 _ e__SystemStrictLists_i_decons;6
+.o 2 0
+e__SystemStrictLists_l_decons;6
+	pop_a 1
+.d 1 0
+	jsr ea7
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons;6
+.o 1 0
+e__SystemStrictLists_n_decons;6
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea7
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea7
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons;6
+.o 1 0
+s7
+	eq_desc _Cons 2 0
+	jmp_true case.3
+	jmp s7.1
+case.3
+	repl_args 2 2
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+s7.1
+	pop_a 1
+	pushD m__SystemStrictLists
+	pushD e__SystemStrictLists_d_decons;6
+.d 0 2 ii
+	jmp _match_error
+.export e__SystemStrictLists_s_cons;5
+.export e__SystemStrictLists_ea_cons;5
+.descexp e__SystemStrictLists_d_cons;5 e__SystemStrictLists_n_cons;5 e__SystemStrictLists_l_cons;5 2 0 "_cons;5"
+.o 3 0
+e__SystemStrictLists_i_cons;5
+	pop_a 1
+	create
+	jsr_eval 1
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jmp s6
+.ai 2 e__SystemStrictLists_ea_cons;5 e__SystemStrictLists_i_cons;5
+.o 2 0
+e__SystemStrictLists_l_cons;5
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons;5
+.n 2 e__SystemStrictLists_d_cons;5 e__SystemStrictLists_ea_cons;5
+.o 1 0
+e__SystemStrictLists_n_cons;5
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_s_cons;5
+.o 3 0
+e__SystemStrictLists_ea_cons;5
+	jsr_eval 0
+.o 3 0
+s6
+	push_a 1
+	push_a 1
+	fillh _Cons 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_decons;4
+.descexp e__SystemStrictLists_d_decons;4 e__SystemStrictLists_n_decons;4 e__SystemStrictLists_l_decons;4 1 0 "_decons;4"
+.o 2 0
+e__SystemStrictLists_i_decons;4
+	pop_a 1
+.d 1 0
+	jmp s5
+.ai 1 _ e__SystemStrictLists_i_decons;4
+.o 2 0
+e__SystemStrictLists_l_decons;4
+	pop_a 1
+.d 1 0
+	jsr ea5
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 e__SystemStrictLists_d_decons;4
+.o 1 0
+e__SystemStrictLists_n_decons;4
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea5
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea5
+	jsr_eval 0
+.o 1 0
+e__SystemStrictLists_s_decons;4
+.o 1 0
+s5
+	eq_desc _Cons 2 0
+	jmp_true case.4
+	jmp s5.1
+case.4
+	repl_args 2 2
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+s5.1
+	pop_a 1
+	pushD m__SystemStrictLists
+	pushD e__SystemStrictLists_d_decons;4
+.d 0 2 ii
+	jmp _match_error
+.export e__SystemStrictLists_s_cons;3
+.export e__SystemStrictLists_ea_cons;3
+.descexp e__SystemStrictLists_d_cons;3 e__SystemStrictLists_n_cons;3 e__SystemStrictLists_l_cons;3 2 0 "_cons;3"
+.o 3 0
+e__SystemStrictLists_i_cons;3
+	pop_a 1
+	create
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jmp s4
+.ai 2 e__SystemStrictLists_ea_cons;3 e__SystemStrictLists_i_cons;3
+.o 2 0
+e__SystemStrictLists_l_cons;3
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.d 3 0
+	jmp e__SystemStrictLists_ea_cons;3
+.n 2 e__SystemStrictLists_d_cons;3 e__SystemStrictLists_ea_cons;3
+.o 1 0
+e__SystemStrictLists_n_cons;3
+	push_node _cycle_in_spine 2
+.o 3 0
+e__SystemStrictLists_ea_cons;3
+.o 3 0
+e__SystemStrictLists_s_cons;3
+.o 3 0
+s4
+	push_a 1
+	push_a 1
+	fillh _Cons 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_nil_uts
+.export e__SystemStrictLists_ea_nil_uts
+.descexp e__SystemStrictLists_d_nil_uts e__SystemStrictLists_n_nil_uts e__SystemStrictLists_l_nil_uts 1 0 "_nil_uts"
+.o 2 0
+e__SystemStrictLists_l_nil_uts
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemStrictLists_ea_nil_uts
+.n 1 e__SystemStrictLists_d_nil_uts e__SystemStrictLists_ea_nil_uts
+.o 1 0
+e__SystemStrictLists_n_nil_uts
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_ea_nil_uts
+	jsr_eval 0
+	repl_r_args 2 0
+.o 3 0
+e__SystemStrictLists_s_nil_uts
+.o 3 0
+s3
+	pop_a 2
+	fillh _Nil 0 0
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_nil_u
+.export e__SystemStrictLists_ea_nil_u
+.descexp e__SystemStrictLists_d_nil_u e__SystemStrictLists_n_nil_u e__SystemStrictLists_l_nil_u 1 0 "_nil_u"
+.o 2 0
+e__SystemStrictLists_l_nil_u
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e__SystemStrictLists_ea_nil_u
+.n 1 e__SystemStrictLists_d_nil_u e__SystemStrictLists_ea_nil_u
+.o 1 0
+e__SystemStrictLists_n_nil_u
+	push_node _cycle_in_spine 1
+.o 2 0
+e__SystemStrictLists_ea_nil_u
+	jsr_eval 0
+	repl_r_args 2 0
+.o 3 0
+e__SystemStrictLists_s_nil_u
+.o 3 0
+s2
+	pop_a 2
+	fillh _Nil 0 0
+.d 1 0
+	rtn
+.export e__SystemStrictLists_s_nil
+.descexp e__SystemStrictLists_d_nil e__SystemStrictLists_n_nil e__SystemStrictLists_l_nil 1 0 "_nil"
+.o 2 0
+e__SystemStrictLists_l_nil
+	pop_a 1
+.d 1 0
+	jmp ea1
+.n 1 e__SystemStrictLists_d_nil _
+.o 1 0
+e__SystemStrictLists_n_nil
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea1
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 1 0
+ea1
+	jsr_eval 0
+	repl_r_args 2 0
+.o 2 0
+e__SystemStrictLists_s_nil
+.o 2 0
+s1
+	pop_a 2
+	fillh _Nil 0 0
+.d 1 0
+	rtn
+.impmod _system
+.implab _match_error

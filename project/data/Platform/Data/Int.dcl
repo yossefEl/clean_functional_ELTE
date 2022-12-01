@@ -1,0 +1,6 @@
+definition module Data.Int
+
+from StdInt import IF_INT_64_OR_32
+
+LargestInt  :== IF_INT_64_OR_32  9223372036854775807  2147483647
+SmallestInt :== IF_INT_64_OR_32 -9223372036854775808 -2147483648

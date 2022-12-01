@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clean Language Report</title>
+</head>
+<body style="font-family:Helvetica">
+<div><div style="position: absolute;"><svg width="355.555555555556" height="177.777777777778">
+<path d="M49.7777777777778 7.32929319639176 h280.888888888889 v141.785858051661 h-280.888888888889 Z M64 33.9959598630584 h252.444444444444 v88.4525247183276 h-252.444444444444 Z" stroke="none" fill="#3F87AF" fill-rule="evenodd"/>
+<path d="M64 111.781817914719 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 33.9959598630584 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 44.6626265297251 h252.444444444444 v67.1191913849942 h-252.444444444444 Z" stroke="none" fill="#FFFFFF"/>
+<path d="M99.1179703874409 137.550135143052 C93.2711853763986 133.302197180425,88.084448516421 128.213312506961,83.725936053644 122.448484581386 L110.089961763567 122.448484581386 Z" stroke="none" fill="#8C96A0"/>
+<path d="M99.1179703874409 18.8943093013927 C93.2711853763986 23.1422472640192,88.084448516421 28.2311319374834,83.725936053644 33.9959598630584 L110.089961763567 33.9959598630584 Z" stroke="none" fill="#8C96A0"/>
+<path d="M126.968649704419 100.555210486665 C109.380820468897 87.7769045717629,109.380820468897 61.5564287615705,126.968649704419 48.7781228466684 L116.780371998016 34.7551616108359 C89.6658019265873 54.45504989631,89.6658019265873 94.8782834370233,116.780371998016 114.578171722497 Z" stroke="none" fill="#8C96A0"/>
+<path d="M113.645517319123 118.89292902583 C83.5996423751073 97.0633230878727,83.5996423751073 52.2700102454607,113.645517319123 30.4404043075029 L102.673525942996 15.3387537458372 C62.3680839449271 44.6223714674879,62.3680839449271 104.710961865845,102.673525942996 133.994579587496 Z" stroke="none" fill="#8C96A0"/>
+<path d="M123.413094148863 104.110766042221 C105.825264913342 91.3324601273184,105.825264913342 65.111984317126,123.413094148863 52.3336784022239 L113.22481644246 38.3107171663915 C86.1102463710318 58.0106054518656,86.1102463710318 98.4338389925788,113.22481644246 118.133727278053  Z" stroke="none" fill="#3F87AF"/>
+<path d="M110.089961763567 122.448484581386 C80.0440868195518 100.618878643428,80.0440868195518 55.8255658010162,110.089961763567 33.9959598630584L83.725936053644 33.9959598630584 C63.9432065006372 60.1617750913602,63.9432065006372 96.2826693530842,83.725936053644 122.448484581386" stroke="none" fill="#3F87AF"/>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="145.777777777778" y="103.111111111111" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144.888888888889" y="102.222222222222" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144" y="101.333333333333" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="143.111111111111" y="100.444444444444" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="142.222222222222" y="99.5555555555556" fill="#3F87AF">Clean</text>
+</svg>
+</div><h1 style="text-align:right;background-color:#9999FF;"><a id="_5"><br>Chapter 5<br><br>Defining New Types</a></h1></div>
+<p style="text-align:justify;">CLEAN is a strongly typed language: every object (graph) and function (graph rewrite rule) in CLEAN has a type. The basic type system of CLEAN is based on the classical polymorphic Milner/Hindley/Mycroft (Milner  1978; Hindley 1969, Mycroft, 1984) type system. This type system is adapted for graph rewriting systems and extended with <i>basic types</i>, (possibly <i>existentially and universally quantified</i>) <i>algebraic types</i>, <i>record types</i>, <i>abstract types</i> and <i>synonym types</i>.</p>
+<p style="text-align:justify;">New types can be defined in an implementation as well as in a definition module. Types can <i>only</i> be defined on the global level. Abstract types can only be defined in a definition module hiding the actual implementation in the corresponding implementation module.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:27.0690909090909%;padding:0 0 4px 0;">AlgebraicTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:42.78%;padding:0 0 4px 0;">// <span style="color:blue;"><a href="#_5.1">see 5.1</a></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:27.0690909090909%;padding:0 0 4px 0;">RecordTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:42.78%;padding:0 0 4px 0;">// <span style="color:blue;"><a href="#_5.2">see 5.2</a></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:27.0690909090909%;padding:0 0 4px 0;">SynonymTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:42.78%;padding:0 0 4px 0;">// <span style="color:blue;"><a href="#_5.3">see 5.3</a></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:27.0690909090909%;padding:0 0 4px 0;">AbstractTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:42.78%;padding:0 0 4px 0;">// <span style="color:blue;"><a href="#_5.4">see 5.4</a></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8692929292929%;padding:0 0 4px 0;" colspan="3">AbstractSynonymTypeDef</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8692929292929%;padding:0 0 4px 0;" colspan="3">ExtensibleAlgebraicTypeDef</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8692929292929%;padding:0 0 4px 0;" colspan="3">AlgebraicTypeDefExtension</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8692929292929%;padding:0 0 4px 0;" colspan="3">NewTypeDef</td></tr>
+</table><p></p>
+<h2 style="background-color:#9999FF;"><a id="_5.1">5.1 Defining Algebraic Data Types</a></h2>
+<p style="text-align:justify;">With an algebraic data type one assigns a new type constructor (a new type) to a newly introduced data structure. The data structure consists of a new constant value (called the data constructor) that can have zero or more arguments (of any type). Every data constructor must unambiguously have been (pre) defined in an algebraic data type definition  Several data constructors can be introduced in one algebraic data type definition which makes it possible to define alternative data structures of the same algebraic data type. The data constructors can, just like functions, be used in a curried way. Also type constructors can be used in a curried way, albeit only in the type world of course.</p>
+<p style="text-align:justify;">Polymorphic algebraic data types can be defined by adding (possibly existentially or universally quantified, see below) type variables to the type constructors on the left-hand side of the algebraic data type definition. The arguments of the data constructor in a type definition are type instances of types (that are defined or are being defined).</p>
+<p style="text-align:justify;">Types can be preceded by uniqueness type attributes (<span style="color:blue;"><a href="CleanLanguageReport9.html#_9">see Chapter 9</a></span>). The arguments of a defined data constructor can optionally be annotated as being strict (<span style="color:blue;"><a href="#_5.1.6">see 5.1.6</a></span>).</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AlgebraicTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:9.05454545454545%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7945454545454%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>=</b></span> ConstructorDef</td></tr>
+<tr><td style="width:37.1858585858586%;padding:0 0 4px 0;" colspan="5"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7945454545454%;padding:0 0 4px 0;">{<span style="font-family:courier;color:#993300;"><b>|</b></span> ConstructorDef} <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeLhs</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[<span style="font-family:courier;color:#993300;"><b>*</b></span>] TypeConstructor {[<span style="font-family:courier;color:#993300;"><b>*</b></span><span style="font-family:courier;">]TypeVariable</span>}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeConstructor</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">TypeName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ConstructorDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[ExistQuantVariables] <span style="font-family:courier;">ConstructorName</span> {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[ExistQuantVariables] <span style="font-family:courier;color:#993300;"><b>(</b></span><span style="font-family:courier;">ConstructorName</span><span style="font-family:courier;color:#993300;"><b>)</b></span> [FixPrec] {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">FixPrec</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>infixl</b></span> [Prec]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>infixr</b></span> [Prec]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>infix</b></span> [Prec]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">Prec</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">Digit</td></tr>
+<tr><td style="width:100.000404040404%;padding:0 0 4px 0;" colspan="5"></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">BrackType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[Strict] [UnqTypeAttrib] SimpleType</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ArgType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">BrackType</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[Strict] [UnqTypeAttrib] <span style="font-family:courier;color:#993300;"><b>(</b></span>UnivQuantVariables Type [ClassContext]<span style="font-family:courier;color:#993300;"><b>)</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ExistQuantVariables</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>E.</b></span>{TypeVariable }+<span style="font-family:courier;color:#993300;"><b>:</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">UnivQuantVariables</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>A.</b></span>{TypeVariable }+<span style="font-family:courier;color:#993300;"><b>:</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of an algebraic type definition and its use.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Day&nbsp;=&nbsp;Mon&nbsp;|&nbsp;Tue&nbsp;|&nbsp;Wed&nbsp;|&nbsp;Thu&nbsp;|&nbsp;Fri&nbsp;|&nbsp;Sat&nbsp;|&nbsp;Sun<br>
+::Tree&nbsp;a&nbsp;=&nbsp;NilTree<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;NodeTree&nbsp;a&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)<br>
+<br>
+MyTree::&nbsp;(Tree&nbsp;Int)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;constant&nbsp;function&nbsp;yielding&nbsp;a&nbsp;Tree&nbsp;of&nbsp;Int</span><br>
+MyTree&nbsp;=&nbsp;NodeTree&nbsp;1&nbsp;NilTree&nbsp;NilTree<br></div>
+<p></p><p style="text-align:justify;">An algebraic data type definition can be seen as the specification of a grammar in which is specified what legal data objects are of that specific type. Notice that all other CLEAN types (basic, list, tuple, array, record, abstract types) can be regarded as special cases of an algebraic type.</p>
+<p style="text-align:justify;">Constructors with two arguments can be defined as <span style="font-family:courier;color:#FF0000;"><b>infix</b></span> constructor, in a similar way as function operators (with fixity (<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>, <span style="font-family:courier;color:#FF0000;"><b>infixr</b></span> or just <span style="font-family:courier;color:#FF0000;"><b>infix</b></span>, default <span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>) and precedence (<span style="font-family:courier;">0</span> through <span style="font-family:courier;">9</span>, default <span style="font-family:courier;">9</span>). If infix constructors are surrounded by brackets they can also be used in prefix position (<span style="color:blue;"><a href="CleanLanguageReport3.html#_3.1">see 3.1</a></span> and <span style="color:blue;"><a href="CleanLanguageReport3.html#_3.4">3.4</a></span>). In a pattern match they can be written down in infix position as well.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When a constructor operator is used in infix position (in an expression or in a in a pattern) <i>both</i> arguments have to be present. Constructor operators can be used in a curried way, but then they have to be used as ordinary prefix constructors (<span style="color:blue;"><a href="CleanLanguageReport3.html#_3.1">see 3.1</a></span> and <span style="color:blue;"><a href="CleanLanguageReport3.html#_3.4">3.4</a></span>).</td></tr>
+</table>
+<p></p><div style="background-color:#FFFF45;">Algebraic type definition and constructor pattern in function definition.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Tree2&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;(/\)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;0&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Value&nbsp;a<br>
+<br>
+Mirror::&nbsp;(Tree2&nbsp;a)&nbsp;-&gt;&nbsp;Tree2&nbsp;a<br>
+Mirror&nbsp;(left/\right)&nbsp;&nbsp;=&nbsp;Mirror&nbsp;right/\Mirror&nbsp;left<br>
+Mirror&nbsp;leaf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;leaf<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example of an algebraic type defining an infix data constructor and a function on this type; notice that one cannot use a '<span style="font-family:courier;">:</span>' because this character is already reserved.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::List&nbsp;a&nbsp;=&nbsp;(&lt;:&gt;)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixr</b></span>&nbsp;5&nbsp;a&nbsp;(List&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Nil<br>
+<br>
+Head::&nbsp;(List&nbsp;a)&nbsp;-&gt;&nbsp;a<br>
+Head&nbsp;(x&lt;:&gt;xs)&nbsp;=&nbsp;x<br></div>
+<p></p><p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">All data constructors being defined in the scope must have <i>different</i> names, to make type inferencing possible.</td></tr>
+</table>
+<div style="background-color:#FFFF45;">Scope of type definitions.</div>
+<div style="position: absolute;height:7.875em;width:44.4444444444444em"><span><svg viewBox="0 0 711.111111111111 126" width="100%" height="100%">
+<path d="M0 18 h403.2 v88.5 h-403.2 Z" fill="none" stroke="#000000"/>
+<path d="M179.911111111111 52.5 h218.311111111111 v18 h-218.311111111111 Z" fill="none" stroke="#000000"/>
+</svg></span></div>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>implementation</b></span>&nbsp;<span style="font-family:courier;color:#FF0000;"><b>module</b></span>&nbsp;XYZ<br>
+<br>
+::&nbsp;Type_contructor&nbsp;type_vars&nbsp;=&nbsp;expression<br>
+<br>
+other_definitions<br><h3 style="background-color:#9999FF;"><a id="_5.1.1">5.1.1 Using Constructors in Patterns</a></h3>
+<p style="text-align:justify;">An algebraic data type can be used in a pattern. The pattern consists of the <i>data constructor</i> (<span style="color:blue;"><a href="CleanLanguageReport3.html#_3.2">see 3.2</a></span>) with its optional arguments which on its turn can contain <i>sub-patterns</i>. A constructor pattern forces evaluation of the corresponding actual argument to strong root normal form since the strategy has to determine whether the actual argument indeed is equal to the specified constructor.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">GraphPattern</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:28.8745454545455%;padding:0 0 4px 0;">QConstructor {Pattern}</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:40.9745454545455%;padding:0 0 4px 0;">// Constructor pattern</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:28.8745454545455%;padding:0 0 4px 0;">GraphPattern <span style="font-family:courier;">QConstructorName</span></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:40.9745454545455%;padding:0 0 4px 0;">// Infix Constructor operator</td></tr>
+<tr><td style="width:26.1111111111111%;padding:0 0 4px 0;" colspan="3"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8692929292929%;padding:0 0 4px 0;" colspan="3">GraphPattern</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8692929292929%;padding:0 0 4px 0;" colspan="3">Pattern</td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of an algebraic data type definition and its use in a pattern in function definition.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Tree&nbsp;a&nbsp;=&nbsp;Node&nbsp;a&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Nil<br>
+<br>
+Mirror::&nbsp;(Tree&nbsp;a)&nbsp;-&gt;&nbsp;Tree&nbsp;a<br>
+Mirror&nbsp;(Node&nbsp;e&nbsp;left&nbsp;right)&nbsp;=&nbsp;Node&nbsp;e&nbsp;(Mirror&nbsp;right)&nbsp;(Mirror&nbsp;left)<br>
+Mirror&nbsp;Nil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Nil<br></div>
+<p></p><p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The data constructor used in a patter must have been defined in an algebraic data type definition.</td></tr>
+</table>
+<h3 style="background-color:#9999FF;"><a id="_5.1.2">5.1.2 Using Higher Order Types</a></h3>
+<p style="text-align:justify;">In an algebraic type definition ordinary types can be used (such as a basic type, e.g. <span style="font-family:courier;">Int</span>, or a list type, e.g. <span style="font-family:courier;">[Int]</span>, or an instantiation of a user defined type, e.g. Tree Int), but one can also use <i>higher order types</i>. Higher order types can be constructed by curried applications of the type constructors. Higher order types can be applied in the type world in a similar way as higher order functions in the function world. The use of higher order types increases the flexibility with which algebraic types can be defined. Predefined types can also be used in curried way (<span style="color:blue;"><a href="CleanLanguageReport4.html#_4.5">see 4.5</a></span>). Higher order types play an important role in combination with type classes (<span style="color:blue;"><a href="CleanLanguageReport6.html#_6">see Chapter 6</a></span>).</p>
+<p style="text-align:justify;">Of course, one needs to ensure that all types are applied in a correct way. To be able to specify the rules that indicate whether a type itself is correct, we introduce the notion of <i>kind</i>. A kind can be seen as the 'type of a type' In our case, the kind of a type expresses the number of type arguments this type may have. The kind <span style="font-family:courier;">X</span> stands for any so-called <i>first-order</i> type: a type expecting no further arguments ((<span style="font-family:courier;">Int</span>, <span style="font-family:courier;">Bool</span>, <span style="font-family:courier;">[Int]</span>, etcetera). All function arguments are of kind <span style="font-family:courier;">X</span>. The kind <span style="font-family:courier;">X -&gt; X</span> stands for a type that can be applied to a (first-order) type, which then yields another first-order type, <span style="font-family:courier;">X -&gt; X -&gt; X</span> expects two type arguments, and so on.</p>
+<p style="text-align:justify;">In CLEAN each <i>top-level</i> type should have kind <span style="font-family:courier;">X</span>. A top-level type is a type that occurs either as an argument or result type of a function or as argument type of a data constructor (in some algebraic type definition). The rule for determining the kinds of the type variables (which can be of any order) is fairly simple: The kind of a type variable directly follows from its use. If a variable has no arguments, its kind is <span style="font-family:courier;">X</span>. Otherwise its kind corresponds to the number of arguments to which the variable is applied. The kind of type variable determines its possible instantiations, i.e. it can only be instantiated with a type, which is of the same kind as the type variable itself.</p>
+<p></p><div style="background-color:#FFFF45;">Example of an algebraic type using higher order types; the type variable <span style="font-family:courier;">t</span>in the definition of <span style="font-family:courier;">Tree2</span> s of kind <span style="font-family:courier;">X -&gt; X</span>. <span style="font-family:courier;">Tree2</span> is instantiated with a list (also of kind <span style="font-family:courier;">X -&gt; X</span>) in the definition of <span style="font-family:courier;">MyTree2</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Tree2&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;NilTree<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;NodeTree&nbsp;(t&nbsp;Int)&nbsp;(Tree2&nbsp;t)&nbsp;(Tree2&nbsp;t)<br>
+<br>
+MyTree2::&nbsp;Tree2&nbsp;[]<br>
+MyTree2&nbsp;=&nbsp;NodeTree&nbsp;[1,2,3]&nbsp;NilTree&nbsp;NilTree<br></div>
+<p></p><h3 style="background-color:#9999FF;"><a id="_5.1.3">5.1.3 Defining Algebraic Data Types with Existentially Quantified Variables</a></h3>
+<p style="text-align:justify;">An algebraic type definition can contain <i>existentially quantified type variable s</i> (or, for short, existential type variables) (<b>Läufer</b> 1992). These special variables are defined on the right-hand side of the type definition and are indicated by preceding them with "<span style="font-family:courier;color:#993300;"><b>E.</b></span>". Existential types are useful if one wants to create (recursive) data structures in which objects of <i>different types</i> are being stored (e.g. a list with elements of different types).</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AlgebraicTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:9.05454545454545%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7939393939394%;padding:0 0 4px 0;" colspan="13"><span style="font-family:courier;color:#993300;"><b>=</b></span> ConstructorDef</td></tr>
+<tr><td style="width:37.1858585858586%;padding:0 0 4px 0;" colspan="5"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7939393939394%;padding:0 0 4px 0;" colspan="13">{<span style="font-family:courier;color:#993300;"><b>|</b></span> ConstructorDef} <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ConstructorDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[ExistQuantVariables] <span style="font-family:courier;">ConstructorName</span> {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[ExistQuantVariables] <span style="font-family:courier;color:#993300;"><b>(</b></span><span style="font-family:courier;">ConstructorName</span><span style="font-family:courier;color:#993300;"><b>)</b></span> [FixPrec] {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ExistQuantVariables</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15"><span style="font-family:courier;color:#993300;"><b>E.</b></span>{TypeVariable}+<span style="font-family:courier;color:#993300;"><b>:</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of the use of an existentially quantified type. In this example a record (<span style="color:blue;"><a href="#_5.2">see 5.2</a></span>) is defined containing an existentially quantified state <span style="font-family:courier;">s</span>, a method to change this state  s, and a method to convert the state <span style="font-family:courier;">s</span> into a <span style="font-family:courier;">String</span>. Notice that upon creation of the record <span style="font-family:courier;">MyObject</span> the type of the internal state and the methods defined on the state are consistent (in this case the state is of type <span style="font-family:courier;">Int</span>). The methods stored in the object <span style="font-family:courier;">Object</span> can (only) be applied on the state of that object thus enabling an object-oriented style of programming. The concrete type of the state hidden in the object is not visible from outside. To show it to the outside world one has to convert the state, which can be of any type, to an ordinary not existentially quantified type. For instance,<span style="font-family:courier;">PrintState</span> converts the any state into a <span style="font-family:courier;">String</span>. Objects that have states of different type are considered to be of the same type and can for instance be part of the same list.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Object&nbsp;=&nbsp;E.s:&nbsp;{state::s,&nbsp;method::s-&gt;s,&nbsp;tostring::&nbsp;s&nbsp;-&gt;&nbsp;String&nbsp;}<br>
+<br>
+MyObject&nbsp;=&nbsp;&nbsp;&nbsp;{&nbsp;state&nbsp;=&nbsp;3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;method&nbsp;=&nbsp;(+)&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;tostring&nbsp;=&nbsp;toString<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+IncrementObject&nbsp;obj=:{method,state}&nbsp;=&nbsp;{obj&nbsp;&amp;&nbsp;state&nbsp;=&nbsp;method&nbsp;state}<br>
+<br>
+PrintState&nbsp;obj=:{tostring,state}&nbsp;=&nbsp;tostring&nbsp;state<br>
+<br>
+Start&nbsp;=&nbsp;PrintState&nbsp;(IncrementObject&nbsp;MyObject)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;the&nbsp;result&nbsp;will&nbsp;be&nbsp;4</span><br></div>
+<p></p><p style="text-align:justify;">To ensure correctness of typing, there is a limitation imposed on the use of <i>existentially quantified data</i> structures.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">Once a data structure containing existentially quantified parts is created the type of these components are forgotten. This means that, in general, if such a data structured is passed to another function it is statically impossible to determine the actual types of those components: it can be of any type. Therefore, a function having an existentially quantified data structure as input is not allowed to make specific type assumptions on the parts that correspond to the existential type variables. This implies that one can only instantiate an existential type variable with a concrete type when the object is created. In all other cases it can only be unified with a universally quantified type.</td></tr>
+</table>
+<p></p><div style="background-color:#FFFF45;"><b>Counter Example</b>. Illegal use of an object with existentially quantified components.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+Start&nbsp;=&nbsp;(IncrementObject&nbsp;MyObject).state<br></div>
+<p></p><h3 style="background-color:#9999FF;"><a id="_5.1.4">5.1.4 Defining Algebraic Data Types with Universally Quantified Variables</a></h3>
+<p style="text-align:justify;">An algebraic type definition can contain <i>universally quantified type variables</i> (or, for short, universal type variables) of Rank 2 (on the argument position of a data constructor). These special variables are defined on the right-hand side of a type definition on the arguments position of the data constructor being defined and have to be preceded by an  "<span style="font-family:courier;color:#993300;"><b>A.</b></span>" (meaning: "for all"). It can be used to store polymorphic functions that work on arguments of 'any' type. The universal type is very useful for constructing dictionaries for overloaded functions (<span style="color:blue;"><a href="CleanLanguageReport6.html#_6">see Chapter 6</a></span>).</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AlgebraicTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:9.05454545454545%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7939393939394%;padding:0 0 4px 0;" colspan="13"><span style="font-family:courier;color:#993300;"><b>=</b></span> ConstructorDef</td></tr>
+<tr><td style="width:37.1858585858586%;padding:0 0 4px 0;" colspan="5"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7939393939394%;padding:0 0 4px 0;" colspan="13">{<span style="font-family:courier;color:#993300;"><b>|</b></span> ConstructorDef} <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ConstructorDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[ExistQuantVariables] <span style="font-family:courier;">ConstructorName</span> {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[ExistQuantVariables] <span style="font-family:courier;color:#993300;"><b>(</b></span><span style="font-family:courier;">ConstructorName</span><span style="font-family:courier;color:#993300;"><b>)</b></span> [FixPrec] {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">BrackType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[Strict] [UnqTypeAttrib] SimpleType</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ArgType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">BrackType</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[Strict] [UnqTypeAttrib] <span style="font-family:courier;color:#993300;"><b>(</b></span>UnivQuantVariables Type)</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">UnivQuantVariables</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15"><span style="font-family:courier;color:#993300;"><b>A.</b></span>{TypeVariable}+<span style="font-family:courier;color:#993300;"><b>:</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;"><b>Counter Example</b>. The following program is ill typed. Although an identity function is stored in <span style="font-family:courier;">T2</span>, <span style="font-family:courier;">T2</span> can contain any function that can be unified with <span style="font-family:courier;">b -&gt; b</span> (for instance <span style="font-family:courier;">Int -&gt; Int</span> will do). Therefore a type error is given for <span style="font-family:courier;">f2</span> since <span style="font-family:courier;">g</span> is applied to both an <span style="font-family:courier;">Int</span> and a <span style="font-family:courier;">Char</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;T2&nbsp;b&nbsp;=&nbsp;C2&nbsp;(b&nbsp;-&gt;&nbsp;b)<br>
+<br>
+f2::&nbsp;(T2&nbsp;b)&nbsp;-&gt;&nbsp;(Int,Char)<br>
+f2&nbsp;(C2&nbsp;g)&nbsp;=&nbsp;(g&nbsp;1,&nbsp;g&nbsp;'a')<br>
+<br>
+Id::a&nbsp;-&gt;&nbsp;a<br>
+Id&nbsp;x&nbsp;=&nbsp;x<br>
+<br>
+Start&nbsp;=&nbsp;f2&nbsp;(C2&nbsp;Ids)<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example of the use of a universally quantified type. In contrast with the example above it is now specified that <span style="font-family:courier;">T</span> must contain a universally quantified function <span style="font-family:courier;">b -&gt; b</span>. The identity function <span style="font-family:courier;">Id</span> can be stored in <span style="font-family:courier;">T</span>, since its type <span style="font-family:courier;">Id::a -&gt; a</span> is actually a shorthand for <span style="font-family:courier;">Id::A.a:a -&gt; a</span>.  A function from <span style="font-family:courier;">Int -&gt; Int</span> cannot be stored in <span style="font-family:courier;">T</span> since this type is not unifiable with <span style="font-family:courier;">A.a:a -&gt; a</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">::&nbsp;T&nbsp;=&nbsp;C&nbsp;(A.b:&nbsp;b&nbsp;-&gt;&nbsp;b)<br>
+<br>
+f::&nbsp;(T&nbsp;b)&nbsp;-&gt;&nbsp;(Int,Char)<br>
+f&nbsp;(C&nbsp;g)&nbsp;=&nbsp;(g&nbsp;1,&nbsp;g&nbsp;'a')<br>
+<br>
+Id::a&nbsp;-&gt;&nbsp;a<br>
+Id&nbsp;x&nbsp;=&nbsp;x<br>
+<br>
+Start&nbsp;=&nbsp;f&nbsp;(C&nbsp;Ids)<br></div>
+<p></p><h3 style="background-color:#9999FF;"><a id="_5.1.5">5.1.5 Extensible Algebraic Types</a></h3>
+<p style="text-align:justify;">An extensible algebraic type is an algebraic type that can be extended with additional constructors in other modules. To define it add <span style="font-family:courier;">| ..</span> to an algebraic type definition (or just <span style="font-family:courier;">..</span> after <span style="font-family:courier;">|</span> without constructors). In other modules additional constructors may be added (once per module) by using <span style="font-family:courier;">|</span> in the definition instead of <span style="font-family:courier;">=</span>.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ExtensibleAlgebraicTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs <span style="font-family:courier;color:#993300;"><b>=</b></span> {ConstructorDef <span style="font-family:courier;color:#993300;"><b>|</b></span>} <span style="font-family:courier;color:#993300;"><b>..</b></span><span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AlgebraicTypeDefExtension</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs <span style="font-family:courier;color:#993300;"><b>|</b></span> ConstructorDef  {<span style="font-family:courier;color:#993300;"><b>|</b></span> ConstructorDef} <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">For example, to define extensible algebraic types <span style="font-family:courier;">X</span> and <span style="font-family:courier;">Y</span> with constructor <span style="font-family:courier;">A</span>:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;X&nbsp;a&nbsp;=&nbsp;..<br>
+::&nbsp;Y&nbsp;=&nbsp;A&nbsp;Int&nbsp;|&nbsp;..<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">To extended <span style="font-family:courier;">X</span> with constructor <span style="font-family:courier;">Xn</span> and <span style="font-family:courier;">Y</span> with <span style="font-family:courier;">B</span> and <span style="font-family:courier;">C</span> in another module (in which <span style="font-family:courier;">X</span> and <span style="font-family:courier;">Y</span> are imported):</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::&nbsp;X&nbsp;a&nbsp;|&nbsp;Xn&nbsp;a<br>
+::&nbsp;Y&nbsp;|&nbsp;B&nbsp;Int&nbsp;Int&nbsp;|&nbsp;C&nbsp;Int&nbsp;Int&nbsp;Int<br></div>
+<p></p><p style="text-align:justify;">Additional constructors can also be exported and imported. These constructors can be imported directly using an explicit import, but not using a ConstructorsOrFields list of an imported type</p>
+<h3 style="background-color:#9999FF;"><a id="_5.1.6">5.1.6 Strictness Annotations in Type Definitions</a></h3>
+<p style="text-align:justify;">Functional programs will generally run much more efficient when strict data structures are being used instead of lazy ones. If the inefficiency of your program becomes problematic one can think of changing lazy data structures into strict ones. This has to be done by hand in the definition of the type.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AlgebraicTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:9.05454545454545%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7939393939394%;padding:0 0 4px 0;" colspan="13"><span style="font-family:courier;color:#993300;"><b>=</b></span> ConstructorDef</td></tr>
+<tr><td style="width:37.1858585858586%;padding:0 0 4px 0;" colspan="5"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:60.7939393939394%;padding:0 0 4px 0;" colspan="13">{<span style="font-family:courier;color:#993300;"><b>|</b></span> ConstructorDef} <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ConstructorDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[ExistQuantVariables] <span style="font-family:courier;">ConstructorName</span> {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15">[ExistQuantVariables] <span style="font-family:courier;color:#993300;"><b>(</b></span><span style="font-family:courier;">ConstructorName</span><span style="font-family:courier;color:#993300;"><b>)</b></span> [FixPrec] {ArgType} {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">Strict</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8686868686869%;padding:0 0 4px 0;" colspan="15"><span style="font-family:courier;color:#993300;"><b>!</b></span></td></tr>
+</table><p></p>
+<p style="text-align:justify;">In the type definition of a constructor (in an algebraic data type definition or in a definition of a record type) the arguments of the data constructor can <i>optionally</i> be annotated as being strict. So, some arguments can be defined strict while others can be defined as being lazy. In reasoning about objects of such a type it will always be true that the annotated argument will be in strong root normal form when the object is examined. Whenever a new object is created in a strict context, the compiler will take care of the evaluation of the strict annotated arguments. When the new object is created in a lazy context, the compiler will insert code that will take care of the evaluation whenever the object is put into a strict context. If one makes a data structure strict in a certain argument, it is better not define infinite instances of such a data structure to avoid non-termination.</p>
+<p style="text-align:justify;">So, in a type definition one can define a data constructor to be strict in zero or more of its arguments. Strictness is a property of data structure that is specified in its type.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">In general (with the exceptions of tuples) one cannot arbitrary mix strict and non-strict data structures because they are considered to be of different type.</td></tr>
+</table>
+<p style="text-align:justify;">When a strict annotated argument is put in a strict context while the argument is defined in terms of another strict annotated data structure the latter is put in a strict context as well and therefore also evaluated. So, one can change the default <i>lazy semantics</i> of CLEAN into a (<i>hyper</i>) <i>strict semantics</i> as demanded. The type system will check the consistency of types and ensure that the specified strictness is maintained.</p>
+<p style="text-align:justify;">There is no explicit notation for creating unboxed versions of an algebraic data type. The compiler will automatically choose the most efficient representation for a given data type. For algebraic data type definitions containing strict elements of basic type, record type and array type an unboxed representation will be chosen.</p>
+<p></p><div style="background-color:#FFFF45;">Example: both integer values in the definition of <span style="font-family:courier;">Point</span> are strict and will be stored unboxed since they are known to be of basic type. The integer values stored in <span style="font-family:courier;">MyPoint</span> are strict as well, but will be stored unboxed since <span style="font-family:courier;">MyTuple</span> is polymorphic.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Point&nbsp;=&nbsp;(!Int,!Int)<br>
+<br>
+::MyTuple&nbsp;a&nbsp;=&nbsp;Pair&nbsp;!a&nbsp;!a<br>
+<br>
+::MyPoint&nbsp;:==&nbsp;MyTuple&nbsp;Int<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">A user defined lazy list similar to type <span style="font-family:courier;">[a]</span> could be defined in algebraic type definition as follows:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::LazyList&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;LazyCons&nbsp;a&nbsp;(LazyList&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;LazyNil<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">A head strict list similar to type <span style="font-family:courier;">[!a]</span> could be defined in algebraic type definition as follows:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::HeadSList&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;HeadSCons&nbsp;!a&nbsp;(HeadSList&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;HeadSNil<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">A tail strict list similar to type <span style="font-family:courier;">[a!]</span> could be defined in algebraic type definition as follows:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::TailSList&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;TailSCons&nbsp;a&nbsp;!(TailSList&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;TailSNil<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">A strict list similar to type <span style="font-family:courier;">[!a!]</span> could be defined in algebraic type definition as follows:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::StrictList&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;StrictCons&nbsp;!a&nbsp;!(StrictList&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;StrictNil<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">An unboxed list similar to type <span style="font-family:courier;">[#Int]</span>could be defined in algebraic type definition as follows:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::UnboxedIList&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;UnboxedICons&nbsp;!Int&nbsp;&nbsp;UnboxedIList<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;UnboxedINil<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">An unboxed list similar to type <span style="font-family:courier;">[#Int!]</span> could be defined in algebraic type definition as follows:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::UnboxedIList&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;UnboxedICons&nbsp;!Int&nbsp;!UnboxedIList<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;UnboxedINil<br></div>
+<p></p><h3 style="background-color:#9999FF;"><a id="_5.1.7">5.1.7 Semantic Restrictions on Algebraic Data Types</a></h3>
+<p style="text-align:justify;">Other semantic restrictions on algebraic data types:</p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The name of a type must be different from other names in the same scope and name space (<span style="color:blue;"><a href="CleanLanguageReport2.html#_2.1">see 2.1</a></span>).</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The name of a type variable must be different from other type variable names in the same scope and name space</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">All type variables used on the right-hand side are bound, i.e. must either be introduced on the left-hand side of the algebraic type being defined, or they must be bound by an existential quantifier on the right-hand side, or, they must be bound by a universal quantifier specified on the corresponding argument.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A data constructor can only be defined once within the same scope and name space. So, each data constructor unambiguously identifies its type to make type inferencing possible.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When a data constructor is used in infix position both arguments have to be present. Data constructors can be used in a curried way in the function world, but then they have to be used as ordinary prefix constructors.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">Type constructors can be used in a curried way in the type world; to use predefined bracket-like type constructors (for lists, tuples, arrays) in a curried way they must be used in prefix notation.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The right-hand side of an algebraic data type definition should yield a type of kind <span style="font-family:courier;">X</span>, all arguments of the data constructor being defined should be of kind <span style="font-family:courier;">X</span> as well.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A type can only be instantiated with a type that is of the same kind.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">An existentially quantified type variable specified in an algebraic type can only be instantiated with a concrete type (= not a type variable) when a data structure of this type is created.</td></tr>
+</table>
+<h2 style="background-color:#9999FF;"><a id="_5.2">5.2 Defining Record Types</a></h2>
+<p style="text-align:justify;">A <i>record type</i> is basically an algebraic data type in which exactly one constructor is defined. Special about records is that a <i>field name</i> is attached to each of the arguments of the data constructor and that</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">records cannot be used in a curried way.</td></tr>
+</table>
+<p style="text-align:justify;">Compared with ordinary algebraic data structures the use of records gives a lot of notational convenience because the field names enable <i>selection by field name</i> instead of <i>selection by position</i>. When a record is created <i>all</i> arguments of the constructor have to be defined but one can specify the arguments in <i>any</i> order. Furthermore, when pattern matching is performed on a record, one only has to mention those fields one is interested in (<span style="color:blue;"><a href="#_5.2.2">see 5.2.2</a></span>). A record can be created via a functional update (<span style="color:blue;"><a href="#_5.2.1">see 5.2.1</a></span>). In that case one only has to specify the values for those fields that differ from the old record. Matching and creation of records can hence be specified in CLEAN in such a way that after a change in the structure of a record only those functions have to be changed that are explicitly referring to the changed fields.</p>
+<p style="text-align:justify;">Existential and universal type variables (<span style="color:blue;"><a href="#_5.1.3">see 5.1.3</a></span> and <span style="color:blue;"><a href="#_5.1.4">5.1.4</a></span>) are allowed in record types (as in any other type). The arguments of the constructor can optionally be annotated as being strict (<span style="color:blue;"><a href="CleanLanguageReport10.html#_10.1">see 10.1</a></span>). The optional uniqueness attributes are treated in <span style="color:blue;"><a href="CleanLanguageReport9.html#_9">Chapter 9</a></span>.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">RecordTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs <span style="font-family:courier;color:#993300;"><b>=</b></span> [ExistQuantVariables] [Strict] <span style="font-family:courier;color:#993300;"><b>{</b></span>{<span style="font-family:courier;">FieldName</span> <span style="font-family:courier;color:#993300;"><b>::</b></span>FieldType}-list<span style="font-family:courier;color:#993300;"><b>}</b></span> <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">FieldType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[Strict] Type</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">UnivQuantVariables [Strict] Type</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[Strict] [UnqTypeAttrib] <span style="font-family:courier;color:#993300;"><b>(</b></span>UnivQuantVariables Type)</td></tr>
+</table><p></p>
+<p style="text-align:justify;">As data constructor for a record the name of the record type is used internally.</p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The semantic restrictions that apply for algebraic data types also hold for record types.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The field names inside one record all have to be different. It is allowed to use the same field name in different records. If the same names are used in different records, one can explicitly specify the intended record type when the record is constructed.</td></tr>
+</table>
+<p></p><div style="background-color:#FFFF45;">Example of a record definition.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Complex&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;{&nbsp;re&nbsp;::&nbsp;Real<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;im&nbsp;::&nbsp;Real<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br></div>
+<p></p><p style="text-align:justify;">The combination of existential type variables in record types are of use for an object oriented style of programming.</p>
+<p></p><div style="background-color:#FFFF45;">Example of the use of an existentially quantified record. One can create an object of a certain type that can have different representations.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Object&nbsp;=&nbsp;E.x:&nbsp;&nbsp;{&nbsp;state&nbsp;&nbsp;::&nbsp;x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;get&nbsp;::&nbsp;x&nbsp;-&gt;&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;set&nbsp;::&nbsp;x&nbsp;Int&nbsp;-&gt;&nbsp;x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+CreateObject1::&nbsp;Object<br>
+CreateObject1&nbsp;=&nbsp;{state&nbsp;=&nbsp;[],&nbsp;get&nbsp;=&nbsp;myget,&nbsp;set&nbsp;=&nbsp;myset}<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;myget::&nbsp;[Int]&nbsp;-&gt;&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myget&nbsp;[i:is]&nbsp;=&nbsp;i<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myget&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;0<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myset::&nbsp;[Int]&nbsp;Int&nbsp;-&gt;&nbsp;[Int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myset&nbsp;is&nbsp;i&nbsp;=&nbsp;[i:is]<br></div>
+<p></p><p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">CreateObject2&nbsp;=&nbsp;{state&nbsp;=&nbsp;0.0,&nbsp;get&nbsp;=&nbsp;myget,&nbsp;set&nbsp;=&nbsp;myset}<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;myget::&nbsp;Real&nbsp;-&gt;&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myget&nbsp;r&nbsp;=&nbsp;toInt&nbsp;r<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myset::&nbsp;Real&nbsp;Int&nbsp;-&gt;&nbsp;Real<br>
+&nbsp;&nbsp;&nbsp;&nbsp;myset&nbsp;r&nbsp;i&nbsp;=&nbsp;r&nbsp;+&nbsp;toReal&nbsp;i<br>
+<br>
+Get::&nbsp;Object&nbsp;-&gt;&nbsp;Int<br>
+Get&nbsp;{state,get}&nbsp;=&nbsp;get&nbsp;state<br>
+<br>
+Set::&nbsp;Object&nbsp;Int&nbsp;-&gt;&nbsp;Object<br>
+Set&nbsp;o=:{state,set}&nbsp;i&nbsp;=&nbsp;{o&nbsp;&amp;&nbsp;state&nbsp;=&nbsp;set&nbsp;state&nbsp;i}<br>
+<br>
+Start::&nbsp;[Object]<br>
+Start&nbsp;=&nbsp;map&nbsp;(Set&nbsp;3)&nbsp;[CreateObject1,CreateObject2]<br><p></p><div style="background-color:#FFFF45;">Example of a complex number as record type with strict components.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Complex&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;re::&nbsp;!Real<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;im::&nbsp;!Real<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+(+)&nbsp;infixl&nbsp;6::&nbsp;!Complex&nbsp;!Complex&nbsp;-&gt;&nbsp;Complex<br>
+(+)&nbsp;{re=r1,im=i1}&nbsp;{re=r2,im=i2}&nbsp;=&nbsp;{re=r1+r2,im=i1+i2}<br></div>
+<p></p><p style="text-align:justify;">The compiler often unboxes records to make the generated code more efficient. However in some cases this is less efficient, for example for abstract data types, large unique records that can be updated in place, or when records are shared. Therefore unboxing can be prevented by adding an ! before the { in the record type definition.</p>
+<h3 style="background-color:#9999FF;"><a id="_5.2.1">5.2.1 Creating Records and Selection of Record Fields</a></h3>
+<p style="text-align:justify;">A <i>record</i> is a tuple-like algebraic data structure that has the advantage that its elements can be selected by field name rather than by position.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">Record</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">RecordDenotation</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">RecordUpdate</td></tr>
+</table><p></p>
+<h3 style="background-color:#9999FF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple Records</h3>
+<p style="text-align:justify;">The first way is to create a record is by <i>explicitly</i> defining a value for <i>each</i> of its fields.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">RecordDenotation</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>{</b></span>[<span style="font-family:courier;">QTypeName</span><span style="font-family:courier;color:#993300;"><b>|</b></span>] {<span style="font-family:courier;">FieldName</span> <span style="font-family:courier;color:#993300;"><b>=</b></span> GraphExpr}-list]<span style="font-family:courier;color:#993300;"><b>}</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Creation of a record.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Point&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;{&nbsp;x::&nbsp;Real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;record&nbsp;type&nbsp;definition</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;y::&nbsp;Real<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+::ColorPoint&nbsp;=&nbsp;&nbsp;&nbsp;{&nbsp;p::&nbsp;Point&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;record&nbsp;type&nbsp;definition</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;c::&nbsp;Color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+::Color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Red&nbsp;|&nbsp;Green&nbsp;|&nbsp;Blue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;algebraic&nbsp;type&nbsp;definition</span><br>
+<br>
+CreateColorPoint::&nbsp;(Real,Real)&nbsp;Color&nbsp;-&gt;&nbsp;ColorPoint&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;type&nbsp;of&nbsp;function</span><br>
+CreateColorPoint&nbsp;(px,py)&nbsp;col&nbsp;=&nbsp;{&nbsp;c&nbsp;=&nbsp;col&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;function&nbsp;creating&nbsp;a&nbsp;new&nbsp;record</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;p&nbsp;=&nbsp;{&nbsp;x&nbsp;=&nbsp;px<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;y&nbsp;=&nbsp;py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br></div>
+<p></p><table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A record can only be used if its type has been defined in a record type definition; the field names used must be identical to the field names specified in the corresponding type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When creating a record explicitly, the order in which the record fields are instantiated is irrelevant, but <i>all</i> fields have to get a value; the type of these values must be an instantiation of the corresponding type specified in record type definition. Curried use of records is <i>not</i> possible.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When creating a record, its type constructor that can be used to disambiguate the record from other records; the type constructor can be left out if there is <i>at least</i> one field name is specified which is not being defined in some other record.</td></tr>
+</table>
+<h3 style="background-color:#9999FF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record Update</h3>
+<p style="text-align:justify;">The second way is to construct a new record out of an existing one (a <i>functional record update</i>).</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">RecordUpdate</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>{</b></span>[<span style="font-family:courier;">QTypeName</span><span style="font-family:courier;color:#993300;"><b>|</b></span>][RecordExpr <span style="font-family:courier;color:#993300;"><b>&amp;</b></span>][{<span style="font-family:courier;">FieldName</span> {Selection} = GraphExpr}-list]<span style="font-family:courier;color:#993300;"><b>}</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">Selection</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>.</b></span><span style="font-family:courier;">FieldName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>.</b></span>ArrayIndex</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">RecordExpr</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">GraphExpr</td></tr>
+</table><p></p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The record expression must yield a record.</td></tr>
+</table>
+<p style="text-align:justify;">The record written to the left of the <span style="font-family:courier;">&amp; (r &amp; f = v</span> is pronounced as: <span style="font-family:courier;">r</span> with for <span style="font-family:courier;">f</span> the value <span style="font-family:courier;">v</span>) is the record to be duplicated.  On the right from the <span style="font-family:courier;">&amp;</span> the structures are specified in which the new record <i>differs</i> from the old one. A structure can be any field of the record or a selection of any field or array element of a record or array stored in this record. All other fields are duplicated and created<i>implicitly</i>. Notice that the functional update is not an update in the classical, destructive sense since a <i>new</i> record is created.  The functional update of records is performed very efficient such that we have not added support for destructive updates of records of unique type. The <span style="font-family:courier;">&amp;</span>-operator is strict in the record argument and arguments for strict fields.</p>
+<p></p><div style="background-color:#FFFF45;">Updating a record within a record using the functional update.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+MoveColorPoint::&nbsp;ColorPoint&nbsp;(Real,Real)&nbsp;-&gt;&nbsp;ColorPoint<br>
+MoveColorPoint&nbsp;cp&nbsp;(dx,dy)&nbsp;=&nbsp;{cp&nbsp;&amp;&nbsp;p.x&nbsp;=&nbsp;cp.p.x&nbsp;+&nbsp;dx,&nbsp;p.y&nbsp;=&nbsp;c.p.y&nbsp;+&nbsp;dy}<br></div>
+<p></p><h3 style="background-color:#9999FF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# with Record Update</h3>
+<p style="text-align:justify;"><span style="font-family:courier;">variable = {variable &amp; </span>updates<span style="font-family:courier;">}</span> after <span style="font-family:courier;">#</span> or <span style="font-family:courier;">#!</span> can be abbreviated to <span style="font-family:courier;">variable &amp; </span>updates, by omitting <span style="font-family:courier;">= {variable</span> and <span style="font-family:courier;">}</span> (same as for array updates in <span style="color:blue;"><a href="CleanLanguageReport4.html#_4.4.1">section 4.4.1</a></span>).</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:0.472727272727273%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:72.4581818181818%;padding:0 0 4px 0;">Variable <span style="font-family:courier;color:#993300;"><b>&amp;</b></span> {<span style="font-family:courier;">FieldName</span> {Selection} <span style="font-family:courier;color:#993300;"><b>=</b></span> GraphExpr}-list <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<p style="text-align:justify;">For example:</p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">#&nbsp;r&nbsp;&amp;&nbsp;x&nbsp;=&nbsp;1<br><div style="background-color:#FFFF45;">instead of</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">#&nbsp;r&nbsp;=&nbsp;{r&nbsp;&amp;&nbsp;x&nbsp;=&nbsp;1}<br></div>
+<p></p><p style="text-align:justify;">Multiple updates are also allowed, for example:</p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">#&nbsp;r&nbsp;&amp;&nbsp;x=1,&nbsp;y=2,&nbsp;z.c='a'<br><div style="background-color:#FFFF45;">instead of</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;">#&nbsp;r&nbsp;=&nbsp;{r&nbsp;&amp;&nbsp;x=1,&nbsp;y=2,&nbsp;z.c='a'}<br></div>
+<p></p><h3 style="background-color:#9999FF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection of a Record Field</h3>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">RecordSelection</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">RecordExpr [<span style="font-family:courier;color:#993300;"><b>.</b></span><span style="font-family:courier;">QTypeName</span>]<span style="font-family:courier;color:#993300;"><b>.</b></span><span style="font-family:courier;">FieldName</span> {Selection}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">RecordExpr [<span style="font-family:courier;color:#993300;"><b>.</b></span><span style="font-family:courier;">QTypeName</span>]<span style="font-family:courier;color:#993300;"><b>!</b></span><span style="font-family:courier;">FieldName</span> {Selection}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">Selection</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>.</b></span><span style="font-family:courier;">FieldName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>.</b></span>ArrayIndex</td></tr>
+</table><p></p>
+<p style="text-align:justify;">With a <i>record selection</i> (using the '<span style="font-family:courier;">.</span>' symbol) one can select the value stored in the indicated record field. A "unique" selection using the '<span style="font-family:courier;">!</span>' symbol returns a tuple containing the demanded record field and the original record. This type of record selection can be very handy for destructively updating of uniquely typed records with values that depend on the current contents of the record. Record selection binds more tightly (priority <span style="font-family:courier;">11</span>) than application (priority <span style="font-family:courier;">10</span>).</p>
+<p></p><div style="background-color:#FFFF45;">Record selection.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+GetPoint::&nbsp;ColorPoint&nbsp;-&gt;&nbsp;Point<br>
+GetPoint&nbsp;cp&nbsp;=&nbsp;cp.p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;selection&nbsp;of&nbsp;a&nbsp;record&nbsp;field</span><br>
+<br>
+GetXPoint::&nbsp;ColorPoint&nbsp;-&gt;&nbsp;Real<br>
+GetXPoint&nbsp;cp&nbsp;=&nbsp;cp.p.x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;selection&nbsp;of&nbsp;a&nbsp;record&nbsp;field</span><br>
+<br>
+GetXPoint2::&nbsp;*ColorPoint&nbsp;-&gt;&nbsp;(Real,.ColorPoint)<br>
+GetXPoint2&nbsp;cp&nbsp;=&nbsp;cp!p.x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;selection&nbsp;of&nbsp;a&nbsp;record&nbsp;f</span><br></div>
+<p></p><h3 style="background-color:#9999FF;"><a id="_5.2.2">5.2.2 Record Patterns</a></h3>
+<p style="text-align:justify;">An object of type <i>record</i> can be specified as pattern. Only those fields which contents one would like to use in the right-hand side need to be mentioned in the pattern.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">RecordPattern</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>{</b></span>[<span style="font-family:courier;">QTypeName</span> <span style="font-family:courier;color:#993300;"><b>|</b></span>] {<span style="font-family:courier;">FieldName</span> [<span style="font-family:courier;color:#993300;"><b>=</b></span> GraphPattern]}-list<span style="font-family:courier;color:#993300;"><b>}</b></span></td></tr>
+</table><p></p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The type of the record must have been defined in a record type definition.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The field names specified in the pattern must be identical to the field names specified in the corresponding type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When matching a record, the type contructor which can be used to disambiguate the record from other records, can only be left out if there is <i>at least </i>one field name is specified which is not being defined in some other record.</td></tr>
+</table>
+<p></p><div style="background-color:#FFFF45;">Use of record patterns.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Tree&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;Node&nbsp;(RecTree&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Leaf&nbsp;a<br>
+::RecTree&nbsp;a&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;elem&nbsp;&nbsp;::&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;left&nbsp;&nbsp;::&nbsp;Tree&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;right&nbsp;&nbsp;::&nbsp;Tree&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+Mirror::&nbsp;(Tree&nbsp;a)&nbsp;-&gt;&nbsp;Tree&nbsp;a<br>
+Mirror&nbsp;(Node&nbsp;tree=:{left=l,right=r})&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Node&nbsp;{tree&nbsp;&amp;&nbsp;left=r,right=l}<br>
+Mirror&nbsp;leaf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;leaf<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">The first alternative of function <span style="font-family:courier;">Mirror</span> defined in another equivalent way:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+Mirror&nbsp;(Node&nbsp;tree=:{left,right})&nbsp;=&nbsp;Node&nbsp;{tree&nbsp;&amp;&nbsp;left=right,right=left}<br>
+<br></div>
+<div style="background-color:#FFFF45;">or (except <span style="font-family:courier;">tree</span> may be evaluated lazily):</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+Mirror&nbsp;(Node&nbsp;tree)&nbsp;=&nbsp;Node&nbsp;{tree&nbsp;&amp;&nbsp;left=tree.right,right=tree.left}<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_5.3">5.3 Defining Synonym Types</a></h2>
+<p style="text-align:justify;"><i>Synonym types</i> permit the programmer to introduce a new type name for an existing type.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">SynonymTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span>TypeLhs <span style="font-family:courier;color:#993300;"><b>:==</b></span> Type <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">For the left-hand side the same restrictions hold as for algebraic types.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">Cyclic definitions of synonym types (e.g. <span style="font-family:courier;">::T a b :== G a b; ::G a b :== T a b</span>) are not allowed.</td></tr>
+</table>
+<p></p><div style="background-color:#FFFF45;">Example of a type synonym definition.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Operator&nbsp;a&nbsp;:==&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br>
+<br>
+map2::&nbsp;(Operator&nbsp;a)&nbsp;[a]&nbsp;[a]&nbsp;-&gt;&nbsp;[a]<br>
+map2&nbsp;op&nbsp;[]&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;[]<br>
+map2&nbsp;op&nbsp;[f1:r1]&nbsp;[f2:r2]&nbsp;&nbsp;&nbsp;=&nbsp;[op&nbsp;f1&nbsp;f2&nbsp;:map2&nbsp;op&nbsp;r1&nbsp;r2]<br>
+<br>
+Start::&nbsp;Int<br>
+Start&nbsp;=&nbsp;map2&nbsp;(*)&nbsp;[2,3,4,5]&nbsp;[7,8,9,10]<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_5.4">5.4 Defining Abstract Data Types</a></h2>
+<p style="text-align:justify;">A type can be exported by defining the type in a CLEAN definition module (<span style="color:blue;"><a href="CleanLanguageReport2.html#_2">see Chapter 2</a></span>). For software engineering reasons it sometimes better only to export the name of a type but not its concrete definition (the right-hand side of the type definition). The type then becomes an <i>abstract data type</i>. In CLEAN this is done by specifying only the left-hand-side of a type in the definition module while the concrete definition (the right-hand side of the type definition) is hidden in the implementation module. So, CLEAN's module structure is used to hide the actual implementation. When one wants to do something useful with objects of abstract types one needs to export functions that can create and manipulate objects of this type as well.</p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">Abstract data type definitions are only allowed in definition modules, the concrete definition has to be given in the corresponding implementation module.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The left-hand side of the concrete type should be identical to (modulo alpha conversion for variable names) the left-hand side of the abstract type definition (inclusive strictness and uniqueness type attributes).</td></tr>
+</table>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AbstractTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>::</b></span> [<span style="font-family:courier;color:#993300;"><b>!</b></span>][UnqOrCoercibleTypeAttrib] TypeConstructor {[<span style="font-family:courier;color:#993300;"><b>*</b></span>]<span style="font-family:courier;">TypeVariable</span>}<span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">UnqOrCoercibleTypeAttrib</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>*</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>.</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of an abstract data type.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>definition</b></span>&nbsp;<span style="font-family:courier;color:#FF0000;"><b>module</b></span>&nbsp;stack<br>
+<br>
+::Stack&nbsp;a<br>
+<br>
+Empty&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;&nbsp;&nbsp;&nbsp;Stack&nbsp;a<br>
+isEmpty&nbsp;&nbsp;::&nbsp;&nbsp;&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;Bool<br>
+Top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;&nbsp;&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;a<br>
+Push&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;a&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;Stack&nbsp;a<br>
+Pop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;&nbsp;&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;Stack&nbsp;a<br></div>
+<p></p><p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>implementation</b></span>&nbsp;<span style="font-family:courier;color:#FF0000;"><b>module</b></span>&nbsp;stack<br>
+<br>
+::Stack&nbsp;a&nbsp;:==&nbsp;[a]<br>
+<br>
+Empty::&nbsp;Stack&nbsp;a<br>
+Empty&nbsp;=&nbsp;[]<br>
+<br>
+isEmpty::&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;Bool<br>
+isEmpty&nbsp;[]&nbsp;=&nbsp;True<br>
+isEmpty&nbsp;s&nbsp;&nbsp;=&nbsp;False<br>
+<br>
+Top::&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;a<br>
+Top&nbsp;[e:s]&nbsp;=&nbsp;e<br>
+<br>
+Push::&nbsp;a&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;Stack&nbsp;a<br>
+Push&nbsp;e&nbsp;s&nbsp;=&nbsp;[e:s]<br>
+<br>
+Pop::&nbsp;(Stack&nbsp;a)&nbsp;-&gt;&nbsp;Stack&nbsp;a<br>
+Pop&nbsp;[e:s]&nbsp;=&nbsp;s<br><p></p>
+<h3 style="background-color:#9999FF;"><a id="_5.4.1">5.4.1 Defining Abstract Data Types with Synonym Type Definition</a></h3>
+<p style="text-align:justify;">Because the concrete definition of an abstract data type does not appear in the definition module, the compiler cannot generate optimal code. Therefore, if the concrete type is a synonym type, the right-hand-side of the definition may be included surrounded by brackets:</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">AbstractSynonymTypeDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">AbstractTypeDef <span style="font-family:courier;color:#993300;"><b>(:==</b></span> Type <span style="font-family:courier;color:#993300;"><b>)</b></span> <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<p style="text-align:justify;">The type of the implementation is still hidden as for other abstract data types, except that the compiler uses it only to generate the same code as for a synonym type.</p>
+</body>
+</html>

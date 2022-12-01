@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clean Language Report</title>
+</head>
+<body style="font-family:Helvetica">
+<div><div style="position: absolute;"><svg width="355.555555555556" height="177.777777777778">
+<path d="M49.7777777777778 7.32929319639176 h280.888888888889 v141.785858051661 h-280.888888888889 Z M64 33.9959598630584 h252.444444444444 v88.4525247183276 h-252.444444444444 Z" stroke="none" fill="#3F87AF" fill-rule="evenodd"/>
+<path d="M64 111.781817914719 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 33.9959598630584 h252.444444444444 v10.6666666666667 h-252.444444444444 Z" stroke="none" fill="#8C96A0"/>
+<path d="M64 44.6626265297251 h252.444444444444 v67.1191913849942 h-252.444444444444 Z" stroke="none" fill="#FFFFFF"/>
+<path d="M99.1179703874409 137.550135143052 C93.2711853763986 133.302197180425,88.084448516421 128.213312506961,83.725936053644 122.448484581386 L110.089961763567 122.448484581386 Z" stroke="none" fill="#8C96A0"/>
+<path d="M99.1179703874409 18.8943093013927 C93.2711853763986 23.1422472640192,88.084448516421 28.2311319374834,83.725936053644 33.9959598630584 L110.089961763567 33.9959598630584 Z" stroke="none" fill="#8C96A0"/>
+<path d="M126.968649704419 100.555210486665 C109.380820468897 87.7769045717629,109.380820468897 61.5564287615705,126.968649704419 48.7781228466684 L116.780371998016 34.7551616108359 C89.6658019265873 54.45504989631,89.6658019265873 94.8782834370233,116.780371998016 114.578171722497 Z" stroke="none" fill="#8C96A0"/>
+<path d="M113.645517319123 118.89292902583 C83.5996423751073 97.0633230878727,83.5996423751073 52.2700102454607,113.645517319123 30.4404043075029 L102.673525942996 15.3387537458372 C62.3680839449271 44.6223714674879,62.3680839449271 104.710961865845,102.673525942996 133.994579587496 Z" stroke="none" fill="#8C96A0"/>
+<path d="M123.413094148863 104.110766042221 C105.825264913342 91.3324601273184,105.825264913342 65.111984317126,123.413094148863 52.3336784022239 L113.22481644246 38.3107171663915 C86.1102463710318 58.0106054518656,86.1102463710318 98.4338389925788,113.22481644246 118.133727278053  Z" stroke="none" fill="#3F87AF"/>
+<path d="M110.089961763567 122.448484581386 C80.0440868195518 100.618878643428,80.0440868195518 55.8255658010162,110.089961763567 33.9959598630584L83.725936053644 33.9959598630584 C63.9432065006372 60.1617750913602,63.9432065006372 96.2826693530842,83.725936053644 122.448484581386" stroke="none" fill="#3F87AF"/>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="145.777777777778" y="103.111111111111" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144.888888888889" y="102.222222222222" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="144" y="101.333333333333" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="143.111111111111" y="100.444444444444" fill="#8C96A0">Clean</text>
+<text font-family="Helvetica" font-weight="bold" font-size="56.8888888888889px" x="142.222222222222" y="99.5555555555556" fill="#3F87AF">Clean</text>
+</svg>
+</div><h1 style="text-align:right;background-color:#9999FF;"><a id="_6"><br>Chapter 6<br><br>Overloading</a></h1></div>
+<p style="text-align:justify;">CLEAN allows functions and operators to be <i>overloaded</i>. <i>Type classes</i> and type constructor classes are provided (which look similar to Haskell (Hudak et  al. 1992) and Gofer (Jones, 1993), although our classes have slightly different semantics) with which a restricted context can be imposed on a type variable in a type specification.</p>
+<p style="text-align:justify;">If one defines a function it should in general have a name that is <i>different</i> from all other function names defined within the same scope and name space (<span style="color:blue;"><a href="CleanLanguageReport2.html#_2.1">see 2.1</a></span>). However, it is sometimes very convenient to <i>overload</i> certain  functions and operators (e.g. <span style="font-family:courier;">+</span>,<span style="font-family:courier;">-</span>,<span style="font-family:courier;">==</span>), i.e. use <i>identical</i> names for <i>different</i> functions or operators that perform <i>similar tasks</i> albeit on objects of <i>different types</i>.</p>
+<p style="text-align:justify;">In principle it is possible to simulate a kind of overloading by using records. One simply defines a record (<span style="color:blue;"><a href="CleanLanguageReport5.html#_5.2">see 5.2</a></span>) in which a collection of functions are stored that somehow belong to each other. Now the field name of the record can be used as (overloaded) synonym for any concrete function stored on the corresponding position. The record can be regarded as a kind of <i>dictionary</i> in which the concrete function can be looked up.</p>
+<p></p><div style="background-color:#FFFF45;">Example of the use of a dictionary record to simulate overloading. <i>sumlist</i> can use the field name add as synonym for any concrete function obeying the type as specified in the record definition. The operators <span style="font-family:courier;">+.</span>, <span style="font-family:courier;">+^</span>, <span style="font-family:courier;">-.</span> and <span style="font-family:courier;">-^</span> are assumed to be predefined primitives operators for addition and subtraction on the basic types <span style="font-family:courier;">Real</span> and <span style="font-family:courier;">Int</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+::Arith&nbsp;a&nbsp;=&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;add&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;subtract&nbsp;::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>
+<br>
+ArithReal&nbsp;=&nbsp;{&nbsp;add&nbsp;=&nbsp;(+.),&nbsp;subtract&nbsp;=&nbsp;(-.)&nbsp;}&nbsp;<br>
+ArithInt&nbsp;&nbsp;=&nbsp;{&nbsp;add&nbsp;=&nbsp;(+^),&nbsp;subtract&nbsp;=&nbsp;(-^)&nbsp;}&nbsp;<br>
+<br>
+sumlist::&nbsp;(Arith&nbsp;a)&nbsp;[a]&nbsp;[a]&nbsp;-&gt;&nbsp;[a]&nbsp;<br>
+sumlist&nbsp;arith&nbsp;[x:xs]&nbsp;[y:ys]&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;[arith.add&nbsp;x&nbsp;y:sumlist&nbsp;arith&nbsp;xs&nbsp;ys]&nbsp;<br>
+sumlist&nbsp;arith&nbsp;x&nbsp;y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;[]&nbsp;<br>
+<br>
+Start&nbsp;=&nbsp;sumlist&nbsp;ArithInt&nbsp;[1..10]&nbsp;[11..20]<br></div>
+<p></p><p style="text-align:justify;">A disadvantage of such a dictionary record is that it is syntactically not so nice (e.g. one explicitly has to pass the record to the appropriate function) and that one has to pay a huge price for efficiency (due to the use of higher order functions) as well. CLEAN's overloading system as introduced below enables the CLEAN system to automatically create and add dictionaries as argument to the appropriate function definitions and function applications. To avoid efficiency loss the CLEAN compiler will substitute the intended concrete function for the overloaded function application where possible. In worst case however CLEAN's overloading system will indeed have to generate a dictionary record that is then automatically passed as additional parameter to the appropriate function.</p>
+<h2 style="background-color:#9999FF;"><a id="_6.1">6.1 Type Classes</a></h2>
+<p style="text-align:justify;">In a <i>type class definition</i> one gives a name to a <i>set of overloaded functions</i> (this is similar to the definition of a type of the dictionary record as explained above). For each <i>overloaded function</i> or <i>operator</i> which is a <i>member</i> of the class the <i>overloaded name</i> and its <i>overloaded type</i> is specified. The <i>type class variables</i> are used to indicate how the different instantiations of the class vary from each other. CLEAN offers multi-parameter type constructor classes, similar to those available in Haskell.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeClassDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;">ClassName</span> <span style="font-family:courier;">{[</span><span style="font-family:courier;color:#993300;"><b>.</b></span>]<span style="font-family:courier;">TypeVariable</span>}+ [ClassContext]</td></tr>
+<tr><td style="width:26.1111111111111%;padding:0 0 4px 0;" colspan="3"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[[<span style="font-family:courier;color:#FF0000;"><b>where</b></span>] <span style="font-family:courier;color:#0000FF;"><b>{</b></span> {ClassMemberDef}+ <span style="font-family:courier;color:#0000FF;"><b>}</b></span>] <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">{[</span><span style="font-family:courier;color:#993300;"><b>.</b></span>]<span style="font-family:courier;">TypeVariable</span>}+ <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType<span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;color:#993300;"><b>(</b></span><span style="font-family:courier;">FunctionName</span><span style="font-family:courier;color:#993300;"><b>)</b></span> [FixPrec] <span style="font-family:courier;">{[</span><span style="font-family:courier;color:#993300;"><b>.</b></span>]<span style="font-family:courier;">TypeVariable</span>}+ <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType<span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ClassMemberDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">FunctionTypeDef</td></tr>
+<tr><td style="width:26.1111111111111%;padding:0 0 4px 0;" colspan="3"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[MacroDef]</td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of the definition of a type class; in this case the class named <span style="font-family:courier;">Arith</span> contains two overloaded operators.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Arith&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example. Classes can have several type class variables.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Arith2&nbsp;a&nbsp;b&nbsp;c<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(:+:)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6::&nbsp;a&nbsp;b&nbsp;-&gt;&nbsp;c<br></div>
+<p></p><p style="text-align:justify;">With an <i>instance declaration</i> an instance of a given class can be defined (this is similar to the creation of a dictionary record). When the instance is made one has to be specify for which <i>concrete type</i> an instance is created. For each overloaded function in the class an <i>instance of the overloaded function</i> or <i>operator</i> has to be defined. The type of the instance can be found via uniform substitution of the type class variables by the corresponding type instances specified in the instance definition.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeClassInstanceDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>instance</b></span> <span style="font-family:courier;">QClassName</span> Type+ [ClassContext]</td></tr>
+<tr><td style="width:26.1111111111111%;padding:0 0 4px 0;" colspan="3"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[<span style="font-family:courier;color:#FF0000;"><b>where</b></span>] <span style="font-family:courier;color:#0000FF;"><b>{</b></span> {FunctionDef}+ <span style="font-family:courier;color:#0000FF;"><b>}</b></span> <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of the definition of an instance of a type class <span style="font-family:courier;">Arith</span> for type <span style="font-family:courier;">Int</span>. The type of the concrete functions can be  obtained via uniform substitution of the type class variable in the class definition by the corresponding type specified in the instance definition. One is not obliged to repeat the type of the concrete functions instantiated (nor the fixity or associativity in the case of operators).</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith&nbsp;Int<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)::&nbsp;Int&nbsp;Int&nbsp;-&gt;&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+^&nbsp;y<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)::&nbsp;Int&nbsp;Int&nbsp;-&gt;&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;-^&nbsp;y<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example of the definition of an instance of a type class <span style="font-family:courier;">Arith</span> for type <span style="font-family:courier;">Real</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith&nbsp;Real<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+.&nbsp;y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;-.&nbsp;y<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example. Instantiation of <span style="font-family:courier;">Arith2</span> using the instantiations of <span style="font-family:courier;">Arith</span> specified above.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith2&nbsp;Int&nbsp;&nbsp;Int&nbsp;&nbsp;Int&nbsp;&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span>&nbsp;(:+:)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+&nbsp;y<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith2&nbsp;Int&nbsp;&nbsp;Real&nbsp;Real&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span>&nbsp;(:+:)&nbsp;x&nbsp;y&nbsp;=&nbsp;toReal&nbsp;x&nbsp;+&nbsp;y<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith2&nbsp;Real&nbsp;Int&nbsp;&nbsp;Real&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span>&nbsp;(:+:)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+&nbsp;toReal&nbsp;y<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith2&nbsp;Real&nbsp;Real&nbsp;Real&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span>&nbsp;(:+:)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+&nbsp;y<br></div>
+<p></p><p style="text-align:justify;">One can define as many instances of a class as one likes. Instances can be added later on in any module that has imported the class one wants to instantiate.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When an instance of a class is defined a concrete definition has to be given for all the class members.</td></tr>
+</table>
+<h2 style="background-color:#9999FF;"><a id="_6.2">6.2 Functions Defined in Terms of Overloaded Functions</a></h2>
+<p style="text-align:justify;">When an overloaded name is encountered in an expression, the compiler will determine which of the corresponding concrete functions/operators is meant by looking at the concrete type of the expression. This type is used to determine which concrete function to apply.</p>
+<p style="text-align:justify;">All instances of a type variable of a certain class have to be of a flat type (see the restrictions mentioned in <span style="color:blue;"><a href="#_6.11">6.11</a></span>).</p>
+<p style="text-align:justify;">If it is clear from the type of the expression which one of the concrete instantiations is meant the compiler will in principle substitute the concrete function for the overloaded one, such that no efficiency is lost.</p>
+<p></p><div style="background-color:#FFFF45;">Example of the substitution of a concrete function for an overloaded one. Given the definitions above the function</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+inc&nbsp;n&nbsp;=&nbsp;n&nbsp;+&nbsp;1<br>
+<br></div>
+<div style="background-color:#FFFF45;">will be internally transformed into</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+inc&nbsp;n&nbsp;=&nbsp;n&nbsp;+^&nbsp;1<br></div>
+<p></p><p style="text-align:justify;">However, it is very well possible that the compiler, given the type of the expression, cannot decide which one of the corresponding concrete functions to apply. The new function then becomes overloaded as well.</p>
+<p></p><div style="background-color:#FFFF45;">For instance, the function</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+add&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+&nbsp;y<br>
+<br></div>
+<div style="background-color:#FFFF45;">becomes overloaded as well because it cannot be determined which concrete instances can be applied: <span style="font-family:courier;">add</span>can be applied to arguments of any type, as long as addition (<span style="font-family:courier;">+</span>) is defined on them.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"></div>
+<p></p><p style="text-align:justify;">This has as consequence that an additional restriction must be imposed on the type of such an expression. A <i>class context</i> has to be added to the function type to express that the function can only be applied provided that the appropriate type classes have been instantiated (in fact one specifies the type of the dictionary record which has to be passed to the function in worst case). Such a context can also be regarded as an additional restriction imposed on a type variable, introducing a kind of <i>bounded polymorphism</i>.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">FunctionType</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[{ArgType}+ <span style="font-family:courier;color:#993300;"><b>-&gt;</b></span>] Type [ClassContext] [UnqTypeUnEqualities]</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ClassContext</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#993300;"><b>|</b></span> ClassConstraints {<span style="font-family:courier;color:#993300;"><b>&amp;</b></span> ClassConstraints}</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ClassConstraints</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">ClassOrGenericName-list {SimpleType}+</td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">ClassOrGenericName</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">QClassName</span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;color:#993300;"><b>{|</b></span>TypeKind<span style="font-family:courier;color:#993300;"><b>|}</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of the use of a class context to impose a restriction on the instantiation of a type variable. The function <span style="font-family:courier;">add</span> can be applied on arguments of any type under the condition that an instance of the class <span style="font-family:courier;">Arith</span> is defined on them.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+add::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a&nbsp;|&nbsp;Arith&nbsp;a<br>
+add&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+&nbsp;y<br></div>
+<p></p><p style="text-align:justify;">CLEAN's type system can infer class contexts automatically. If a type class is specified as a restricted context the type system will check the correctness of the specification (as always a type specification can be more restrictive than is deduced by the compiler).</p>
+<h2 style="background-color:#9999FF;"><a id="_6.3">6.3 Type Classes Defined in Terms of Overloaded Functions</a></h2>
+<p style="text-align:justify;">The concrete functions defined in a class instance definition can also be defined in terms of (other) overloaded functions. This is reflected in the type of the instantiated functions. Both the concrete type and the context restriction have to be specified.</p>
+<p></p><div style="background-color:#FFFF45;">Example of an instance declaration with a type which is depending on the same type class. The function <span style="font-family:courier;">+</span> on lists can be defined in terms of the overloaded operator <span style="font-family:courier;">+</span>on the list elements. With this definition <span style="font-family:courier;">+</span>is defined not only on lists, but also on a list of lists etcetera.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Arith&nbsp;[a]&nbsp;|&nbsp;Arith&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;on&nbsp;lists</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6::&nbsp;[a]&nbsp;[a]&nbsp;-&gt;&nbsp;[a]&nbsp;|&nbsp;Arith&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;[x:xs]&nbsp;[y:ys]&nbsp;=&nbsp;[x&nbsp;+&nbsp;y:xs&nbsp;+&nbsp;ys]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;[]<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6::&nbsp;[a]&nbsp;[a]&nbsp;-&gt;&nbsp;[a]&nbsp;|&nbsp;Arith&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)&nbsp;[x:xs]&nbsp;[y:ys]&nbsp;=&nbsp;[x&nbsp;-&nbsp;y:xs&nbsp;-&nbsp;ys]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(-)&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;[]<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Equality class.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;Bool<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;[a]&nbsp;|&nbsp;Eq&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;on&nbsp;lists</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;[a]&nbsp;[a]&nbsp;-&gt;&nbsp;Bool&nbsp;|&nbsp;Eq&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;[x:xs]&nbsp;[y:ys]&nbsp;=&nbsp;x&nbsp;==&nbsp;y&nbsp;&amp;&amp;&nbsp;xs&nbsp;==&nbsp;ys<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;False<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_6.4">6.4 Type Constructor Classes</a></h2>
+<p style="text-align:justify;">The CLEAN type system offers the possibility to use higher order types (<span style="color:blue;"><a href="CleanLanguageReport3.html#_3.7.1">see 3.7.1</a></span>). This makes it possible to define <i>type constructor classes</i> (similar to constructor classes as introduced in Gofer, Jones (1993)). In that case the overloaded type variable of the type class is not of kind <span style="font-family:courier;">X</span>, but of higher order, e.g. <span style="font-family:courier;">X -&gt; X</span>, <span style="font-family:courier;">X -&gt; X -&gt; X</span>, etcetera. This offers the possibility to define overloaded functions that can be instantiated with type constructors of higher order (as usual, the overloaded type variable and a concrete instantiation of this type variable need to be of the same kind). This makes it possible to overload more complex functions like map and the like.</p>
+<p></p><div style="background-color:#FFFF45;">Example of a definition of a type constructor class. The class <span style="font-family:courier;">Functor</span> including the overloaded function <span style="font-family:courier;">map</span> which varies in type variable <span style="font-family:courier;">f</span> of kind <span style="font-family:courier;">X -&gt; X</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Functor&nbsp;f<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;map::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(f&nbsp;a)&nbsp;-&gt;&nbsp;(f&nbsp;b)<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;">Example of an instantiation of a type constructor class. An instantiation of the well-known function <span style="font-family:courier;">map</span> applied on lists (<span style="font-family:courier;">[]</span> is of kind <span style="font-family:courier;">X -&gt; X</span>), and a map function defined on <span style="font-family:courier;">Tree</span>'s (<span style="font-family:courier;">Tree</span> is of kind <span style="font-family:courier;">X -&gt; X</span>).</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Functor&nbsp;[]<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;map::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;[a]&nbsp;-&gt;&nbsp;[b]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;f&nbsp;[x:xs]&nbsp;=&nbsp;[f&nbsp;x&nbsp;:&nbsp;map&nbsp;f&nbsp;xs]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;f&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;[]<br>
+<br>
+::Tree&nbsp;a&nbsp;=&nbsp;(/\)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;0&nbsp;(Tree&nbsp;a)&nbsp;(Tree&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Leaf&nbsp;a<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Functor&nbsp;Tree<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;map::&nbsp;(a&nbsp;-&gt;&nbsp;b)&nbsp;(Tree&nbsp;a)&nbsp;-&gt;&nbsp;(Tree&nbsp;b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;f&nbsp;(l/\r)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;map&nbsp;f&nbsp;l&nbsp;/\&nbsp;map&nbsp;f&nbsp;r<br>
+&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;f&nbsp;(Leaf&nbsp;a)&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Leaf&nbsp;(f&nbsp;a)<br></div>
+<p></p><p style="text-align:justify;">CLEAN 2.0 offers the possibility to define generic functions. With generic functions one is able to define a function like <span style="font-family:courier;">map</span> once that works for <i>any</i> type (<span style="color:blue;"><a href="CleanLanguageReport7.html#_7.2">see 7.2</a></span>).</p>
+<h2 style="background-color:#9999FF;"><a id="_6.5">6.5 Overlapping Instances</a></h2>
+<p style="text-align:justify;">Identical instances of the same class are not allowed. The compiler would not know which instance to choose. However, it is not required that all instances are of different type. It is allowed to specify an instance of a class of which the types overlap with some other instance given for that class, i.e. the types of the different class instances are different but they can be unified with each other. It is even allowed to specify an instance that works for any type, just by instantiating with a type variable instead of instantiating with a concrete type. This can be handy to define a simple default case (see also the section one generic definitions). If more than one instance is applicable, the compiler will always choose the most specific instantiation.</p>
+<p></p><div style="background-color:#FFFF45;">Example of overlapping instances. Below there are three instances given for the class <span style="font-family:courier;">Eq</span>: one for <span style="font-family:courier;">Int</span>eger values, one for <span style="font-family:courier;">Real</span> values, and one for objects of any type. The latter instance is more general and overlaps with both the other instances that are more specific. If <span style="font-family:courier;">Int</span>egers or <span style="font-family:courier;">Real</span>s are compared, the corresponding equality function will be chosen. For all other types for which no specific instances for equality are defined, the general instance will be chosen. </div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;Bool<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;Int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;on&nbsp;Integers</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;==^&nbsp;y<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;Real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;on&nbsp;Reals</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;==.&nbsp;y<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;generic&nbsp;instance&nbsp;for&nbsp;Eq</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;x&nbsp;y&nbsp;=&nbsp;False<br></div>
+<p></p><p style="text-align:justify;">It is sometimes unclear which of the class instances is the most specific. In that case the lexicographic order is chosen looking at the specified instances (with type variables always <span style="font-family:courier;">&gt;</span> type constructors).</p>
+<p></p><div style="background-color:#FFFF45;">Example of overlapping instances. The two instances of class <span style="font-family:courier;">C</span> overlap with each other. In the <span style="font-family:courier;">Start</span> rule the function <span style="font-family:courier;">f</span> is applied to two <span style="font-family:courier;">Bool</span>ean values. In this case any of the two instances of <span style="font-family:courier;">f</span> could be chosen. They both can be applied (one has type <span style="font-family:courier;">f::Bool a -&gt; Bool</span>, the other <span style="font-family:courier;">f::a Bool -&gt; Bool</span>, <span style="font-family:courier;">Start</span> requires <span style="font-family:courier;">f:: Bool Bool -&gt; Bool</span>). The compiler will choose the first instance, because in lexicographical order <span style="font-family:courier;">instance C Bool dontcare</span> &lt;= <span style="font-family:courier;">instance C dontcare Bool</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;C&nbsp;a1&nbsp;a2<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;f::&nbsp;a1&nbsp;a2&nbsp;-&gt;&nbsp;Bool<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;C&nbsp;Bool&nbsp;dontcare<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;b1&nbsp;b2&nbsp;=&nbsp;b1<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;C&nbsp;dontcare&nbsp;Bool<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;b1&nbsp;b2&nbsp;=&nbsp;b2<br>
+<br>
+Start&nbsp;=&nbsp;f&nbsp;True&nbsp;False&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;the&nbsp;result&nbsp;will&nbsp;yield&nbsp;True</span><br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_6.6">6.6 Internal Overloading</a></h2>
+<p style="text-align:justify;">It is possible that a CLEAN expression using overloaded functions is internally ambiguously overloaded. The problem can occur when an overloaded function is used which has on overloaded type in which an overloaded type variable appears on the right-hand side of the <span style="font-family:courier;">-&gt;</span>. If such a function is applied in such a way that the overloaded type does not appear in the resulting type of the application, any of the available instances of the overloaded function can be used.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">In that case that an overloaded function is internally ambiguously overloaded the compiler cannot determine which instance to take: a type error is given.</td></tr>
+</table>
+<p></p><div style="background-color:#FFFF45;"><b>Counter example</b> (ambiguous internal overloaded expression). The function body of <span style="font-family:courier;">f</span> is internally ambiguously overloaded which results in a type error. It is not possible to determine whether its argument should be converted to an <span style="font-family:courier;">Int</span> or to a <span style="font-family:courier;">Bool</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Read&nbsp;&nbsp;a::&nbsp;a&nbsp;-&gt;&nbsp;String<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Write&nbsp;a::&nbsp;String&nbsp;-&gt;&nbsp;a<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Read&nbsp;&nbsp;Int,&nbsp;Bool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;export&nbsp;of&nbsp;class&nbsp;instance,&nbsp;see&nbsp;6.10</span><br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Write&nbsp;Int,&nbsp;Bool<br>
+<br>
+f::&nbsp;String&nbsp;-&gt;&nbsp;String<br>
+f&nbsp;x&nbsp;=&nbsp;Write&nbsp;(Read&nbsp;x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;!&nbsp;This&nbsp;results&nbsp;in&nbsp;a&nbsp;type&nbsp;error&nbsp;!</span><br></div>
+<p></p><p style="text-align:justify;">One can solve such an ambiguity by splitting up the expression in parts that are typed explicitly such that it becomes clear which of the instances should be used.</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;">f::&nbsp;String&nbsp;-&gt;&nbsp;String<br>
+f&nbsp;x&nbsp;=&nbsp;Write&nbsp;(MyRead&nbsp;x)<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;MyRead::&nbsp;Int&nbsp;-&gt;&nbsp;String<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MyRead&nbsp;x&nbsp;=&nbsp;Read&nbsp;x<br><p></p>
+<p></p><div style="background-color:#FFFF45;"><b>Counter example</b> (ambiguous internal overloaded expression). The function <span style="font-family:courier;">:+:</span> is internally ambiguously overloaded which results in a type error. The compiler is not able to infer the result type <span style="font-family:courier;">c</span> of the multi parameter type class <span style="font-family:courier;">Arith2 a b c</span>. The reason is that the compiler will first do the type unification and then tries to solve the overloading. In this case solving the overloading will have consequences for other overloading situations. The system can only solve one overloaded situation at a time and solving the overloading may not have any effect on other unifications.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+Start&nbsp;::&nbsp;Int<br>
+Start&nbsp;=&nbsp;2&nbsp;:+:&nbsp;3&nbsp;:+:&nbsp;4<br></div>
+<p></p><p></p><div style="background-color:#FFFF45;"><b>Example </b>(ambiguous internal overloaded expression). By explicitly specifying types the overloading can be solved. The following program is accepted.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+Start::&nbsp;Int<br>
+Start&nbsp;=&nbsp;2&nbsp;:+:&nbsp;more<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;more::&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;more&nbsp;=&nbsp;3&nbsp;:+:&nbsp;4<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_6.7">6.7 Defining Derived Members in a Class</a></h2>
+<p style="text-align:justify;">The members of a class consist of a set of functions or operators that logically belong to each other. It is often the case that the effect of some members (<i>derived members</i>) can be expressed in others. For instance, <span style="font-family:courier;">&lt;&gt;</span> can be regarded as synonym for <span style="font-family:courier;">not (==)</span>. For software engineering (the fixed relation is made explicit) and efficiency (one does not need to include such derived members in the dictionary record) it is good to make this relation explicit. In CLEAN the existing macro facilities (<span style="color:blue;"><a href="CleanLanguageReport10.html#_10.3">see Chapter 10.3</a></span>) are used for this purpose.</p>
+<p></p><div style="background-color:#FFFF45;">Classes with macro definitions to specify derived members.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Eq&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;Bool<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&lt;&gt;)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;&nbsp;Bool&nbsp;|&nbsp;Eq&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&lt;&gt;)&nbsp;x&nbsp;y&nbsp;:==&nbsp;not&nbsp;(x&nbsp;==&nbsp;y)<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Ord&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&lt;)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;&nbsp;Bool<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&gt;)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;&nbsp;Bool&nbsp;|&nbsp;Ord&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&gt;)&nbsp;x&nbsp;y&nbsp;:==&nbsp;y&nbsp;&lt;&nbsp;x<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&lt;=)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;&nbsp;Bool&nbsp;|&nbsp;Ord&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&lt;=)&nbsp;x&nbsp;y&nbsp;:==&nbsp;not&nbsp;(y&lt;x)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&gt;=)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;&nbsp;Bool&nbsp;|&nbsp;Ord&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(&gt;=)&nbsp;x&nbsp;y&nbsp;:==&nbsp;not&nbsp;(x&lt;y)<br>
+<br>
+min::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a&nbsp;|&nbsp;Ord&nbsp;a<br>
+min&nbsp;x&nbsp;y&nbsp;:==&nbsp;if&nbsp;(x&lt;y)&nbsp;x&nbsp;y<br>
+<br>
+max::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a&nbsp;|&nbsp;Ord&nbsp;a<br>
+max&nbsp;x&nbsp;y&nbsp;:==&nbsp;if&nbsp;(x&lt;y)&nbsp;y&nbsp;x<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_6.8">6.8 A Shorthand for Defining Overloaded Functions</a></h2>
+<p style="text-align:justify;">A class definition seems sometimes a bit overdone when a class actually only consists of one member. Special syntax is provided for this case.</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.0290909090909%;padding:0 0 4px 0;">TypeClassDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;">ClassName</span> <span style="font-family:courier;">{[</span><span style="font-family:courier;color:#993300;"><b>.</b></span>]<span style="font-family:courier;">TypeVariable</span>}+ [ClassContext]</td></tr>
+<tr><td style="width:26.1111111111111%;padding:0 0 4px 0;" colspan="3"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;">[[<span style="font-family:courier;color:#FF0000;"><b>where</b></span>] <span style="font-family:courier;color:#0000FF;"><b>{</b></span> {ClassMemberDef}+ <span style="font-family:courier;color:#0000FF;"><b>}</b></span>] <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;">FunctionName</span> <span style="font-family:courier;">{[</span><span style="font-family:courier;color:#993300;"><b>.</b></span>]<span style="font-family:courier;">TypeVariable</span>}+ <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType<span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.0290909090909%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.8690909090909%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span> <span style="font-family:courier;color:#993300;"><b>(</b></span><span style="font-family:courier;">FunctionName</span><span style="font-family:courier;color:#993300;"><b>)</b></span> [FixPrec] <span style="font-family:courier;">{[</span><span style="font-family:courier;color:#993300;"><b>.</b></span>]<span style="font-family:courier;">TypeVariable</span>}+ <span style="font-family:courier;color:#993300;"><b>::</b></span> FunctionType<span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Example of an overloaded function/operator.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;(+)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6&nbsp;a::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br>
+<br></div>
+<div style="background-color:#FFFF45;">which is shorthand for:</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;+&nbsp;a<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infixl</b></span>&nbsp;6::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br></div>
+<p></p><p style="text-align:justify;">The instantiation of such a simple one-member class is done in a similar way as with ordinary classes, using the name of the overloaded function as class name.</p>
+<p></p><div style="background-color:#FFFF45;">Example of an instantiation of an overloaded function/operator.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;+&nbsp;Int<br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(+)&nbsp;x&nbsp;y&nbsp;=&nbsp;x&nbsp;+^&nbsp;y<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_6.9">6.9 Classes Defined in Terms of Other Classes</a></h2>
+<p style="text-align:justify;">In the definition of a class one can optionally specify that other classes that already have been defined elsewhere are included. The classes to include are specified as context after the overloaded type variable. It is not needed (but it is allowed) to define new members in the class body of the new class. In this way one can give a new name to a collection of existing classes creating a hierarchy of classes (cyclic dependencies are forbidden). Since one and the same class can be included in several other classes, one can combine classes in different kinds of meaningful ways. For an example have a closer look at the CLEAN standard library (see e.g. <span style="font-family:courier;">StdOverloaded</span> and <span style="font-family:courier;">StdClass</span>)</p>
+<p></p><div style="background-color:#FFFF45;">Example of defining classes in terms of existing classes. The class <span style="font-family:courier;">Arith</span> consists of the class <span style="font-family:courier;">+</span><span style="font-family:courier;"> and </span><span style="font-family:courier;">-</span>.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+class&nbsp;(+)&nbsp;infixl&nbsp;6&nbsp;a::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br>
+<br>
+class&nbsp;(-)&nbsp;infixl&nbsp;6&nbsp;a::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;a<br>
+<br>
+class&nbsp;Arith&nbsp;a&nbsp;|&nbsp;+,-&nbsp;a<br></div>
+<p></p><h2 style="background-color:#9999FF;"><a id="_6.10">6.10 Exporting Type Classes</a></h2>
+<p style="text-align:justify;">To export a class one simply repeats the class definition in the definition module (<span style="color:blue;"><a href="CleanLanguageReport2.html#_2">see Chapter 2</a></span>). To export an instantiation of a class one simply repeats the instance definition in the definition module, however <i>without</i> revealing the concrete implementation (which can only be specified in the implementation module).</p>
+<table style="background-color:#FFCC99;width:100%;" cellspacing="0" cellpadding="0"><tr><td style="width:23.4436363636364%;padding:0 0 4px 0;">TypeClassInstanceExportDef</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.4545454545455%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>instance</b></span> <span style="font-family:courier;">ClassName</span> InstanceExportTypes <span style="font-family:courier;color:#0000FF;"><b>;</b></span></td></tr>
+<tr><td style="width:23.4436363636364%;padding:0 0 4px 0;">InstanceExportTypes</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.4545454545455%;padding:0 0 4px 0;">{Type+ [ClassContext]}-list</td></tr>
+<tr><td style="width:23.4436363636364%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.4545454545455%;padding:0 0 4px 0;">Type+ [ClassContext] [<span style="font-family:courier;color:#FF0000;"><b>where</b></span>] <span style="font-family:courier;color:#0000FF;"><b>{</b></span>{FunctionTypeDef}+ <span style="font-family:courier;color:#0000FF;"><b>}</b></span></td></tr>
+<tr><td style="width:23.4436363636364%;padding:0 0 4px 0;"></td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">|</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.4545454545455%;padding:0 0 4px 0;">Type+ [ClassContext] [Special]</td></tr>
+<tr><td style="width:23.4436363636364%;padding:0 0 4px 0;">Special</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:1.06181818181818%;padding:0 0 4px 0;">=</td><td style="width:2.02020202020202%;padding:0 0 4px 0;"></td><td style="width:71.4545454545455%;padding:0 0 4px 0;"><span style="font-family:courier;color:#FF0000;"><b>special</b></span> <span style="font-family:courier;color:#0000FF;"><b>{</b></span>{<span style="font-family:courier;">TypeVariable</span> <span style="font-family:courier;color:#993300;"><b>=</b></span> Type}-list { <span style="font-family:courier;color:#0000FF;"><b>;</b></span> {<span style="font-family:courier;">TypeVariable</span> <span style="font-family:courier;color:#993300;"><b>=</b></span> Type}-list }<span style="font-family:courier;color:#0000FF;"><b>}</b></span></td></tr>
+</table><p></p>
+<p></p><div style="background-color:#FFFF45;">Exporting classes and instances.</div>
+<div style="font-family:courier;margin:0px;background-color:#FFFF99;"><br>
+<span style="font-family:courier;color:#FF0000;"><b>definition</b></span>&nbsp;<span style="font-family:courier;color:#FF0000;"><b>module</b></span>&nbsp;example<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;Eq&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;the&nbsp;class&nbsp;Eq&nbsp;is&nbsp;exported</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(==)&nbsp;<span style="font-family:courier;color:#FF0000;"><b>infix</b></span>&nbsp;2::&nbsp;a&nbsp;a&nbsp;-&gt;&nbsp;Bool<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;[a]&nbsp;|&nbsp;Eq&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;an&nbsp;instance&nbsp;of&nbsp;Eq&nbsp;on&nbsp;lists&nbsp;is&nbsp;exported</span><br>
+<span style="font-family:courier;color:#FF0000;"><b>special</b></span>&nbsp;&nbsp;a&nbsp;=&nbsp;Int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;with&nbsp;an&nbsp;additional&nbsp;specialised&nbsp;version&nbsp;for&nbsp;[Int]</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;Real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;and&nbsp;an&nbsp;additional&nbsp;specialised&nbsp;version&nbsp;for&nbsp;[Real]</span><br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;Eq&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000FF;">//&nbsp;a&nbsp;general&nbsp;instance&nbsp;of&nbsp;Eq&nbsp;is&nbsp;exported</span><br></div>
+<p></p><p style="text-align:justify;">For reasons of efficiency the compiler will always make specialized efficient versions of overloaded functions inside an implementation module. For each concrete application of an overloaded function a specialized version is made for the concrete type the overloaded function is applied to. So, when an overloaded function is used in the implementation module in which the overloaded function is defined, no overhead is introduced.</p>
+<p style="text-align:justify;">However, when an overloaded function is exported it is unknown with which concrete instances the function will be applied. So, a dictionary record is constructed in which the concrete function can be stored as is explained in the introduction of this section. This approach can be very inefficient, especially in comparison to a specialized version. One can therefore ask the compiler to generate specialized versions of an overloaded function that is being exported. This can be done by using the keyword <span style="font-family:courier;color:#FF0000;"><b>special</b></span>. If the exported overloaded function will be used very frequently, we advise to specialize the function for the most important types it will be applied on.</p>
+<p></p><table style="width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A specialised function can only be generated if a concrete type is definend for all type variables which appear in the instance definition of a class.</td></tr>
+</table>
+<p style="text-align:justify;">The types of class instance members may be specified. Strictness annotations specified in the type of the instance member of the class definition should be included, because the annotations are copied when the type of the class instance member is instantiated.</p>
+<p style="text-align:justify;">Additional strictness annotations are permitted. For example:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>class</b></span>&nbsp;next&nbsp;a&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;::&nbsp;a&nbsp;-&gt;&nbsp;a<br>
+<br>
+<span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;next&nbsp;Int&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;::&nbsp;!Int&nbsp;-&gt;&nbsp;Int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;x&nbsp;=&nbsp;x+1<br><p></p>
+<p style="text-align:justify;">If such an instance is exported, the type of the instance member must be included in the definition module:</p>
+<p></p>
+<p style="font-family:courier;margin:0px;background-color:#FFFF99;line-height:1.125;"><span style="font-family:courier;color:#FF0000;"><b>instance</b></span>&nbsp;next&nbsp;Int&nbsp;<span style="font-family:courier;color:#FF0000;"><b>where</b></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;next&nbsp;::&nbsp;!Int&nbsp;-&gt;&nbsp;Int<br><p></p>
+<p style="text-align:justify;">If no additional strictness annotations are specified, it can still be exported without the type.</p>
+<h2 style="background-color:#9999FF;"><a id="_6.11">6.11 Semantic Restrictions on Type Classes</a></h2>
+<p style="text-align:justify;">Semantic restrictions:</p>
+<table style="border-spacing:0;width:100%;"><tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">When a class is instantiated a concrete definition must be given for each of the members in the class (not for derived members).</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The type of a concrete function or operator must exactly match the overloaded type after uniform substitution of the overloaded type variable by the concrete type as specified in the corresponding type instance declaration.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The overloaded type variable and the concrete type must be of the same kind.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A type instance of an overloaded type must be a <i>flat type</i>, i.e. a type of the form <span style="font-family:courier;">T a1 ... an</span> where <span style="font-family:courier;">ai</span> are type variables which are <i>all</i> different.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">It is not allowed to use a type synonym as instance.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The <span style="font-family:courier;">Start</span> function cannot have an overloaded type.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">For the specification of derived members in a class the same restrictions hold as for defining macros.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A restricted context can only be imposed on one of the type variables appearing in the type of the expression.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">The specification of the concrete functions can only be given in implementation modules.</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A specialised function can only be generated if a concrete type is defined for all type variables which appear in the instance definition of a class .</td></tr>
+<tr><td style="vertical-align:top;width:30px;"><table style="border-top:7px solid white;border-bottom:1px solid white;border-left:0px solid white;border-right:8px solid white;width:16px;height:16px;background:#FFCC99;float:left"></table>
+</td><td style="text-align:justify;">A request to generate a specialised function for a class instance can only be defined in a definition module.</td></tr>
+</table>
+</body>
+</html>

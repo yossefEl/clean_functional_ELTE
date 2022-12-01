@@ -1,0 +1,446 @@
+.comp 920 000111010010000
+.start _nostart_
+.depend "StdOverloaded" "20211222160339"
+.depend "StdBool" "20211222160339"
+.depend "StdClass" "20211222160339"
+.module m_StdClass "StdClass" "20211222160339"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_rzero;
+.impdesc e_StdOverloaded_r-;
+.impdesc e_StdOverloaded_r+;
+.export e_StdClass_rPlusMin;
+.record e_StdClass_rPlusMin; {a}{a}{a} 3 0 e_StdOverloaded_rzero; e_StdOverloaded_r-; e_StdOverloaded_r+; "PlusMin;"
+.descexp e_StdClass_tPlusMin; e_StdClass_cPlusMin; _hnf 3 1 "PlusMin;"
+.n 3 e_StdClass_tPlusMin;
+.o 1 0
+e_StdClass_cPlusMin;
+	push_node _cycle_in_spine 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 2 1 0
+	push_r_args 2 1 0
+	push_r_args 2 1 0
+	update_a 2 5
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.impmod StdClass
+.impdesc e_StdClass_rPlusMin;
+	fill_r e_StdClass_rPlusMin; 3 0 3 0 0
+	pop_a 3
+.d 1 0
+	rtn
+.export e_StdClass_dPlusMin;.+
+.export e_StdClass_nPlusMin;.+
+.desc e_StdClass_dPlusMin;.+ e_StdClass_nPlusMin;.+ _hnf 1 0 "PlusMin;.+"
+.n 1 e_StdClass_dPlusMin;.+
+.o 1 0
+e_StdClass_nPlusMin;.+
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 1 1
+	fill_r e_StdOverloaded_r+; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dPlusMin;.-
+.export e_StdClass_nPlusMin;.-
+.desc e_StdClass_dPlusMin;.- e_StdClass_nPlusMin;.- _hnf 1 0 "PlusMin;.-"
+.n 1 e_StdClass_dPlusMin;.-
+.o 1 0
+e_StdClass_nPlusMin;.-
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 2 1
+	fill_r e_StdOverloaded_r-; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dPlusMin;.zero
+.export e_StdClass_nPlusMin;.zero
+.desc e_StdClass_dPlusMin;.zero e_StdClass_nPlusMin;.zero _hnf 1 0 "PlusMin;.zero"
+.n 1 e_StdClass_dPlusMin;.zero
+.o 1 0
+e_StdClass_nPlusMin;.zero
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 3 1
+	fill_r e_StdOverloaded_rzero; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_rone;
+.impdesc e_StdOverloaded_r/;
+.impdesc e_StdOverloaded_r*;
+.export e_StdClass_rMultDiv;
+.record e_StdClass_rMultDiv; {a}{a}{a} 3 0 e_StdOverloaded_rone; e_StdOverloaded_r/; e_StdOverloaded_r*; "MultDiv;"
+.descexp e_StdClass_tMultDiv; e_StdClass_cMultDiv; _hnf 3 1 "MultDiv;"
+.n 3 e_StdClass_tMultDiv;
+.o 1 0
+e_StdClass_cMultDiv;
+	push_node _cycle_in_spine 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 2 1 0
+	push_r_args 2 1 0
+	push_r_args 2 1 0
+	update_a 2 5
+	update_a 1 4
+	update_a 0 3
+	pop_a 3
+.impmod StdClass
+.impdesc e_StdClass_rMultDiv;
+	fill_r e_StdClass_rMultDiv; 3 0 3 0 0
+	pop_a 3
+.d 1 0
+	rtn
+.export e_StdClass_dMultDiv;.*
+.export e_StdClass_nMultDiv;.*
+.desc e_StdClass_dMultDiv;.* e_StdClass_nMultDiv;.* _hnf 1 0 "MultDiv;.*"
+.n 1 e_StdClass_dMultDiv;.*
+.o 1 0
+e_StdClass_nMultDiv;.*
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 1 1
+	fill_r e_StdOverloaded_r*; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dMultDiv;./
+.export e_StdClass_nMultDiv;./
+.desc e_StdClass_dMultDiv;./ e_StdClass_nMultDiv;./ _hnf 1 0 "MultDiv;./"
+.n 1 e_StdClass_dMultDiv;./
+.o 1 0
+e_StdClass_nMultDiv;./
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 2 1
+	fill_r e_StdOverloaded_r/; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dMultDiv;.one
+.export e_StdClass_nMultDiv;.one
+.desc e_StdClass_dMultDiv;.one e_StdClass_nMultDiv;.one _hnf 1 0 "MultDiv;.one"
+.n 1 e_StdClass_dMultDiv;.one
+.o 1 0
+e_StdClass_nMultDiv;.one
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 3 1
+	fill_r e_StdOverloaded_rone; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_r~;
+.impdesc e_StdOverloaded_rsign;
+.impdesc e_StdOverloaded_rabs;
+.export e_StdClass_rArith;
+.record e_StdClass_rArith; aa{a}{a}{a} 5 0 e_StdOverloaded_r~; e_StdOverloaded_rsign; e_StdOverloaded_rabs; "Arith;"
+.descexp e_StdClass_tArith; e_StdClass_cArith; _hnf 5 1 "Arith;"
+.n 5 e_StdClass_tArith;
+.o 1 0
+e_StdClass_cArith;
+	push_node _cycle_in_spine 5
+	jsr_eval 4
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 4 1 0
+	push_r_args 4 1 0
+	push_r_args 4 1 0
+	update_a 2 7
+	update_a 1 6
+	update_a 0 5
+	pop_a 3
+.impmod StdClass
+.impdesc e_StdClass_rArith;
+	fill_r e_StdClass_rArith; 5 0 5 0 0
+	pop_a 5
+.d 1 0
+	rtn
+.export e_StdClass_dArith;.PlusMin
+.export e_StdClass_nArith;.PlusMin
+.descs e_StdClass_dArith;.PlusMin e_StdClass_nArith;.PlusMin _ 1 0 "Arith;.PlusMin"
+.n -4 e_StdClass_dArith;.PlusMin
+.o 1 0
+e_StdClass_nArith;.PlusMin
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 5 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dArith;.MultDiv
+.export e_StdClass_nArith;.MultDiv
+.descs e_StdClass_dArith;.MultDiv e_StdClass_nArith;.MultDiv _ 3 0 "Arith;.MultDiv"
+.n -4 e_StdClass_dArith;.MultDiv
+.o 1 0
+e_StdClass_nArith;.MultDiv
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 5 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dArith;.abs
+.export e_StdClass_nArith;.abs
+.desc e_StdClass_dArith;.abs e_StdClass_nArith;.abs _hnf 1 0 "Arith;.abs"
+.n 1 e_StdClass_dArith;.abs
+.o 1 0
+e_StdClass_nArith;.abs
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 5 0 3 1
+	fill_r e_StdOverloaded_rabs; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dArith;.sign
+.export e_StdClass_nArith;.sign
+.desc e_StdClass_dArith;.sign e_StdClass_nArith;.sign _hnf 1 0 "Arith;.sign"
+.n 1 e_StdClass_dArith;.sign
+.o 1 0
+e_StdClass_nArith;.sign
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 5 0 4 1
+	fill_r e_StdOverloaded_rsign; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dArith;.~
+.export e_StdClass_nArith;.~
+.desc e_StdClass_dArith;.~ e_StdClass_nArith;.~ _hnf 1 0 "Arith;.~"
+.n 1 e_StdClass_dArith;.~
+.o 1 0
+e_StdClass_nArith;.~
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 5 0 5 1
+	fill_r e_StdOverloaded_r~; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_rIncDec;
+.record e_StdClass_rIncDec; {a}{a}{a}{a} 4 0 e_StdOverloaded_rzero; e_StdOverloaded_rone; e_StdOverloaded_r-; e_StdOverloaded_r+; "IncDec;"
+.descexp e_StdClass_tIncDec; e_StdClass_cIncDec; _hnf 4 1 "IncDec;"
+.n 4 e_StdClass_tIncDec;
+.o 1 0
+e_StdClass_cIncDec;
+	push_node _cycle_in_spine 4
+	jsr_eval 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 3 1 0
+	push_r_args 3 1 0
+	push_r_args 3 1 0
+	push_r_args 3 1 0
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	update_a 0 4
+	pop_a 4
+.impdesc e_StdClass_rIncDec;
+	fill_r e_StdClass_rIncDec; 4 0 4 0 0
+	pop_a 4
+.d 1 0
+	rtn
+.export e_StdClass_dIncDec;.+
+.export e_StdClass_nIncDec;.+
+.desc e_StdClass_dIncDec;.+ e_StdClass_nIncDec;.+ _hnf 1 0 "IncDec;.+"
+.n 1 e_StdClass_dIncDec;.+
+.o 1 0
+e_StdClass_nIncDec;.+
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 4 0 1 1
+	fill_r e_StdOverloaded_r+; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dIncDec;.-
+.export e_StdClass_nIncDec;.-
+.desc e_StdClass_dIncDec;.- e_StdClass_nIncDec;.- _hnf 1 0 "IncDec;.-"
+.n 1 e_StdClass_dIncDec;.-
+.o 1 0
+e_StdClass_nIncDec;.-
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 4 0 2 1
+	fill_r e_StdOverloaded_r-; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dIncDec;.one
+.export e_StdClass_nIncDec;.one
+.desc e_StdClass_dIncDec;.one e_StdClass_nIncDec;.one _hnf 1 0 "IncDec;.one"
+.n 1 e_StdClass_dIncDec;.one
+.o 1 0
+e_StdClass_nIncDec;.one
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 4 0 3 1
+	fill_r e_StdOverloaded_rone; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dIncDec;.zero
+.export e_StdClass_nIncDec;.zero
+.desc e_StdClass_dIncDec;.zero e_StdClass_nIncDec;.zero _hnf 1 0 "IncDec;.zero"
+.n 1 e_StdClass_dIncDec;.zero
+.o 1 0
+e_StdClass_nIncDec;.zero
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 4 0 4 1
+	fill_r e_StdOverloaded_rzero; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_r<;
+.export e_StdClass_rEnum;
+.record e_StdClass_rEnum; {a}a 2 0 e_StdOverloaded_r<; "Enum;"
+.descexp e_StdClass_tEnum; e_StdClass_cEnum; _hnf 2 1 "Enum;"
+.n 2 e_StdClass_tEnum;
+.o 1 0
+e_StdClass_cEnum;
+	push_node _cycle_in_spine 2
+	jsr_eval 1
+	jsr_eval 0
+	repl_r_args 1 0
+.impmod StdClass
+.impdesc e_StdClass_rEnum;
+	fill_r e_StdClass_rEnum; 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e_StdClass_dEnum;.<
+.export e_StdClass_nEnum;.<
+.desc e_StdClass_dEnum;.< e_StdClass_nEnum;.< _hnf 1 0 "Enum;.<"
+.n 1 e_StdClass_dEnum;.<
+.o 1 0
+e_StdClass_nEnum;.<
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	fill_r e_StdOverloaded_r<; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dEnum;.IncDec
+.export e_StdClass_nEnum;.IncDec
+.descs e_StdClass_dEnum;.IncDec e_StdClass_nEnum;.IncDec _ 2 0 "Enum;.IncDec"
+.n -4 e_StdClass_dEnum;.IncDec
+.o 1 0
+e_StdClass_nEnum;.IncDec
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.impmod StdOverloaded
+.impdesc e_StdOverloaded_r==;
+.export e_StdClass_rEq;
+.record e_StdClass_rEq; {a} 1 0 e_StdOverloaded_r==; "Eq;"
+.descexp e_StdClass_tEq; e_StdClass_cEq; _hnf 1 1 "Eq;"
+.n 1 e_StdClass_tEq;
+.o 1 0
+e_StdClass_cEq;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args 1 0
+.impmod StdClass
+.impdesc e_StdClass_rEq;
+	fill_r e_StdClass_rEq; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dEq;.==
+.export e_StdClass_nEq;.==
+.desc e_StdClass_dEq;.== e_StdClass_nEq;.== _hnf 1 0 "Eq;.=="
+.n 1 e_StdClass_dEq;.==
+.o 1 0
+e_StdClass_nEq;.==
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_r e_StdOverloaded_r==; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_rOrd;
+.record e_StdClass_rOrd; {a} 1 0 e_StdOverloaded_r<; "Ord;"
+.descexp e_StdClass_tOrd; e_StdClass_cOrd; _hnf 1 1 "Ord;"
+.n 1 e_StdClass_tOrd;
+.o 1 0
+e_StdClass_cOrd;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args 1 0
+.impdesc e_StdClass_rOrd;
+	fill_r e_StdClass_rOrd; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_StdClass_dOrd;.<
+.export e_StdClass_nOrd;.<
+.desc e_StdClass_dOrd;.< e_StdClass_nOrd;.< _hnf 1 0 "Ord;.<"
+.n 1 e_StdClass_dOrd;.<
+.o 1 0
+e_StdClass_nOrd;.<
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_r e_StdOverloaded_r<; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
