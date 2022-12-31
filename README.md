@@ -50,7 +50,7 @@ isPrime x = length [y \\ y <- [1..x] | x rem y == 0] == 2
 Start = 'z'-'a'
 Start = 'a'+'d'
 Start = toChar '1' does nothing
-Start = toChar 68 //shows the relevant char in the ascii table 
+Start = toChar 68 #shows the relevant char in the ascii table 
 Start = toUpper 'a' //retuns the upper case of the char
 Start = toLower 'A' //returns the lower case of the char
 Start = digitToInt '3' // returns the int value of the char if it is a digit, if the char is a letter it returns the ascii value 
