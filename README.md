@@ -36,7 +36,6 @@ Example<br>
 
 # Clean Programming Language 🫧
 
-# Documentation
 
 ## Util functions
 
